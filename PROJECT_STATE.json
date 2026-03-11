@@ -1,24 +1,40 @@
 {
   "project": "nexus-tools",
   "version": "0.1.0",
-  "phase": "MVP Development",
+  "phase": "MVP Deployed — Polish + SEO",
   "status": "in_progress",
   "last_updated": "2026-03-11",
-  "updated_by": "NEXUS@PC-Principal",
+  "updated_by": "NEXUS@PC-Principal (RED INTERNA terminal)",
+  "task_id": "T058",
+  "domain": "toolnexus.dev",
+  "url": "https://toolnexus.dev",
+  "deploy": {
+    "host": "Mini PC (100.67.20.43)",
+    "port": 3456,
+    "path": "/home/ricardo/nexus-tools/",
+    "proxy": "VPS nginx (76.13.109.80)",
+    "ssl": "Let's Encrypt (expires 2026-06-09)",
+    "process": "npx next start -p 3456 (needs systemd)"
+  },
   "features": {
-    "completed": [],
-    "in_progress": [
+    "completed": [
       "favicon-generator MVP",
-      "json-formatter MVP"
+      "json-formatter MVP",
+      "domain-purchase (toolnexus.dev)",
+      "nginx-reverse-proxy",
+      "ssl-letsencrypt",
+      "production-deploy"
     ],
+    "in_progress": [],
     "pending": [
+      "systemd-service (survive reboots)",
+      "robots.txt + sitemap.xml",
       "meta-tag-generator",
       "base64-encoder",
       "color-converter",
       "css-unit-converter",
-      "adsense-integration",
-      "domain-purchase",
-      "docker-deploy"
+      "google-search-console",
+      "adsense-integration"
     ]
   },
   "decisions": [
@@ -41,6 +57,16 @@
       "date": "2026-03-11",
       "decision": "100% client-side, sin backend",
       "reason": "$0 costo servidor, privacidad como feature, simplicidad"
+    },
+    {
+      "date": "2026-03-11",
+      "decision": "Dominio toolnexus.dev comprado",
+      "reason": ".dev es el TLD de developers, HSTS forzado, corto y memorable"
+    },
+    {
+      "date": "2026-03-11",
+      "decision": "Deploy en Mini PC port 3456, nginx VPS reverse proxy",
+      "reason": "Mismo patrón que Nextcloud/CEREBRO — $0 hosting, infra existente"
     }
   ],
   "metrics": {
