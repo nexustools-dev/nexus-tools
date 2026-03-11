@@ -1,0 +1,51 @@
+{
+  "project": "nexus-tools",
+  "version": "0.1.0",
+  "phase": "MVP Development",
+  "status": "in_progress",
+  "last_updated": "2026-03-11",
+  "updated_by": "NEXUS@PC-Principal",
+  "features": {
+    "completed": [],
+    "in_progress": [
+      "favicon-generator MVP",
+      "json-formatter MVP"
+    ],
+    "pending": [
+      "meta-tag-generator",
+      "base64-encoder",
+      "color-converter",
+      "css-unit-converter",
+      "adsense-integration",
+      "domain-purchase",
+      "docker-deploy"
+    ]
+  },
+  "decisions": [
+    {
+      "date": "2026-03-11",
+      "decision": "Next.js 15 + Tailwind v4 + TypeScript",
+      "reason": "SSR para SEO, Tailwind para velocidad de desarrollo, TS para calidad"
+    },
+    {
+      "date": "2026-03-11",
+      "decision": "Proyecto independiente coordinado con RED INTERNA para infra",
+      "reason": "Separar código web de infra/ops. RED INTERNA maneja deploy/nginx/SSL"
+    },
+    {
+      "date": "2026-03-11",
+      "decision": "Favicon generator + JSON formatter como primeras herramientas",
+      "reason": "Favicon: menor competencia (solo 2 rivales serios). JSON: rápido de construir, RPM alto ($10-18)"
+    },
+    {
+      "date": "2026-03-11",
+      "decision": "100% client-side, sin backend",
+      "reason": "$0 costo servidor, privacidad como feature, simplicidad"
+    }
+  ],
+  "metrics": {
+    "tools_count": 2,
+    "monthly_visitors": 0,
+    "adsense_revenue": 0
+  }
+}
