@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useCallback } from "react";
+import { useState, useMemo, useCallback, useRef } from "react";
 import { useTranslations } from "next-intl";
 
 /* ── Presets ── */
@@ -107,6 +107,45 @@ function getNextExecutions(cron: string, count: number): Date[] {
   return results;
 }
 
+/* ── Field input with local state — select-on-focus, sync-on-blur ── */
+function CronFieldInput({ label, hint, value, onChange }: { label: string; hint: string; value: string; onChange: (v: string) => void }) {
+  const [local, setLocal] = useState(value);
+  const [focused, setFocused] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  // Sync from parent when not focused (e.g. preset clicked)
+  if (!focused && local !== value) setLocal(value);
+
+  return (
+    <div>
+      <label className="block text-xs text-zinc-500 mb-1.5 text-center">{label}</label>
+      <input
+        ref={inputRef}
+        type="text"
+        value={focused ? local : value}
+        onChange={(e) => setLocal(e.target.value)}
+        onFocus={() => {
+          setFocused(true);
+          setLocal(value);
+          setTimeout(() => inputRef.current?.select(), 0);
+        }}
+        onBlur={() => {
+          setFocused(false);
+          onChange(local.trim() || "*");
+        }}
+        onKeyDown={(e) => {
+          if (e.key === "Enter") {
+            e.currentTarget.blur();
+          }
+        }}
+        className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2.5 font-mono text-sm text-center focus:outline-none focus:border-lime-500"
+        translate="no"
+      />
+      <div className="text-[10px] text-zinc-600 text-center mt-1">{hint}</div>
+    </div>
+  );
+}
+
 export function CronExpressionBuilder() {
   const t = useTranslations("cronExpressionBuilder.ui");
   const tc = useTranslations("ui");
@@ -182,17 +221,13 @@ export function CronExpressionBuilder() {
       {/* Field editors */}
       <div className="grid grid-cols-5 gap-3">
         {fields.map((f) => (
-          <div key={f.idx}>
-            <label className="block text-xs text-zinc-500 mb-1.5 text-center">{f.label}</label>
-            <input
-              type="text"
-              value={parts[f.idx] || "*"}
-              onChange={(e) => setPart(f.idx, e.target.value)}
-              className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2.5 font-mono text-sm text-center focus:outline-none focus:border-lime-500"
-              translate="no"
-            />
-            <div className="text-[10px] text-zinc-600 text-center mt-1">{f.hint}</div>
-          </div>
+          <CronFieldInput
+            key={f.idx}
+            label={f.label}
+            hint={f.hint}
+            value={parts[f.idx] || "*"}
+            onChange={(val) => setPart(f.idx, val)}
+          />
         ))}
       </div>
 

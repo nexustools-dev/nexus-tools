@@ -203,12 +203,12 @@ export function QrCodeGenerator() {
         </div>
 
         {/* Right: Preview */}
-        <div className="flex items-center justify-center">
-          <div className="bg-white rounded-xl p-6 shadow-lg">
+        <div className="flex items-center justify-center overflow-hidden">
+          <div className="bg-white rounded-xl p-6 shadow-lg max-w-full overflow-hidden">
             {input.trim() && !error ? (
-              <canvas ref={canvasRef} />
+              <canvas ref={canvasRef} className="max-w-full h-auto" />
             ) : (
-              <div className="w-[256px] h-[256px] flex items-center justify-center text-zinc-400 text-sm">
+              <div className="w-[256px] max-w-full h-[256px] flex items-center justify-center text-zinc-400 text-sm">
                 {error ? t(error) : "QR Preview"}
               </div>
             )}

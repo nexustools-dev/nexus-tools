@@ -35,8 +35,8 @@ export function PlaceholderImage() {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    // Scale canvas for preview (max 600px wide)
-    const scale = Math.min(1, 600 / width, 400 / height);
+    // Scale canvas for preview (fit within grid column)
+    const scale = Math.min(1, 380 / width, 280 / height);
     canvas.width = width;
     canvas.height = height;
     canvas.style.width = `${width * scale}px`;
@@ -158,8 +158,8 @@ export function PlaceholderImage() {
         </div>
 
         {/* Preview */}
-        <div className="flex items-center justify-center">
-          <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-4 inline-block">
+        <div className="flex items-center justify-center overflow-hidden">
+          <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-4 inline-block max-w-full overflow-hidden">
             <canvas ref={canvasRef} className="rounded" />
           </div>
         </div>
