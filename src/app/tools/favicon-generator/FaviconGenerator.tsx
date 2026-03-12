@@ -50,24 +50,76 @@ const SYSTEM_FONTS = [
   { name: "Impact", value: "Impact, sans-serif" },
 ];
 
+// Paint-style color palette
+const COLOR_PALETTE = [
+  // Row 1 - Reds, browns, warm tones
+  "#ed1c24", "#ff3f34", "#ff6b6b", "#ee5a24", "#f39c12", "#f1c40f", "#fdcb6e",  "#ffeaa7",
+  // Row 2 - Greens
+  "#27ae60", "#2ecc71", "#00b894", "#55efc4", "#10b981", "#6ab04c", "#badc58", "#c7ecee",
+  // Row 3 - Blues
+  "#2980b9", "#3498db", "#0984e3", "#74b9ff", "#0652dd", "#1e3799", "#4a69bd", "#6c5ce7",
+  // Row 4 - Purples, pinks, neutrals
+  "#8e44ad", "#be2edd", "#e84393", "#fd79a8", "#2d3436", "#636e72", "#b2bec3", "#ffffff",
+];
+
 function loadGoogleFont(fontName: string): Promise<void> {
   return new Promise((resolve) => {
     const id = `gfont-${fontName.replace(/\s+/g, "-")}`;
-    if (document.getElementById(id)) {
-      // Already loaded, but check if font is ready
-      document.fonts.ready.then(() => resolve());
-      return;
+    if (!document.getElementById(id)) {
+      const link = document.createElement("link");
+      link.id = id;
+      link.rel = "stylesheet";
+      link.href = `https://fonts.googleapis.com/css2?family=${encodeURIComponent(fontName)}:wght@700&display=swap`;
+      document.head.appendChild(link);
     }
-    const link = document.createElement("link");
-    link.id = id;
-    link.rel = "stylesheet";
-    link.href = `https://fonts.googleapis.com/css2?family=${encodeURIComponent(fontName)}:wght@700&display=swap`;
-    link.onload = () => {
-      document.fonts.ready.then(() => resolve());
-    };
-    link.onerror = () => resolve();
-    document.head.appendChild(link);
+    // Wait for the specific font face to be loaded and usable by Canvas
+    document.fonts.load(`bold 48px "${fontName}"`).then(() => resolve()).catch(() => resolve());
   });
+}
+
+function ColorPalette({
+  value,
+  onChange,
+  label,
+}: {
+  value: string;
+  onChange: (color: string) => void;
+  label: string;
+}) {
+  return (
+    <div>
+      <label className="block text-sm text-zinc-400 mb-1">{label}</label>
+      <div className="grid grid-cols-8 gap-1 mb-2">
+        {COLOR_PALETTE.map((color) => (
+          <button
+            key={color}
+            onClick={() => onChange(color)}
+            className={`w-full aspect-square rounded-md border-2 transition-all hover:scale-110 ${
+              value.toLowerCase() === color.toLowerCase()
+                ? "border-white scale-110"
+                : "border-transparent"
+            }`}
+            style={{ backgroundColor: color }}
+            title={color}
+          />
+        ))}
+      </div>
+      <div className="flex gap-2 items-center">
+        <input
+          type="color"
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          className="w-10 h-10 rounded cursor-pointer bg-transparent border-0"
+        />
+        <input
+          type="text"
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          className="flex-1 bg-zinc-800 border border-zinc-700 rounded-lg px-3 py-2 text-sm font-mono focus:outline-none focus:border-emerald-500"
+        />
+      </div>
+    </div>
+  );
 }
 
 export function FaviconGenerator() {
@@ -347,41 +399,9 @@ export function FaviconGenerator() {
 
         {/* Colors */}
         {mode !== "image" && (
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <label className="block text-sm text-zinc-400 mb-1">Background</label>
-              <div className="flex gap-2 items-center">
-                <input
-                  type="color"
-                  value={bgColor}
-                  onChange={(e) => setBgColor(e.target.value)}
-                  className="w-10 h-10 rounded cursor-pointer bg-transparent border-0"
-                />
-                <input
-                  type="text"
-                  value={bgColor}
-                  onChange={(e) => setBgColor(e.target.value)}
-                  className="flex-1 bg-zinc-800 border border-zinc-700 rounded-lg px-3 py-2 text-sm font-mono focus:outline-none focus:border-emerald-500"
-                />
-              </div>
-            </div>
-            <div>
-              <label className="block text-sm text-zinc-400 mb-1">Text Color</label>
-              <div className="flex gap-2 items-center">
-                <input
-                  type="color"
-                  value={textColor}
-                  onChange={(e) => setTextColor(e.target.value)}
-                  className="w-10 h-10 rounded cursor-pointer bg-transparent border-0"
-                />
-                <input
-                  type="text"
-                  value={textColor}
-                  onChange={(e) => setTextColor(e.target.value)}
-                  className="flex-1 bg-zinc-800 border border-zinc-700 rounded-lg px-3 py-2 text-sm font-mono focus:outline-none focus:border-emerald-500"
-                />
-              </div>
-            </div>
+          <div className="space-y-4">
+            <ColorPalette label="Background" value={bgColor} onChange={setBgColor} />
+            <ColorPalette label="Text Color" value={textColor} onChange={setTextColor} />
           </div>
         )}
 
