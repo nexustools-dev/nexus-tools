@@ -17,6 +17,14 @@ const tools = [
     icon: "{}",
     color: "from-blue-500 to-indigo-600",
   },
+  {
+    name: "Meta Tag Generator",
+    description:
+      "Generate SEO meta tags, Open Graph, and Twitter Cards. Live preview of Google and social media results.",
+    href: "/tools/meta-tag-generator",
+    icon: "<>",
+    color: "from-purple-500 to-pink-600",
+  },
 ];
 
 export default function Home() {

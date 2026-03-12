@@ -55,6 +55,12 @@ export default function RootLayout({
               >
                 JSON Formatter
               </a>
+              <a
+                href="/tools/meta-tag-generator"
+                className="hover:text-zinc-100 transition-colors"
+              >
+                Meta Tags
+              </a>
             </div>
           </div>
         </nav>
