@@ -59,9 +59,11 @@ export function TextCaseConverter() {
   }, [input]);
 
   const copyText = useCallback(async (text: string, key: string) => {
-    await navigator.clipboard.writeText(text);
-    setCopiedKey(key);
-    setTimeout(() => setCopiedKey(null), 2000);
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopiedKey(key);
+      setTimeout(() => setCopiedKey(null), 2000);
+    } catch { /* clipboard unavailable */ }
   }, []);
 
   return (

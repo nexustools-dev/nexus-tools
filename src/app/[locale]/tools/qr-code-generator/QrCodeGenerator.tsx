@@ -6,6 +6,14 @@ import QRCode from "qrcode";
 
 const SAMPLE_TEXT = "https://toolnexus.dev";
 
+function isValidHex(color: string): boolean {
+  return /^#[0-9a-fA-F]{6}$/.test(color);
+}
+
+function sanitizeHex(color: string): string {
+  return isValidHex(color) ? color : "#000000";
+}
+
 export function QrCodeGenerator() {
   const t = useTranslations("qrCodeGenerator.ui");
   const tc = useTranslations("ui");
@@ -30,7 +38,7 @@ export function QrCodeGenerator() {
     const opts = {
       width: size,
       margin: 2,
-      color: { dark: fgColor, light: bgColor },
+      color: { dark: sanitizeHex(fgColor), light: sanitizeHex(bgColor) },
       errorCorrectionLevel: ecLevel,
     };
 

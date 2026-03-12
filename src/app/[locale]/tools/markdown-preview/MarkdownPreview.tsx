@@ -252,9 +252,11 @@ export function MarkdownPreview() {
   }, [input]);
 
   const copyText = useCallback(async (text: string, field: string) => {
-    await navigator.clipboard.writeText(text);
-    setCopiedField(field);
-    setTimeout(() => setCopiedField(null), 2000);
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopiedField(field);
+      setTimeout(() => setCopiedField(null), 2000);
+    } catch { /* clipboard unavailable */ }
   }, []);
 
   const downloadHtml = useCallback(() => {

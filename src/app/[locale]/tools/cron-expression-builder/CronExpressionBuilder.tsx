@@ -107,6 +107,16 @@ function getNextExecutions(cron: string, count: number): Date[] {
   return results;
 }
 
+/* ── Validate a single cron field ── */
+function isValidCronField(val: string): boolean {
+  if (val === "*") return true;
+  // Match: *, */N, N, N-N, N,N,N, N-N/N, etc.
+  return /^(\*|[0-9]{1,2})(\/[0-9]{1,2})?$/.test(val) ||
+    /^[0-9]{1,2}-[0-9]{1,2}(\/[0-9]{1,2})?$/.test(val) ||
+    /^([0-9]{1,2},)+[0-9]{1,2}$/.test(val) ||
+    /^\*\/[0-9]{1,2}$/.test(val);
+}
+
 /* ── Field input with local state — select-on-focus, sync-on-blur ── */
 function CronFieldInput({ label, hint, value, onChange }: { label: string; hint: string; value: string; onChange: (v: string) => void }) {
   const [local, setLocal] = useState(value);
@@ -155,8 +165,9 @@ export function CronExpressionBuilder() {
   const parts = cron.trim().split(/\s+/);
   const isValid = parts.length === 5;
 
-  const description = useMemo(() => (isValid ? describeCron(cron) : ""), [cron, isValid]);
-  const nextExecs = useMemo(() => (isValid ? getNextExecutions(cron, 5) : []), [cron, isValid]);
+  const fieldsValid = isValid && parts.every(isValidCronField);
+  const description = useMemo(() => (fieldsValid ? describeCron(cron) : ""), [cron, fieldsValid]);
+  const nextExecs = useMemo(() => (fieldsValid ? getNextExecutions(cron, 5) : []), [cron, fieldsValid]);
 
   const setPart = (idx: number, val: string) => {
     const p = [...parts];
@@ -166,9 +177,11 @@ export function CronExpressionBuilder() {
   };
 
   const copyText = useCallback(async (text: string, field: string) => {
-    await navigator.clipboard.writeText(text);
-    setCopiedField(field);
-    setTimeout(() => setCopiedField(null), 2000);
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopiedField(field);
+      setTimeout(() => setCopiedField(null), 2000);
+    } catch { /* clipboard unavailable */ }
   }, []);
 
   const fields = [
