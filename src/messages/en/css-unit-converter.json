@@ -1,0 +1,21 @@
+{
+  "metadata": {
+    "title": "CSS Unit Converter — px, rem, em, vh, vw Conversion",
+    "description": "Free CSS unit converter. Convert between px, rem, em, %, vh, and vw. Customize base font size and viewport dimensions. 100% browser-based.",
+    "keywords": "css unit converter, px to rem, rem to px, em to px, css converter, pixel to rem converter, responsive css units, vw to px"
+  },
+  "heading": "CSS Unit Converter",
+  "subheading": "Convert between CSS units: px, rem, em, %, vh, and vw. Set your base font size and viewport dimensions.",
+  "seo": {
+    "section1Title": "CSS Units Explained",
+    "section1Text": "CSS supports a wide range of units for expressing lengths, sizes, and positions. Choosing the right unit is critical for building accessible, responsive layouts. Units fall into two main categories: absolute units (like px) that always represent a fixed size, and relative units (like rem, em, %, vh, vw) that scale based on a reference value.",
+    "section2Title": "Absolute vs Relative Units",
+    "section2Text": "Absolute units like px (pixels) are fixed regardless of screen size or user settings. They are predictable and easy to reason about but can cause accessibility issues when users change their browser font size. Relative units scale proportionally — rem scales with the root font size, em with the parent element's font size, % with the parent's dimensions, and viewport units (vh, vw) with the screen size.",
+    "section3Title": "When to Use rem",
+    "section3Text": "rem (root em) is relative to the root <html> element's font size, which defaults to 16px in most browsers. Using rem for font sizes and spacing ensures your layout respects the user's system font size preferences, which is important for accessibility. A common pattern is to set html { font-size: 62.5% } so that 1rem = 10px, making the math easier.",
+    "section4Title": "When to Use em",
+    "section4Text": "em is relative to the current element's font size (or its closest parent's font size for non-font properties). It is useful for component-level scaling — for example, setting padding in em means the spacing scales automatically if you change the component's font size. However, em values can compound in nested elements, making them harder to manage than rem at scale.",
+    "section5Title": "Viewport Units",
+    "section5Text": "vw (viewport width) and vh (viewport height) are percentages of the browser viewport size. 100vw = full width, 50vh = half the screen height. They are excellent for full-screen sections, hero images, and layouts that need to fill the screen. Modern CSS also introduces svh, lvh, and dvh to handle the dynamic viewport height on mobile browsers more accurately."
+  }
+}

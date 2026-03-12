@@ -1,0 +1,18 @@
+{
+  "metadata": {
+    "title": "Gerador de Favicon — Crie Favicons a partir de Texto, Emoji ou Imagens",
+    "description": "Gerador de favicon online grátis. Crie favicons a partir de texto, emoji ou envie imagens. Baixe como ICO, PNG e SVG em todos os tamanhos necessários. 100% no navegador.",
+    "keywords": "gerador de favicon, criar favicon online, favicon de texto, favicon emoji, tamanhos de favicon, favicon ico gerador, favicon png, ícones manifest.json"
+  },
+  "heading": "Gerador de Favicon",
+  "subheading": "Gere favicons a partir de texto, emoji ou imagens. Baixe como ICO e PNG em todos os tamanhos padrão.",
+  "seo": {
+    "section1Title": "O que é um Favicon?",
+    "section1Text": "Um favicon (abreviação de \"favorite icon\") é o pequeno ícone exibido nas abas do navegador, favoritos e histórico. Ele ajuda os usuários a identificar seu site rapidamente. Os navegadores modernos suportam múltiplos formatos e tamanhos de favicon, incluindo ICO, PNG e SVG.",
+    "section2Title": "Quais Tamanhos Preciso?",
+    "section2Text": "Diferentes plataformas exigem diferentes tamanhos de favicon. O conjunto padrão inclui: 16x16 e 32x32 para abas do navegador, 48x48 para atalhos do Windows, 180x180 para Apple Touch Icon (tela inicial do iOS), 192x192 e 512x512 para PWA Android e manifest.json. Este gerador cria todos os tamanhos de uma vez.",
+    "section3Title": "Como Adicionar um Favicon ao Seu Site",
+    "section3Text": "Coloque os arquivos de favicon na raiz do seu site e adicione as seguintes tags dentro da seção <head> do seu HTML:",
+    "faviconCode": "<link rel=\"icon\" type=\"image/x-icon\" href=\"/favicon.ico\">\n<link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/favicon-32x32.png\">\n<link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/favicon-16x16.png\">\n<link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/apple-touch-icon.png\">\n<link rel=\"manifest\" href=\"/site.webmanifest\">"
+  }
+}

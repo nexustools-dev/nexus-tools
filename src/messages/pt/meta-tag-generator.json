@@ -1,0 +1,21 @@
+{
+  "metadata": {
+    "title": "Gerador de Meta Tags — Crie Tags SEO para o Seu Site",
+    "description": "Gerador de meta tags SEO gratuito. Crie title, description, Open Graph, Twitter Card e outras tags HTML. Pré-visualização em tempo real dos resultados no Google e redes sociais.",
+    "keywords": "gerador de meta tags, meta tags seo, gerador open graph, twitter card gerador, tags html seo, gerador meta description, og tags, ferramentas seo grátis"
+  },
+  "heading": "Gerador de Meta Tags",
+  "subheading": "Gere meta tags HTML para SEO, Open Graph e Twitter Cards. Visualize como sua página aparecerá no Google e nas redes sociais.",
+  "seo": {
+    "section1Title": "O que São Meta Tags?",
+    "section1Text": "Meta tags são elementos HTML colocados dentro da seção <head> de uma página web que fornecem metadados sobre a página para mecanismos de busca e redes sociais. Elas influenciam como sua página aparece nos resultados do Google e ao ser compartilhada no Twitter, Facebook, LinkedIn e outras plataformas.",
+    "section2Title": "Meta Tags Essenciais para SEO",
+    "section2Text": "As meta tags mais importantes para SEO são o título (title) e a meta descrição. O title tag (50–60 caracteres) aparece como o título clicável nos resultados de busca. A meta description (150–160 caracteres) é o trecho de texto abaixo do título. Uma descrição atraente pode melhorar significativamente sua taxa de cliques, mesmo que não afete diretamente o posicionamento.",
+    "section3Title": "Tags Open Graph",
+    "section3Text": "As tags Open Graph (OG) controlam como seu conteúdo é exibido ao ser compartilhado no Facebook, LinkedIn, WhatsApp e outras plataformas que suportam o protocolo OG. As principais são og:title, og:description, og:image e og:url. Usar uma og:image dedicada (1200x630px recomendado) melhora consideravelmente o engajamento ao compartilhar.",
+    "section4Title": "Twitter Card Tags",
+    "section4Text": "As Twitter Card tags definem como seu conteúdo aparece ao ser compartilhado no Twitter/X. O tipo twitter:card pode ser summary, summary_large_image, app ou player. Usar summary_large_image com uma imagem de qualidade aumenta significativamente o engajamento na plataforma.",
+    "section5Title": "Como Adicionar Meta Tags",
+    "section5Text": "Copie o HTML gerado e cole dentro da seção <head> da sua página. No Next.js, use a API de Metadata em layout.tsx ou page.tsx. No WordPress, use um plugin de SEO como Yoast ou RankMath. Verifique suas tags com a ferramenta de Resultados Ricos do Google e os depuradores de redes sociais."
+  }
+}

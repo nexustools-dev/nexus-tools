@@ -1,0 +1,17 @@
+{
+  "metadata": {
+    "title": "Formateador JSON — Formatear, Validar y Minificar JSON Online",
+    "description": "Formateador JSON online gratis. Valida, formatea y minifica JSON con resaltado de sintaxis y detección de errores. 100% en el navegador, sin enviar datos a servidores.",
+    "keywords": "formateador json, validar json online, formatear json, json beautifier, minificar json, editor json online, json pretty print, validador de json"
+  },
+  "heading": "Formateador y Validador JSON",
+  "subheading": "Pega tu JSON para formatearlo, validarlo y minificarlo. Todo se ejecuta en tu navegador.",
+  "seo": {
+    "section1Title": "¿Qué es JSON?",
+    "section1Text": "JSON (JavaScript Object Notation) es un formato ligero de intercambio de datos, fácil de leer y escribir para humanos, y fácil de parsear y generar para máquinas. Es el formato estándar para APIs, archivos de configuración y almacenamiento de datos en el desarrollo web moderno.",
+    "section2Title": "Cómo Usar Este Formateador JSON",
+    "section2Text": "Pega tu JSON crudo en el campo de entrada y haz clic en Formatear. La herramienta validará tu JSON al instante, resaltará cualquier error de sintaxis con la línea y posición exactas, y mostrará el resultado formateado con sangría correcta. También puedes minificar el JSON para reducir su tamaño en producción.",
+    "section3Title": "Características",
+    "section3List": "Formatea JSON con sangría de 2 espacios | Valida JSON con ubicación exacta del error | Minifica JSON para reducir el tamaño del archivo | Copia el resultado al portapapeles | 100% del lado del cliente — tus datos nunca salen de tu navegador"
+  }
+}

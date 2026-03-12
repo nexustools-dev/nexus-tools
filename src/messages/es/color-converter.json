@@ -1,0 +1,19 @@
+{
+  "metadata": {
+    "title": "Convertidor de Colores — Conversión HEX, RGB, HSL",
+    "description": "Convertidor de colores online gratis. Convierte entre formatos HEX, RGB y HSL al instante. Vista previa de color en vivo, copia valores CSS. 100% en tu navegador.",
+    "keywords": "convertidor de colores, hex a rgb, rgb a hex, hsl a hex, selector de color, convertidor colores css, hex a hsl, conversor de colores"
+  },
+  "heading": "Convertidor de Colores",
+  "subheading": "Convierte colores entre HEX, RGB y HSL. Elige un color o ingresa valores manualmente.",
+  "seo": {
+    "section1Title": "Formatos de Color Explicados",
+    "section1Text": "CSS soporta múltiples formatos de color, cada uno con diferentes fortalezas. HEX es el más compacto y ampliamente usado en herramientas de diseño. RGB es intuitivo para mezclar colores con valores de luz. HSL es el formato más amigable para humanos, permitiéndote ajustar tono, saturación y luminosidad de forma independiente — ideal para crear paletas de colores y temas.",
+    "section2Title": "Colores HEX",
+    "section2Text": "Los colores HEX usan un código hexadecimal de 6 dígitos (ej., #ff5733) que representa los canales rojo, verde y azul (00–FF cada uno). Existe una forma abreviada de 3 dígitos cuando cada par se repite (ej., #f53 para #ff5533). HEX es el formato más común en diseño web y es soportado por todos los navegadores y herramientas de diseño.",
+    "section3Title": "Colores RGB",
+    "section3Text": "RGB (Red, Green, Blue) define colores usando tres valores enteros de 0 a 255. Por ejemplo, rgb(255, 87, 51) es un naranja-rojo vivo. CSS también soporta rgba() con un canal alfa para transparencia (0.0 a 1.0). RGB se usa comúnmente en manipulación de colores con JavaScript y dibujo en canvas.",
+    "section4Title": "Colores HSL",
+    "section4Text": "HSL (Hue, Saturation, Lightness) es posiblemente el modelo de color más intuitivo para humanos. Hue es un grado en la rueda de colores (0–360), Saturation es un porcentaje (0% = gris, 100% = color pleno), y Lightness es un porcentaje (0% = negro, 100% = blanco). HSL facilita crear variaciones de color — solo ajusta la luminosidad para obtener tintes y sombras del mismo tono."
+  }
+}

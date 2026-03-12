@@ -1,0 +1,18 @@
+{
+  "metadata": {
+    "title": "Favicon Generator — Create Favicons from Text, Emoji, or Images",
+    "description": "Free online favicon generator. Create favicons from text, emoji, or upload images. Download as ICO, PNG, and SVG in all required sizes. 100% browser-based.",
+    "keywords": "favicon generator, favicon ico generator, text to favicon, emoji favicon, favicon sizes, favicon from text, svg favicon generator, manifest.json icons"
+  },
+  "heading": "Favicon Generator",
+  "subheading": "Generate favicons from text, emoji, or images. Download as ICO and PNG in all standard sizes.",
+  "seo": {
+    "section1Title": "What is a Favicon?",
+    "section1Text": "A favicon (short for \"favorite icon\") is the small icon displayed in browser tabs, bookmarks, and history. It helps users identify your website at a glance. Modern browsers support multiple favicon formats and sizes, including ICO, PNG, and SVG.",
+    "section2Title": "What Sizes Do I Need?",
+    "section2Text": "Different platforms require different favicon sizes. The standard set includes: 16x16 and 32x32 for browser tabs, 48x48 for Windows desktop shortcuts, 180x180 for Apple Touch Icon (iOS home screen), 192x192 and 512x512 for Android PWA and manifest.json. This generator creates all sizes at once.",
+    "section3Title": "How to Add a Favicon to Your Website",
+    "section3Text": "Place your favicon files in the root of your website and add the following tags inside the <head> section of your HTML:",
+    "faviconCode": "<link rel=\"icon\" type=\"image/x-icon\" href=\"/favicon.ico\">\n<link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/favicon-32x32.png\">\n<link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/favicon-16x16.png\">\n<link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/apple-touch-icon.png\">\n<link rel=\"manifest\" href=\"/site.webmanifest\">"
+  }
+}

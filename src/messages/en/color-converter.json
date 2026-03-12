@@ -1,0 +1,19 @@
+{
+  "metadata": {
+    "title": "Color Converter — HEX, RGB, HSL Color Conversion Tool",
+    "description": "Free online color converter. Convert between HEX, RGB, and HSL color formats instantly. Live color preview, copy CSS values. 100% browser-based.",
+    "keywords": "color converter, hex to rgb, rgb to hex, hsl to hex, color picker, css color converter, hex to hsl, color format converter"
+  },
+  "heading": "Color Converter",
+  "subheading": "Convert colors between HEX, RGB, and HSL. Pick a color or enter values manually.",
+  "seo": {
+    "section1Title": "Color Formats Explained",
+    "section1Text": "CSS supports multiple color formats, each with different strengths. HEX is the most compact and widely used in design tools. RGB is intuitive for mixing colors with light values. HSL is the most human-friendly format, letting you adjust hue, saturation, and lightness independently — making it ideal for creating color palettes and themes.",
+    "section2Title": "HEX Colors",
+    "section2Text": "HEX colors use a 6-digit hexadecimal code (e.g., #ff5733) representing red, green, and blue channels (00–FF each). A shorthand 3-digit form exists when each pair repeats (e.g., #f53 for #ff5533). HEX is the most common format in web design and is supported by all browsers and design tools.",
+    "section3Title": "RGB Colors",
+    "section3Text": "RGB (Red, Green, Blue) defines colors using three integer values from 0 to 255. For example, rgb(255, 87, 51) is a vivid orange-red. CSS also supports rgba() with an alpha channel for transparency (0.0 to 1.0). RGB is commonly used in JavaScript color manipulation and canvas drawing.",
+    "section4Title": "HSL Colors",
+    "section4Text": "HSL (Hue, Saturation, Lightness) is arguably the most intuitive color model for humans. Hue is a degree on the color wheel (0–360), Saturation is a percentage (0% = gray, 100% = full color), and Lightness is a percentage (0% = black, 100% = white). HSL makes it easy to create color variations — just adjust lightness to get tints and shades of the same hue."
+  }
+}

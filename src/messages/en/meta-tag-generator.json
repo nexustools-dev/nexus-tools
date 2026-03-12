@@ -1,0 +1,21 @@
+{
+  "metadata": {
+    "title": "Meta Tag Generator — Create SEO Meta Tags for Your Website",
+    "description": "Free meta tag generator for SEO. Create title, description, Open Graph, Twitter Card, and other HTML meta tags. Live preview of Google and social media results.",
+    "keywords": "meta tag generator, seo meta tags, open graph generator, twitter card generator, html meta tags, meta description generator, og tags generator, seo tools"
+  },
+  "heading": "Meta Tag Generator",
+  "subheading": "Generate HTML meta tags for SEO, Open Graph, and Twitter Cards. Preview how your page will look in Google and social media.",
+  "seo": {
+    "section1Title": "What Are Meta Tags?",
+    "section1Text": "Meta tags are HTML elements placed inside the <head> section of a webpage that provide metadata about the page to search engines and social media platforms. They influence how your page appears in Google search results, when shared on Twitter, Facebook, LinkedIn, and other platforms.",
+    "section2Title": "Essential Meta Tags for SEO",
+    "section2Text": "The most important meta tags for SEO are the title tag and meta description. The title tag (50–60 characters) appears as the clickable headline in search results. The meta description (150–160 characters) is the snippet below the title. A compelling description can significantly improve your click-through rate even when it does not directly affect rankings.",
+    "section3Title": "Open Graph Tags",
+    "section3Text": "Open Graph (OG) tags control how your content is displayed when shared on Facebook, LinkedIn, WhatsApp, and other platforms that support the OG protocol. The key tags are og:title, og:description, og:image, and og:url. Using a dedicated og:image (1200x630px recommended) greatly improves engagement when your content is shared.",
+    "section4Title": "Twitter Card Tags",
+    "section4Text": "Twitter Card tags define how your content appears when shared on Twitter/X. The twitter:card type can be summary, summary_large_image, app, or player. Using summary_large_image with a high-quality image significantly increases engagement on the platform.",
+    "section5Title": "How to Add Meta Tags",
+    "section5Text": "Copy the generated HTML and paste it inside the <head> section of your page. In Next.js, use the Metadata API in layout.tsx or page.tsx. In WordPress, use an SEO plugin like Yoast or RankMath. Verify your tags using Google's Rich Results Test and social media debugger tools."
+  }
+}

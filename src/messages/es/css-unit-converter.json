@@ -1,0 +1,21 @@
+{
+  "metadata": {
+    "title": "Convertidor de Unidades CSS — Conversión px, rem, em, vh, vw",
+    "description": "Convertidor de unidades CSS gratis. Convierte entre px, rem, em, %, vh y vw. Personaliza el tamaño de fuente base y las dimensiones del viewport. 100% en tu navegador.",
+    "keywords": "convertidor de unidades css, px a rem, rem a px, em a px, conversor css, pixel a rem, unidades css responsive, vw a px"
+  },
+  "heading": "Convertidor de Unidades CSS",
+  "subheading": "Convierte entre unidades CSS: px, rem, em, %, vh y vw. Configura tu tamaño de fuente base y dimensiones del viewport.",
+  "seo": {
+    "section1Title": "Unidades CSS Explicadas",
+    "section1Text": "CSS ofrece una amplia gama de unidades para expresar longitudes, tamaños y posiciones. Elegir la unidad correcta es fundamental para construir layouts accesibles y responsive. Las unidades se dividen en dos categorías principales: unidades absolutas (como px) que siempre representan un tamaño fijo, y unidades relativas (como rem, em, %, vh, vw) que escalan basándose en un valor de referencia.",
+    "section2Title": "Unidades Absolutas vs Relativas",
+    "section2Text": "Las unidades absolutas como px (píxeles) son fijas independientemente del tamaño de pantalla o configuración del usuario. Son predecibles y fáciles de razonar pero pueden causar problemas de accesibilidad cuando los usuarios cambian el tamaño de fuente de su navegador. Las unidades relativas escalan proporcionalmente — rem escala con el tamaño de fuente raíz, em con el tamaño de fuente del elemento padre, % con las dimensiones del padre, y las unidades de viewport (vh, vw) con el tamaño de la pantalla.",
+    "section3Title": "Cuándo Usar rem",
+    "section3Text": "rem (root em) es relativo al tamaño de fuente del elemento raíz <html>, que por defecto es 16px en la mayoría de navegadores. Usar rem para tamaños de fuente y espaciado asegura que tu layout respete las preferencias de tamaño de fuente del sistema del usuario, lo cual es importante para la accesibilidad. Un patrón común es establecer html { font-size: 62.5% } para que 1rem = 10px, facilitando las matemáticas.",
+    "section4Title": "Cuándo Usar em",
+    "section4Text": "em es relativo al tamaño de fuente del elemento actual (o del padre más cercano para propiedades que no son de fuente). Es útil para escalado a nivel de componente — por ejemplo, establecer padding en em significa que el espaciado escala automáticamente si cambias el tamaño de fuente del componente. Sin embargo, los valores em se acumulan en elementos anidados, haciéndolos más difíciles de manejar que rem a escala.",
+    "section5Title": "Unidades de Viewport",
+    "section5Text": "vw (viewport width) y vh (viewport height) son porcentajes del tamaño de la ventana del navegador. 100vw = ancho completo, 50vh = mitad de la altura de pantalla. Son excelentes para secciones a pantalla completa, imágenes hero y layouts que necesitan llenar la pantalla. El CSS moderno también introduce svh, lvh y dvh para manejar la altura dinámica del viewport en navegadores móviles con mayor precisión."
+  }
+}

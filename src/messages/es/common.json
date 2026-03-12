@@ -1,0 +1,58 @@
+{
+  "brand": "NexusTools",
+  "nav": {
+    "faviconGenerator": "Generador de Favicon",
+    "jsonFormatter": "Formateador JSON",
+    "metaTags": "Meta Tags",
+    "base64": "Base64",
+    "colors": "Colores",
+    "cssUnits": "Unidades CSS"
+  },
+  "footer": {
+    "privacy": "Todas las herramientas funcionan 100% en tu navegador. No se envían datos a ningún servidor.",
+    "copyright": "NexusTools © {year}"
+  },
+  "metadata": {
+    "title": "NexusTools — Herramientas Gratis para Desarrolladores",
+    "titleTemplate": "%s | NexusTools",
+    "description": "Herramientas online gratis para desarrolladores: generador de favicon, formateador JSON, generador de meta tags y más. Rápidas, privadas, funcionan en tu navegador.",
+    "keywords": "herramientas para desarrolladores, generador de favicon, formateador json, generador de meta tags, herramientas online gratis"
+  },
+  "home": {
+    "heading": "Herramientas Gratis para Desarrolladores",
+    "subheading": "Herramientas rápidas, privadas y open-source que funcionan completamente en tu navegador. Sin subir archivos, sin rastreo, sin cuentas.",
+    "whyHeading": "¿Por qué NexusTools?",
+    "feature1Title": "100% en tu Navegador",
+    "feature1Desc": "Tus datos nunca salen de tu dispositivo. Todo el procesamiento ocurre localmente en tu navegador.",
+    "feature2Title": "Sin Cuenta Necesaria",
+    "feature2Desc": "Solo abre y usa. Sin registros, sin pedir emails, sin muros de pago.",
+    "feature3Title": "Rápidas y Gratis",
+    "feature3Desc": "Herramientas ligeras que cargan al instante. Gratis para siempre, con publicidad mínima.",
+    "tools": {
+      "faviconGenerator": {
+        "name": "Generador de Favicon",
+        "description": "Genera favicons desde texto, emoji o imágenes. Descarga como ICO, PNG, SVG en todos los tamaños necesarios."
+      },
+      "jsonFormatter": {
+        "name": "Formateador JSON",
+        "description": "Formatea, valida y minifica JSON. Resaltado de sintaxis, detección de errores y vista de árbol."
+      },
+      "metaTagGenerator": {
+        "name": "Generador de Meta Tags",
+        "description": "Genera meta tags SEO, Open Graph y Twitter Cards. Vista previa en vivo de resultados en Google y redes sociales."
+      },
+      "base64Encoder": {
+        "name": "Codificador y Decodificador Base64",
+        "description": "Codifica texto a Base64 o decodifica Base64 a texto. Soporta UTF-8 y variantes URL-safe."
+      },
+      "colorConverter": {
+        "name": "Convertidor de Colores",
+        "description": "Convierte colores entre HEX, RGB y HSL. Selector visual de colores con vista previa en vivo y salida CSS."
+      },
+      "cssUnitConverter": {
+        "name": "Convertidor de Unidades CSS",
+        "description": "Convierte entre px, rem, em, %, vh y vw. Tamaño de fuente base y dimensiones del viewport personalizables."
+      }
+    }
+  }
+}

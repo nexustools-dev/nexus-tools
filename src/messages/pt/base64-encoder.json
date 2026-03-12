@@ -1,0 +1,19 @@
+{
+  "metadata": {
+    "title": "Codificador Base64 — Codificar e Decodificar Base64 Online",
+    "description": "Codificador e decodificador Base64 online grátis. Converta texto para Base64 e vice-versa. Suporte a UTF-8 e Base64 seguro para URLs. 100% no navegador.",
+    "keywords": "codificador base64, decodificador base64, converter para base64, base64 online grátis, texto para base64, base64 para texto, conversor base64, encode decode base64"
+  },
+  "heading": "Codificador e Decodificador Base64",
+  "subheading": "Codifique texto para Base64 ou decodifique Base64 de volta para texto. Suporte a UTF-8 e variantes seguras para URL.",
+  "seo": {
+    "section1Title": "O que é Base64?",
+    "section1Text": "Base64 é um esquema de codificação de binário para texto que representa dados binários usando 64 caracteres ASCII imprimíveis (A–Z, a–z, 0–9, +, /). É amplamente utilizado para transmitir dados binários com segurança por canais que suportam apenas texto, como e-mail (MIME), payloads JSON e data URIs em HTML.",
+    "section2Title": "Como Funciona a Codificação Base64",
+    "section2Text": "Base64 codifica cada 3 bytes de dados de entrada em 4 caracteres ASCII. A saída é sempre um múltiplo de 4 caracteres, preenchida com sinais = se necessário. Isso significa que os dados codificados em Base64 são aproximadamente 33% maiores que o original. A decodificação inverte o processo exatamente, recuperando os dados binários originais.",
+    "section3Title": "Base64 Seguro para URL",
+    "section3Text": "O Base64 padrão usa os caracteres + e / que têm significados especiais em URLs. O Base64 seguro para URL (também chamado Base64url) substitui + por - e / por _, tornando a saída segura para usar diretamente em URLs e nomes de arquivo sem codificação percentual. É comumente usado em tokens JWT e fluxos OAuth.",
+    "section4Title": "Casos de Uso Comuns",
+    "section4List": "Incorporar imagens em HTML/CSS como data URIs | Codificar dados binários em APIs JSON | Ofuscação básica de dados (não é criptografia) | Payloads de tokens JWT | Anexos de e-mail (codificação MIME) | Armazenar dados binários em formatos somente texto"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "metadata": {
+    "title": "Generador de Favicon — Crea Favicons desde Texto, Emoji o Imágenes",
+    "description": "Generador de favicon online gratis. Crea favicons desde texto, emoji o sube imágenes. Descarga en ICO, PNG y SVG en todos los tamaños requeridos. 100% en el navegador.",
+    "keywords": "generador de favicon, crear favicon online, favicon desde texto, favicon emoji, tamaños de favicon, favicon ico gratis, generador svg favicon, iconos manifest.json"
+  },
+  "heading": "Generador de Favicon",
+  "subheading": "Genera favicons desde texto, emoji o imágenes. Descarga en ICO y PNG en todos los tamaños estándar.",
+  "seo": {
+    "section1Title": "¿Qué es un Favicon?",
+    "section1Text": "Un favicon (abreviatura de \"favorite icon\") es el pequeño ícono que aparece en las pestañas del navegador, marcadores e historial. Ayuda a los usuarios a identificar tu sitio web de un vistazo. Los navegadores modernos admiten múltiples formatos y tamaños de favicon, incluyendo ICO, PNG y SVG.",
+    "section2Title": "¿Qué Tamaños Necesito?",
+    "section2Text": "Distintas plataformas requieren diferentes tamaños de favicon. El conjunto estándar incluye: 16x16 y 32x32 para pestañas del navegador, 48x48 para accesos directos en Windows, 180x180 para Apple Touch Icon (pantalla inicio de iOS), 192x192 y 512x512 para PWA en Android y manifest.json. Este generador crea todos los tamaños a la vez.",
+    "section3Title": "Cómo Añadir un Favicon a tu Sitio Web",
+    "section3Text": "Coloca los archivos del favicon en la raíz de tu sitio web y añade las siguientes etiquetas dentro del elemento <head> de tu HTML:",
+    "faviconCode": "<link rel=\"icon\" type=\"image/x-icon\" href=\"/favicon.ico\">\n<link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/favicon-32x32.png\">\n<link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/favicon-16x16.png\">\n<link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/apple-touch-icon.png\">\n<link rel=\"manifest\" href=\"/site.webmanifest\">"
+  }
+}

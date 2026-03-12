@@ -1,0 +1,58 @@
+{
+  "brand": "NexusTools",
+  "nav": {
+    "faviconGenerator": "Favicon Generator",
+    "jsonFormatter": "JSON Formatter",
+    "metaTags": "Meta Tags",
+    "base64": "Base64",
+    "colors": "Colors",
+    "cssUnits": "CSS Units"
+  },
+  "footer": {
+    "privacy": "All tools run 100% in your browser. No data is sent to any server.",
+    "copyright": "NexusTools © {year}"
+  },
+  "metadata": {
+    "title": "NexusTools — Free Developer Tools",
+    "titleTemplate": "%s | NexusTools",
+    "description": "Free online developer tools: favicon generator, JSON formatter, meta tag generator, and more. Fast, private, runs in your browser.",
+    "keywords": "developer tools, favicon generator, json formatter, meta tag generator, free online tools"
+  },
+  "home": {
+    "heading": "Free Developer Tools",
+    "subheading": "Fast, private, open-source tools that run entirely in your browser. No uploads, no tracking, no accounts.",
+    "whyHeading": "Why NexusTools?",
+    "feature1Title": "100% Browser-Based",
+    "feature1Desc": "Your data never leaves your device. All processing happens locally in your browser.",
+    "feature2Title": "No Account Required",
+    "feature2Desc": "Just open and use. No sign-ups, no email harvesting, no paywalls.",
+    "feature3Title": "Fast & Free",
+    "feature3Desc": "Lightweight tools that load instantly. Free forever, supported by minimal ads.",
+    "tools": {
+      "faviconGenerator": {
+        "name": "Favicon Generator",
+        "description": "Generate favicons from text, emoji, or images. Download as ICO, PNG, SVG with all required sizes."
+      },
+      "jsonFormatter": {
+        "name": "JSON Formatter",
+        "description": "Format, validate, and minify JSON. Syntax highlighting, error detection, and tree view."
+      },
+      "metaTagGenerator": {
+        "name": "Meta Tag Generator",
+        "description": "Generate SEO meta tags, Open Graph, and Twitter Cards. Live preview of Google and social media results."
+      },
+      "base64Encoder": {
+        "name": "Base64 Encoder & Decoder",
+        "description": "Encode text to Base64 or decode Base64 back to text. Supports UTF-8 and URL-safe variants."
+      },
+      "colorConverter": {
+        "name": "Color Converter",
+        "description": "Convert colors between HEX, RGB, and HSL. Visual color picker with live preview and CSS output."
+      },
+      "cssUnitConverter": {
+        "name": "CSS Unit Converter",
+        "description": "Convert between px, rem, em, %, vh, and vw. Customizable base font size and viewport dimensions."
+      }
+    }
+  }
+}

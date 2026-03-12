@@ -1,0 +1,17 @@
+{
+  "metadata": {
+    "title": "JSON Formatter & Validator — Format, Validate, Minify JSON Online",
+    "description": "Free online JSON formatter, validator, and minifier. Syntax highlighting, error detection, tree view. 100% browser-based, no data sent to servers.",
+    "keywords": "json formatter, json validator, json beautifier, json minifier, json editor online, format json, validate json, json pretty print"
+  },
+  "heading": "JSON Formatter & Validator",
+  "subheading": "Paste your JSON to format, validate, and minify. Everything runs in your browser.",
+  "seo": {
+    "section1Title": "What is JSON?",
+    "section1Text": "JSON (JavaScript Object Notation) is a lightweight data-interchange format that is easy for humans to read and write, and easy for machines to parse and generate. It is the standard format for APIs, configuration files, and data storage in modern web development.",
+    "section2Title": "How to Use This JSON Formatter",
+    "section2Text": "Paste your raw JSON into the input field and click Format. The tool will instantly validate your JSON, highlight any syntax errors with the exact line and position, and display the formatted result with proper indentation. You can also minify JSON to reduce its size for production use.",
+    "section3Title": "Features",
+    "section3List": "Format JSON with 2-space indentation | Validate JSON with exact error location | Minify JSON to reduce file size | Copy formatted output to clipboard | 100% client-side — your data never leaves your browser"
+  }
+}
