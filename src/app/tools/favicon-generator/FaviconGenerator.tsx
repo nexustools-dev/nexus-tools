@@ -20,6 +20,25 @@ export function FaviconGenerator() {
   const previewRef = useRef<HTMLCanvasElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+  const loadedImageRef = useRef<HTMLImageElement | null>(null);
+
+  // Pre-load uploaded image so it's ready for synchronous drawing
+  useEffect(() => {
+    if (!uploadedImage) {
+      loadedImageRef.current = null;
+      return;
+    }
+    const img = new Image();
+    img.onload = () => {
+      loadedImageRef.current = img;
+      // Trigger re-render to update previews
+      setImageReady((n) => n + 1);
+    };
+    img.src = uploadedImage;
+  }, [uploadedImage]);
+
+  const [imageReady, setImageReady] = useState(0);
+
   const drawFavicon = useCallback(
     (canvas: HTMLCanvasElement, size: number) => {
       const ctx = canvas.getContext("2d")!;
@@ -34,11 +53,9 @@ export function FaviconGenerator() {
       ctx.fill();
       ctx.clip();
 
-      if (mode === "image" && uploadedImage) {
-        const img = new Image();
-        img.src = uploadedImage;
-        ctx.drawImage(img, 0, 0, size, size);
-      } else {
+      if (mode === "image" && loadedImageRef.current) {
+        ctx.drawImage(loadedImageRef.current, 0, 0, size, size);
+      } else if (mode !== "image") {
         const content = mode === "emoji" ? emoji : text;
         const computedFontSize = (fontSize / 100) * size;
         const fontFam =
@@ -50,7 +67,8 @@ export function FaviconGenerator() {
         ctx.fillText(content, size / 2, size / 2 + computedFontSize * 0.05);
       }
     },
-    [mode, text, emoji, bgColor, textColor, fontSize, fontFamily, borderRadius, uploadedImage]
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [mode, text, emoji, bgColor, textColor, fontSize, fontFamily, borderRadius, uploadedImage, imageReady]
   );
 
   useEffect(() => {
