@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
 import { useTranslations } from "next-intl";
 
 interface ImageInfo {
@@ -31,9 +31,24 @@ export function ImageCompressor() {
   const [error, setError] = useState("");
   const fileRef = useRef<HTMLInputElement>(null);
 
+  // Revoke old ObjectURLs to prevent memory leaks
+  useEffect(() => {
+    return () => {
+      if (result) {
+        URL.revokeObjectURL(result.originalUrl);
+        URL.revokeObjectURL(result.compressedUrl);
+      }
+    };
+  }, [result]);
+
   const compress = useCallback(async (file: File) => {
     setError("");
     setProcessing(true);
+    // Revoke previous URLs before creating new ones
+    if (result) {
+      URL.revokeObjectURL(result.originalUrl);
+      URL.revokeObjectURL(result.compressedUrl);
+    }
     setResult(null);
 
     try {
