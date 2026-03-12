@@ -4,6 +4,7 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { NavMenu } from "@/components/NavMenu";
 import { Inter } from "next/font/google";
 import type { Metadata } from "next";
 import "../globals.css";
@@ -71,67 +72,8 @@ export default async function LocaleLayout({ children, params }: Props) {
               <Link href="/" className="text-xl font-bold tracking-tight">
                 <span className="text-emerald-400">Nexus</span>Tools
               </Link>
-              <div className="flex items-center gap-6 text-sm text-zinc-400">
-                <Link
-                  href="/tools/favicon-generator"
-                  className="hover:text-zinc-100 transition-colors"
-                >
-                  {t("nav.faviconGenerator")}
-                </Link>
-                <Link
-                  href="/tools/json-formatter"
-                  className="hover:text-zinc-100 transition-colors"
-                >
-                  {t("nav.jsonFormatter")}
-                </Link>
-                <Link
-                  href="/tools/meta-tag-generator"
-                  className="hover:text-zinc-100 transition-colors"
-                >
-                  {t("nav.metaTags")}
-                </Link>
-                <Link
-                  href="/tools/base64-encoder"
-                  className="hover:text-zinc-100 transition-colors"
-                >
-                  {t("nav.base64")}
-                </Link>
-                <Link
-                  href="/tools/color-converter"
-                  className="hover:text-zinc-100 transition-colors"
-                >
-                  {t("nav.colors")}
-                </Link>
-                <Link
-                  href="/tools/css-unit-converter"
-                  className="hover:text-zinc-100 transition-colors"
-                >
-                  {t("nav.cssUnits")}
-                </Link>
-                <Link
-                  href="/tools/hash-generator"
-                  className="hover:text-zinc-100 transition-colors"
-                >
-                  {t("nav.hash")}
-                </Link>
-                <Link
-                  href="/tools/url-encoder"
-                  className="hover:text-zinc-100 transition-colors"
-                >
-                  {t("nav.urlEncoder")}
-                </Link>
-                <Link
-                  href="/tools/regex-tester"
-                  className="hover:text-zinc-100 transition-colors"
-                >
-                  {t("nav.regex")}
-                </Link>
-                <Link
-                  href="/tools/lorem-ipsum"
-                  className="hover:text-zinc-100 transition-colors"
-                >
-                  {t("nav.loremIpsum")}
-                </Link>
+              <div className="flex items-center gap-4">
+                <NavMenu />
                 <div className="border-l border-zinc-700 pl-4">
                   <LanguageSwitcher />
                 </div>
