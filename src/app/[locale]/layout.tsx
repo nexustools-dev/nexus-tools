@@ -62,8 +62,9 @@ export default async function LocaleLayout({ children, params }: Props) {
   const t = await getTranslations({ locale });
 
   return (
-    <html lang={locale} className="dark">
+    <html lang={locale} className="dark" translate="no">
       <head>
+        <meta name="google" content="notranslate" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#10b981" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />

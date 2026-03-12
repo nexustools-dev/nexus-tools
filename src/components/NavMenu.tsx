@@ -127,7 +127,7 @@ export function NavMenu() {
                 }}
                 className="flex items-center gap-2 px-2.5 py-2 rounded-lg text-xs text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800 transition-colors"
               >
-                <span className="w-5 h-5 flex items-center justify-center rounded bg-zinc-800 text-[8px] font-mono font-bold text-emerald-400 shrink-0">
+                <span className="w-5 h-5 flex items-center justify-center rounded bg-zinc-800 text-[8px] font-mono font-bold text-emerald-400 shrink-0" translate="no">
                   {tool.icon}
                 </span>
                 <span>{t(`${tool.key}.name`)}</span>

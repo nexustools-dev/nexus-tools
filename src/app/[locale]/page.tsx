@@ -63,6 +63,7 @@ export default async function Home({ params }: Props) {
           >
             <div
               className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-br ${tool.color} text-white font-mono font-bold text-sm mb-4`}
+              translate="no"
             >
               {tool.icon}
             </div>

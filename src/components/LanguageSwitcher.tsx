@@ -15,7 +15,7 @@ export function LanguageSwitcher() {
   const router = useRouter();
 
   return (
-    <div className="flex gap-1">
+    <div className="flex gap-1" translate="no">
       {Object.entries(localeLabels).map(([code, label]) => (
         <button
           key={code}
