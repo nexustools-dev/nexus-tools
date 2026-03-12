@@ -1,0 +1,34 @@
+{
+  "colorPaletteGenerator": {
+    "metadata": {
+      "title": "Generador de Paletas de Color — Crea Esquemas Armoniosos Online",
+      "description": "Generador de paletas de color gratuito. Crea paletas complementarias, análogas, triádicas, complementarias divididas, tetrádricas y monocromáticas desde cualquier color base. Copia variables CSS al instante. 100% en el navegador.",
+      "keywords": "generador de paletas de color, esquema de colores, colores complementarios, paleta análoga, colores triádicos, armonía de color, modelo de color HSL, variables CSS de color, teoría del color"
+    },
+    "heading": "Generador de Paletas de Color",
+    "subheading": "Elige un color base y genera paletas armoniosas usando reglas probadas de teoría del color. Previsualiza tonos, copia valores hex o variables CSS. Todo funciona en tu navegador.",
+    "ui": {
+      "howItWorksText": "Elige un color base, selecciona un tipo de armonía y obtén una paleta al instante. Haz clic en cualquier muestra para copiar su valor hex. Usa Copiar CSS para exportar todos los colores como propiedades CSS personalizadas. Ningún dato sale de tu navegador.",
+      "baseColor": "Color Base",
+      "palette": "Paleta",
+      "copyCss": "Copiar CSS",
+      "shades": "Tonos",
+      "complementary": "Complementario",
+      "analogous": "Análogo",
+      "triadic": "Triádico",
+      "splitComplementary": "Complementario Dividido",
+      "tetradic": "Tetrádico",
+      "monochromatic": "Monocromático"
+    },
+    "seo": {
+      "section1Title": "¿Qué es la armonía de color?",
+      "section1Text": "La armonía de color se refiere a la disposición de colores de forma visualmente agradable. Basada en la teoría del color, depende de las relaciones entre los tonos en el círculo cromático. Los diseñadores usan paletas armoniosas para crear interfaces que se sienten cohesionadas y equilibradas sin esfuerzo consciente por parte del espectador. Las reglas más comunes — complementario, análogo, triádico y tetrádico — no son arbitrarias: corresponden a relaciones geométricas en el círculo y explotan la manera en que el sistema visual humano percibe el contraste y la similitud.",
+      "section2Title": "El modelo de color HSL",
+      "section2Text": "HSL son las siglas de Tono (Hue), Saturación y Luminosidad (Lightness). A diferencia de RGB — que describe el color como una mezcla de luz roja, verde y azul — HSL lo describe en términos que coinciden con la forma en que los humanos piensan en el color. El tono es el ángulo en el círculo cromático (0–360°), la saturación controla qué tan vivo es el color (0% = gris, 100% = cromatismo puro) y la luminosidad controla qué tan brillante es (0% = negro, 100% = blanco). HSL hace trivial calcular armonías: los colores complementarios están a 180° de distancia, los triádicos a 120° y los análogos dentro de ±30°.",
+      "section3Title": "Tipos de armonía explicados",
+      "section3Text": "Las paletas complementarias combinan colores directamente opuestos en el círculo, creando el mayor contraste — ideal para llamadas a la acción y destacados. Las paletas análogas usan tres tonos adyacentes, produciendo una sensación tranquila y natural adecuada para fondos y áreas de contenido. Las paletas triádicas separan tres tonos a intervalos de 120°, ofreciendo variedad vibrante con equilibrio visual. El complementario dividido reemplaza el complemento directo con dos tonos que lo flanquean, suavizando el contraste. Las paletas tetrádricas (o rectangulares) usan cuatro tonos en dos pares complementarios, dando máxima variedad pero requiriendo un equilibrio cuidadoso. Las paletas monocromáticas solo varían la luminosidad de un único tono, garantizando armonía y suficiente contraste para interfaces legibles.",
+      "section4Title": "Consejos para usar paletas de color en diseño de interfaces",
+      "section4List": "Aplica la regla 60-30-10: 60% color dominante, 30% secundario, 10% acento | Las paletas monocromáticas son la opción más segura para herramientas en modo oscuro | Verifica los ratios de contraste — WCAG AA requiere al menos 4.5:1 para texto normal | Copia la salida de variables CSS y pégala directamente en tu bloque :root | Las paletas tetrádricas necesitan un color dominante claro para evitar el caos visual | Prueba tu paleta en fondos claros y oscuros antes de comprometerte"
+    }
+  }
+}

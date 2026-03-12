@@ -1,0 +1,39 @@
+{
+  "svgToPng": {
+    "metadata": {
+      "title": "SVG to PNG Converter — Free Online Tool",
+      "description": "Convert SVG files to PNG instantly in your browser. Choose output scale (1x–4x), set a background color or keep it transparent, and download high-resolution PNGs. No upload needed.",
+      "keywords": "svg to png, svg converter, svg to raster, convert svg online, svg to png free, svg rasterizer, vector to png, canvas api converter, svg scale, transparent png"
+    },
+    "heading": "SVG to PNG Converter",
+    "subheading": "Paste or upload an SVG and export it as a high-resolution PNG at 1×, 2×, 3×, or 4× scale. Transparent or solid background. Everything happens in your browser — nothing is sent to any server.",
+    "ui": {
+      "howItWorksText": "Paste SVG code or upload a .svg file, choose a scale multiplier and background, then click Convert. The Canvas API renders your vector at the target resolution and exports a lossless PNG. Nothing leaves your browser.",
+      "scale": "Scale",
+      "background": "Background",
+      "transparent": "Transparent",
+      "white": "White",
+      "black": "Black",
+      "uploadSvg": "Upload SVG",
+      "sample": "Load Sample",
+      "clear": "Clear",
+      "convert": "Convert to PNG",
+      "copySvg": "Copy SVG",
+      "downloadPng": "Download PNG",
+      "previewPlaceholder": "PNG preview will appear here",
+      "invalidSvg": "Invalid SVG — please check your markup and try again.",
+      "canvasError": "Could not initialize the canvas. Try a different browser.",
+      "convertError": "Conversion failed. The SVG may contain unsupported features."
+    },
+    "seo": {
+      "section1Title": "What is SVG and why convert it to PNG?",
+      "section1Text": "SVG (Scalable Vector Graphics) is an XML-based format that describes shapes, paths, and text mathematically. Because vectors are resolution-independent, an SVG looks sharp at any size — from a 16px favicon to a 4K billboard. However, many contexts still require raster images: email clients, apps that don't support inline SVG, social media thumbnails, or image processing pipelines that only accept PNG or JPEG. Converting SVG to PNG bridges the gap, giving you a pixel-perfect snapshot of the vector at exactly the dimensions you need.",
+      "section2Title": "How rasterization works with the Canvas API",
+      "section2Text": "This tool uses the browser's native Canvas API to rasterize your SVG without any server-side processing. The conversion pipeline works in three steps: first, the SVG string is turned into an Object URL and loaded into an HTMLImageElement; second, an HTML5 Canvas is created at the target dimensions (original size multiplied by the chosen scale factor); third, the image is drawn onto the canvas with drawImage() and the result is exported as a PNG Blob via canvas.toBlob(). The entire process runs in-memory and the output URL is a local Blob URL — no network request is made at any point.",
+      "section3Title": "Scaling SVGs for high-DPI screens",
+      "section3Text": "Modern displays (Retina, HiDPI, OLED) use a device pixel ratio of 2× or higher, meaning a CSS pixel maps to 2 or more physical pixels. If you export an SVG at 1× and display it on a 2× screen the PNG will look slightly soft. Exporting at 2× produces a PNG with twice the pixel density, which renders crisp on any HiDPI display. Use 3× or 4× when you need print-quality output or plan to downscale the image for multiple uses. The scale multiplier in this tool directly controls the canvas dimensions before rendering.",
+      "section4Title": "Tips for best conversion results",
+      "section4List": "Always define a viewBox on your SVG so the tool can derive width and height automatically | Use 2× scale for web assets on modern screens — it doubles resolution with minimal file size cost | Choose Transparent background to keep the PNG's alpha channel intact for use on coloured backgrounds | If your SVG uses external fonts, embed them as base64 data URIs inside a <style> block before converting | Avoid very large scale values (4×) on complex SVGs — Canvas rendering is CPU-bound and may be slow | Inline all <image> hrefs as base64 to avoid cross-origin errors during rasterization"
+    }
+  }
+}

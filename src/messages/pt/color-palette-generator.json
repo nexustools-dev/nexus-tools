@@ -1,0 +1,34 @@
+{
+  "colorPaletteGenerator": {
+    "metadata": {
+      "title": "Gerador de Paletas de Cores — Crie Esquemas Harmoniosos Online",
+      "description": "Gerador de paletas de cores gratuito. Crie paletas complementares, análogas, triádicas, complementares divididas, tetrádricas e monocromáticas a partir de qualquer cor base. Copie variáveis CSS na hora. 100% no navegador.",
+      "keywords": "gerador de paletas de cores, esquema de cores, cores complementares, paleta análoga, cores triádicas, harmonia de cores, modelo de cor HSL, variáveis CSS de cor, teoria das cores"
+    },
+    "heading": "Gerador de Paletas de Cores",
+    "subheading": "Escolha uma cor base e gere paletas harmoniosas usando regras comprovadas de teoria das cores. Visualize tons, copie valores hex ou variáveis CSS. Tudo funciona no seu navegador.",
+    "ui": {
+      "howItWorksText": "Escolha uma cor base, selecione um tipo de harmonia e obtenha uma paleta instantaneamente. Clique em qualquer amostra para copiar seu valor hex. Use Copiar CSS para exportar todas as cores como propriedades CSS personalizadas. Nenhum dado sai do seu navegador.",
+      "baseColor": "Cor Base",
+      "palette": "Paleta",
+      "copyCss": "Copiar CSS",
+      "shades": "Tons",
+      "complementary": "Complementar",
+      "analogous": "Análogo",
+      "triadic": "Triádico",
+      "splitComplementary": "Complementar Dividido",
+      "tetradic": "Tetrádico",
+      "monochromatic": "Monocromático"
+    },
+    "seo": {
+      "section1Title": "O que é harmonia de cores?",
+      "section1Text": "Harmonia de cores refere-se à disposição de cores de forma visualmente agradável. Baseada na teoria das cores, ela depende das relações entre as tonalidades na roda de cores. Designers utilizam paletas harmoniosas para criar interfaces que parecem coesas e equilibradas sem esforço consciente do espectador. As regras mais comuns — complementar, análoga, triádica e tetrádica — não são arbitrárias: correspondem a relações geométricas na roda e exploram a maneira como o sistema visual humano percebe contraste e similaridade.",
+      "section2Title": "O modelo de cor HSL",
+      "section2Text": "HSL é a sigla para Matiz (Hue), Saturação e Luminosidade (Lightness). Diferente do RGB — que descreve a cor como uma mistura de luz vermelha, verde e azul — o HSL a descreve em termos que correspondem à forma como os humanos pensam sobre cores. O matiz é o ângulo na roda de cores (0–360°), a saturação controla o quão viva é a cor (0% = cinza, 100% = croma puro) e a luminosidade controla o brilho (0% = preto, 100% = branco). O HSL torna trivial calcular harmonias: cores complementares estão a 180° de distância, triádicas a 120° e análogas dentro de ±30°.",
+      "section3Title": "Tipos de harmonia explicados",
+      "section3Text": "Paletas complementares combinam cores diretamente opostas na roda, criando o maior contraste — ideal para chamadas à ação e destaques. Paletas análogas usam três tonalidades adjacentes, produzindo uma sensação calma e natural, adequada para fundos e áreas de conteúdo. Paletas triádicas espaçam três tonalidades em intervalos de 120°, oferecendo variedade vibrante mantendo equilíbrio visual. O complementar dividido substitui o complemento direto por duas tonalidades que o flanqueiam, suavizando o contraste. Paletas tetrádricas (ou retangulares) usam quatro tonalidades em dois pares complementares, proporcionando máxima variedade mas exigindo equilíbrio cuidadoso. Paletas monocromáticas variam apenas a luminosidade de uma única tonalidade, garantindo harmonia com contraste suficiente para interfaces legíveis.",
+      "section4Title": "Dicas para usar paletas de cores em design de interfaces",
+      "section4List": "Aplique a regra 60-30-10: 60% cor dominante, 30% secundária, 10% destaque | Paletas monocromáticas são a escolha mais segura para ferramentas em modo escuro | Verifique as taxas de contraste — WCAG AA exige pelo menos 4.5:1 para texto normal | Copie o output de variáveis CSS e cole diretamente no seu bloco :root | Paletas tetrádricas precisam de uma cor dominante clara para evitar caos visual | Teste sua paleta em fundos claros e escuros antes de tomar uma decisão final"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "htmlEntityEncoder": {
+    "metadata": {
+      "title": "Codificador y Decodificador de Entidades HTML — Escapa Caracteres Especiales Online",
+      "description": "Codificador y decodificador de entidades HTML gratuito. Escapa caracteres especiales con entidades con nombre, decimales o hexadecimales. Previene vulnerabilidades XSS. 100% en el navegador.",
+      "keywords": "codificador entidades html, escapar html, decodificar html, entidades html, escapar caracteres especiales, prevención xss, codificar ampersand, códigos de caracteres html, entidades con nombre, entidades decimales, entidades hexadecimales"
+    },
+    "heading": "Codificador y Decodificador de Entidades HTML",
+    "subheading": "Codifica caracteres especiales en entidades HTML o decodifica entidades a texto plano. Elige formato con nombre, decimal o hexadecimal. Todo se ejecuta en tu navegador — ningún dato sale de tu equipo.",
+    "ui": {
+      "howItWorksText": "Pega o escribe tu texto, elige el modo codificar o decodificar y selecciona el formato de entidad. El resultado se actualiza al instante. Usa entidades con nombre para mayor legibilidad, decimal o hexadecimal para máxima compatibilidad. Ningún dato abandona tu navegador.",
+      "encode": "Codificar",
+      "decode": "Decodificar",
+      "encodeMode": "Formato",
+      "named": "Nombre",
+      "decimal": "Decimal",
+      "hex": "Hex",
+      "encodeAll": "Codificar Todo",
+      "clear": "Limpiar",
+      "textInput": "Texto de Entrada",
+      "entityInput": "Entrada Codificada",
+      "entityOutput": "Salida Codificada",
+      "textOutput": "Texto Decodificado",
+      "characters": "caracteres",
+      "entities": "entidades encontradas",
+      "reference": "Referencia de Entidades HTML Comunes",
+      "charCol": "Carácter",
+      "namedCol": "Nombre",
+      "decimalCol": "Decimal",
+      "hexCol": "Hex",
+      "descCol": "Descripción"
+    },
+    "seo": {
+      "section1Title": "¿Qué son las entidades HTML?",
+      "section1Text": "Las entidades HTML son secuencias especiales que representan caracteres con un significado reservado en HTML o que no pueden escribirse directamente en el código fuente. El ejemplo más importante es el ampersand (&), que marca el inicio de toda entidad y debe escribirse como &amp; cuando aparece como texto literal. Del mismo modo, el signo menor que (<) debe escribirse como &lt; para que el navegador no lo interprete como la apertura de una etiqueta HTML. Las entidades tienen tres formatos: con nombre (&amp;), decimal (&#38;) y hexadecimal (&#x26;). Los tres representan el mismo carácter — la elección depende de la preferencia de legibilidad y la compatibilidad con el analizador de destino.",
+      "section2Title": "¿Por qué codificar caracteres HTML?",
+      "section2Text": "Codificar caracteres HTML es fundamental por dos razones: corrección y seguridad. En cuanto a la corrección, caracteres como <, > y & forman parte de la sintaxis HTML. Si aparecen sin escapar en el contenido de texto, los navegadores pueden interpretarlos como marcado y romper el diseño de la página. En cuanto a la seguridad, no codificar la entrada del usuario antes de renderizarla en HTML es la causa raíz de los ataques de Cross-Site Scripting (XSS), una de las vulnerabilidades web más frecuentes. Un atacante puede inyectar una etiqueta <script> a través de un campo de formulario o parámetro de URL, y si el servidor muestra esa entrada sin codificar, el script malicioso se ejecuta en el navegador de cada visitante. Siempre codifica la salida, nunca confíes en la entrada sin procesar.",
+      "section3Title": "Entidades con Nombre vs Decimal vs Hex",
+      "section3Text": "Las entidades con nombre como &copy;, &euro; y &mdash; son legibles por humanos y están ampliamente soportadas en todos los navegadores modernos. Las entidades decimales usan el punto de código Unicode en base 10 (&#169; para ©), mientras que las hexadecimales usan base 16 (&#xA9; para el mismo carácter). Las entidades con nombre solo existen para un subconjunto definido de caracteres Unicode — para cualquier carácter fuera de ese subconjunto es necesario usar decimal o hexadecimal. La notación hexadecimal se alinea de forma natural con la documentación Unicode (por ejemplo, U+0026 corresponde a &#x26;), lo que la convierte en la opción preferida al trabajar con tablas de códigos Unicode. En los atributos HTML, codifica siempre las comillas dobles como &quot; o &#34; para prevenir la inyección en atributos.",
+      "section4Title": "Buenas prácticas con entidades HTML",
+      "section4List": "Codifica siempre la entrada del usuario antes de renderizarla en HTML para prevenir ataques XSS | Codifica & como &amp; primero, antes que cualquier otro carácter, para evitar la doble codificación | Usa entidades con nombre para símbolos comunes como &copy;, &reg; y &trade; para mejor legibilidad | Usa entidades decimales o hexadecimales para cualquier carácter Unicode por encima de U+007F cuando apuntes a analizadores heredados | Dentro de atributos HTML, codifica ambas comillas (\" y ') para prevenir la inyección que rompe atributos | Activa \"Codificar Todo\" para forzar la codificación de todos los caracteres no ASCII y maximizar la portabilidad | Decodifica las entidades antes de procesar la lógica del texto — nunca operes sobre cadenas de entidades sin procesar | &nbsp; (espacio de no separación) evita saltos de línea no deseados, pero no debe reemplazar espacios normales de forma masiva"
+    }
+  }
+}

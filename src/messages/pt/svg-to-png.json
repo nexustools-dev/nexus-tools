@@ -1,0 +1,39 @@
+{
+  "svgToPng": {
+    "metadata": {
+      "title": "Conversor SVG para PNG — Ferramenta Online Gratuita",
+      "description": "Converta arquivos SVG para PNG diretamente no navegador. Escolha a escala de saída (1x–4x), defina uma cor de fundo ou mantenha transparente, e baixe PNGs em alta resolução. Sem envio de arquivos.",
+      "keywords": "svg para png, converter svg, svg para raster, converter svg online, svg para png gratis, rasterizador svg, vetor para png, canvas api, escalar svg, png transparente"
+    },
+    "heading": "Conversor SVG para PNG",
+    "subheading": "Cole ou envie um SVG e exporte-o como PNG em alta resolução nas escalas 1×, 2×, 3× ou 4×. Fundo transparente ou sólido. Tudo acontece no seu navegador — nenhum dado é enviado a nenhum servidor.",
+    "ui": {
+      "howItWorksText": "Cole o código SVG ou envie um arquivo .svg, escolha o multiplicador de escala e o fundo, e clique em Converter. A Canvas API renderiza o vetor na resolução escolhida e exporta um PNG sem perdas. Nada sai do seu navegador.",
+      "scale": "Escala",
+      "background": "Fundo",
+      "transparent": "Transparente",
+      "white": "Branco",
+      "black": "Preto",
+      "uploadSvg": "Enviar SVG",
+      "sample": "Carregar exemplo",
+      "clear": "Limpar",
+      "convert": "Converter para PNG",
+      "copySvg": "Copiar SVG",
+      "downloadPng": "Baixar PNG",
+      "previewPlaceholder": "A prévia do PNG aparecerá aqui",
+      "invalidSvg": "SVG inválido — verifique o código e tente novamente.",
+      "canvasError": "Não foi possível inicializar o canvas. Tente em outro navegador.",
+      "convertError": "A conversão falhou. O SVG pode conter recursos não suportados."
+    },
+    "seo": {
+      "section1Title": "O que é SVG e por que converter para PNG?",
+      "section1Text": "SVG (Scalable Vector Graphics) é um formato baseado em XML que descreve formas, caminhos e texto de forma matemática. Por serem vetoriais, os SVGs ficam nítidos em qualquer tamanho — de um favicon de 16px a um banner 4K. Porém, muitos contextos ainda exigem imagens raster: clientes de e-mail, aplicativos que não suportam SVG inline, miniaturas em redes sociais ou pipelines de processamento que só aceitam PNG ou JPEG. Converter SVG para PNG resolve esse problema, gerando um snapshot pixel a pixel do vetor exatamente nas dimensões necessárias.",
+      "section2Title": "Como a rasterização funciona com a Canvas API",
+      "section2Text": "Esta ferramenta usa a Canvas API nativa do navegador para rasterizar o SVG sem nenhum processamento no servidor. O pipeline de conversão funciona em três etapas: primeiro, a string SVG é transformada em uma Object URL e carregada em um HTMLImageElement; segundo, um canvas HTML5 é criado com as dimensões de destino (tamanho original multiplicado pelo fator de escala escolhido); terceiro, a imagem é desenhada no canvas com drawImage() e o resultado é exportado como Blob PNG via canvas.toBlob(). Todo o processo ocorre em memória e a URL gerada é uma Blob URL local — nenhuma requisição de rede é feita em nenhum momento.",
+      "section3Title": "Escalando SVGs para telas de alta densidade",
+      "section3Text": "As telas modernas (Retina, HiDPI, OLED) têm uma proporção de pixels de dispositivo de 2× ou mais, o que significa que um pixel CSS equivale a 2 ou mais pixels físicos. Se você exportar o SVG em 1× e exibi-lo em uma tela 2×, o PNG parecerá levemente desfocado. Exportar em 2× produz um PNG com o dobro da densidade de pixels, que fica nítido em qualquer tela HiDPI. Use 3× ou 4× quando precisar de qualidade para impressão ou planeja redimensionar a imagem para múltiplos usos. O multiplicador de escala desta ferramenta controla diretamente as dimensões do canvas antes da renderização.",
+      "section4Title": "Dicas para melhores resultados na conversão",
+      "section4List": "Sempre defina um viewBox no SVG para que a ferramenta possa derivar largura e altura automaticamente | Use escala 2× para assets web em telas modernas — dobra a resolução com custo mínimo no tamanho do arquivo | Escolha fundo Transparente para preservar o canal alfa do PNG e usá-lo sobre fundos coloridos | Se o SVG usar fontes externas, incorpore-as como URIs base64 dentro de um bloco <style> antes de converter | Evite valores de escala muito altos (4×) em SVGs complexos — a renderização no Canvas depende da CPU e pode ser lenta | Incorpore todos os href de <image> em base64 para evitar erros de cross-origin durante a rasterização"
+    }
+  }
+}

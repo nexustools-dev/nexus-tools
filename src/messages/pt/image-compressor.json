@@ -1,0 +1,37 @@
+{
+  "imageCompressor": {
+    "metadata": {
+      "title": "Compressor de Imagens — Comprima JPG, WebP e PNG Online Grátis",
+      "description": "Compressor de imagens gratuito online. Reduza o tamanho de arquivos JPEG, WebP e PNG usando a Canvas API — 100% no navegador, sem uploads, sem servidor. Ajuste qualidade e redimensione na hora.",
+      "keywords": "compressor de imagens online, comprimir jpeg, comprimir webp, comprimir png, reduzir tamanho imagem, otimizador de imagens navegador, compressão canvas api, compressor imagens grátis"
+    },
+    "heading": "Compressor de Imagens",
+    "subheading": "Comprima imagens JPEG, WebP e PNG diretamente no seu navegador. Ajuste a qualidade, escolha o formato de saída, redimensione se quiser e baixe o resultado. Nenhum arquivo sai do seu dispositivo.",
+    "ui": {
+      "howItWorksText": "Selecione ou arraste uma imagem, escolha o formato de saída e a qualidade, e baixe o arquivo comprimido. Tudo roda no seu navegador via Canvas API — suas imagens nunca são enviadas a nenhum servidor.",
+      "format": "Formato",
+      "quality": "Qualidade",
+      "maxWidth": "Largura máxima",
+      "noResize": "Sem redimensionar",
+      "processing": "Processando…",
+      "dropzone": "Solte uma imagem aqui ou clique para selecionar",
+      "loadError": "Não foi possível carregar a imagem. Tente com outro arquivo.",
+      "canvasError": "Não foi possível inicializar o canvas. Tente em outro navegador.",
+      "compressError": "A compressão falhou. O arquivo pode ser muito grande ou ter um formato não suportado.",
+      "original": "Original",
+      "compressed": "Comprimida",
+      "savings": "Economia",
+      "download": "Baixar"
+    },
+    "seo": {
+      "section1Title": "Por que comprimir imagens?",
+      "section1Text": "As imagens são os recursos mais pesados na maioria das páginas web, representando frequentemente 60–80% do peso total da página. Imagens não otimizadas tornam o carregamento mais lento, prejudicam as pontuações de Core Web Vitals e custam dinheiro real aos usuários móveis em dados. Comprimir uma imagem reduz seu tamanho descartando informações que o olho humano mal percebe — uma foto de 200 KB pode chegar a 40–60 KB com qualidade 80 sem degradação visível. Páginas mais leves ranqueiam melhor no Google, carregam mais rápido em conexões lentas e mantêm os visitantes engajados em vez de fazê-los sair.",
+      "section2Title": "JPEG vs WebP vs PNG — Qual formato usar?",
+      "section2Text": "O JPEG é a escolha clássica para fotografias e imagens com gradientes ricos. Ele usa compressão com perda, o que significa que parte dos dados é removida permanentemente, mas os resultados são excelentes para fotografia com configurações de qualidade acima de 70. O WebP é o formato moderno do Google que supera o JPEG em 25–35% na mesma qualidade perceptual — ele suporta modos com e sem perda, tornando-o ideal para entrega na web. O PNG usa compressão sem perda e preserva cada pixel perfeitamente; é melhor para capturas de tela, ícones, logotipos e imagens com áreas de cor sólida ou transparência. Como regra: prefira WebP para a web, JPEG para compatibilidade e PNG apenas quando a fidelidade perfeita for necessária.",
+      "section3Title": "Como funciona a compressão no navegador",
+      "section3Text": "Esta ferramenta comprime imagens completamente dentro do seu navegador usando a Canvas API do HTML5 — sem nenhum envolvimento de servidor. O processo funciona em três etapas: primeiro, a imagem é decodificada e desenhada em um elemento canvas oculto nas dimensões alvo; segundo, canvas.toBlob() recodifica os dados de pixel para o formato e nível de qualidade escolhidos; terceiro, o Blob resultante é oferecido como arquivo para download. Como tudo acontece localmente, não há latência esperando por uploads, nenhum risco à privacidade e nenhum limite de tamanho imposto por um servidor. A etapa opcional de redimensionamento escala a imagem proporcionalmente antes de codificar, o que frequentemente produz reduções drásticas de tamanho quando a imagem fonte é muito maior que seu tamanho de exibição.",
+      "section4Title": "Dicas de compressão para desenvolvedores",
+      "section4List": "Comece com qualidade 80 para JPEG/WebP — é o ponto ideal entre tamanho de arquivo e fidelidade visual para a maioria das fotografias | Use WebP em vez de JPEG ao mirar navegadores modernos; economiza 25–35% sem perda de qualidade | Arquivos PNG são sem perda — use esta ferramenta para converter PNGs para WebP ou JPEG e obter economias significativas | Defina uma largura máxima que corresponda ao maior breakpoint do seu layout (geralmente 1280px ou 1920px) para evitar servir imagens superdimensionadas | Qualidade abaixo de 60 raramente vale a pena — artefatos ficam evidentes e a confiança do usuário cai | Para imagens hero, mire abaixo de 100 KB; para miniaturas, tente chegar a 10–30 KB | Sempre sirva imagens comprimidas de uma CDN com cabeçalhos Cache-Control adequados para máximo desempenho"
+    }
+  }
+}

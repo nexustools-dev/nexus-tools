@@ -1,0 +1,44 @@
+{
+  "textShadowGenerator": {
+    "metadata": {
+      "title": "Gerador de Text-Shadow CSS — Efeitos de Tipografia Online",
+      "description": "Gerador gratuito de text-shadow CSS. Adicione múltiplas camadas de sombra, ajuste deslocamento, desfoque e cor com pré-visualização ao vivo. Efeitos neon, retro e mais. Copie o CSS na hora.",
+      "keywords": "gerador text-shadow css, sombra texto css, efeito neon css, texto brilhante css, efeitos tipografia css, gerador sombra online, css texto com brilho, text shadow maker"
+    },
+    "heading": "Gerador de Text-Shadow",
+    "subheading": "Crie efeitos CSS text-shadow visualmente com pré-visualização ao vivo. Escolha um preset ou construa o seu com múltiplas camadas de sombra. Copie o CSS com um clique. Tudo roda no seu navegador.",
+    "ui": {
+      "howItWorksText": "Escolha um preset ou adicione camadas de sombra manualmente. Ajuste o deslocamento, desfoque e cor de cada camada, depois copie o CSS. A pré-visualização atualiza em tempo real. Você pode empilhar até 5 sombras para efeitos complexos. Nenhum dado é enviado ao servidor.",
+      "preview": "Pré-visualização",
+      "previewText": "Texto de exemplo",
+      "shadows": "Sombras",
+      "addShadow": "Adicionar sombra",
+      "offsetX": "X",
+      "offsetY": "Y",
+      "blur": "Desfoque",
+      "color": "Cor",
+      "size": "Tamanho",
+      "textColor": "Texto",
+      "bgColor": "Fundo",
+      "css": "CSS",
+      "copy": "Copiar",
+      "presets": "Presets",
+      "simple": "Simples",
+      "glow": "Brilho",
+      "neon": "Neon",
+      "retro": "Retrô",
+      "emboss": "Relevo",
+      "fire": "Fogo"
+    },
+    "seo": {
+      "section1Title": "O que é CSS text-shadow?",
+      "section1Text": "A propriedade CSS text-shadow adiciona um ou mais efeitos de sombra diretamente nos caracteres do texto. Ao contrário do box-shadow, que envolve o container do elemento, o text-shadow acompanha cada curva e traço de cada letra. Isso a torna ideal para efeitos tipográficos, desde sombras sutis que adicionam profundidade até brilhos neon intensos. As sombras são empilhadas na ordem em que são declaradas, com a primeira ficando por cima. Elas não afetam o fluxo do layout, então adicionar ou remover sombras nunca desloca os elementos ao redor. Todos os navegadores modernos suportam text-shadow com ótima performance, tornando-a uma escolha segura e leve para qualquer projeto.",
+      "section2Title": "Sintaxe do text-shadow no CSS",
+      "section2Text": "O shorthand do text-shadow aceita três valores de comprimento e uma cor: offset-x, offset-y, blur-radius e color. O offset-x desloca a sombra horizontalmente (positivo vai para a direita, negativo para a esquerda). O offset-y a desloca verticalmente (positivo vai para baixo). O blur-radius controla a suavidade da borda: um valor de 0 produz uma sombra nítida e dura, enquanto valores maiores geram um brilho difuso. A cor aceita qualquer valor CSS válido, incluindo rgba() e hsla() para controle de opacidade. O blur-radius pode ser omitido e terá valor 0 por padrão. Para múltiplas sombras, declare-as como uma lista separada por vírgulas na mesma propriedade.",
+      "section3Title": "Efeitos criativos: neon, brilho, retrô e relevo",
+      "section3Text": "Empilhar múltiplos text-shadows abre uma grande variedade de estilos visuais. O brilho neon é alcançado com duas ou três sombras do mesmo tom em raios de desfoque crescentes e opacidade decrescente, sem deslocamento. O texto retrô 3D usa sombras nítidas (blur 0) com deslocamentos fixos em cores contrastantes. Os efeitos de relevo combinam uma sombra clara com deslocamentos negativos e uma sombra escura com deslocamentos positivos, criando a ilusão de que o texto emerge do fundo. Os efeitos de fogo empilham sombras em vermelho, laranja e amarelo com deslocamento vertical negativo, simulando chamas para cima. Entender esses blocos base permite compor praticamente qualquer efeito tipográfico sem usar uma única imagem.",
+      "section4Title": "Dicas e boas práticas para text-shadow",
+      "section4List": "Use cores rgba() para controlar a opacidade de cada sombra sem afetar a cor do texto | Um blur de 0 cria sombras duras estilo retrô, ótimas para interfaces vintage ou de games | Empilhe 2 ou 3 sombras com blur crescente para um brilho suave e realista | Evite mais de 4 camadas de sombra em texto animado, pois cada camada tem custo de renderização | Teste em fundos claros e escuros: uma sombra invisível no escuro pode ficar muito marcada no claro | Mantenha os offsets pequenos (1–4px) para profundidade sutil que não prejudique a legibilidade"
+    }
+  }
+}

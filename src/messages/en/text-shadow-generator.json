@@ -1,0 +1,44 @@
+{
+  "textShadowGenerator": {
+    "metadata": {
+      "title": "CSS Text Shadow Generator — Create Typography Effects Online",
+      "description": "Free online CSS text-shadow generator. Add multiple shadow layers, adjust offset, blur, and color with live preview. Create neon glows, retro effects, and more. Copy CSS instantly.",
+      "keywords": "css text shadow generator, text shadow maker, neon text effect, glow text css, css typography effects, text shadow online, font shadow generator, css text glow"
+    },
+    "heading": "Text Shadow Generator",
+    "subheading": "Design CSS text-shadow effects visually with live preview. Choose a preset or build your own with multiple shadow layers. Copy the CSS code in one click. Everything runs in your browser.",
+    "ui": {
+      "howItWorksText": "Pick a preset or add shadow layers manually. Adjust offset, blur, and color for each layer, then copy the CSS. The preview updates in real-time. Up to 5 shadows can be stacked for complex effects. No data is sent to any server.",
+      "preview": "Preview",
+      "previewText": "Preview text",
+      "shadows": "Shadows",
+      "addShadow": "Add Shadow",
+      "offsetX": "X",
+      "offsetY": "Y",
+      "blur": "Blur",
+      "color": "Color",
+      "size": "Size",
+      "textColor": "Text",
+      "bgColor": "Background",
+      "css": "CSS",
+      "copy": "Copy",
+      "presets": "Presets",
+      "simple": "Simple",
+      "glow": "Glow",
+      "neon": "Neon",
+      "retro": "Retro",
+      "emboss": "Emboss",
+      "fire": "Fire"
+    },
+    "seo": {
+      "section1Title": "What is CSS text-shadow?",
+      "section1Text": "The CSS text-shadow property adds one or more shadow effects directly to text characters. Unlike box-shadow, which wraps the element container, text-shadow follows every curve and stroke of each letter. This makes it ideal for typographic effects — from subtle depth to vivid neon glows. Shadows are layered in the order they are declared, with the first shadow on top. They don't affect layout flow, so adding or removing shadows never shifts surrounding elements. All modern browsers support text-shadow with excellent performance, making it a safe and lightweight choice for any project.",
+      "section2Title": "CSS text-shadow Syntax",
+      "section2Text": "The text-shadow shorthand takes three length values and a color: offset-x, offset-y, blur-radius, and color. Offset-x shifts the shadow horizontally (positive moves right, negative moves left). Offset-y shifts it vertically (positive moves down). Blur-radius controls how soft the shadow edge is — a value of 0 produces a sharp, hard shadow, while higher values create a diffuse glow. The color accepts any valid CSS color including rgba() and hsla() for transparency. You can omit the blur-radius and it defaults to 0. Multiple shadows are declared as a comma-separated list on the same property.",
+      "section3Title": "Creative Effects: Neon, Glow, Retro, and Emboss",
+      "section3Text": "Layering multiple text shadows unlocks a wide range of visual styles. A neon glow is achieved with two or three shadows of the same hue at increasing blur radii and decreasing opacity, with no offset. Retro 3D text uses sharp shadows (blur 0) at fixed offsets, stacked in contrasting colors. Emboss effects combine a light shadow at negative offsets with a dark shadow at positive offsets, giving the illusion that text is raised from the background. Fire effects layer red, orange, and yellow shadows with negative y-offsets to simulate upward flames. Understanding these building blocks lets you compose virtually any typographic effect without a single image.",
+      "section4Title": "Text Shadow Tips and Best Practices",
+      "section4List": "Use rgba() colors to control opacity per shadow without affecting text color | A blur of 0 creates hard retro-style shadows — great for vintage and game UI | Stack 2–3 shadows with increasing blur for a realistic soft glow | Avoid more than 4 shadow layers on text that animates — each layer adds paint cost | Test dark and light backgrounds: a shadow invisible on dark may look harsh on light | Keep offset values small (1–4px) for subtle depth that doesn't distract from readability"
+    }
+  }
+}

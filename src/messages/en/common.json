@@ -28,7 +28,13 @@
     "chmodCalculator": "Chmod",
     "boxShadowGenerator": "Box Shadow",
     "borderRadiusGenerator": "Border Radius",
-    "aspectRatioCalculator": "Aspect Ratio"
+    "aspectRatioCalculator": "Aspect Ratio",
+    "imageCompressor": "Image Compress",
+    "svgToPng": "SVG to PNG",
+    "htmlEntityEncoder": "HTML Entities",
+    "colorPaletteGenerator": "Color Palette",
+    "textShadowGenerator": "Text Shadow",
+    "csvToSql": "CSV to SQL"
   },
   "footer": {
     "privacy": "All tools run 100% in your browser. No data is sent to any server.",
@@ -162,6 +168,30 @@
       "aspectRatioCalculator": {
         "name": "Aspect Ratio Calculator",
         "description": "Calculate aspect ratios from dimensions. Lock ratio, common presets, resolution table, and CSS output."
+      },
+      "imageCompressor": {
+        "name": "Image Compressor",
+        "description": "Compress images in your browser. Adjust quality, resize, and convert to JPEG, WebP, or PNG. No uploads."
+      },
+      "svgToPng": {
+        "name": "SVG to PNG Converter",
+        "description": "Convert SVG code or files to PNG images. Choose scale (1x–4x), background color, and download instantly."
+      },
+      "htmlEntityEncoder": {
+        "name": "HTML Entity Encoder",
+        "description": "Encode and decode HTML entities. Named, decimal, and hex formats. Reference table for common characters."
+      },
+      "colorPaletteGenerator": {
+        "name": "Color Palette Generator",
+        "description": "Generate color palettes from a base color. Complementary, analogous, triadic, and more harmony types with shades."
+      },
+      "textShadowGenerator": {
+        "name": "Text Shadow Generator",
+        "description": "Create CSS text-shadow effects visually. Multiple layers, live preview, presets like neon, glow, retro, and fire."
+      },
+      "csvToSql": {
+        "name": "CSV to SQL Converter",
+        "description": "Convert CSV data to SQL INSERT statements. Supports PostgreSQL, MySQL, SQLite, and SQL Server dialects."
       }
     }
   },

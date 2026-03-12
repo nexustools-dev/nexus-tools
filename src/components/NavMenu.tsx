@@ -33,6 +33,12 @@ const TOOLS = [
   { key: "boxShadowGenerator", href: "/tools/box-shadow-generator", icon: "SH" },
   { key: "borderRadiusGenerator", href: "/tools/border-radius-generator", icon: "BR" },
   { key: "aspectRatioCalculator", href: "/tools/aspect-ratio-calculator", icon: "16:9" },
+  { key: "imageCompressor", href: "/tools/image-compressor", icon: "ZIP" },
+  { key: "svgToPng", href: "/tools/svg-to-png", icon: "SVG" },
+  { key: "htmlEntityEncoder", href: "/tools/html-entity-encoder", icon: "&;" },
+  { key: "colorPaletteGenerator", href: "/tools/color-palette-generator", icon: "PAL" },
+  { key: "textShadowGenerator", href: "/tools/text-shadow-generator", icon: "TxS" },
+  { key: "csvToSql", href: "/tools/csv-to-sql", icon: "C→S" },
 ] as const;
 
 export function NavMenu() {

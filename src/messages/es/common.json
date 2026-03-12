@@ -28,7 +28,13 @@
     "chmodCalculator": "Chmod",
     "boxShadowGenerator": "Box Shadow",
     "borderRadiusGenerator": "Border Radius",
-    "aspectRatioCalculator": "Aspect Ratio"
+    "aspectRatioCalculator": "Aspect Ratio",
+    "imageCompressor": "Comprimir Imagen",
+    "svgToPng": "SVG a PNG",
+    "htmlEntityEncoder": "Entidades HTML",
+    "colorPaletteGenerator": "Paleta Colores",
+    "textShadowGenerator": "Text Shadow",
+    "csvToSql": "CSV a SQL"
   },
   "footer": {
     "privacy": "Todas las herramientas funcionan 100% en tu navegador. No se envían datos a ningún servidor.",
@@ -162,6 +168,30 @@
       "aspectRatioCalculator": {
         "name": "Calculadora de Aspect Ratio",
         "description": "Calcula relaciones de aspecto a partir de dimensiones. Bloqueo de ratio, presets comunes, tabla de resoluciones y salida CSS."
+      },
+      "imageCompressor": {
+        "name": "Compresor de Imágenes",
+        "description": "Comprime imágenes en tu navegador. Ajusta calidad, redimensiona y convierte a JPEG, WebP o PNG. Sin subidas."
+      },
+      "svgToPng": {
+        "name": "Convertidor SVG a PNG",
+        "description": "Convierte código o archivos SVG a imágenes PNG. Elige escala (1x–4x), color de fondo y descarga al instante."
+      },
+      "htmlEntityEncoder": {
+        "name": "Codificador de Entidades HTML",
+        "description": "Codifica y decodifica entidades HTML. Formatos con nombre, decimal y hexadecimal. Tabla de referencia de caracteres comunes."
+      },
+      "colorPaletteGenerator": {
+        "name": "Generador de Paletas de Color",
+        "description": "Genera paletas de color desde un color base. Complementarios, análogos, triádicos y más tipos de armonía con matices."
+      },
+      "textShadowGenerator": {
+        "name": "Generador de Text Shadow",
+        "description": "Crea efectos CSS text-shadow visualmente. Múltiples capas, vista previa en vivo, presets como neón, resplandor, retro y fuego."
+      },
+      "csvToSql": {
+        "name": "Convertidor CSV a SQL",
+        "description": "Convierte datos CSV a sentencias INSERT SQL. Soporta PostgreSQL, MySQL, SQLite y SQL Server."
       }
     }
   },

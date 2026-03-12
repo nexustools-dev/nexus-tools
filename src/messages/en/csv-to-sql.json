@@ -1,0 +1,35 @@
+{
+  "csvToSql": {
+    "metadata": {
+      "title": "CSV to SQL Converter — Generate INSERT Statements Online",
+      "description": "Free online CSV to SQL converter. Paste any CSV and get INSERT statements for PostgreSQL, MySQL, SQLite, or SQL Server instantly. Supports batch inserts, CREATE TABLE, and custom delimiters. 100% browser-based.",
+      "keywords": "csv to sql, csv to insert statement, csv to mysql, csv to postgresql, csv converter sql, generate insert statements, batch insert sql, import csv database, sql from csv online"
+    },
+    "heading": "CSV to SQL Converter",
+    "subheading": "Paste your CSV data and get ready-to-run INSERT statements for PostgreSQL, MySQL, SQLite, or SQL Server. Supports batch inserts, optional CREATE TABLE, and custom delimiters. Nothing leaves your browser.",
+    "ui": {
+      "howItWorksText": "Paste your CSV, choose a dialect and table name, then copy the generated SQL. Batch size controls how many rows are grouped in a single INSERT. The preview table shows the first 5 rows so you can verify parsing before copying. No data is sent to any server.",
+      "tableName": "Table name",
+      "delimiter": "Delimiter",
+      "batchSize": "Batch size",
+      "createTable": "Include CREATE TABLE",
+      "csvInput": "CSV Input",
+      "rows": "rows",
+      "columns": "columns",
+      "csvPlaceholder": "Paste CSV here — first row must be the header",
+      "sqlOutput": "SQL Output",
+      "noData": "SQL will appear here once you paste valid CSV data above",
+      "preview": "Preview"
+    },
+    "seo": {
+      "section1Title": "What is a CSV to SQL converter?",
+      "section1Text": "A CSV to SQL converter reads comma-separated values (or any delimiter) and produces SQL INSERT statements that load that data into a relational database. Instead of writing dozens of INSERT lines by hand, you paste your spreadsheet export and get production-ready SQL in seconds. This tool supports four major dialects — PostgreSQL, MySQL, SQLite, and SQL Server — each with its own quoting rules, boolean handling, and syntax differences. Values are automatically detected as numbers, booleans, NULL, or strings, and string values are properly escaped to prevent SQL injection in manual imports.",
+      "section2Title": "Understanding INSERT statements",
+      "section2Text": "The standard INSERT syntax is: INSERT INTO table_name (col1, col2) VALUES (val1, val2). This tool generates one statement per row by default, which is the safest and most portable approach. Each column identifier is quoted according to the chosen dialect — backticks for MySQL, square brackets for SQL Server, double quotes for PostgreSQL and SQLite. String values use single quotes with internal single quotes doubled (the standard SQL escaping method). Numeric values are written bare without quotes, and empty cells or cells containing the literal text 'null' are converted to the SQL NULL keyword.",
+      "section3Title": "Batch inserts and performance",
+      "section3Text": "When inserting thousands of rows, individual INSERT statements are slow because each one requires a separate round-trip to the database. Batch inserts group multiple rows into a single statement: INSERT INTO t (a, b) VALUES (1, 2), (3, 4), (5, 6). This dramatically reduces network overhead and transaction count. This converter lets you choose a batch size of 1 (one row per statement), 50, 100, 500, or 1000 rows. A batch size of 100 is a safe default for most databases. Note that SQL Server does not support multi-row VALUES syntax in the same way, so batching is disabled automatically for that dialect.",
+      "section4Title": "Tips for reliable CSV imports",
+      "section4List": "Always verify the first row is the header — column names become SQL identifiers | Use the delimiter selector if your CSV uses semicolons (common in European locales) or tabs | Enable 'Include CREATE TABLE' to get a table definition alongside the inserts | Review the preview table to catch parsing errors before copying the SQL | For large files, prefer batch size 500–1000 to reduce import time | Run imports inside a transaction (BEGIN / COMMIT) so you can roll back on error"
+    }
+  }
+}

@@ -34,6 +34,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/tools/box-shadow-generator", changeFrequency: "monthly" as const, priority: 0.8 },
     { path: "/tools/border-radius-generator", changeFrequency: "monthly" as const, priority: 0.8 },
     { path: "/tools/aspect-ratio-calculator", changeFrequency: "monthly" as const, priority: 0.8 },
+    { path: "/tools/image-compressor", changeFrequency: "monthly" as const, priority: 0.8 },
+    { path: "/tools/svg-to-png", changeFrequency: "monthly" as const, priority: 0.8 },
+    { path: "/tools/html-entity-encoder", changeFrequency: "monthly" as const, priority: 0.8 },
+    { path: "/tools/color-palette-generator", changeFrequency: "monthly" as const, priority: 0.8 },
+    { path: "/tools/text-shadow-generator", changeFrequency: "monthly" as const, priority: 0.8 },
+    { path: "/tools/csv-to-sql", changeFrequency: "monthly" as const, priority: 0.8 },
   ];
 
   return paths.flatMap(({ path, changeFrequency, priority }) =>

@@ -1,0 +1,44 @@
+{
+  "htmlEntityEncoder": {
+    "metadata": {
+      "title": "HTML Entity Encoder & Decoder — Escape Special Characters Online",
+      "description": "Free online HTML entity encoder and decoder. Escape special characters using named, decimal, or hex entities. Prevent XSS vulnerabilities and render HTML safely. 100% browser-based.",
+      "keywords": "html entity encoder, html escape, html decode, html entities, escape special characters, xss prevention, ampersand encode, html character codes, named entities, decimal entities, hex entities"
+    },
+    "heading": "HTML Entity Encoder & Decoder",
+    "subheading": "Encode special characters into HTML entities or decode entities back to plain text. Choose named, decimal, or hex format. Everything runs in your browser — no data is sent to any server.",
+    "ui": {
+      "howItWorksText": "Paste or type your text, choose encode or decode mode, then pick an entity format. The output updates instantly. Use named entities for readability, decimal or hex for maximum compatibility. No data leaves your browser.",
+      "encode": "Encode",
+      "decode": "Decode",
+      "encodeMode": "Format",
+      "named": "Named",
+      "decimal": "Decimal",
+      "hex": "Hex",
+      "encodeAll": "Encode All",
+      "clear": "Clear",
+      "textInput": "Input Text",
+      "entityInput": "Encoded Input",
+      "entityOutput": "Encoded Output",
+      "textOutput": "Decoded Text",
+      "characters": "characters",
+      "entities": "entities found",
+      "reference": "Common HTML Entities Reference",
+      "charCol": "Char",
+      "namedCol": "Named",
+      "decimalCol": "Decimal",
+      "hexCol": "Hex",
+      "descCol": "Description"
+    },
+    "seo": {
+      "section1Title": "What Are HTML Entities?",
+      "section1Text": "HTML entities are special sequences used to represent characters that either have a reserved meaning in HTML or cannot be typed directly in source code. The most critical example is the ampersand (&), which marks the start of every entity itself and must be written as &amp; when it appears as literal text. Similarly, the less-than sign (<) must be written as &lt; to prevent the browser from interpreting it as the opening of an HTML tag. Entities follow three formats: named (&amp;), decimal (&#38;), and hexadecimal (&#x26;). All three refer to the same character — the choice depends on readability preference and target parser compatibility.",
+      "section2Title": "Why Encode HTML Characters?",
+      "section2Text": "Encoding HTML characters is essential for two reasons: correctness and security. On the correctness side, characters like <, >, and & are part of HTML syntax. If they appear unescaped in text content, browsers may misinterpret them as markup, breaking the page layout. On the security side, failing to encode user-supplied input before rendering it in HTML is the root cause of Cross-Site Scripting (XSS) attacks — one of the most common web vulnerabilities. An attacker can inject a <script> tag through a form field or URL parameter, and if the server renders that input without encoding, the malicious script executes in every visitor's browser. Always encode output, never trust raw input.",
+      "section3Title": "Named vs Decimal vs Hex Entities",
+      "section3Text": "Named entities like &copy;, &euro;, and &mdash; are human-readable and widely supported in all modern browsers. Decimal entities use the Unicode code point in base-10 (&#169; for ©), while hexadecimal entities use base-16 (&#xA9; for the same character). Named entities only exist for a defined subset of Unicode characters — for anything outside that subset, you must use decimal or hex. Hex notation aligns naturally with Unicode documentation (e.g., U+0026 maps to &#x26;), making it the preferred choice when working with Unicode code charts. For HTML attributes, always encode double quotes as &quot; or &#34; to prevent attribute injection.",
+      "section4Title": "HTML Entity Best Practices",
+      "section4List": "Always encode user input before rendering it in HTML to prevent XSS attacks | Encode & as &amp; first, before encoding any other character, to avoid double-encoding | Use named entities for common symbols like &copy;, &reg;, and &trade; for better readability | Use decimal or hex entities for any Unicode character above U+007F when targeting legacy parsers | Inside HTML attributes, encode both quotes (\" and ') to prevent attribute-breaking injection | Enable \"Encode All\" to force-encode every non-ASCII character for maximum portability | Decode entities before processing text logic — never operate on raw entity strings | &nbsp; (non-breaking space) prevents unwanted line breaks but should not replace regular spaces in bulk"
+    }
+  }
+}

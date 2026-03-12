@@ -37,6 +37,12 @@ export default getRequestConfig(async ({ requestLocale }) => {
   const boxShadowGenerator = (await import(`../messages/${locale}/box-shadow-generator.json`)).default;
   const borderRadiusGenerator = (await import(`../messages/${locale}/border-radius-generator.json`)).default;
   const aspectRatioCalculator = (await import(`../messages/${locale}/aspect-ratio-calculator.json`)).default;
+  const imageCompressor = (await import(`../messages/${locale}/image-compressor.json`)).default;
+  const svgToPng = (await import(`../messages/${locale}/svg-to-png.json`)).default;
+  const htmlEntityEncoder = (await import(`../messages/${locale}/html-entity-encoder.json`)).default;
+  const colorPaletteGenerator = (await import(`../messages/${locale}/color-palette-generator.json`)).default;
+  const textShadowGenerator = (await import(`../messages/${locale}/text-shadow-generator.json`)).default;
+  const csvToSql = (await import(`../messages/${locale}/csv-to-sql.json`)).default;
 
   return {
     locale,
@@ -70,6 +76,12 @@ export default getRequestConfig(async ({ requestLocale }) => {
       boxShadowGenerator,
       borderRadiusGenerator,
       aspectRatioCalculator,
+      imageCompressor,
+      svgToPng,
+      htmlEntityEncoder,
+      colorPaletteGenerator,
+      textShadowGenerator,
+      csvToSql,
     },
   };
 });

@@ -1,0 +1,34 @@
+{
+  "colorPaletteGenerator": {
+    "metadata": {
+      "title": "Color Palette Generator — Create Harmonious Color Schemes Online",
+      "description": "Free online color palette generator. Create complementary, analogous, triadic, split-complementary, tetradic and monochromatic palettes from any base color. Copy CSS variables instantly. 100% browser-based.",
+      "keywords": "color palette generator, color scheme tool, complementary colors, analogous palette, triadic colors, color harmony, HSL color model, CSS color variables, color theory tool"
+    },
+    "heading": "Color Palette Generator",
+    "subheading": "Pick a base color and generate harmonious palettes using proven color theory rules. Preview shades, copy hex values or CSS variables. Everything runs in your browser.",
+    "ui": {
+      "howItWorksText": "Pick a base color, choose a harmony type, and instantly get a palette. Click any color swatch to copy its hex value. Use Copy CSS to export all colors as CSS custom properties. No data leaves your browser.",
+      "baseColor": "Base Color",
+      "palette": "Palette",
+      "copyCss": "Copy CSS",
+      "shades": "Shades",
+      "complementary": "Complementary",
+      "analogous": "Analogous",
+      "triadic": "Triadic",
+      "splitComplementary": "Split-Complementary",
+      "tetradic": "Tetradic",
+      "monochromatic": "Monochromatic"
+    },
+    "seo": {
+      "section1Title": "What is Color Harmony?",
+      "section1Text": "Color harmony refers to the arrangement of colors in a way that is visually pleasing. Rooted in color theory, it relies on the relationships between hues on the color wheel. Designers use harmonic palettes to create interfaces that feel cohesive and balanced without conscious effort from the viewer. The most common harmony rules — complementary, analogous, triadic, and tetradic — are not arbitrary: they map to geometric relationships on the wheel and exploit the way the human visual system perceives contrast and similarity.",
+      "section2Title": "The HSL Color Model",
+      "section2Text": "HSL stands for Hue, Saturation, and Lightness. Unlike RGB — which describes color as a mixture of red, green, and blue light — HSL describes color in terms that match how humans think about it. Hue is the angle on the color wheel (0–360°), saturation controls how vivid the color is (0% = grey, 100% = pure chroma), and lightness controls how bright it is (0% = black, 100% = white). HSL makes it trivial to compute color harmonies: complementary colors are simply 180° apart, triadic colors are 120° apart, and analogous colors sit within ±30° of each other.",
+      "section3Title": "Harmony Types Explained",
+      "section3Text": "Complementary palettes pair colors directly opposite on the wheel, creating the highest contrast — ideal for calls to action and highlights. Analogous palettes use three adjacent hues, producing a calm and natural feel suited for backgrounds and content areas. Triadic palettes space three hues at 120° intervals, offering vibrant variety while keeping visual balance. Split-complementary replaces the direct complement with two hues flanking it, softening the contrast. Tetradic (or rectangle) palettes use four hues in two complementary pairs, giving maximum variety but requiring careful balance. Monochromatic palettes vary only the lightness of a single hue, guaranteeing harmony while providing enough contrast for readable interfaces.",
+      "section4Title": "Tips for Using Color Palettes in UI Design",
+      "section4List": "Use the 60-30-10 rule: 60% dominant color, 30% secondary, 10% accent | Monochromatic palettes are the safest choice for dark-mode developer tools | Check contrast ratios — WCAG AA requires at least 4.5:1 for normal text | Copy the CSS variables output and paste them directly into your :root block | Tetradic palettes need a clear dominant color to avoid visual chaos | Test your palette on both light and dark backgrounds before committing"
+    }
+  }
+}

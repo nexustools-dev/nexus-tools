@@ -30,6 +30,12 @@ const toolKeys = [
   { key: "boxShadowGenerator", href: "/tools/box-shadow-generator", icon: "SH", color: "from-violet-500 to-purple-600" },
   { key: "borderRadiusGenerator", href: "/tools/border-radius-generator", icon: "BR", color: "from-pink-500 to-rose-600" },
   { key: "aspectRatioCalculator", href: "/tools/aspect-ratio-calculator", icon: "16:9", color: "from-amber-500 to-yellow-600" },
+  { key: "imageCompressor", href: "/tools/image-compressor", icon: "ZIP", color: "from-teal-500 to-cyan-600" },
+  { key: "svgToPng", href: "/tools/svg-to-png", icon: "SVG", color: "from-indigo-500 to-violet-600" },
+  { key: "htmlEntityEncoder", href: "/tools/html-entity-encoder", icon: "&;", color: "from-orange-500 to-amber-600" },
+  { key: "colorPaletteGenerator", href: "/tools/color-palette-generator", icon: "PAL", color: "from-fuchsia-500 to-pink-600" },
+  { key: "textShadowGenerator", href: "/tools/text-shadow-generator", icon: "TxS", color: "from-cyan-500 to-blue-600" },
+  { key: "csvToSql", href: "/tools/csv-to-sql", icon: "C→S", color: "from-emerald-500 to-green-600" },
 ] as const;
 
 type Props = {

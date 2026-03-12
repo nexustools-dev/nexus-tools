@@ -1,0 +1,37 @@
+{
+  "imageCompressor": {
+    "metadata": {
+      "title": "Image Compressor — Compress JPG, WebP & PNG Online Free",
+      "description": "Free online image compressor. Reduce JPEG, WebP, and PNG file sizes using the Canvas API — 100% in your browser, no uploads, no server. Adjust quality and resize instantly.",
+      "keywords": "image compressor online, compress jpeg, compress webp, compress png, reduce image size, browser image optimizer, canvas api compression, free image compressor"
+    },
+    "heading": "Image Compressor",
+    "subheading": "Compress JPEG, WebP, and PNG images directly in your browser. Adjust quality, pick an output format, optionally resize, and download. No files leave your device.",
+    "ui": {
+      "howItWorksText": "Select or drag an image, choose your output format and quality, then download the compressed file. Everything runs in your browser via the Canvas API — your images are never uploaded anywhere.",
+      "format": "Format",
+      "quality": "Quality",
+      "maxWidth": "Max width",
+      "noResize": "No resize",
+      "processing": "Processing…",
+      "dropzone": "Drop an image here, or click to select",
+      "loadError": "Could not load the image. Please try a different file.",
+      "canvasError": "Could not initialise the canvas. Try a different browser.",
+      "compressError": "Compression failed. The file may be too large or unsupported.",
+      "original": "Original",
+      "compressed": "Compressed",
+      "savings": "Savings",
+      "download": "Download"
+    },
+    "seo": {
+      "section1Title": "Why Compress Images?",
+      "section1Text": "Images are the largest assets on most web pages, often accounting for 60–80% of total page weight. Unoptimised images slow down page load, hurt Core Web Vitals scores, and cost mobile users real bandwidth money. Compressing an image reduces its file size by discarding data that the human eye barely perceives — a 200 KB photo can often reach 40–60 KB at quality 80 with no visible degradation. Smaller pages rank better on Google, load faster on slow connections, and keep visitors engaged instead of bouncing.",
+      "section2Title": "JPEG vs WebP vs PNG — Which Format Should You Use?",
+      "section2Text": "JPEG is the classic choice for photographs and images with rich gradients. It uses lossy compression, meaning some data is permanently removed, but the results are excellent for most photography at quality settings above 70. WebP is Google's modern format that outperforms JPEG by 25–35% at the same perceptual quality — it supports both lossy and lossless modes, making it ideal for web delivery. PNG uses lossless compression and preserves every pixel perfectly; it is best for screenshots, icons, logos, and images with large flat colour areas or transparency. As a rule: prefer WebP for the web, JPEG for compatibility, and PNG only when lossless fidelity is required.",
+      "section3Title": "How Browser-Based Compression Works",
+      "section3Text": "This tool compresses images entirely inside your browser using the HTML5 Canvas API — no server involvement whatsoever. The process works in three steps: first, the image is decoded and drawn onto a hidden canvas element at the target dimensions; second, canvas.toBlob() re-encodes the pixel data to the chosen format and quality level; third, the resulting Blob is offered as a downloadable file. Because everything happens locally, there is zero latency waiting for uploads, no privacy risk, and no file size limit imposed by a server. The optional resize step scales the image proportionally before encoding, which often yields dramatic size reductions when the source image is much larger than its display size.",
+      "section4Title": "Compression Tips for Developers",
+      "section4List": "Start with quality 80 for JPEG/WebP — it is the sweet spot between file size and visual fidelity for most photographs | Use WebP instead of JPEG when targeting modern browsers; it saves 25–35% with no quality loss | PNG files are lossless — use this tool to convert PNGs to WebP or JPEG for significant savings | Set a max-width matching your layout's largest breakpoint (usually 1280px or 1920px) to avoid serving oversized images | Quality below 60 is rarely worth it — artifacts become obvious and user trust drops | For hero images, target under 100 KB; for thumbnails, aim for 10–30 KB | Always serve compressed images from a CDN with proper Cache-Control headers for maximum performance"
+    }
+  }
+}

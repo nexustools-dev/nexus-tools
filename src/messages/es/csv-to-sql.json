@@ -1,0 +1,35 @@
+{
+  "csvToSql": {
+    "metadata": {
+      "title": "Convertidor CSV a SQL — Genera Sentencias INSERT Online",
+      "description": "Convierte CSV a SQL gratis. Pega cualquier CSV y obtén sentencias INSERT para PostgreSQL, MySQL, SQLite o SQL Server al instante. Soporta inserts por lotes, CREATE TABLE y delimitadores personalizados. 100% en el navegador.",
+      "keywords": "csv a sql, csv a insert, csv a mysql, csv a postgresql, convertir csv sql, generar sentencias insert, batch insert sql, importar csv base de datos, sql desde csv online"
+    },
+    "heading": "Convertidor CSV a SQL",
+    "subheading": "Pega tu CSV y obtén sentencias INSERT listas para ejecutar en PostgreSQL, MySQL, SQLite o SQL Server. Soporta inserts por lotes, CREATE TABLE opcional y delimitadores personalizados. Nada sale de tu navegador.",
+    "ui": {
+      "howItWorksText": "Pega tu CSV, elige el dialecto y el nombre de la tabla, y copia el SQL generado. El tamaño de lote controla cuántas filas se agrupan en un solo INSERT. La tabla de vista previa muestra las primeras 5 filas para verificar el parseo antes de copiar. Ningún dato se envía a ningún servidor.",
+      "tableName": "Nombre de tabla",
+      "delimiter": "Delimitador",
+      "batchSize": "Tamaño de lote",
+      "createTable": "Incluir CREATE TABLE",
+      "csvInput": "CSV de entrada",
+      "rows": "filas",
+      "columns": "columnas",
+      "csvPlaceholder": "Pega el CSV aquí — la primera fila debe ser el encabezado",
+      "sqlOutput": "SQL generado",
+      "noData": "El SQL aparecerá aquí cuando pegues datos CSV válidos arriba",
+      "preview": "Vista previa"
+    },
+    "seo": {
+      "section1Title": "¿Qué es un convertidor de CSV a SQL?",
+      "section1Text": "Un convertidor de CSV a SQL lee valores separados por comas (o cualquier otro delimitador) y produce sentencias INSERT que cargan esos datos en una base de datos relacional. En lugar de escribir decenas de líneas INSERT a mano, pegas tu exportación de hoja de cálculo y obtienes SQL listo para producción en segundos. Esta herramienta soporta cuatro dialectos principales — PostgreSQL, MySQL, SQLite y SQL Server — cada uno con sus propias reglas de comillas, manejo de booleanos y diferencias de sintaxis. Los valores se detectan automáticamente como números, booleanos, NULL o cadenas de texto, y los valores de texto se escapan correctamente para evitar inyecciones SQL en importaciones manuales.",
+      "section2Title": "Entendiendo las sentencias INSERT",
+      "section2Text": "La sintaxis estándar de INSERT es: INSERT INTO nombre_tabla (col1, col2) VALUES (val1, val2). Esta herramienta genera una sentencia por fila por defecto, que es el enfoque más seguro y portable. Cada identificador de columna se entrecomilla según el dialecto elegido — comillas graves para MySQL, corchetes para SQL Server, comillas dobles para PostgreSQL y SQLite. Los valores de texto usan comillas simples con las comillas simples internas duplicadas (el método estándar de escape en SQL). Los valores numéricos se escriben sin comillas, y las celdas vacías o que contienen el texto literal 'null' se convierten a la palabra clave SQL NULL.",
+      "section3Title": "Inserts por lotes y rendimiento",
+      "section3Text": "Al insertar miles de filas, las sentencias INSERT individuales son lentas porque cada una requiere un viaje de ida y vuelta separado a la base de datos. Los inserts por lotes agrupan múltiples filas en una sola sentencia: INSERT INTO t (a, b) VALUES (1, 2), (3, 4), (5, 6). Esto reduce drásticamente la sobrecarga de red y el número de transacciones. Este convertidor permite elegir un tamaño de lote de 1 (una fila por sentencia), 50, 100, 500 o 1000 filas. Un tamaño de lote de 100 es un valor seguro para la mayoría de bases de datos. SQL Server no soporta la sintaxis VALUES multifila de la misma forma, por lo que el agrupado se desactiva automáticamente para ese dialecto.",
+      "section4Title": "Consejos para importaciones CSV confiables",
+      "section4List": "Verifica siempre que la primera fila sea el encabezado — los nombres de columna se convierten en identificadores SQL | Usa el selector de delimitador si tu CSV usa punto y coma (común en configuraciones regionales europeas) o tabulaciones | Activa 'Incluir CREATE TABLE' para obtener la definición de tabla junto con los inserts | Revisa la tabla de vista previa para detectar errores de parseo antes de copiar el SQL | Para archivos grandes, prefiere un tamaño de lote de 500–1000 para reducir el tiempo de importación | Ejecuta las importaciones dentro de una transacción (BEGIN / COMMIT) para poder revertirlas en caso de error"
+    }
+  }
+}
