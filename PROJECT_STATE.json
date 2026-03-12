@@ -104,6 +104,11 @@
       "date": "2026-03-12",
       "decision": "Umami over Plausible for analytics",
       "reason": "Plausible needs 2GB RAM (ClickHouse). Umami uses ~300MB (PostgreSQL). Both privacy-friendly, no cookies. Umami sufficient for our needs."
+    },
+    {
+      "date": "2026-03-12",
+      "decision": "Batch 2: 6 tools (UUID, JWT, Timestamp, Markdown, Gradient, Diff) — all pure JS, 0 deps",
+      "reason": "High-traffic dev tools selected by search volume. Custom markdown parser + LCS diff algorithm to avoid external dependencies. All born trilingual."
     }
   ],
   "security": {
