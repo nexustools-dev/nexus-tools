@@ -193,6 +193,46 @@
         "name": "Conversor CSV para SQL",
         "description": "Converta dados CSV em instruções INSERT SQL. Suporta PostgreSQL, MySQL, SQLite e SQL Server."
       }
+    },
+    "comingSoonHeading": "Em Breve",
+    "comingSoonBadge": "planejadas",
+    "comingSoonLabel": "Breve",
+    "suggestHeading": "Não encontrou o que precisa?",
+    "suggestText": "Estamos sempre criando novas ferramentas. Diga-nos o que gostaria de ver — sua sugestão pode ser nosso próximo lançamento.",
+    "suggestButton": "Sugerir uma Ferramenta",
+    "upcoming": {
+      "jwtGenerator": {
+        "name": "Gerador de JWT",
+        "description": "Crie e assine JSON Web Tokens com claims personalizados, expiração e algoritmos."
+      },
+      "crontabValidator": {
+        "name": "Validador de Crontab",
+        "description": "Valide expressões cron e depure problemas de agendamento com mensagens de erro detalhadas."
+      },
+      "httpStatusCodes": {
+        "name": "Códigos de Status HTTP",
+        "description": "Referência interativa de todos os códigos HTTP com descrições, casos de uso e exemplos."
+      },
+      "tailwindColors": {
+        "name": "Seletor de Cores Tailwind",
+        "description": "Explore e pesquise a paleta de cores do Tailwind CSS. Copie nomes de classe, HEX e RGB."
+      },
+      "regexGenerator": {
+        "name": "Gerador de Regex",
+        "description": "Gere expressões regulares a partir de descrições em linguagem natural. Construtor de padrões com exemplos."
+      },
+      "ipSubnetCalculator": {
+        "name": "Calculadora de Sub-redes IP",
+        "description": "Calcule endereços de rede, broadcast, hosts utilizáveis e notação CIDR de qualquer faixa IP."
+      },
+      "cssFlexboxGenerator": {
+        "name": "Gerador CSS Flexbox",
+        "description": "Projete layouts flexbox visualmente. Ajuste direção, wrap, alinhamento e gap com prévia ao vivo."
+      },
+      "openGraphPreview": {
+        "name": "Prévia Open Graph",
+        "description": "Visualize como sua URL aparecerá no Twitter, Facebook, LinkedIn e Slack antes de compartilhar."
+      }
     }
   },
   "ui": {

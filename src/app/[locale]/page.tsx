@@ -38,6 +38,17 @@ const toolKeys = [
   { key: "csvToSql", href: "/tools/csv-to-sql", icon: "C→S", color: "from-emerald-500 to-green-600" },
 ] as const;
 
+const comingSoonKeys = [
+  { key: "jwtGenerator", icon: "JWG", color: "from-rose-500 to-red-600" },
+  { key: "crontabValidator", icon: "CRV", color: "from-green-500 to-teal-600" },
+  { key: "httpStatusCodes", icon: "HTTP", color: "from-blue-500 to-indigo-600" },
+  { key: "tailwindColors", icon: "TW", color: "from-cyan-500 to-sky-600" },
+  { key: "regexGenerator", icon: "RG", color: "from-purple-500 to-violet-600" },
+  { key: "ipSubnetCalculator", icon: "IP", color: "from-amber-500 to-orange-600" },
+  { key: "cssFlexboxGenerator", icon: "FLX", color: "from-pink-500 to-fuchsia-600" },
+  { key: "openGraphPreview", icon: "OG", color: "from-emerald-500 to-green-600" },
+] as const;
+
 type Props = {
   params: Promise<{ locale: string }>;
 };
@@ -93,6 +104,58 @@ export default async function Home({ params }: Props) {
             </p>
           </Link>
         ))}
+      </section>
+
+      {/* Coming Soon */}
+      <section className="mt-16">
+        <div className="flex items-center gap-3 mb-6">
+          <h2 className="text-2xl font-bold">{t("comingSoonHeading")}</h2>
+          <span className="px-2.5 py-0.5 rounded-full bg-amber-500/10 text-amber-400 text-xs font-medium border border-amber-500/20">
+            {comingSoonKeys.length} {t("comingSoonBadge")}
+          </span>
+        </div>
+        <div className="grid md:grid-cols-2 gap-4">
+          {comingSoonKeys.map((tool) => (
+            <div
+              key={tool.key}
+              className="p-5 rounded-xl border border-zinc-800/60 bg-zinc-900/30 opacity-60 relative overflow-hidden"
+            >
+              <div className="absolute top-3 right-3">
+                <span className="px-2 py-0.5 rounded-full bg-zinc-800 text-zinc-500 text-[10px] font-medium uppercase tracking-wider">
+                  {t("comingSoonLabel")}
+                </span>
+              </div>
+              <div
+                className={`inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gradient-to-br ${tool.color} text-white font-mono font-bold text-xs mb-3 opacity-50`}
+                translate="no"
+              >
+                {tool.icon}
+              </div>
+              <h3 className="text-lg font-semibold text-zinc-400 mb-1">
+                {t(`upcoming.${tool.key}.name`)}
+              </h3>
+              <p className="text-zinc-500 text-sm leading-relaxed">
+                {t(`upcoming.${tool.key}.description`)}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Suggest a Tool */}
+      <section className="mt-12">
+        <div className="rounded-xl border border-dashed border-zinc-700 bg-zinc-900/30 p-8 text-center">
+          <h3 className="text-xl font-bold mb-2">{t("suggestHeading")}</h3>
+          <p className="text-zinc-400 text-sm mb-5 max-w-lg mx-auto">
+            {t("suggestText")}
+          </p>
+          <a
+            href="mailto:tools@toolnexus.dev?subject=Tool%20Suggestion"
+            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-sm font-medium transition-colors"
+          >
+            {t("suggestButton")}
+          </a>
+        </div>
       </section>
 
       <section className="mt-16 text-center">

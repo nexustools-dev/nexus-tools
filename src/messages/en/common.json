@@ -193,6 +193,46 @@
         "name": "CSV to SQL Converter",
         "description": "Convert CSV data to SQL INSERT statements. Supports PostgreSQL, MySQL, SQLite, and SQL Server dialects."
       }
+    },
+    "comingSoonHeading": "Coming Soon",
+    "comingSoonBadge": "planned",
+    "comingSoonLabel": "Soon",
+    "suggestHeading": "Don't see what you need?",
+    "suggestText": "We're always building new tools. Tell us what you'd like to see next — your suggestion might become our next release.",
+    "suggestButton": "Suggest a Tool",
+    "upcoming": {
+      "jwtGenerator": {
+        "name": "JWT Generator",
+        "description": "Create and sign JSON Web Tokens with custom claims, expiration, and algorithms."
+      },
+      "crontabValidator": {
+        "name": "Crontab Validator",
+        "description": "Validate cron expressions and debug scheduling issues with detailed error messages."
+      },
+      "httpStatusCodes": {
+        "name": "HTTP Status Codes",
+        "description": "Interactive reference for all HTTP status codes with descriptions, use cases, and examples."
+      },
+      "tailwindColors": {
+        "name": "Tailwind Color Picker",
+        "description": "Browse and search Tailwind CSS color palette. Copy class names, HEX, and RGB values."
+      },
+      "regexGenerator": {
+        "name": "Regex Generator",
+        "description": "Generate regular expressions from natural language descriptions. Pattern builder with examples."
+      },
+      "ipSubnetCalculator": {
+        "name": "IP Subnet Calculator",
+        "description": "Calculate network addresses, broadcast, usable hosts, and CIDR notation from any IP range."
+      },
+      "cssFlexboxGenerator": {
+        "name": "CSS Flexbox Generator",
+        "description": "Design flexbox layouts visually. Adjust direction, wrap, alignment, and gap with live preview."
+      },
+      "openGraphPreview": {
+        "name": "Open Graph Preview",
+        "description": "Preview how your URL will appear on Twitter, Facebook, LinkedIn, and Slack before sharing."
+      }
     }
   },
   "ui": {

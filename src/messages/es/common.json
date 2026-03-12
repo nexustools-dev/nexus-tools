@@ -193,6 +193,46 @@
         "name": "Convertidor CSV a SQL",
         "description": "Convierte datos CSV a sentencias INSERT SQL. Soporta PostgreSQL, MySQL, SQLite y SQL Server."
       }
+    },
+    "comingSoonHeading": "Próximamente",
+    "comingSoonBadge": "planificadas",
+    "comingSoonLabel": "Pronto",
+    "suggestHeading": "¿No encuentras lo que necesitas?",
+    "suggestText": "Siempre estamos creando nuevas herramientas. Cuéntanos qué te gustaría ver — tu sugerencia podría ser nuestro próximo lanzamiento.",
+    "suggestButton": "Sugerir una Herramienta",
+    "upcoming": {
+      "jwtGenerator": {
+        "name": "Generador de JWT",
+        "description": "Crea y firma JSON Web Tokens con claims personalizados, expiración y algoritmos."
+      },
+      "crontabValidator": {
+        "name": "Validador de Crontab",
+        "description": "Valida expresiones cron y depura problemas de programación con mensajes de error detallados."
+      },
+      "httpStatusCodes": {
+        "name": "Códigos de Estado HTTP",
+        "description": "Referencia interactiva de todos los códigos HTTP con descripciones, casos de uso y ejemplos."
+      },
+      "tailwindColors": {
+        "name": "Selector de Colores Tailwind",
+        "description": "Explora y busca la paleta de colores de Tailwind CSS. Copia nombres de clase, HEX y RGB."
+      },
+      "regexGenerator": {
+        "name": "Generador de Regex",
+        "description": "Genera expresiones regulares desde descripciones en lenguaje natural. Constructor de patrones con ejemplos."
+      },
+      "ipSubnetCalculator": {
+        "name": "Calculadora de Subredes IP",
+        "description": "Calcula direcciones de red, broadcast, hosts utilizables y notación CIDR desde cualquier rango IP."
+      },
+      "cssFlexboxGenerator": {
+        "name": "Generador CSS Flexbox",
+        "description": "Diseña layouts flexbox visualmente. Ajusta dirección, wrap, alineación y gap con vista previa en vivo."
+      },
+      "openGraphPreview": {
+        "name": "Vista Previa Open Graph",
+        "description": "Previsualiza cómo aparecerá tu URL en Twitter, Facebook, LinkedIn y Slack antes de compartir."
+      }
     }
   },
   "ui": {
