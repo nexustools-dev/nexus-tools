@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "title": "Border Radius Generator — Create Rounded Corners Visually",
+    "description": "Free online CSS border-radius generator. Adjust each corner individually or link them together. Live preview with copy-ready CSS code. 100% browser-based.",
+    "keywords": "border radius generator, css border radius, rounded corners css, border radius tool, css rounded corners generator, border radius preview, corner radius css, border radius shorthand"
+  },
+  "heading": "Border Radius Generator",
+  "subheading": "Design custom rounded corners visually. Adjust each corner, pick units, and copy the CSS. Everything runs in your browser.",
+  "seo": {
+    "section1Title": "What is border-radius?",
+    "section1Text": "The CSS border-radius property lets you round the corners of an element's border box. It is one of the most widely used CSS properties for modern UI design, transforming sharp rectangular elements into softer, more approachable shapes. You can apply a uniform radius to all four corners or control each corner independently. Border-radius accepts values in pixels, percentages, em, and other CSS length units, giving you precise control over the curvature of every corner.",
+    "section2Title": "Border Radius Syntax",
+    "section2Text": "The border-radius shorthand accepts one to four values. A single value applies the same radius to all corners. Two values set top-left/bottom-right and top-right/bottom-left respectively. Three values set top-left, top-right/bottom-left, and bottom-right. Four values set each corner clockwise from top-left. For elliptical corners, use the slash notation (e.g., border-radius: 50px / 30px) where the first set defines horizontal radii and the second defines vertical radii. This 8-value syntax enables organic, asymmetric shapes that go far beyond simple rounded corners.",
+    "section3Title": "Creative Shapes with border-radius",
+    "section3Text": "Border-radius can do much more than subtle corner rounding. Setting border-radius to 50% on a square element creates a perfect circle, while applying it to a rectangle produces a pill or capsule shape. By using different values for each corner, you can create leaf shapes, organic blobs, and fluid asymmetric forms. Combining border-radius with background gradients, box-shadow, and transforms unlocks creative possibilities like speech bubbles, water drops, and abstract decorative elements — all in pure CSS without images.",
+    "section4Title": "Border Radius Tips",
+    "section4List": "Use % values for responsive corners that scale with element size | Set border-radius: 50% on a square to create a perfect circle | Use 9999px for pill-shaped buttons regardless of size | Combine different values per corner for organic leaf and blob shapes | Elliptical radii (slash notation) create more natural curves | Border-radius works on images, videos, and any block element | Inspect with browser DevTools to fine-tune values visually"
+  },
+  "ui": {
+    "howItWorksText": "Adjust each corner radius using the sliders or type a value directly. Link corners to change all at once, or unlink them for individual control. Pick your unit, preview the shape, and copy the CSS. No data is sent to any server.",
+    "preview": "Preview",
+    "topLeft": "Top Left",
+    "topRight": "Top Right",
+    "bottomRight": "Bottom Right",
+    "bottomLeft": "Bottom Left",
+    "linkCorners": "Link Corners",
+    "unit": "Unit",
+    "pixels": "Pixels",
+    "percent": "Percent",
+    "css": "CSS",
+    "presets": "Presets",
+    "circle": "Circle",
+    "pill": "Pill",
+    "rounded": "Rounded",
+    "leaf": "Leaf",
+    "blob": "Blob",
+    "ticket": "Ticket",
+    "boxSize": "Box Size",
+    "bgColor": "Background Color",
+    "copy": "Copy"
+  }
+}

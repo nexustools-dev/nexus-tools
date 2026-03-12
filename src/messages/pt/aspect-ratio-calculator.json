@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "title": "Calculadora de Proporcao de Tela — Redimensionar e Converter Proporcoes",
+    "description": "Calculadora de proporcao de tela gratuita. Redimensione proporcionalmente, encontre a proporcao para qualquer resolucao, obtenha CSS pronto para usar e consulte os formatos mais comuns. 100% no navegador.",
+    "keywords": "calculadora proporcao de tela, conversor aspect ratio, calculadora 16:9, redimensionar proporcao, proporcao de tela, aspect ratio video, proporcao responsiva, css aspect-ratio"
+  },
+  "heading": "Calculadora de Proporcao de Tela",
+  "subheading": "Calcule, converta e visualize proporcoes de tela. Redimensione proporcionalmente e obtenha CSS pronto para usar.",
+  "seo": {
+    "section1Title": "O que e Proporcao de Tela?",
+    "section1Text": "A proporcao de tela (aspect ratio) e a relacao proporcional entre a largura e a altura de uma imagem, video ou tela, expressa como largura:altura. Ela define o formato do conteudo: por exemplo, 16:9 e um retangulo largo enquanto 1:1 e um quadrado perfeito. As proporcoes de tela sao fundamentais na producao de midia, no design web responsivo e no layout de interfaces para garantir que o conteudo seja exibido corretamente em diferentes dispositivos e plataformas sem cortes ou distorcoes indesejadas.",
+    "section2Title": "Proporcoes de Tela Comuns",
+    "section2Text": "16:9 e o padrao para video HD e 4K, YouTube e a maioria dos monitores modernos. 4:3 era o formato padrao das transmissoes de TV antigas e dos primeiros monitores de computador. 1:1 e amplamente usado em redes sociais como o Instagram para publicacoes quadradas. 21:9 (ultrapanoramico) e popular para conteudo cinematografico e monitores ultrawide para jogos. 3:2 e a proporcao classica do filme 35mm e das cameras DSLR. 9:16 e o formato vertical usado no TikTok, Reels e Stories.",
+    "section3Title": "Proporcao de Tela no CSS",
+    "section3Text": "O CSS moderno oferece a propriedade aspect-ratio para definir uma proporcao preferida em qualquer elemento (por exemplo, aspect-ratio: 16 / 9). Isso elimina o antigo truque do padding-top em porcentagem que foi usado por anos. Combinado com object-fit (cover, contain, fill), voce pode controlar exatamente como imagens e videos preenchem seus containers mantendo suas proporcoes originais. A propriedade aspect-ratio e compativel com todos os navegadores modernos.",
+    "section4Title": "Dicas sobre Proporcao de Tela",
+    "section4List": "Use a propriedade CSS aspect-ratio para containers responsivos sem JavaScript | Sempre ajuste a proporcao ao formato da plataforma de destino (16:9 para YouTube, 9:16 para TikTok, 1:1 para Instagram) | Combine aspect-ratio com object-fit: cover para evitar barras pretas | Ao redimensionar imagens, trave a proporcao para evitar distorcoes | Use 2:1 ou 1.91:1 para previsualizacoes Open Graph e redes sociais | Teste seus layouts em multiplos breakpoints para garantir que as proporcoes se mantenham em todos os tamanhos de tela"
+  },
+  "ui": {
+    "howItWorksText": "Digite uma largura e uma altura para calcular a proporcao de tela. Trave a proporcao, altere uma dimensao e a outra se ajusta automaticamente. Consulte os presets de formatos comuns e copie o CSS gerado.",
+    "width": "Largura",
+    "height": "Altura",
+    "ratio": "Proporcao",
+    "lockRatio": "Travar Proporcao",
+    "cssOutput": "Codigo CSS",
+    "presets": "Presets",
+    "widescreen": "Panoramico",
+    "standard": "Padrao",
+    "square": "Quadrado",
+    "ultrawide": "Ultrapanoramico",
+    "photo": "Foto",
+    "vertical": "Vertical",
+    "social": "Redes Sociais",
+    "resolutions": "Resolucoes",
+    "copy": "Copiar",
+    "preview": "Pre-visualizacao"
+  }
+}

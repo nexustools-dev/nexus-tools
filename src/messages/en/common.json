@@ -22,7 +22,13 @@
     "cronExpressionBuilder": "Cron Builder",
     "jsonCsvConverter": "JSON/CSV",
     "textCaseConverter": "Text Case",
-    "placeholderImage": "Placeholder"
+    "placeholderImage": "Placeholder",
+    "sqlFormatter": "SQL Formatter",
+    "jsonYamlConverter": "JSON/YAML",
+    "chmodCalculator": "Chmod",
+    "boxShadowGenerator": "Box Shadow",
+    "borderRadiusGenerator": "Border Radius",
+    "aspectRatioCalculator": "Aspect Ratio"
   },
   "footer": {
     "privacy": "All tools run 100% in your browser. No data is sent to any server.",
@@ -132,6 +138,30 @@
       "placeholderImage": {
         "name": "Placeholder Image Generator",
         "description": "Generate custom placeholder images with any dimensions, colors, and text overlay. Download PNG or copy data URL."
+      },
+      "sqlFormatter": {
+        "name": "SQL Formatter",
+        "description": "Format, beautify, and minify SQL queries. Syntax highlighting, configurable indentation, and keyword casing."
+      },
+      "jsonYamlConverter": {
+        "name": "JSON to YAML Converter",
+        "description": "Convert between JSON and YAML formats. Bidirectional, configurable indentation, inline arrays support."
+      },
+      "chmodCalculator": {
+        "name": "Chmod Calculator",
+        "description": "Calculate Unix file permissions visually. Interactive checkbox grid, octal and symbolic notation, common presets."
+      },
+      "boxShadowGenerator": {
+        "name": "Box Shadow Generator",
+        "description": "Create CSS box-shadow visually. Multiple shadow layers, color picker, inset toggle, and ready-to-copy CSS."
+      },
+      "borderRadiusGenerator": {
+        "name": "Border Radius Generator",
+        "description": "Design CSS border-radius visually. Independent corner control, px and % units, shape presets, live preview."
+      },
+      "aspectRatioCalculator": {
+        "name": "Aspect Ratio Calculator",
+        "description": "Calculate aspect ratios from dimensions. Lock ratio, common presets, resolution table, and CSS output."
       }
     }
   },

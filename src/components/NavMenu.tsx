@@ -27,6 +27,12 @@ const TOOLS = [
   { key: "jsonCsvConverter", href: "/tools/json-csv-converter", icon: "CSV" },
   { key: "textCaseConverter", href: "/tools/text-case-converter", icon: "Cc" },
   { key: "placeholderImage", href: "/tools/placeholder-image", icon: "IMG" },
+  { key: "sqlFormatter", href: "/tools/sql-formatter", icon: "SQL" },
+  { key: "jsonYamlConverter", href: "/tools/json-yaml-converter", icon: "YML" },
+  { key: "chmodCalculator", href: "/tools/chmod-calculator", icon: "777" },
+  { key: "boxShadowGenerator", href: "/tools/box-shadow-generator", icon: "SH" },
+  { key: "borderRadiusGenerator", href: "/tools/border-radius-generator", icon: "BR" },
+  { key: "aspectRatioCalculator", href: "/tools/aspect-ratio-calculator", icon: "16:9" },
 ] as const;
 
 export function NavMenu() {

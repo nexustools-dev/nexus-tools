@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "title": "Aspect Ratio Calculator — Resize, Scale & Convert Ratios",
+    "description": "Free aspect ratio calculator. Resize dimensions proportionally, find ratios for any resolution, get CSS output, and browse common presets. 100% browser-based.",
+    "keywords": "aspect ratio calculator, aspect ratio converter, 16:9 calculator, resize aspect ratio, screen ratio calculator, video aspect ratio, responsive aspect ratio, css aspect-ratio"
+  },
+  "heading": "Aspect Ratio Calculator",
+  "subheading": "Calculate, convert, and preview aspect ratios. Resize dimensions proportionally and get ready-to-use CSS output.",
+  "seo": {
+    "section1Title": "What is Aspect Ratio?",
+    "section1Text": "Aspect ratio is the proportional relationship between the width and height of an image, video, or screen, expressed as width:height. It defines the shape of the content — for example, 16:9 is a wide rectangle while 1:1 is a perfect square. Aspect ratios are fundamental in media production, responsive web design, and UI layout to ensure content displays correctly across different devices and platforms without unwanted cropping or stretching.",
+    "section2Title": "Common Aspect Ratios",
+    "section2Text": "16:9 is the standard for HD and 4K video, YouTube, and most modern monitors. 4:3 was the default for old TV broadcasts and early computer monitors. 1:1 is widely used on social media platforms like Instagram for square posts. 21:9 (ultrawide) is popular for cinematic content and ultrawide gaming monitors. 3:2 is the classic 35mm film and DSLR photo ratio. 9:16 is the vertical format used by TikTok, Reels, and Stories.",
+    "section3Title": "Aspect Ratio in CSS",
+    "section3Text": "Modern CSS provides the aspect-ratio property to set a preferred aspect ratio on any element (e.g., aspect-ratio: 16 / 9). This eliminates the old padding-top percentage hack that was used for years. Combined with object-fit (cover, contain, fill), you can control exactly how images and videos fill their containers while preserving their original proportions. The aspect-ratio property is supported in all modern browsers.",
+    "section4Title": "Aspect Ratio Tips",
+    "section4List": "Use the CSS aspect-ratio property for responsive containers without JavaScript | Always match the aspect ratio to your target platform (16:9 for YouTube, 9:16 for TikTok, 1:1 for Instagram) | Combine aspect-ratio with object-fit: cover to avoid letterboxing | When resizing images, lock the ratio to prevent distortion | Use 2:1 or 1.91:1 for Open Graph and social sharing previews | Test your layouts at multiple breakpoints to ensure ratios hold on all screen sizes"
+  },
+  "ui": {
+    "howItWorksText": "Enter a width and height to calculate the aspect ratio. Lock the ratio, then change one dimension — the other adjusts automatically. Browse presets for common formats and copy the CSS output.",
+    "width": "Width",
+    "height": "Height",
+    "ratio": "Ratio",
+    "lockRatio": "Lock Ratio",
+    "cssOutput": "CSS Output",
+    "presets": "Presets",
+    "widescreen": "Widescreen",
+    "standard": "Standard",
+    "square": "Square",
+    "ultrawide": "Ultrawide",
+    "photo": "Photo",
+    "vertical": "Vertical",
+    "social": "Social",
+    "resolutions": "Resolutions",
+    "copy": "Copy",
+    "preview": "Preview"
+  }
+}

@@ -22,7 +22,13 @@
     "cronExpressionBuilder": "Cron Builder",
     "jsonCsvConverter": "JSON/CSV",
     "textCaseConverter": "Formato Texto",
-    "placeholderImage": "Placeholder"
+    "placeholderImage": "Placeholder",
+    "sqlFormatter": "SQL Formatter",
+    "jsonYamlConverter": "JSON/YAML",
+    "chmodCalculator": "Chmod",
+    "boxShadowGenerator": "Box Shadow",
+    "borderRadiusGenerator": "Border Radius",
+    "aspectRatioCalculator": "Aspect Ratio"
   },
   "footer": {
     "privacy": "Todas as ferramentas funcionam 100% no seu navegador. Nenhum dado é enviado a servidores.",
@@ -132,6 +138,30 @@
       "placeholderImage": {
         "name": "Gerador de Imagens Placeholder",
         "description": "Gere imagens placeholder com dimensões, cores e texto personalizado. Baixe PNG ou copie a URL de dados."
+      },
+      "sqlFormatter": {
+        "name": "Formatador SQL",
+        "description": "Formate, embeleze e minifique consultas SQL. Destaque de sintaxe, indentação configurável e controle de maiúsculas nas palavras-chave."
+      },
+      "jsonYamlConverter": {
+        "name": "Conversor JSON para YAML",
+        "description": "Converta entre formatos JSON e YAML. Bidirecional, indentação configurável e suporte a arrays inline."
+      },
+      "chmodCalculator": {
+        "name": "Calculadora Chmod",
+        "description": "Calcule permissões de arquivos Unix visualmente. Grade interativa de checkboxes, notação octal e simbólica, presets comuns."
+      },
+      "boxShadowGenerator": {
+        "name": "Gerador de Box Shadow",
+        "description": "Crie box-shadow CSS visualmente. Múltiplas camadas de sombra, seletor de cor, toggle inset e CSS pronto para copiar."
+      },
+      "borderRadiusGenerator": {
+        "name": "Gerador de Border Radius",
+        "description": "Projete border-radius CSS visualmente. Controle independente por canto, unidades px e %, presets de formas, prévia ao vivo."
+      },
+      "aspectRatioCalculator": {
+        "name": "Calculadora de Aspect Ratio",
+        "description": "Calcule proporções a partir de dimensões. Bloqueio de proporção, presets comuns, tabela de resoluções e saída CSS."
       }
     }
   },

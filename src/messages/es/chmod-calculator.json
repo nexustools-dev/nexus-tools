@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "title": "Calculadora Chmod — Generador de Permisos Unix Online",
+    "description": "Calculadora chmod gratuita. Configura permisos de archivos Unix visualmente con checkboxes, obtén la notación octal y simbólica, previsualiza el comando chmod y aprende sobre setuid, setgid y sticky bit. 100% en tu navegador.",
+    "keywords": "calculadora chmod, generador chmod, permisos unix, permisos de archivos, permisos octales, comando chmod, permisos linux, calculador de permisos, setuid, setgid, sticky bit"
+  },
+  "heading": "Calculadora Chmod",
+  "subheading": "Configura permisos de archivos Unix visualmente con checkboxes. Obtén la notación octal y simbólica, copia el comando chmod y usa presets comunes. Todo se ejecuta en tu navegador.",
+  "seo": {
+    "section1Title": "¿Qué es chmod?",
+    "section1Text": "chmod (change mode) es un comando de Unix/Linux que establece los permisos de archivos y directorios. Cada archivo en un sistema Unix tiene tres grupos de permisos — propietario, grupo y otros — y cada grupo puede tener permisos de lectura (r), escritura (w) y ejecución (x). Este modelo de seguridad ha sido la base del control de acceso en Unix desde los años 70 y sigue siendo esencial en Linux, macOS y todo sistema operativo tipo Unix. Entender chmod es fundamental para la administración de servidores, el despliegue de aplicaciones web y la gestión segura de scripts.",
+    "section2Title": "Entendiendo los Números de Permisos",
+    "section2Text": "Los permisos Unix usan un sistema de numeración octal (base 8) donde cada permiso es un bit: lectura = 4 (binario 100), escritura = 2 (binario 010), ejecución = 1 (binario 001). Se suman los valores para cada grupo. Por ejemplo, lectura + escritura = 6 (4+2), lectura + ejecución = 5 (4+1), y lectura + escritura + ejecución = 7 (4+2+1). Un número octal de tres dígitos como 755 significa: el propietario obtiene 7 (rwx), el grupo obtiene 5 (r-x) y otros obtienen 5 (r-x). Un cuarto dígito al inicio controla los bits especiales: setuid (4), setgid (2) y sticky (1).",
+    "section3Title": "Patrones de Permisos Comunes",
+    "section3Text": "644 (rw-r--r--) es el valor por defecto para archivos regulares — el propietario puede leer y escribir, los demás solo pueden leer. 755 (rwxr-xr-x) es el valor por defecto para directorios y scripts ejecutables — el propietario tiene acceso total, los demás pueden leer y recorrer. 600 (rw-------) es para archivos privados como llaves SSH y archivos de configuración con secretos — solo el propietario puede acceder. 700 (rwx------) es lo mismo pero para directorios. 777 (rwxrwxrwx) da acceso total a todos y casi nunca debería usarse en producción.",
+    "section4Title": "Consejos sobre chmod",
+    "section4List": "Nunca uses 777 en producción — le da acceso total a todos, creando una vulnerabilidad de seguridad grave | Usa chmod -R con cuidado — los cambios recursivos de permisos pueden romper cosas rápidamente; siempre verifica la ruta objetivo | setuid en ejecutables los ejecuta como el propietario del archivo, lo cual es poderoso pero peligroso si se usa mal | setgid en directorios hace que los archivos nuevos hereden el grupo, útil para carpetas de proyectos compartidos | El sticky bit en directorios (como /tmp) evita que los usuarios borren archivos que no les pertenecen | Usa la notación simbólica (chmod u+x archivo) para cambios rápidos individuales, y la octal (chmod 755 archivo) para establecer todos los permisos de una vez | Siempre pon las llaves SSH en 600 y los directorios .ssh en 700 — SSH se negará a usar llaves con permisos demasiado abiertos"
+  },
+  "ui": {
+    "howItWorksText": "Marca las casillas de permisos para propietario, grupo y otros. La herramienta muestra al instante el valor octal, la notación simbólica y el comando chmod completo que puedes copiar y ejecutar. Usa los presets para patrones comunes como 644, 755 o 600.",
+    "owner": "Propietario",
+    "group": "Grupo",
+    "others": "Otros",
+    "read": "Lectura",
+    "write": "Escritura",
+    "execute": "Ejecución",
+    "octal": "Octal",
+    "symbolic": "Simbólico",
+    "command": "Comando",
+    "setuid": "Setuid",
+    "setgid": "Setgid",
+    "sticky": "Sticky",
+    "special": "Especiales",
+    "presets": "Presets",
+    "fileDefault": "Archivo por defecto (644)",
+    "dirDefault": "Directorio por defecto (755)",
+    "private": "Privado (600)",
+    "fullAccess": "Acceso total (777)",
+    "readOnly": "Solo lectura (444)",
+    "copy": "Copiar"
+  }
+}

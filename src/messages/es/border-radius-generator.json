@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "title": "Generador de Border Radius — Crea Esquinas Redondeadas Visualmente",
+    "description": "Generador de border-radius CSS online gratis. Ajusta cada esquina individualmente o vincúlalas. Vista previa en vivo con código CSS listo para copiar. 100% en el navegador.",
+    "keywords": "generador border radius, css border radius, esquinas redondeadas css, herramienta border radius, generador esquinas redondeadas css, vista previa border radius, radio esquina css, border radius abreviado"
+  },
+  "heading": "Generador de Border Radius",
+  "subheading": "Diseña esquinas redondeadas personalizadas visualmente. Ajusta cada esquina, elige unidades y copia el CSS. Todo se ejecuta en tu navegador.",
+  "seo": {
+    "section1Title": "¿Qué es border-radius?",
+    "section1Text": "La propiedad CSS border-radius te permite redondear las esquinas del borde de un elemento. Es una de las propiedades CSS más utilizadas en el diseño de interfaces modernas, transformando elementos rectangulares rígidos en formas más suaves y amigables. Puedes aplicar un radio uniforme a las cuatro esquinas o controlar cada una de forma independiente. Border-radius acepta valores en píxeles, porcentajes, em y otras unidades de longitud CSS, dándote control preciso sobre la curvatura de cada esquina.",
+    "section2Title": "Sintaxis de Border Radius",
+    "section2Text": "La forma abreviada de border-radius acepta de uno a cuatro valores. Un solo valor aplica el mismo radio a todas las esquinas. Dos valores definen superior-izquierda/inferior-derecha y superior-derecha/inferior-izquierda respectivamente. Tres valores definen superior-izquierda, superior-derecha/inferior-izquierda, e inferior-derecha. Cuatro valores definen cada esquina en sentido horario desde la superior izquierda. Para esquinas elípticas, se usa la notación con barra (ej., border-radius: 50px / 30px) donde el primer grupo define radios horizontales y el segundo radios verticales. Esta sintaxis de 8 valores permite crear formas orgánicas y asimétricas que van mucho más allá de las esquinas redondeadas simples.",
+    "section3Title": "Formas Creativas con border-radius",
+    "section3Text": "Border-radius puede hacer mucho más que redondear esquinas sutilmente. Establecer border-radius en 50% sobre un elemento cuadrado crea un círculo perfecto, mientras que aplicarlo a un rectángulo produce una forma de pastilla o cápsula. Usando valores diferentes para cada esquina, puedes crear formas de hoja, blobs orgánicos y figuras asimétricas fluidas. Combinar border-radius con gradientes de fondo, box-shadow y transforms abre posibilidades creativas como burbujas de diálogo, gotas de agua y elementos decorativos abstractos — todo en CSS puro sin imágenes.",
+    "section4Title": "Consejos sobre Border Radius",
+    "section4List": "Usa valores en % para esquinas responsivas que escalen con el tamaño del elemento | Establece border-radius: 50% en un cuadrado para crear un círculo perfecto | Usa 9999px para botones en forma de pastilla sin importar el tamaño | Combina valores diferentes por esquina para formas orgánicas de hoja y blob | Los radios elípticos (notación con barra) crean curvas más naturales | Border-radius funciona en imágenes, videos y cualquier elemento de bloque | Inspecciona con DevTools del navegador para ajustar valores visualmente"
+  },
+  "ui": {
+    "howItWorksText": "Ajusta el radio de cada esquina con los deslizadores o escribe un valor directamente. Vincula las esquinas para cambiar todas a la vez, o desvincúlalas para control individual. Elige tu unidad, previsualiza la forma y copia el CSS. Ningún dato se envía a ningún servidor.",
+    "preview": "Vista Previa",
+    "topLeft": "Superior Izquierda",
+    "topRight": "Superior Derecha",
+    "bottomRight": "Inferior Derecha",
+    "bottomLeft": "Inferior Izquierda",
+    "linkCorners": "Vincular Esquinas",
+    "unit": "Unidad",
+    "pixels": "Píxeles",
+    "percent": "Porcentaje",
+    "css": "CSS",
+    "presets": "Presets",
+    "circle": "Círculo",
+    "pill": "Pastilla",
+    "rounded": "Redondeado",
+    "leaf": "Hoja",
+    "blob": "Blob",
+    "ticket": "Ticket",
+    "boxSize": "Tamaño de Caja",
+    "bgColor": "Color de Fondo",
+    "copy": "Copiar"
+  }
+}

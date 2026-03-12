@@ -1,0 +1,33 @@
+{
+  "metadata": {
+    "title": "SQL Formatter — Format & Beautify SQL Queries Online",
+    "description": "Free online SQL formatter and beautifier. Format, indent, and minify SQL queries with customizable options. Supports SELECT, JOIN, subqueries. 100% browser-based.",
+    "keywords": "sql formatter, sql beautifier, format sql online, sql pretty print, sql indent, sql minify, sql query formatter, format sql query, sql formatting tool"
+  },
+  "heading": "SQL Formatter",
+  "subheading": "Format, beautify, and minify SQL queries instantly. Customize indentation, keyword casing, and style. Everything runs in your browser — no queries are sent anywhere.",
+  "seo": {
+    "section1Title": "What is SQL Formatting?",
+    "section1Text": "SQL formatting is the practice of structuring SQL queries in a consistent, readable way. Well-formatted SQL makes code reviews faster, debugging easier, and onboarding smoother for new team members. Consistent formatting across a codebase reduces cognitive load and helps developers spot logical errors, missing clauses, and performance issues at a glance. Most professional teams enforce SQL style guides as part of their development standards.",
+    "section2Title": "SQL Style Conventions",
+    "section2Text": "The most widely adopted SQL conventions include writing keywords in uppercase (SELECT, FROM, WHERE) to visually separate them from table and column names. Each major clause should start on its own line with consistent indentation. Column lists are often placed one per line for easier diffing in version control. Comma placement varies — some teams prefer leading commas for easy commenting, while others use trailing commas. The key is consistency within your project.",
+    "section3Title": "Common SQL Clauses",
+    "section3Text": "A well-formatted SQL query organizes its clauses in a logical order: SELECT defines which columns to retrieve, FROM specifies the source tables, JOIN combines related tables with ON conditions, WHERE filters rows before aggregation, GROUP BY groups rows for aggregate functions, HAVING filters grouped results, ORDER BY sorts the output, and LIMIT restricts the number of returned rows. Each clause serves a distinct purpose in building your query.",
+    "section4Title": "SQL Formatting Tips",
+    "section4List": "Use consistent indentation (2 or 4 spaces) for all nested clauses | Align column names vertically for easier scanning | Write SQL keywords in uppercase to distinguish them from identifiers | Place each JOIN on its own line with the ON condition indented beneath it | Comment complex joins and subqueries to explain business logic | Break long WHERE clauses into one condition per line with AND/OR at the start | Use table aliases consistently and meaningfully (e.g., u for users, o for orders)"
+  },
+  "ui": {
+    "howItWorksText": "Paste your SQL query below and click Format. Choose your preferred indent size and keyword casing. All formatting happens in your browser — no queries are transmitted anywhere.",
+    "inputLabel": "Input SQL",
+    "outputLabel": "Formatted SQL",
+    "format": "Format",
+    "minify": "Minify",
+    "indentSize": "Indent Size",
+    "uppercaseKeywords": "Uppercase Keywords",
+    "sample": "Sample",
+    "clear": "Clear",
+    "download": "Download",
+    "lineCount": "Lines",
+    "keywordCount": "Keywords"
+  }
+}

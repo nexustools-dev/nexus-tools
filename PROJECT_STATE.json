@@ -1,7 +1,7 @@
 {
   "project": "nexus-tools",
-  "version": "3.0.0",
-  "phase": "22 tools live — Batch 3 deployed + UX reviewed, ready for Batch 4 or growth",
+  "version": "4.0.0",
+  "phase": "28 tools built — Batch 4 complete, ready to deploy",
   "status": "stable",
   "last_updated": "2026-03-12",
   "updated_by": "NEXUS@PC-Principal",
@@ -62,7 +62,13 @@
       "PWA support (manifest.json, icons, installable from Brave/Chrome/Edge)",
       "NavMenu search (Ctrl+K, filter tools, Escape to close)",
       "browser auto-translate fix (translate=no on html, meta notranslate)",
-      "UX fixes: placeholder/QR preview overflow, cron field select-on-focus editing"
+      "UX fixes: placeholder/QR preview overflow, cron field select-on-focus editing",
+      "sql-formatter (custom tokenizer, syntax highlighting, format/minify, keyword casing)",
+      "json-yaml-converter (bidirectional, custom parser, inline arrays, configurable indent)",
+      "chmod-calculator (interactive checkbox grid, octal/symbolic, special bits, presets)",
+      "box-shadow-generator (multi-layer shadows, sliders, color picker, 7 presets, live preview)",
+      "border-radius-generator (4-corner control, link/unlink, px/%, 6 shape presets)",
+      "aspect-ratio-calculator (GCD ratio, lock ratio, resolution table, CSS output)"
     ],
     "in_progress": [],
     "pending": [
@@ -129,6 +135,11 @@
       "date": "2026-03-12",
       "decision": "Security audit of Batch 3 + MarkdownPreview completed",
       "reason": "Found 1 CRITICAL XSS vulnerability in MarkdownPreview (dangerouslySetInnerHTML without URL validation). 3 ALTO items require fix before production. PasswordGenerator, PlaceholderImage, TextCaseConverter are secure. 0 npm vulnerabilities detected."
+    },
+    {
+      "date": "2026-03-12",
+      "decision": "Batch 4: 6 tools (SQL Formatter, JSON-YAML, Chmod, Box Shadow, Border Radius, Aspect Ratio)",
+      "reason": "Mix of dev tools (SQL, YAML, chmod) and CSS visual tools (shadow, radius, aspect ratio). All 0 deps except SQL tokenizer (custom). All born trilingual with security best practices."
     }
   ],
   "security": {
@@ -175,9 +186,9 @@
     "blockers": []
   },
   "metrics": {
-    "tools_count": 22,
+    "tools_count": 28,
     "languages": 3,
-    "total_pages": 69,
+    "total_pages": 87,
     "monthly_visitors": 0,
     "adsense_revenue": 0
   }

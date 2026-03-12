@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "title": "Calculadora Chmod — Gerador de Permissões Unix Online",
+    "description": "Calculadora chmod gratuita. Configure permissões de arquivos Unix visualmente com checkboxes, obtenha a notação octal e simbólica, visualize o comando chmod e aprenda sobre setuid, setgid e sticky bit. 100% no navegador.",
+    "keywords": "calculadora chmod, gerador chmod, permissões unix, permissões de arquivos, permissões octais, comando chmod, permissões linux, calculador de permissões, setuid, setgid, sticky bit"
+  },
+  "heading": "Calculadora Chmod",
+  "subheading": "Configure permissões de arquivos Unix visualmente com checkboxes. Obtenha a notação octal e simbólica, copie o comando chmod e use presets comuns. Tudo roda no seu navegador.",
+  "seo": {
+    "section1Title": "O que é chmod?",
+    "section1Text": "chmod (change mode) é um comando Unix/Linux que define as permissões de arquivos e diretórios. Cada arquivo em um sistema Unix tem três grupos de permissões — proprietário, grupo e outros — e cada grupo pode ter permissões de leitura (r), escrita (w) e execução (x). Esse modelo de segurança é a base do controle de acesso no Unix desde os anos 70 e continua essencial no Linux, macOS e em qualquer sistema operacional do tipo Unix. Entender chmod é fundamental para administração de servidores, deploy de aplicações web e gerenciamento seguro de scripts.",
+    "section2Title": "Entendendo os Números de Permissão",
+    "section2Text": "As permissões Unix usam um sistema de numeração octal (base 8) onde cada permissão é um bit: leitura = 4 (binário 100), escrita = 2 (binário 010), execução = 1 (binário 001). Você soma os valores para cada grupo. Por exemplo, leitura + escrita = 6 (4+2), leitura + execução = 5 (4+1), e leitura + escrita + execução = 7 (4+2+1). Um número octal de três dígitos como 755 significa: o proprietário recebe 7 (rwx), o grupo recebe 5 (r-x) e outros recebem 5 (r-x). Um quarto dígito inicial controla os bits especiais: setuid (4), setgid (2) e sticky (1).",
+    "section3Title": "Padrões de Permissão Comuns",
+    "section3Text": "644 (rw-r--r--) é o padrão para arquivos regulares — o proprietário pode ler e escrever, os demais só podem ler. 755 (rwxr-xr-x) é o padrão para diretórios e scripts executáveis — o proprietário tem acesso total, os demais podem ler e navegar. 600 (rw-------) é para arquivos privados como chaves SSH e arquivos de configuração com segredos — só o proprietário pode acessar. 700 (rwx------) é o mesmo, mas para diretórios. 777 (rwxrwxrwx) dá acesso total a todos e quase nunca deve ser usado em produção.",
+    "section4Title": "Dicas sobre chmod",
+    "section4List": "Nunca use 777 em produção — dá acesso total a todos, criando uma vulnerabilidade de segurança grave | Use chmod -R com cuidado — mudanças recursivas de permissão podem quebrar tudo rapidamente; sempre confira o caminho de destino | setuid em executáveis os roda como o proprietário do arquivo, o que é poderoso mas perigoso se mal utilizado | setgid em diretórios faz novos arquivos herdarem o grupo, útil para pastas de projetos compartilhados | O sticky bit em diretórios (como /tmp) impede que usuários apaguem arquivos de outros | Use a notação simbólica (chmod u+x arquivo) para mudanças rápidas pontuais, e a octal (chmod 755 arquivo) para definir todas as permissões de uma vez | Sempre defina chaves SSH como 600 e diretórios .ssh como 700 — o SSH vai se recusar a usar chaves com permissões abertas demais"
+  },
+  "ui": {
+    "howItWorksText": "Marque as caixas de permissão para proprietário, grupo e outros. A ferramenta mostra instantaneamente o valor octal, a notação simbólica e o comando chmod completo que você pode copiar e executar. Use os presets para padrões comuns como 644, 755 ou 600.",
+    "owner": "Proprietário",
+    "group": "Grupo",
+    "others": "Outros",
+    "read": "Leitura",
+    "write": "Escrita",
+    "execute": "Execução",
+    "octal": "Octal",
+    "symbolic": "Simbólico",
+    "command": "Comando",
+    "setuid": "Setuid",
+    "setgid": "Setgid",
+    "sticky": "Sticky",
+    "special": "Especiais",
+    "presets": "Presets",
+    "fileDefault": "Arquivo padrão (644)",
+    "dirDefault": "Diretório padrão (755)",
+    "private": "Privado (600)",
+    "fullAccess": "Acesso total (777)",
+    "readOnly": "Somente leitura (444)",
+    "copy": "Copiar"
+  }
+}

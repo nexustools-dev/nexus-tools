@@ -22,7 +22,13 @@
     "cronExpressionBuilder": "Cron Builder",
     "jsonCsvConverter": "JSON/CSV",
     "textCaseConverter": "Formato Texto",
-    "placeholderImage": "Placeholder"
+    "placeholderImage": "Placeholder",
+    "sqlFormatter": "SQL Formatter",
+    "jsonYamlConverter": "JSON/YAML",
+    "chmodCalculator": "Chmod",
+    "boxShadowGenerator": "Box Shadow",
+    "borderRadiusGenerator": "Border Radius",
+    "aspectRatioCalculator": "Aspect Ratio"
   },
   "footer": {
     "privacy": "Todas las herramientas funcionan 100% en tu navegador. No se envían datos a ningún servidor.",
@@ -132,6 +138,30 @@
       "placeholderImage": {
         "name": "Generador de Imágenes Placeholder",
         "description": "Genera imágenes placeholder con dimensiones, colores y texto personalizado. Descarga PNG o copia la URL de datos."
+      },
+      "sqlFormatter": {
+        "name": "Formateador SQL",
+        "description": "Formatea, embellece y minifica consultas SQL. Resaltado de sintaxis, indentación configurable y manejo de mayúsculas en palabras clave."
+      },
+      "jsonYamlConverter": {
+        "name": "Convertidor JSON a YAML",
+        "description": "Convierte entre formatos JSON y YAML. Bidireccional, indentación configurable y soporte de arrays en línea."
+      },
+      "chmodCalculator": {
+        "name": "Calculadora Chmod",
+        "description": "Calcula permisos de archivos Unix visualmente. Cuadrícula interactiva de checkboxes, notación octal y simbólica, presets comunes."
+      },
+      "boxShadowGenerator": {
+        "name": "Generador de Box Shadow",
+        "description": "Crea box-shadow CSS visualmente. Múltiples capas de sombra, selector de color, toggle inset y CSS listo para copiar."
+      },
+      "borderRadiusGenerator": {
+        "name": "Generador de Border Radius",
+        "description": "Diseña border-radius CSS visualmente. Control independiente por esquina, unidades px y %, presets de formas, vista previa en vivo."
+      },
+      "aspectRatioCalculator": {
+        "name": "Calculadora de Aspect Ratio",
+        "description": "Calcula relaciones de aspecto a partir de dimensiones. Bloqueo de ratio, presets comunes, tabla de resoluciones y salida CSS."
       }
     }
   },

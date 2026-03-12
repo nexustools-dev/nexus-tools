@@ -1,0 +1,44 @@
+{
+  "metadata": {
+    "title": "CSS Box Shadow Generator — Create Shadows Visually Online",
+    "description": "Free online CSS box-shadow generator. Add multiple shadows, adjust blur, spread, offset and color with live preview. Copy CSS code instantly. 100% browser-based.",
+    "keywords": "css box shadow generator, box shadow maker, css shadow tool, drop shadow css, inset shadow, multiple box shadows, shadow generator online, css shadow preview"
+  },
+  "heading": "Box Shadow Generator",
+  "subheading": "Design CSS box shadows visually with a live preview. Add multiple layers, tweak offsets, blur, and spread, then copy the code. Everything runs in your browser.",
+  "seo": {
+    "section1Title": "What is CSS box-shadow?",
+    "section1Text": "The CSS box-shadow property adds one or more shadow effects to an element's frame. Shadows can be placed outside (default) or inside (inset) the box. They are commonly used to create depth perception, elevate cards above a background, highlight interactive elements on hover, and build realistic layered interfaces. Unlike images, box shadows are rendered by the browser at any resolution with zero extra requests.",
+    "section2Title": "Box Shadow Syntax Explained",
+    "section2Text": "The box-shadow shorthand accepts values in this order: offset-x, offset-y, blur-radius, spread-radius, color, and the optional inset keyword. Offset-x moves the shadow horizontally (positive = right), offset-y moves it vertically (positive = down). Blur-radius softens the edge — larger values produce a more diffuse shadow. Spread-radius expands or contracts the shadow size before blurring. Color can be any CSS color, including rgba() for transparency. Adding the inset keyword renders the shadow inside the element.",
+    "section3Title": "Multiple Shadows",
+    "section3Text": "CSS allows comma-separated shadow declarations on a single property, enabling complex layered effects. Designers stack shadows to simulate realistic lighting — a tight dark shadow for contact depth plus a large soft shadow for ambient light. Layering two or three shadows produces results that feel natural and polished. Keep performance in mind: each shadow triggers extra painting, so avoid stacking more than four or five on elements that animate frequently.",
+    "section4Title": "Box Shadow Tips",
+    "section4List": "Use rgba() or hsla() colors so shadows blend naturally with any background | Avoid blur values above 40px on mobile — large shadows hurt scroll performance | Combine a small tight shadow with a large soft one for realistic elevation | Use inset shadows for pressed-button effects and inner glows | Keep spread at 0 for the most natural-looking drop shadows | Test shadows on both light and dark backgrounds to ensure contrast"
+  },
+  "ui": {
+    "howItWorksText": "Add a shadow layer, adjust its offsets, blur, spread, and color, then copy the CSS. The preview updates in real-time. You can stack multiple shadows for complex effects. No data is sent to any server.",
+    "preview": "Preview",
+    "shadows": "Shadows",
+    "addShadow": "Add Shadow",
+    "removeShadow": "Remove",
+    "horizontalOffset": "Horizontal Offset",
+    "verticalOffset": "Vertical Offset",
+    "blur": "Blur",
+    "spread": "Spread",
+    "color": "Color",
+    "inset": "Inset",
+    "css": "CSS",
+    "presets": "Presets",
+    "subtle": "Subtle",
+    "medium": "Medium",
+    "heavy": "Heavy",
+    "insetShadow": "Inset",
+    "layered": "Layered",
+    "colored": "Colored",
+    "neonGlow": "Neon Glow",
+    "bgColor": "Background Color",
+    "boxColor": "Box Color",
+    "copy": "Copy"
+  }
+}

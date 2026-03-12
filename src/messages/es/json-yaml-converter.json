@@ -1,0 +1,34 @@
+{
+  "metadata": {
+    "title": "Convertidor JSON a YAML — Convierte JSON a YAML Online",
+    "description": "Convertidor online gratis de JSON a YAML y de YAML a JSON. Tamaño de indentación personalizable, opción de arrays en línea, estadísticas de claves y descarga instantánea. 100% en el navegador, sin enviar datos a servidores.",
+    "keywords": "json a yaml, yaml a json, convertidor json yaml, convertir json a yaml online, yaml json online, json a yml, convertidor yaml, herramienta json yaml online"
+  },
+  "heading": "Convertidor JSON a YAML",
+  "subheading": "Convierte JSON a YAML o YAML de vuelta a JSON. Ajusta la indentación, activa arrays en línea y descarga el resultado. Todo se ejecuta en tu navegador.",
+  "seo": {
+    "section1Title": "¿Qué son JSON y YAML?",
+    "section1Text": "JSON (JavaScript Object Notation) y YAML (YAML Ain't Markup Language) son dos de los formatos de serialización de datos más populares. JSON usa llaves, corchetes y comillas para representar datos estructurados, y es el formato predeterminado para APIs REST, archivos de configuración e intercambio de datos web. YAML usa indentación y una sintaxis mínima para lograr lo mismo, lo que lo hace más legible y fácil de escribir a mano. JSON se prefiere para la comunicación entre máquinas, mientras que YAML es el favorito para archivos de configuración donde las personas necesitan leer y editar los datos con frecuencia.",
+    "section2Title": "JSON vs YAML — Diferencias clave",
+    "section2Text": "La mayor diferencia es la sintaxis: JSON requiere llaves, corchetes, comas y claves entre comillas, mientras que YAML se basa en indentación y saltos de línea. YAML soporta comentarios (con #), algo que JSON no permite — una gran ventaja para archivos de configuración. YAML también soporta anclas y alias para reutilizar valores, cadenas multilínea y una conversión de tipos más flexible (por ejemplo, yes/no se convierten en booleanos). JSON es más estricto y predecible, lo que lo hace mejor para el intercambio de datos. YAML es más expresivo pero puede introducir errores sutiles a través de la conversión implícita de tipos.",
+    "section3Title": "YAML en DevOps",
+    "section3Text": "YAML se ha convertido en el lenguaje común de DevOps y la infraestructura como código. Los manifiestos de Kubernetes, los archivos Docker Compose, los workflows de GitHub Actions, los pipelines de GitLab CI, los playbooks de Ansible y los charts de Helm usan YAML como formato de configuración. Su legibilidad lo hace ideal para definir configuraciones complejas de despliegue, dependencias de servicios y flujos de automatización. Convertir respuestas JSON de APIs o configuraciones generadas a YAML es una tarea habitual al integrar herramientas en pipelines CI/CD o preparar recursos de Kubernetes.",
+    "section4Title": "Consejos de conversión",
+    "section4List": "Valida siempre tu JSON o YAML antes de convertir para detectar errores de sintaxis a tiempo | Cuidado con la conversión implícita de tipos de YAML — cadenas como 'yes', 'no', 'on', 'off' se convierten en booleanos | Usa indentación de 2 espacios en YAML para seguir las convenciones de Kubernetes y Docker Compose | Activa los arrays en línea para una salida compacta cuando los arrays contienen valores simples | Pon entre comillas las cadenas en YAML que puedan interpretarse como números, booleanos o null | Prueba el YAML convertido en tu herramienta destino (kubectl, docker-compose) antes de desplegar"
+  },
+  "ui": {
+    "howItWorksText": "Pega JSON o YAML abajo, elige la dirección de conversión, ajusta el tamaño de indentación si lo necesitas y mira el resultado al instante. Descarga cuando quieras. Ningún dato sale de tu navegador.",
+    "jsonToYaml": "JSON → YAML",
+    "yamlToJson": "YAML → JSON",
+    "indentSize": "Tamaño de indentación",
+    "inlineArrays": "Arrays en línea",
+    "sample": "Ejemplo",
+    "clear": "Limpiar",
+    "downloadYaml": "Descargar YAML",
+    "downloadJson": "Descargar JSON",
+    "keysCount": "claves",
+    "maxDepth": "profundidad máxima",
+    "invalidJson": "JSON inválido — revisa la sintaxis e inténtalo de nuevo",
+    "invalidYaml": "YAML inválido — revisa la indentación y la sintaxis"
+  }
+}

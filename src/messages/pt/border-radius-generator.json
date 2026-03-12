@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "title": "Gerador de Border Radius — Crie Cantos Arredondados Visualmente",
+    "description": "Gerador de border-radius CSS online grátis. Ajuste cada canto individualmente ou vincule-os. Prévia ao vivo com código CSS pronto para copiar. 100% no navegador.",
+    "keywords": "gerador border radius, css border radius, cantos arredondados css, ferramenta border radius, gerador cantos arredondados css, prévia border radius, raio canto css, border radius abreviado"
+  },
+  "heading": "Gerador de Border Radius",
+  "subheading": "Crie cantos arredondados personalizados visualmente. Ajuste cada canto, escolha unidades e copie o CSS. Tudo roda no seu navegador.",
+  "seo": {
+    "section1Title": "O que é border-radius?",
+    "section1Text": "A propriedade CSS border-radius permite arredondar os cantos da caixa de borda de um elemento. É uma das propriedades CSS mais utilizadas no design de interfaces modernas, transformando elementos retangulares rígidos em formas mais suaves e amigáveis. Você pode aplicar um raio uniforme nos quatro cantos ou controlar cada um de forma independente. Border-radius aceita valores em pixels, porcentagens, em e outras unidades de comprimento CSS, dando controle preciso sobre a curvatura de cada canto.",
+    "section2Title": "Sintaxe do Border Radius",
+    "section2Text": "A forma abreviada do border-radius aceita de um a quatro valores. Um único valor aplica o mesmo raio em todos os cantos. Dois valores definem superior-esquerdo/inferior-direito e superior-direito/inferior-esquerdo respectivamente. Três valores definem superior-esquerdo, superior-direito/inferior-esquerdo e inferior-direito. Quatro valores definem cada canto no sentido horário a partir do superior esquerdo. Para cantos elípticos, usa-se a notação com barra (ex., border-radius: 50px / 30px) onde o primeiro grupo define raios horizontais e o segundo raios verticais. Essa sintaxe de 8 valores permite criar formas orgânicas e assimétricas que vão muito além dos cantos arredondados simples.",
+    "section3Title": "Formas Criativas com border-radius",
+    "section3Text": "Border-radius pode fazer muito mais do que arredondar cantos sutilmente. Definir border-radius como 50% em um elemento quadrado cria um círculo perfeito, enquanto aplicá-lo a um retângulo produz uma forma de pílula ou cápsula. Usando valores diferentes para cada canto, você pode criar formas de folha, blobs orgânicos e figuras assimétricas fluidas. Combinar border-radius com gradientes de fundo, box-shadow e transforms abre possibilidades criativas como balões de fala, gotas d'água e elementos decorativos abstratos — tudo em CSS puro sem imagens.",
+    "section4Title": "Dicas sobre Border Radius",
+    "section4List": "Use valores em % para cantos responsivos que escalam com o tamanho do elemento | Defina border-radius: 50% em um quadrado para criar um círculo perfeito | Use 9999px para botões em forma de pílula independente do tamanho | Combine valores diferentes por canto para formas orgânicas de folha e blob | Raios elípticos (notação com barra) criam curvas mais naturais | Border-radius funciona em imagens, vídeos e qualquer elemento de bloco | Inspecione com DevTools do navegador para ajustar valores visualmente"
+  },
+  "ui": {
+    "howItWorksText": "Ajuste o raio de cada canto com os controles deslizantes ou digite um valor diretamente. Vincule os cantos para mudar todos de uma vez, ou desvincule para controle individual. Escolha sua unidade, visualize a forma e copie o CSS. Nenhum dado é enviado a nenhum servidor.",
+    "preview": "Prévia",
+    "topLeft": "Superior Esquerdo",
+    "topRight": "Superior Direito",
+    "bottomRight": "Inferior Direito",
+    "bottomLeft": "Inferior Esquerdo",
+    "linkCorners": "Vincular Cantos",
+    "unit": "Unidade",
+    "pixels": "Pixels",
+    "percent": "Porcentagem",
+    "css": "CSS",
+    "presets": "Presets",
+    "circle": "Círculo",
+    "pill": "Pílula",
+    "rounded": "Arredondado",
+    "leaf": "Folha",
+    "blob": "Blob",
+    "ticket": "Ticket",
+    "boxSize": "Tamanho da Caixa",
+    "bgColor": "Cor de Fundo",
+    "copy": "Copiar"
+  }
+}

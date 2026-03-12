@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "title": "Calculadora de Relacion de Aspecto — Redimensionar y Convertir Proporciones",
+    "description": "Calculadora de relacion de aspecto gratis. Redimensiona proporcionalmente, encuentra la relacion para cualquier resolucion, obtiene CSS listo para usar y consulta los formatos mas comunes. 100% en tu navegador.",
+    "keywords": "calculadora relacion de aspecto, convertidor relacion de aspecto, calculadora 16:9, redimensionar aspecto, proporcion de pantalla, relacion de aspecto video, aspecto responsive, css aspect-ratio"
+  },
+  "heading": "Calculadora de Relacion de Aspecto",
+  "subheading": "Calcula, convierte y previsualiza relaciones de aspecto. Redimensiona proporcionalmente y obtiene CSS listo para usar.",
+  "seo": {
+    "section1Title": "Que es la Relacion de Aspecto?",
+    "section1Text": "La relacion de aspecto es la proporcion entre el ancho y el alto de una imagen, video o pantalla, expresada como ancho:alto. Define la forma del contenido: por ejemplo, 16:9 es un rectangulo apaisado mientras que 1:1 es un cuadrado perfecto. Las relaciones de aspecto son fundamentales en la produccion de medios, el diseno web responsive y el diseno de interfaces para asegurar que el contenido se muestre correctamente en distintos dispositivos y plataformas sin recortes ni deformaciones no deseadas.",
+    "section2Title": "Relaciones de Aspecto Comunes",
+    "section2Text": "16:9 es el estandar para video HD y 4K, YouTube y la mayoria de monitores modernos. 4:3 era el formato por defecto de las emisiones de television antiguas y los primeros monitores de ordenador. 1:1 se usa ampliamente en redes sociales como Instagram para publicaciones cuadradas. 21:9 (ultrapanoramic) es popular para contenido cinematografico y monitores ultrawide para gaming. 3:2 es la proporcion clasica de la pelicula de 35mm y las camaras DSLR. 9:16 es el formato vertical que usan TikTok, Reels y Stories.",
+    "section3Title": "Relacion de Aspecto en CSS",
+    "section3Text": "El CSS moderno ofrece la propiedad aspect-ratio para definir una proporcion preferida en cualquier elemento (por ejemplo, aspect-ratio: 16 / 9). Esto elimina el viejo truco del padding-top en porcentaje que se uso durante anos. Combinado con object-fit (cover, contain, fill), puedes controlar exactamente como las imagenes y videos llenan sus contenedores manteniendo sus proporciones originales. La propiedad aspect-ratio es compatible con todos los navegadores modernos.",
+    "section4Title": "Consejos sobre Relacion de Aspecto",
+    "section4List": "Usa la propiedad CSS aspect-ratio para contenedores responsive sin JavaScript | Ajusta siempre la relacion de aspecto a tu plataforma destino (16:9 para YouTube, 9:16 para TikTok, 1:1 para Instagram) | Combina aspect-ratio con object-fit: cover para evitar bandas negras | Al redimensionar imagenes, bloquea la proporcion para evitar deformaciones | Usa 2:1 o 1.91:1 para previsualizaciones Open Graph y redes sociales | Prueba tus layouts en multiples breakpoints para asegurar que las proporciones se mantienen en todos los tamanos de pantalla"
+  },
+  "ui": {
+    "howItWorksText": "Introduce un ancho y un alto para calcular la relacion de aspecto. Bloquea la proporcion, cambia una dimension y la otra se ajusta automaticamente. Consulta los presets de formatos comunes y copia el CSS generado.",
+    "width": "Ancho",
+    "height": "Alto",
+    "ratio": "Proporcion",
+    "lockRatio": "Bloquear Proporcion",
+    "cssOutput": "Codigo CSS",
+    "presets": "Presets",
+    "widescreen": "Panoramico",
+    "standard": "Estandar",
+    "square": "Cuadrado",
+    "ultrawide": "Ultrapanoramico",
+    "photo": "Foto",
+    "vertical": "Vertical",
+    "social": "Redes Sociales",
+    "resolutions": "Resoluciones",
+    "copy": "Copiar",
+    "preview": "Vista Previa"
+  }
+}

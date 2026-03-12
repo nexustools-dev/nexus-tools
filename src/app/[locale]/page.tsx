@@ -24,6 +24,12 @@ const toolKeys = [
   { key: "jsonCsvConverter", href: "/tools/json-csv-converter", icon: "CSV", color: "from-amber-500 to-orange-600" },
   { key: "textCaseConverter", href: "/tools/text-case-converter", icon: "Cc", color: "from-lime-500 to-green-600" },
   { key: "placeholderImage", href: "/tools/placeholder-image", icon: "IMG", color: "from-pink-500 to-fuchsia-600" },
+  { key: "sqlFormatter", href: "/tools/sql-formatter", icon: "SQL", color: "from-blue-500 to-cyan-600" },
+  { key: "jsonYamlConverter", href: "/tools/json-yaml-converter", icon: "YML", color: "from-orange-500 to-red-600" },
+  { key: "chmodCalculator", href: "/tools/chmod-calculator", icon: "777", color: "from-green-500 to-teal-600" },
+  { key: "boxShadowGenerator", href: "/tools/box-shadow-generator", icon: "SH", color: "from-violet-500 to-purple-600" },
+  { key: "borderRadiusGenerator", href: "/tools/border-radius-generator", icon: "BR", color: "from-pink-500 to-rose-600" },
+  { key: "aspectRatioCalculator", href: "/tools/aspect-ratio-calculator", icon: "16:9", color: "from-amber-500 to-yellow-600" },
 ] as const;
 
 type Props = {

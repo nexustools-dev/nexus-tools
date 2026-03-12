@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "title": "Chmod Calculator — Unix File Permission Generator Online",
+    "description": "Free chmod calculator. Set Unix file permissions visually with checkboxes, get octal and symbolic notation, preview the chmod command, and learn about setuid, setgid, and sticky bit. 100% browser-based.",
+    "keywords": "chmod calculator, chmod generator, unix permissions, file permissions, octal permissions, chmod command, linux permissions, permission calculator, setuid, setgid, sticky bit"
+  },
+  "heading": "Chmod Calculator",
+  "subheading": "Set Unix file permissions visually with checkboxes. Get octal and symbolic notation, copy the chmod command, and use common presets. Everything runs in your browser.",
+  "seo": {
+    "section1Title": "What is chmod?",
+    "section1Text": "chmod (change mode) is a Unix/Linux command that sets file and directory permissions. Every file in a Unix system has three permission groups — owner, group, and others — and each group can have read (r), write (w), and execute (x) permissions. This security model has been the foundation of Unix access control since the 1970s and remains essential in Linux, macOS, and every Unix-like operating system. Understanding chmod is critical for server administration, deploying web applications, and managing scripts securely.",
+    "section2Title": "Understanding Permission Numbers",
+    "section2Text": "Unix permissions use an octal (base-8) numbering system where each permission is a bit: read = 4 (binary 100), write = 2 (binary 010), execute = 1 (binary 001). You add the values together for each group. For example, read + write = 6 (4+2), read + execute = 5 (4+1), and read + write + execute = 7 (4+2+1). A three-digit octal like 755 means: owner gets 7 (rwx), group gets 5 (r-x), and others get 5 (r-x). A fourth leading digit controls special bits: setuid (4), setgid (2), and sticky (1).",
+    "section3Title": "Common Permission Patterns",
+    "section3Text": "644 (rw-r--r--) is the default for regular files — the owner can read and write, everyone else can only read. 755 (rwxr-xr-x) is the default for directories and executable scripts — the owner has full access, everyone else can read and traverse. 600 (rw-------) is for private files like SSH keys and config files with secrets — only the owner can access them. 700 (rwx------) is the same but for directories. 777 (rwxrwxrwx) gives everyone full access and should almost never be used in production.",
+    "section4Title": "chmod Tips",
+    "section4List": "Never use 777 in production — it gives everyone full access, creating a serious security vulnerability | Use chmod -R carefully — recursive permission changes can break things fast; always double-check the target path | setuid on executables runs them as the file owner, which is powerful but dangerous if misused | setgid on directories makes new files inherit the group, useful for shared project folders | The sticky bit on directories (like /tmp) prevents users from deleting files they do not own | Use symbolic notation (chmod u+x file) for quick single changes, octal (chmod 755 file) for setting all permissions at once | Always set SSH keys to 600 and .ssh directories to 700 — SSH will refuse to use keys with loose permissions"
+  },
+  "ui": {
+    "howItWorksText": "Check the permission boxes for owner, group, and others. The tool instantly shows the octal value, symbolic notation, and the full chmod command you can copy and run. Use presets for common patterns like 644, 755, or 600.",
+    "owner": "Owner",
+    "group": "Group",
+    "others": "Others",
+    "read": "Read",
+    "write": "Write",
+    "execute": "Execute",
+    "octal": "Octal",
+    "symbolic": "Symbolic",
+    "command": "Command",
+    "setuid": "Setuid",
+    "setgid": "Setgid",
+    "sticky": "Sticky",
+    "special": "Special",
+    "presets": "Presets",
+    "fileDefault": "File Default (644)",
+    "dirDefault": "Directory Default (755)",
+    "private": "Private (600)",
+    "fullAccess": "Full Access (777)",
+    "readOnly": "Read Only (444)",
+    "copy": "Copy"
+  }
+}

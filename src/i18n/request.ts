@@ -31,6 +31,12 @@ export default getRequestConfig(async ({ requestLocale }) => {
   const jsonCsvConverter = (await import(`../messages/${locale}/json-csv-converter.json`)).default;
   const textCaseConverter = (await import(`../messages/${locale}/text-case-converter.json`)).default;
   const placeholderImage = (await import(`../messages/${locale}/placeholder-image.json`)).default;
+  const sqlFormatter = (await import(`../messages/${locale}/sql-formatter.json`)).default;
+  const jsonYamlConverter = (await import(`../messages/${locale}/json-yaml-converter.json`)).default;
+  const chmodCalculator = (await import(`../messages/${locale}/chmod-calculator.json`)).default;
+  const boxShadowGenerator = (await import(`../messages/${locale}/box-shadow-generator.json`)).default;
+  const borderRadiusGenerator = (await import(`../messages/${locale}/border-radius-generator.json`)).default;
+  const aspectRatioCalculator = (await import(`../messages/${locale}/aspect-ratio-calculator.json`)).default;
 
   return {
     locale,
@@ -58,6 +64,12 @@ export default getRequestConfig(async ({ requestLocale }) => {
       jsonCsvConverter,
       textCaseConverter,
       placeholderImage,
+      sqlFormatter,
+      jsonYamlConverter,
+      chmodCalculator,
+      boxShadowGenerator,
+      borderRadiusGenerator,
+      aspectRatioCalculator,
     },
   };
 });

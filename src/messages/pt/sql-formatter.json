@@ -1,0 +1,33 @@
+{
+  "metadata": {
+    "title": "Formatador SQL — Formate e Embeleze Consultas SQL Online",
+    "description": "Formatador e embelezador SQL online grátis. Formate, indente e minifique consultas SQL com opções personalizáveis. Suporta SELECT, JOIN, subconsultas. 100% no navegador.",
+    "keywords": "formatador sql, formatar sql online, embelezar sql, indentar sql, minificar sql, formatar consulta sql, ferramenta formatação sql, pretty print sql"
+  },
+  "heading": "Formatador SQL",
+  "subheading": "Formate, embeleze e minifique consultas SQL instantaneamente. Personalize a indentação, o estilo das palavras-chave e mais. Tudo roda no seu navegador — nenhuma consulta é enviada a lugar nenhum.",
+  "seo": {
+    "section1Title": "O que é Formatação SQL?",
+    "section1Text": "Formatação SQL é a prática de estruturar consultas de forma consistente e legível. Um SQL bem formatado torna as revisões de código mais rápidas, a depuração mais fácil e a integração de novos membros da equipe mais tranquila. Um formato uniforme em toda a base de código reduz a carga cognitiva e ajuda desenvolvedores a identificar erros lógicos, cláusulas ausentes e problemas de desempenho com facilidade. A maioria das equipes profissionais adota guias de estilo SQL como parte de seus padrões de desenvolvimento.",
+    "section2Title": "Convenções de Estilo SQL",
+    "section2Text": "As convenções SQL mais adotadas incluem escrever palavras-chave em maiúsculas (SELECT, FROM, WHERE) para separá-las visualmente dos nomes de tabelas e colunas. Cada cláusula principal deve começar em sua própria linha com indentação consistente. Listas de colunas costumam ser colocadas uma por linha para facilitar comparações no controle de versão. A posição das vírgulas varia — alguns times preferem vírgulas no início para facilitar a comentação de linhas, enquanto outros usam vírgulas no final. O fundamental é manter a consistência dentro do seu projeto.",
+    "section3Title": "Cláusulas SQL Comuns",
+    "section3Text": "Uma consulta SQL bem formatada organiza suas cláusulas em ordem lógica: SELECT define quais colunas buscar, FROM especifica as tabelas de origem, JOIN combina tabelas relacionadas com condições ON, WHERE filtra linhas antes da agregação, GROUP BY agrupa linhas para funções de agregação, HAVING filtra resultados agrupados, ORDER BY ordena a saída, e LIMIT restringe o número de linhas retornadas. Cada cláusula tem um propósito específico na construção da sua consulta.",
+    "section4Title": "Dicas de Formatação SQL",
+    "section4List": "Use indentação consistente (2 ou 4 espaços) para todas as cláusulas aninhadas | Alinhe os nomes das colunas verticalmente para facilitar a leitura | Escreva as palavras-chave SQL em maiúsculas para distingui-las dos identificadores | Coloque cada JOIN em sua própria linha com a condição ON indentada abaixo | Comente joins complexos e subconsultas para explicar a lógica de negócio | Separe cláusulas WHERE longas em uma condição por linha com AND/OR no início | Use aliases de tabela consistentes e descritivos (ex: u para users, p para pedidos)"
+  },
+  "ui": {
+    "howItWorksText": "Cole sua consulta SQL abaixo e clique em Formatar. Escolha o tamanho da indentação e o estilo das palavras-chave. Toda a formatação acontece no seu navegador — nenhuma consulta é transmitida a lugar nenhum.",
+    "inputLabel": "SQL de Entrada",
+    "outputLabel": "SQL Formatado",
+    "format": "Formatar",
+    "minify": "Minificar",
+    "indentSize": "Tamanho da Indentação",
+    "uppercaseKeywords": "Palavras-Chave em Maiúsculas",
+    "sample": "Exemplo",
+    "clear": "Limpar",
+    "download": "Baixar",
+    "lineCount": "Linhas",
+    "keywordCount": "Palavras-Chave"
+  }
+}

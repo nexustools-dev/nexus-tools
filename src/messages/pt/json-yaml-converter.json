@@ -1,0 +1,34 @@
+{
+  "metadata": {
+    "title": "Conversor JSON para YAML — Converta JSON para YAML Online",
+    "description": "Conversor online grátis de JSON para YAML e de YAML para JSON. Tamanho de indentação personalizável, opção de arrays inline, estatísticas de chaves e download instantâneo. 100% no navegador, sem envio de dados a servidores.",
+    "keywords": "json para yaml, yaml para json, conversor json yaml, converter json para yaml online, yaml json online, json para yml, conversor yaml, ferramenta json yaml online"
+  },
+  "heading": "Conversor JSON para YAML",
+  "subheading": "Converta JSON para YAML ou YAML de volta para JSON. Ajuste a indentação, ative arrays inline e baixe o resultado. Tudo roda no seu navegador.",
+  "seo": {
+    "section1Title": "O que são JSON e YAML?",
+    "section1Text": "JSON (JavaScript Object Notation) e YAML (YAML Ain't Markup Language) são dois dos formatos de serialização de dados mais populares. JSON usa chaves, colchetes e aspas para representar dados estruturados, e é o formato padrão para APIs REST, arquivos de configuração e troca de dados na web. YAML usa indentação e uma sintaxe mínima para alcançar o mesmo objetivo, tornando-o mais legível e fácil de escrever manualmente. JSON é preferido para comunicação entre máquinas, enquanto YAML é o favorito para arquivos de configuração onde pessoas precisam ler e editar os dados com frequência.",
+    "section2Title": "JSON vs YAML — Principais diferenças",
+    "section2Text": "A maior diferença é a sintaxe: JSON exige chaves, colchetes, vírgulas e chaves entre aspas, enquanto YAML se baseia em indentação e quebras de linha. YAML suporta comentários (com #), algo que JSON não permite — uma grande vantagem para arquivos de configuração. YAML também suporta âncoras e aliases para reutilizar valores, strings multilinha e uma conversão de tipos mais flexível (por exemplo, yes/no se tornam booleanos). JSON é mais rígido e previsível, o que o torna melhor para troca de dados. YAML é mais expressivo, mas pode introduzir bugs sutis através da conversão implícita de tipos.",
+    "section3Title": "YAML no DevOps",
+    "section3Text": "YAML se tornou a linguagem comum do DevOps e da infraestrutura como código. Manifestos do Kubernetes, arquivos Docker Compose, workflows do GitHub Actions, pipelines do GitLab CI, playbooks do Ansible e charts do Helm usam YAML como formato de configuração. Sua legibilidade o torna ideal para definir configurações complexas de deploy, dependências de serviços e fluxos de automação. Converter respostas JSON de APIs ou configurações geradas para YAML é uma tarefa comum ao integrar ferramentas em pipelines CI/CD ou preparar recursos do Kubernetes.",
+    "section4Title": "Dicas de conversão",
+    "section4List": "Sempre valide seu JSON ou YAML antes de converter para detectar erros de sintaxe cedo | Cuidado com a conversão implícita de tipos do YAML — strings como 'yes', 'no', 'on', 'off' se tornam booleanos | Use indentação de 2 espaços no YAML para seguir as convenções do Kubernetes e Docker Compose | Ative os arrays inline para uma saída compacta quando os arrays contêm valores simples | Coloque entre aspas as strings no YAML que possam ser interpretadas como números, booleanos ou null | Teste o YAML convertido na sua ferramenta destino (kubectl, docker-compose) antes de fazer deploy"
+  },
+  "ui": {
+    "howItWorksText": "Cole JSON ou YAML abaixo, escolha a direção da conversão, ajuste o tamanho da indentação se precisar e veja o resultado na hora. Baixe quando quiser. Nenhum dado sai do seu navegador.",
+    "jsonToYaml": "JSON → YAML",
+    "yamlToJson": "YAML → JSON",
+    "indentSize": "Tamanho da indentação",
+    "inlineArrays": "Arrays inline",
+    "sample": "Exemplo",
+    "clear": "Limpar",
+    "downloadYaml": "Baixar YAML",
+    "downloadJson": "Baixar JSON",
+    "keysCount": "chaves",
+    "maxDepth": "profundidade máxima",
+    "invalidJson": "JSON inválido — verifique a sintaxe e tente novamente",
+    "invalidYaml": "YAML inválido — verifique a indentação e a sintaxe"
+  }
+}

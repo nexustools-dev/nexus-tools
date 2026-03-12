@@ -28,6 +28,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/tools/json-csv-converter", changeFrequency: "monthly" as const, priority: 0.8 },
     { path: "/tools/text-case-converter", changeFrequency: "monthly" as const, priority: 0.8 },
     { path: "/tools/placeholder-image", changeFrequency: "monthly" as const, priority: 0.8 },
+    { path: "/tools/sql-formatter", changeFrequency: "monthly" as const, priority: 0.8 },
+    { path: "/tools/json-yaml-converter", changeFrequency: "monthly" as const, priority: 0.8 },
+    { path: "/tools/chmod-calculator", changeFrequency: "monthly" as const, priority: 0.8 },
+    { path: "/tools/box-shadow-generator", changeFrequency: "monthly" as const, priority: 0.8 },
+    { path: "/tools/border-radius-generator", changeFrequency: "monthly" as const, priority: 0.8 },
+    { path: "/tools/aspect-ratio-calculator", changeFrequency: "monthly" as const, priority: 0.8 },
   ];
 
   return paths.flatMap(({ path, changeFrequency, priority }) =>

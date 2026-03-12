@@ -1,0 +1,44 @@
+{
+  "metadata": {
+    "title": "Generador de Box Shadow CSS — Crea Sombras Visualmente Online",
+    "description": "Generador de box-shadow CSS online gratis. Agrega múltiples sombras, ajusta desenfoque, expansión, desplazamiento y color con vista previa en vivo. Copia el código CSS al instante. 100% en el navegador.",
+    "keywords": "generador box shadow css, creador sombras css, herramienta sombra css, sombra css, sombra interna css, múltiples sombras css, generador sombras online, vista previa sombra css"
+  },
+  "heading": "Generador de Box Shadow",
+  "subheading": "Diseña sombras CSS visualmente con vista previa en vivo. Agrega múltiples capas, ajusta desplazamientos, desenfoque y expansión, y luego copia el código. Todo se ejecuta en tu navegador.",
+  "seo": {
+    "section1Title": "¿Qué es CSS box-shadow?",
+    "section1Text": "La propiedad CSS box-shadow agrega uno o más efectos de sombra al marco de un elemento. Las sombras pueden colocarse por fuera (por defecto) o por dentro (inset) de la caja. Se usan frecuentemente para crear percepción de profundidad, elevar tarjetas sobre un fondo, resaltar elementos interactivos al pasar el mouse y construir interfaces con capas realistas. A diferencia de las imágenes, las sombras son renderizadas por el navegador a cualquier resolución sin peticiones adicionales.",
+    "section2Title": "Sintaxis de Box Shadow Explicada",
+    "section2Text": "La propiedad abreviada box-shadow acepta valores en este orden: offset-x, offset-y, blur-radius, spread-radius, color y la palabra clave opcional inset. Offset-x mueve la sombra horizontalmente (positivo = derecha), offset-y la mueve verticalmente (positivo = abajo). Blur-radius suaviza el borde — valores más grandes producen una sombra más difusa. Spread-radius expande o contrae el tamaño de la sombra antes del desenfoque. El color puede ser cualquier color CSS, incluyendo rgba() para transparencia. Agregar la palabra clave inset renderiza la sombra dentro del elemento.",
+    "section3Title": "Sombras Múltiples",
+    "section3Text": "CSS permite declaraciones de sombra separadas por comas en una sola propiedad, lo que habilita efectos complejos con capas. Los diseñadores apilan sombras para simular iluminación realista — una sombra oscura y ajustada para profundidad de contacto más una sombra grande y suave para luz ambiental. Combinar dos o tres sombras produce resultados naturales y pulidos. Ten en cuenta el rendimiento: cada sombra genera pintado adicional, así que evita apilar más de cuatro o cinco en elementos que se animen con frecuencia.",
+    "section4Title": "Consejos para Box Shadow",
+    "section4List": "Usa colores rgba() o hsla() para que las sombras se mezclen naturalmente con cualquier fondo | Evita valores de desenfoque mayores a 40px en móviles — sombras grandes afectan el rendimiento del scroll | Combina una sombra pequeña y ajustada con una grande y suave para elevación realista | Usa sombras inset para efectos de botón presionado y brillos internos | Mantén el spread en 0 para sombras con caída más naturales | Prueba las sombras en fondos claros y oscuros para asegurar buen contraste"
+  },
+  "ui": {
+    "howItWorksText": "Agrega una capa de sombra, ajusta sus desplazamientos, desenfoque, expansión y color, y luego copia el CSS. La vista previa se actualiza en tiempo real. Puedes apilar múltiples sombras para efectos complejos. Ningún dato se envía a ningún servidor.",
+    "preview": "Vista Previa",
+    "shadows": "Sombras",
+    "addShadow": "Agregar Sombra",
+    "removeShadow": "Eliminar",
+    "horizontalOffset": "Desplazamiento Horizontal",
+    "verticalOffset": "Desplazamiento Vertical",
+    "blur": "Desenfoque",
+    "spread": "Expansión",
+    "color": "Color",
+    "inset": "Interior",
+    "css": "CSS",
+    "presets": "Presets",
+    "subtle": "Sutil",
+    "medium": "Media",
+    "heavy": "Intensa",
+    "insetShadow": "Interior",
+    "layered": "Capas",
+    "colored": "Color",
+    "neonGlow": "Neón",
+    "bgColor": "Color de Fondo",
+    "boxColor": "Color de Caja",
+    "copy": "Copiar"
+  }
+}

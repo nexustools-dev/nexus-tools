@@ -1,0 +1,44 @@
+{
+  "metadata": {
+    "title": "Gerador de Box Shadow CSS — Crie Sombras Visualmente Online",
+    "description": "Gerador de box-shadow CSS online grátis. Adicione múltiplas sombras, ajuste desfoque, expansão, deslocamento e cor com prévia ao vivo. Copie o código CSS instantaneamente. 100% no navegador.",
+    "keywords": "gerador box shadow css, criador sombras css, ferramenta sombra css, sombra css, sombra interna css, múltiplas sombras css, gerador sombras online, prévia sombra css"
+  },
+  "heading": "Gerador de Box Shadow",
+  "subheading": "Crie sombras CSS visualmente com prévia ao vivo. Adicione múltiplas camadas, ajuste deslocamentos, desfoque e expansão, e depois copie o código. Tudo roda no seu navegador.",
+  "seo": {
+    "section1Title": "O que é CSS box-shadow?",
+    "section1Text": "A propriedade CSS box-shadow adiciona um ou mais efeitos de sombra ao quadro de um elemento. As sombras podem ser posicionadas por fora (padrão) ou por dentro (inset) da caixa. São comumente usadas para criar percepção de profundidade, elevar cards acima de um fundo, destacar elementos interativos no hover e construir interfaces com camadas realistas. Diferente de imagens, as sombras são renderizadas pelo navegador em qualquer resolução sem requisições extras.",
+    "section2Title": "Sintaxe do Box Shadow Explicada",
+    "section2Text": "A propriedade abreviada box-shadow aceita valores nesta ordem: offset-x, offset-y, blur-radius, spread-radius, cor e a palavra-chave opcional inset. Offset-x move a sombra horizontalmente (positivo = direita), offset-y move verticalmente (positivo = baixo). Blur-radius suaviza a borda — valores maiores produzem uma sombra mais difusa. Spread-radius expande ou contrai o tamanho da sombra antes do desfoque. A cor pode ser qualquer cor CSS, incluindo rgba() para transparência. Adicionar a palavra-chave inset renderiza a sombra dentro do elemento.",
+    "section3Title": "Sombras Múltiplas",
+    "section3Text": "CSS permite declarações de sombra separadas por vírgula em uma única propriedade, possibilitando efeitos complexos com camadas. Designers empilham sombras para simular iluminação realista — uma sombra escura e compacta para profundidade de contato mais uma sombra grande e suave para luz ambiente. Combinar duas ou três sombras produz resultados naturais e refinados. Fique atento ao desempenho: cada sombra gera pintura adicional, então evite empilhar mais de quatro ou cinco em elementos que animam com frequência.",
+    "section4Title": "Dicas para Box Shadow",
+    "section4List": "Use cores rgba() ou hsla() para que as sombras se misturem naturalmente com qualquer fundo | Evite valores de desfoque acima de 40px em dispositivos móveis — sombras grandes prejudicam o desempenho do scroll | Combine uma sombra pequena e compacta com uma grande e suave para elevação realista | Use sombras inset para efeitos de botão pressionado e brilhos internos | Mantenha o spread em 0 para sombras projetadas mais naturais | Teste as sombras em fundos claros e escuros para garantir bom contraste"
+  },
+  "ui": {
+    "howItWorksText": "Adicione uma camada de sombra, ajuste seus deslocamentos, desfoque, expansão e cor, e depois copie o CSS. A prévia atualiza em tempo real. Você pode empilhar múltiplas sombras para efeitos complexos. Nenhum dado é enviado a nenhum servidor.",
+    "preview": "Prévia",
+    "shadows": "Sombras",
+    "addShadow": "Adicionar Sombra",
+    "removeShadow": "Remover",
+    "horizontalOffset": "Deslocamento Horizontal",
+    "verticalOffset": "Deslocamento Vertical",
+    "blur": "Desfoque",
+    "spread": "Expansão",
+    "color": "Cor",
+    "inset": "Interior",
+    "css": "CSS",
+    "presets": "Presets",
+    "subtle": "Sutil",
+    "medium": "Média",
+    "heavy": "Intensa",
+    "insetShadow": "Interior",
+    "layered": "Camadas",
+    "colored": "Colorida",
+    "neonGlow": "Neon",
+    "bgColor": "Cor de Fundo",
+    "boxColor": "Cor da Caixa",
+    "copy": "Copiar"
+  }
+}

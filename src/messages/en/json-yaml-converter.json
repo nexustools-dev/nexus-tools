@@ -1,0 +1,34 @@
+{
+  "metadata": {
+    "title": "JSON to YAML Converter — Convert JSON to YAML Online",
+    "description": "Free online JSON to YAML converter and YAML to JSON converter. Custom indent size, inline arrays option, key stats, instant download. 100% browser-based, no data sent to servers.",
+    "keywords": "json to yaml, yaml to json, json yaml converter, convert json to yaml online, yaml json online, json to yml, yaml converter, json yaml online tool"
+  },
+  "heading": "JSON to YAML Converter",
+  "subheading": "Convert JSON to YAML or YAML back to JSON. Adjust indentation, toggle inline arrays, and download the result. Everything runs in your browser.",
+  "seo": {
+    "section1Title": "What are JSON and YAML?",
+    "section1Text": "JSON (JavaScript Object Notation) and YAML (YAML Ain't Markup Language) are two of the most popular data serialization formats. JSON uses braces, brackets, and quotes to represent structured data and is the default format for REST APIs, configuration files, and web data exchange. YAML uses indentation and minimal syntax to achieve the same goal, making it more human-readable and easier to write by hand. JSON is preferred for machine-to-machine communication, while YAML is favored for configuration files where humans need to read and edit the data frequently.",
+    "section2Title": "JSON vs YAML — Key Differences",
+    "section2Text": "The biggest difference is syntax: JSON requires braces, brackets, commas, and quoted keys, while YAML relies on indentation and newlines. YAML supports comments (with #), which JSON does not — a major advantage for configuration files. YAML also supports anchors and aliases for reusing values, multi-line strings, and more flexible type coercion (e.g., yes/no become booleans). JSON is stricter and more predictable, which makes it better for data interchange. YAML is more expressive but can introduce subtle bugs through implicit type conversion.",
+    "section3Title": "YAML in DevOps",
+    "section3Text": "YAML has become the lingua franca of DevOps and infrastructure-as-code. Kubernetes manifests, Docker Compose files, GitHub Actions workflows, GitLab CI pipelines, Ansible playbooks, and Helm charts all use YAML as their configuration format. Its readability makes it ideal for defining complex deployment configurations, service dependencies, and automation workflows. Converting JSON API responses or generated configs to YAML is a common task when integrating tools into CI/CD pipelines or preparing Kubernetes resources.",
+    "section4Title": "Conversion Tips",
+    "section4List": "Always validate your JSON or YAML before converting to catch syntax errors early | Watch for YAML's implicit type coercion — strings like 'yes', 'no', 'on', 'off' become booleans | Use 2-space indentation for YAML to match Kubernetes and Docker Compose conventions | Enable inline arrays for compact output when arrays contain simple values | Quote strings in YAML that could be misinterpreted as numbers, booleans, or null | Test converted YAML in your target tool (kubectl, docker-compose) before deploying"
+  },
+  "ui": {
+    "howItWorksText": "Paste JSON or YAML below, choose the conversion direction, adjust indent size if needed, and see the result instantly. Download when ready. No data leaves your browser.",
+    "jsonToYaml": "JSON → YAML",
+    "yamlToJson": "YAML → JSON",
+    "indentSize": "Indent Size",
+    "inlineArrays": "Inline Arrays",
+    "sample": "Sample",
+    "clear": "Clear",
+    "downloadYaml": "Download YAML",
+    "downloadJson": "Download JSON",
+    "keysCount": "keys",
+    "maxDepth": "max depth",
+    "invalidJson": "Invalid JSON — check your syntax and try again",
+    "invalidYaml": "Invalid YAML — check your indentation and syntax"
+  }
+}
