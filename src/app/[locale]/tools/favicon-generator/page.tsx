@@ -1,6 +1,7 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import { FaviconGenerator } from "./FaviconGenerator";
+import { ToolJsonLd } from "@/components/ToolJsonLd";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -19,8 +20,20 @@ export default async function FaviconGeneratorPage({ params }: Props) {
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "faviconGenerator" });
 
+  const faq = [
+    { question: t("seo.section1Title"), answer: t("seo.section1Text") },
+    { question: t("seo.section2Title"), answer: t("seo.section2Text") },
+    { question: t("seo.section3Title"), answer: t("seo.section3Text") },
+  ];
+
   return (
     <div className="max-w-4xl mx-auto px-6 py-12">
+      <ToolJsonLd
+        name={t("heading")}
+        description={t("metadata.description")}
+        url={`https://toolnexus.dev/${locale}/tools/favicon-generator`}
+        faq={faq}
+      />
       <h1 className="text-3xl font-bold mb-2">{t("heading")}</h1>
       <p className="text-zinc-400 mb-8">{t("subheading")}</p>
       <FaviconGenerator />

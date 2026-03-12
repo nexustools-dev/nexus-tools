@@ -24,8 +24,21 @@ export default async function Home({ params }: Props) {
 
   const t = await getTranslations({ locale, namespace: "home" });
 
+  const webSiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "NexusTools",
+    url: `https://toolnexus.dev/${locale}`,
+    description: t("subheading"),
+    inLanguage: locale === "pt" ? "pt-BR" : locale === "es" ? "es" : "en",
+  };
+
   return (
     <div className="max-w-6xl mx-auto px-6 py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
+      />
       <section className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
           {t("heading")}

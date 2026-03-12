@@ -1,6 +1,7 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import { Base64Encoder } from "./Base64Encoder";
+import { ToolJsonLd } from "@/components/ToolJsonLd";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -19,8 +20,21 @@ export default async function Base64EncoderPage({ params }: Props) {
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "base64Encoder" });
 
+  const faq = [
+    { question: t("seo.section1Title"), answer: t("seo.section1Text") },
+    { question: t("seo.section2Title"), answer: t("seo.section2Text") },
+    { question: t("seo.section3Title"), answer: t("seo.section3Text") },
+    { question: t("seo.section4Title"), answer: t("seo.section4List").replace(/ \| /g, ". ") },
+  ];
+
   return (
     <div className="max-w-4xl mx-auto px-6 py-12">
+      <ToolJsonLd
+        name={t("heading")}
+        description={t("metadata.description")}
+        url={`https://toolnexus.dev/${locale}/tools/base64-encoder`}
+        faq={faq}
+      />
       <h1 className="text-3xl font-bold mb-2">{t("heading")}</h1>
       <p className="text-zinc-400 mb-8">{t("subheading")}</p>
       <Base64Encoder />
