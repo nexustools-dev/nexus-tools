@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { Inter } from "next/font/google";
 import type { Metadata } from "next";
 import "../globals.css";
@@ -70,7 +71,7 @@ export default async function LocaleLayout({ children, params }: Props) {
               <Link href="/" className="text-xl font-bold tracking-tight">
                 <span className="text-emerald-400">Nexus</span>Tools
               </Link>
-              <div className="flex gap-6 text-sm text-zinc-400">
+              <div className="flex items-center gap-6 text-sm text-zinc-400">
                 <Link
                   href="/tools/favicon-generator"
                   className="hover:text-zinc-100 transition-colors"
@@ -107,6 +108,9 @@ export default async function LocaleLayout({ children, params }: Props) {
                 >
                   {t("nav.cssUnits")}
                 </Link>
+                <div className="border-l border-zinc-700 pl-4">
+                  <LanguageSwitcher />
+                </div>
               </div>
             </div>
           </nav>
