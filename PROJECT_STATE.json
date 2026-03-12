@@ -1,7 +1,7 @@
 {
   "project": "nexus-tools",
   "version": "3.0.0",
-  "phase": "22 tools live — Batch 3 deployed, ready for growth",
+  "phase": "22 tools live — Batch 3 deployed + UX reviewed, ready for Batch 4 or growth",
   "status": "stable",
   "last_updated": "2026-03-12",
   "updated_by": "NEXUS@PC-Principal",
@@ -61,7 +61,8 @@
       "placeholder-image (Canvas API, dimensions/colors/text, 8 presets, data URL)",
       "PWA support (manifest.json, icons, installable from Brave/Chrome/Edge)",
       "NavMenu search (Ctrl+K, filter tools, Escape to close)",
-      "browser auto-translate fix (translate=no on html, meta notranslate)"
+      "browser auto-translate fix (translate=no on html, meta notranslate)",
+      "UX fixes: placeholder/QR preview overflow, cron field select-on-focus editing"
     ],
     "in_progress": [],
     "pending": [
