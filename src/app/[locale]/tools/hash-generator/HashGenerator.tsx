@@ -105,10 +105,21 @@ async function sha(algorithm: string, input: string): Promise<string> {
     .join("");
 }
 
+type SecurityLevel = "broken" | "weak" | "strong" | "strongest";
+
 type HashResult = {
   algorithm: string;
   noteKey: string;
   hash: string;
+  bits: number;
+  security: SecurityLevel;
+};
+
+const SECURITY_COLORS: Record<SecurityLevel, { dot: string; badge: string; text: string }> = {
+  broken:   { dot: "bg-red-400",     badge: "bg-red-900/50 text-red-400 border-red-800",       text: "text-red-400" },
+  weak:     { dot: "bg-yellow-400",  badge: "bg-yellow-900/50 text-yellow-400 border-yellow-800", text: "text-yellow-400" },
+  strong:   { dot: "bg-emerald-400", badge: "bg-emerald-900/50 text-emerald-400 border-emerald-800", text: "text-emerald-400" },
+  strongest:{ dot: "bg-emerald-300", badge: "bg-emerald-900/50 text-emerald-300 border-emerald-800", text: "text-emerald-300" },
 };
 
 const SAMPLE_TEXT = "Hello, World! 🌍";
@@ -116,7 +127,7 @@ const SAMPLE_TEXT = "Hello, World! 🌍";
 export function HashGenerator() {
   const t = useTranslations("hashGenerator.ui");
   const tc = useTranslations("ui");
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState(SAMPLE_TEXT);
   const [hashes, setHashes] = useState<HashResult[]>([]);
   const [uppercase, setUppercase] = useState(false);
   const [copiedAll, setCopiedAll] = useState(false);
@@ -133,10 +144,10 @@ export function HashGenerator() {
       sha("SHA-512", text),
     ]);
     setHashes([
-      { algorithm: "MD5", noteKey: "md5Note", hash: md5(text) },
-      { algorithm: "SHA-1", noteKey: "sha1Note", hash: sha1 },
-      { algorithm: "SHA-256", noteKey: "sha256Note", hash: sha256 },
-      { algorithm: "SHA-512", noteKey: "sha512Note", hash: sha512 },
+      { algorithm: "MD5", noteKey: "md5Note", hash: md5(text), bits: 128, security: "broken" },
+      { algorithm: "SHA-1", noteKey: "sha1Note", hash: sha1, bits: 160, security: "weak" },
+      { algorithm: "SHA-256", noteKey: "sha256Note", hash: sha256, bits: 256, security: "strong" },
+      { algorithm: "SHA-512", noteKey: "sha512Note", hash: sha512, bits: 512, security: "strongest" },
     ]);
   }, []);
 
@@ -233,27 +244,40 @@ export function HashGenerator() {
           </div>
         ) : (
           <div className="space-y-3">
-            {hashes.map((h, idx) => (
-              <div
-                key={h.algorithm}
-                className="bg-zinc-900 border border-zinc-800 rounded-lg p-4"
-              >
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-xs text-zinc-500">
+            {hashes.map((h, idx) => {
+              const colors = SECURITY_COLORS[h.security];
+              const displayHash = uppercase ? h.hash.toUpperCase() : h.hash;
+              return (
+                <div
+                  key={h.algorithm}
+                  className="bg-zinc-900 border border-zinc-800 rounded-lg p-4"
+                >
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center gap-2">
+                      <span className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-xs font-medium border ${colors.badge}`}>
+                        <span className={`w-1.5 h-1.5 rounded-full ${colors.dot}`} />
+                        {h.algorithm}
+                      </span>
+                      <span className="text-xs text-zinc-600">
+                        {h.bits}-bit &middot; {h.hash.length} chars
+                      </span>
+                    </div>
+                    <button
+                      onClick={() => copyHash(h.hash, idx)}
+                      className="px-2 py-1 rounded bg-zinc-800 hover:bg-zinc-700 text-xs font-medium transition-colors"
+                    >
+                      {copiedIdx === idx ? tc("copied") : tc("copy")}
+                    </button>
+                  </div>
+                  <p className="text-xs text-zinc-500 mb-1.5">
                     {t(h.noteKey as "md5Note" | "sha1Note" | "sha256Note" | "sha512Note")}
-                  </span>
-                  <button
-                    onClick={() => copyHash(h.hash, idx)}
-                    className="px-2 py-1 rounded bg-zinc-800 hover:bg-zinc-700 text-xs font-medium transition-colors"
-                  >
-                    {copiedIdx === idx ? tc("copied") : tc("copy")}
-                  </button>
+                  </p>
+                  <p className="font-mono text-sm break-all text-zinc-200 select-all">
+                    {displayHash}
+                  </p>
                 </div>
-                <p className="font-mono text-sm break-all text-zinc-200 select-all">
-                  {uppercase ? h.hash.toUpperCase() : h.hash}
-                </p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         )}
       </div>
