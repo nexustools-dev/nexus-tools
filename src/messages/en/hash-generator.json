@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "title": "Hash Generator — MD5, SHA-1, SHA-256, SHA-512 Online",
+    "description": "Free online hash generator. Create MD5, SHA-1, SHA-256, and SHA-512 hashes from any text instantly. 100% browser-based, no data sent to servers.",
+    "keywords": "hash generator, md5 hash, sha256 hash, sha1 hash, sha512 hash, online hash, hash calculator, checksum generator, crypto hash"
+  },
+  "heading": "Hash Generator",
+  "subheading": "Generate MD5, SHA-1, SHA-256, and SHA-512 hashes from any text. All processing happens in your browser.",
+  "seo": {
+    "section1Title": "What is a Hash Function?",
+    "section1Text": "A cryptographic hash function takes any input data and produces a fixed-size output (the hash or digest). The same input always produces the same hash, but even a tiny change in the input produces a completely different output. Hash functions are one-way — you cannot reverse a hash to recover the original data.",
+    "section2Title": "Common Hash Algorithms",
+    "section2Text": "MD5 produces a 128-bit (32 hex character) hash. It is fast but considered cryptographically broken — use it only for checksums, not security. SHA-1 produces a 160-bit (40 hex character) hash and is also deprecated for security. SHA-256 and SHA-512 (part of the SHA-2 family) produce 256-bit and 512-bit hashes respectively and are widely used in TLS, digital signatures, and blockchain.",
+    "section3Title": "When to Use Each Algorithm",
+    "section3Text": "Use SHA-256 for most purposes: file integrity verification, digital signatures, password hashing (with salt), and blockchain. Use SHA-512 when you need a longer hash or slightly better performance on 64-bit systems. Use MD5 only for non-security checksums like verifying file downloads. Avoid SHA-1 for any security-related purpose.",
+    "section4Title": "Common Use Cases",
+    "section4List": "File integrity verification (checksums) | Password storage (with salt and key stretching) | Digital signatures and certificates | Blockchain and cryptocurrency | Data deduplication | Git commit identifiers (SHA-1)"
+  },
+  "ui": {
+    "howItWorksText": "Type or paste text below and see its hash in multiple algorithms instantly. All hashing is done locally using the Web Crypto API — your text never leaves your browser.",
+    "inputLabel": "Input Text",
+    "inputPlaceholder": "Type or paste text to hash...",
+    "sample": "Sample",
+    "clear": "Clear",
+    "hashResults": "Hash Results",
+    "copyAll": "Copy All",
+    "copiedAll": "Copied All!",
+    "emptyState": "Enter some text to generate hashes",
+    "uppercase": "Uppercase",
+    "md5Note": "MD5 — 128-bit, fast but not secure",
+    "sha1Note": "SHA-1 — 160-bit, deprecated for security",
+    "sha256Note": "SHA-256 — 256-bit, recommended",
+    "sha512Note": "SHA-512 — 512-bit, strongest"
+  }
+}

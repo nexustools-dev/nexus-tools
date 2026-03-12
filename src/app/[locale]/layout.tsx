@@ -108,6 +108,12 @@ export default async function LocaleLayout({ children, params }: Props) {
                 >
                   {t("nav.cssUnits")}
                 </Link>
+                <Link
+                  href="/tools/hash-generator"
+                  className="hover:text-zinc-100 transition-colors"
+                >
+                  {t("nav.hash")}
+                </Link>
                 <div className="border-l border-zinc-700 pl-4">
                   <LanguageSwitcher />
                 </div>

@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/tools/base64-encoder", changeFrequency: "monthly" as const, priority: 0.8 },
     { path: "/tools/color-converter", changeFrequency: "monthly" as const, priority: 0.8 },
     { path: "/tools/css-unit-converter", changeFrequency: "monthly" as const, priority: 0.8 },
+    { path: "/tools/hash-generator", changeFrequency: "monthly" as const, priority: 0.8 },
   ];
 
   return paths.flatMap(({ path, changeFrequency, priority }) =>

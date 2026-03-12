@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "title": "Gerador de Hash — MD5, SHA-1, SHA-256, SHA-512 Online",
+    "description": "Gerador de hash online grátis. Crie hashes MD5, SHA-1, SHA-256 e SHA-512 de qualquer texto instantaneamente. 100% no navegador, sem enviar dados a servidores.",
+    "keywords": "gerador de hash, hash md5, hash sha256, hash sha1, hash sha512, hash online, calculadora de hash, gerador de checksum, hash criptográfico"
+  },
+  "heading": "Gerador de Hash",
+  "subheading": "Gere hashes MD5, SHA-1, SHA-256 e SHA-512 de qualquer texto. Todo o processamento acontece no seu navegador.",
+  "seo": {
+    "section1Title": "O que é uma função hash?",
+    "section1Text": "Uma função hash criptográfica recebe qualquer dado de entrada e produz uma saída de tamanho fixo (o hash ou digest). A mesma entrada sempre produz o mesmo hash, mas mesmo uma mudança mínima na entrada produz uma saída completamente diferente. Funções hash são unidirecionais — não é possível reverter um hash para recuperar os dados originais.",
+    "section2Title": "Algoritmos de hash comuns",
+    "section2Text": "MD5 produz um hash de 128 bits (32 caracteres hexadecimais). É rápido mas considerado criptograficamente quebrado — use apenas para checksums, não para segurança. SHA-1 produz um hash de 160 bits (40 caracteres hexadecimais) e também está depreciado para segurança. SHA-256 e SHA-512 (parte da família SHA-2) produzem hashes de 256 e 512 bits respectivamente e são amplamente usados em TLS, assinaturas digitais e blockchain.",
+    "section3Title": "Quando usar cada algoritmo",
+    "section3Text": "Use SHA-256 para a maioria dos propósitos: verificação de integridade de arquivos, assinaturas digitais, armazenamento de senhas (com salt) e blockchain. Use SHA-512 quando precisar de um hash mais longo ou melhor desempenho em sistemas de 64 bits. Use MD5 apenas para checksums sem fins de segurança, como verificar downloads. Evite SHA-1 para qualquer propósito relacionado à segurança.",
+    "section4Title": "Casos de uso comuns",
+    "section4List": "Verificação de integridade de arquivos (checksums) | Armazenamento de senhas (com salt e key stretching) | Assinaturas digitais e certificados | Blockchain e criptomoedas | Deduplicação de dados | Identificadores de commits no Git (SHA-1)"
+  },
+  "ui": {
+    "howItWorksText": "Digite ou cole texto abaixo e veja seu hash em múltiplos algoritmos instantaneamente. Todo o hashing é feito localmente usando a Web Crypto API — seu texto nunca sai do seu navegador.",
+    "inputLabel": "Texto de entrada",
+    "inputPlaceholder": "Digite ou cole texto para gerar hash...",
+    "sample": "Exemplo",
+    "clear": "Limpar",
+    "hashResults": "Resultados do Hash",
+    "copyAll": "Copiar Tudo",
+    "copiedAll": "Tudo Copiado!",
+    "emptyState": "Digite texto para gerar os hashes",
+    "uppercase": "Maiúsculas",
+    "md5Note": "MD5 — 128-bit, rápido mas não seguro",
+    "sha1Note": "SHA-1 — 160-bit, depreciado para segurança",
+    "sha256Note": "SHA-256 — 256-bit, recomendado",
+    "sha512Note": "SHA-512 — 512-bit, o mais forte"
+  }
+}

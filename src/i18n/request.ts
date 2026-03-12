@@ -15,6 +15,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
   const base64Encoder = (await import(`../messages/${locale}/base64-encoder.json`)).default;
   const colorConverter = (await import(`../messages/${locale}/color-converter.json`)).default;
   const cssUnitConverter = (await import(`../messages/${locale}/css-unit-converter.json`)).default;
+  const hashGenerator = (await import(`../messages/${locale}/hash-generator.json`)).default;
 
   return {
     locale,
@@ -26,6 +27,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
       base64Encoder,
       colorConverter,
       cssUnitConverter,
+      hashGenerator,
     },
   };
 });

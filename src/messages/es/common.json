@@ -6,7 +6,8 @@
     "metaTags": "Meta Tags",
     "base64": "Base64",
     "colors": "Colores",
-    "cssUnits": "Unidades CSS"
+    "cssUnits": "Unidades CSS",
+    "hash": "Hash"
   },
   "footer": {
     "privacy": "Todas las herramientas funcionan 100% en tu navegador. No se envían datos a ningún servidor.",
@@ -52,6 +53,10 @@
       "cssUnitConverter": {
         "name": "Convertidor de Unidades CSS",
         "description": "Convierte entre px, rem, em, %, vh y vw. Tamaño de fuente base y dimensiones del viewport personalizables."
+      },
+      "hashGenerator": {
+        "name": "Generador de Hash",
+        "description": "Genera hashes MD5, SHA-1, SHA-256 y SHA-512 de cualquier texto. Instantáneo, privado y en tu navegador."
       }
     }
   },

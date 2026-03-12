@@ -8,6 +8,7 @@ const toolKeys = [
   { key: "base64Encoder", href: "/tools/base64-encoder", icon: "B64", color: "from-orange-500 to-amber-600" },
   { key: "colorConverter", href: "/tools/color-converter", icon: "CLR", color: "from-rose-500 to-red-600" },
   { key: "cssUnitConverter", href: "/tools/css-unit-converter", icon: "CSS", color: "from-cyan-500 to-blue-600" },
+  { key: "hashGenerator", href: "/tools/hash-generator", icon: "#", color: "from-yellow-500 to-orange-600" },
 ] as const;
 
 type Props = {
