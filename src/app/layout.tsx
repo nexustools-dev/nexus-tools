@@ -5,6 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://toolnexus.dev"),
   title: {
     default: "NexusTools — Free Developer Tools",
     template: "%s | NexusTools",
@@ -19,6 +20,11 @@ export const metadata: Metadata = {
     "free online tools",
   ],
   robots: { index: true, follow: true },
+  openGraph: {
+    type: "website",
+    siteName: "NexusTools",
+    locale: "en_US",
+  },
 };
 
 export default function RootLayout({
