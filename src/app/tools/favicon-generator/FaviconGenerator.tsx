@@ -6,6 +6,70 @@ type Mode = "text" | "emoji" | "image";
 
 const SIZES = [16, 32, 48, 64, 128, 180, 192, 512];
 
+const EMOJI_GRID = [
+  // Tech & Dev
+  "\u{1F680}", "\u{1F4BB}", "\u{2699}\uFE0F", "\u{1F529}", "\u{1F4A1}", "\u{26A1}", "\u{1F50C}", "\u{1F4E1}",
+  "\u{1F916}", "\u{1F4BE}", "\u{1F5A5}\uFE0F", "\u{2328}\uFE0F", "\u{1F579}\uFE0F", "\u{1F4F1}", "\u{1F50D}", "\u{1F517}",
+  // Objects & Symbols
+  "\u{2B50}", "\u{1F525}", "\u{1F4A7}", "\u{2744}\uFE0F", "\u{1F308}", "\u{2600}\uFE0F", "\u{1F319}", "\u{2601}\uFE0F",
+  "\u{1F3AF}", "\u{1F4CC}", "\u{1F4CB}", "\u{1F4CA}", "\u{1F3C6}", "\u{1F48E}", "\u{1F511}", "\u{1F512}",
+  // Nature & Animals
+  "\u{1F33F}", "\u{1F331}", "\u{1F340}", "\u{1F33A}", "\u{1F338}", "\u{1F335}", "\u{1F30D}", "\u{1F30A}",
+  "\u{1F981}", "\u{1F43B}", "\u{1F427}", "\u{1F989}", "\u{1F41D}", "\u{1F98B}", "\u{1F40D}", "\u{1F422}",
+  // Food & Fun
+  "\u{2615}", "\u{1F37A}", "\u{1F355}", "\u{1F382}", "\u{1F3B5}", "\u{1F3A8}", "\u{1F3AC}", "\u{1F3AE}",
+  // Faces & People
+  "\u{1F60E}", "\u{1F47B}", "\u{1F4AA}", "\u{270C}\uFE0F", "\u{1F44D}", "\u{2764}\uFE0F", "\u{1F64C}", "\u{1F918}",
+];
+
+const GOOGLE_FONTS = [
+  { name: "Inter", value: "Inter" },
+  { name: "Roboto", value: "Roboto" },
+  { name: "Open Sans", value: "Open Sans" },
+  { name: "Montserrat", value: "Montserrat" },
+  { name: "Poppins", value: "Poppins" },
+  { name: "Playfair Display", value: "Playfair Display" },
+  { name: "Oswald", value: "Oswald" },
+  { name: "Raleway", value: "Raleway" },
+  { name: "Ubuntu", value: "Ubuntu" },
+  { name: "Fira Code", value: "Fira Code" },
+  { name: "JetBrains Mono", value: "JetBrains Mono" },
+  { name: "Space Grotesk", value: "Space Grotesk" },
+  { name: "Bebas Neue", value: "Bebas Neue" },
+  { name: "Pacifico", value: "Pacifico" },
+  { name: "Permanent Marker", value: "Permanent Marker" },
+  { name: "Righteous", value: "Righteous" },
+  { name: "Archivo Black", value: "Archivo Black" },
+  { name: "Abril Fatface", value: "Abril Fatface" },
+];
+
+const SYSTEM_FONTS = [
+  { name: "Georgia", value: "Georgia, serif" },
+  { name: "Courier New", value: "Courier New, monospace" },
+  { name: "Arial Black", value: "Arial Black, sans-serif" },
+  { name: "Impact", value: "Impact, sans-serif" },
+];
+
+function loadGoogleFont(fontName: string): Promise<void> {
+  return new Promise((resolve) => {
+    const id = `gfont-${fontName.replace(/\s+/g, "-")}`;
+    if (document.getElementById(id)) {
+      // Already loaded, but check if font is ready
+      document.fonts.ready.then(() => resolve());
+      return;
+    }
+    const link = document.createElement("link");
+    link.id = id;
+    link.rel = "stylesheet";
+    link.href = `https://fonts.googleapis.com/css2?family=${encodeURIComponent(fontName)}:wght@700&display=swap`;
+    link.onload = () => {
+      document.fonts.ready.then(() => resolve());
+    };
+    link.onerror = () => resolve();
+    document.head.appendChild(link);
+  });
+}
+
 export function FaviconGenerator() {
   const [mode, setMode] = useState<Mode>("text");
   const [text, setText] = useState("A");
@@ -13,9 +77,12 @@ export function FaviconGenerator() {
   const [bgColor, setBgColor] = useState("#10b981");
   const [textColor, setTextColor] = useState("#ffffff");
   const [fontSize, setFontSize] = useState(70);
-  const [fontFamily, setFontFamily] = useState("Inter, sans-serif");
+  const [fontFamily, setFontFamily] = useState("Inter");
+  const [isGoogleFont, setIsGoogleFont] = useState(true);
+  const [fontLoaded, setFontLoaded] = useState(0);
   const [borderRadius, setBorderRadius] = useState(20);
   const [uploadedImage, setUploadedImage] = useState<string | null>(null);
+  const [showEmojiPicker, setShowEmojiPicker] = useState(false);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const previewRef = useRef<HTMLCanvasElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -31,13 +98,25 @@ export function FaviconGenerator() {
     const img = new Image();
     img.onload = () => {
       loadedImageRef.current = img;
-      // Trigger re-render to update previews
       setImageReady((n) => n + 1);
     };
     img.src = uploadedImage;
   }, [uploadedImage]);
 
   const [imageReady, setImageReady] = useState(0);
+
+  // Load Google Font when selected
+  useEffect(() => {
+    if (isGoogleFont && fontFamily) {
+      loadGoogleFont(fontFamily).then(() => {
+        setFontLoaded((n) => n + 1);
+      });
+    }
+  }, [fontFamily, isGoogleFont]);
+
+  const resolvedFontFamily = isGoogleFont
+    ? `"${fontFamily}", sans-serif`
+    : fontFamily;
 
   const drawFavicon = useCallback(
     (canvas: HTMLCanvasElement, size: number) => {
@@ -59,7 +138,9 @@ export function FaviconGenerator() {
         const content = mode === "emoji" ? emoji : text;
         const computedFontSize = (fontSize / 100) * size;
         const fontFam =
-          mode === "emoji" ? "Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif" : fontFamily;
+          mode === "emoji"
+            ? "Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif"
+            : resolvedFontFamily;
         ctx.font = `bold ${computedFontSize}px ${fontFam}`;
         ctx.fillStyle = textColor;
         ctx.textAlign = "center";
@@ -68,7 +149,7 @@ export function FaviconGenerator() {
       }
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [mode, text, emoji, bgColor, textColor, fontSize, fontFamily, borderRadius, uploadedImage, imageReady]
+    [mode, text, emoji, bgColor, textColor, fontSize, resolvedFontFamily, borderRadius, uploadedImage, imageReady, fontLoaded]
   );
 
   useEffect(() => {
@@ -88,6 +169,17 @@ export function FaviconGenerator() {
     reader.readAsDataURL(file);
   };
 
+  const handleFontChange = (value: string) => {
+    const googleFont = GOOGLE_FONTS.find((f) => f.value === value);
+    if (googleFont) {
+      setFontFamily(googleFont.value);
+      setIsGoogleFont(true);
+    } else {
+      setFontFamily(value);
+      setIsGoogleFont(false);
+    }
+  };
+
   const downloadPNG = (size: number) => {
     const canvas = document.createElement("canvas");
     drawFavicon(canvas, size);
@@ -98,7 +190,6 @@ export function FaviconGenerator() {
   };
 
   const downloadICO = () => {
-    // ICO format: generate 16, 32, 48 as PNG and pack into ICO container
     const icoSizes = [16, 32, 48];
     const images: { size: number; data: Uint8Array }[] = [];
 
@@ -115,7 +206,6 @@ export function FaviconGenerator() {
       images.push({ size, data: bytes });
     }
 
-    // ICO file format
     const headerSize = 6;
     const entrySize = 16;
     let dataOffset = headerSize + entrySize * images.length;
@@ -123,27 +213,24 @@ export function FaviconGenerator() {
     const buffer = new ArrayBuffer(totalSize);
     const view = new DataView(buffer);
 
-    // Header
-    view.setUint16(0, 0, true); // reserved
-    view.setUint16(2, 1, true); // ICO type
-    view.setUint16(4, images.length, true); // image count
+    view.setUint16(0, 0, true);
+    view.setUint16(2, 1, true);
+    view.setUint16(4, images.length, true);
 
-    // Entries
     for (let i = 0; i < images.length; i++) {
       const offset = headerSize + i * entrySize;
       const img = images[i];
-      view.setUint8(offset, img.size < 256 ? img.size : 0); // width
-      view.setUint8(offset + 1, img.size < 256 ? img.size : 0); // height
-      view.setUint8(offset + 2, 0); // color palette
-      view.setUint8(offset + 3, 0); // reserved
-      view.setUint16(offset + 4, 1, true); // color planes
-      view.setUint16(offset + 6, 32, true); // bits per pixel
-      view.setUint32(offset + 8, img.data.length, true); // data size
-      view.setUint32(offset + 12, dataOffset, true); // data offset
+      view.setUint8(offset, img.size < 256 ? img.size : 0);
+      view.setUint8(offset + 1, img.size < 256 ? img.size : 0);
+      view.setUint8(offset + 2, 0);
+      view.setUint8(offset + 3, 0);
+      view.setUint16(offset + 4, 1, true);
+      view.setUint16(offset + 6, 32, true);
+      view.setUint32(offset + 8, img.data.length, true);
+      view.setUint32(offset + 12, dataOffset, true);
       dataOffset += img.data.length;
     }
 
-    // Image data
     let currentOffset = headerSize + entrySize * images.length;
     for (const img of images) {
       const bytes = new Uint8Array(buffer, currentOffset, img.data.length);
@@ -187,7 +274,7 @@ export function FaviconGenerator() {
           ))}
         </div>
 
-        {/* Text/Emoji input */}
+        {/* Text input */}
         {mode === "text" && (
           <div>
             <label className="block text-sm text-zinc-400 mb-1">Text (1-3 characters)</label>
@@ -201,18 +288,50 @@ export function FaviconGenerator() {
           </div>
         )}
 
+        {/* Emoji input + picker */}
         {mode === "emoji" && (
           <div>
             <label className="block text-sm text-zinc-400 mb-1">Emoji</label>
-            <input
-              type="text"
-              value={emoji}
-              onChange={(e) => setEmoji(e.target.value.slice(0, 2))}
-              className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2 text-2xl focus:outline-none focus:border-emerald-500"
-            />
+            <div className="flex gap-2">
+              <input
+                type="text"
+                value={emoji}
+                onChange={(e) => setEmoji(e.target.value.slice(0, 2))}
+                className="flex-1 bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2 text-2xl focus:outline-none focus:border-emerald-500"
+              />
+              <button
+                onClick={() => setShowEmojiPicker(!showEmojiPicker)}
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                  showEmojiPicker
+                    ? "bg-emerald-600 text-white"
+                    : "bg-zinc-800 hover:bg-zinc-700 text-zinc-400"
+                }`}
+              >
+                Browse
+              </button>
+            </div>
+            {showEmojiPicker && (
+              <div className="mt-2 bg-zinc-900 border border-zinc-700 rounded-lg p-3 grid grid-cols-8 gap-1 max-h-48 overflow-y-auto">
+                {EMOJI_GRID.map((e, i) => (
+                  <button
+                    key={i}
+                    onClick={() => {
+                      setEmoji(e);
+                      setShowEmojiPicker(false);
+                    }}
+                    className={`text-2xl p-1.5 rounded-lg hover:bg-zinc-700 transition-colors ${
+                      emoji === e ? "bg-zinc-700 ring-1 ring-emerald-500" : ""
+                    }`}
+                  >
+                    {e}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
         )}
 
+        {/* Image upload */}
         {mode === "image" && (
           <div>
             <label className="block text-sm text-zinc-400 mb-1">Upload Image</label>
@@ -303,15 +422,24 @@ export function FaviconGenerator() {
           <div>
             <label className="block text-sm text-zinc-400 mb-1">Font</label>
             <select
-              value={fontFamily}
-              onChange={(e) => setFontFamily(e.target.value)}
+              value={isGoogleFont ? fontFamily : fontFamily}
+              onChange={(e) => handleFontChange(e.target.value)}
               className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-emerald-500"
             >
-              <option value="Inter, sans-serif">Inter</option>
-              <option value="Georgia, serif">Georgia</option>
-              <option value="Courier New, monospace">Courier New</option>
-              <option value="Arial Black, sans-serif">Arial Black</option>
-              <option value="Impact, sans-serif">Impact</option>
+              <optgroup label="Google Fonts">
+                {GOOGLE_FONTS.map((f) => (
+                  <option key={f.value} value={f.value}>
+                    {f.name}
+                  </option>
+                ))}
+              </optgroup>
+              <optgroup label="System Fonts">
+                {SYSTEM_FONTS.map((f) => (
+                  <option key={f.value} value={f.value}>
+                    {f.name}
+                  </option>
+                ))}
+              </optgroup>
             </select>
           </div>
         )}
