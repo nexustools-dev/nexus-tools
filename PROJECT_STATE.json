@@ -1,7 +1,7 @@
 {
   "project": "nexus-tools",
-  "version": "4.0.0",
-  "phase": "28 tools live — Batch 4 deployed + audited, ready for Batch 5 or growth",
+  "version": "5.0.0",
+  "phase": "34 tools live — Batch 5 deployed, 105 pages (34×3 locales + extras)",
   "status": "stable",
   "last_updated": "2026-03-12",
   "updated_by": "NEXUS@PC-Principal",
@@ -68,7 +68,13 @@
       "chmod-calculator (interactive checkbox grid, octal/symbolic, special bits, presets)",
       "box-shadow-generator (multi-layer shadows, sliders, color picker, 7 presets, live preview)",
       "border-radius-generator (4-corner control, link/unlink, px/%, 6 shape presets)",
-      "aspect-ratio-calculator (GCD ratio, lock ratio, resolution table, CSS output)"
+      "aspect-ratio-calculator (GCD ratio, lock ratio, resolution table, CSS output)",
+      "image-compressor (Canvas API, quality slider, resize, JPEG/WebP/PNG output)",
+      "svg-to-png (SVG rasterization, 1x-4x scale, transparent/white/black bg)",
+      "html-entity-encoder (encode/decode, named/decimal/hex modes, reference table)",
+      "color-palette-generator (HSL math, 6 harmony types, 11-shade gradient, CSS export)",
+      "text-shadow-generator (multi-layer, 6 presets: neon/glow/fire/retro/emboss)",
+      "csv-to-sql (CSV parser, INSERT generation, 4 SQL dialects, batch insert)"
     ],
     "in_progress": [],
     "pending": [
@@ -140,6 +146,11 @@
       "date": "2026-03-12",
       "decision": "Batch 4: 6 tools (SQL Formatter, JSON-YAML, Chmod, Box Shadow, Border Radius, Aspect Ratio)",
       "reason": "Mix of dev tools (SQL, YAML, chmod) and CSS visual tools (shadow, radius, aspect ratio). All 0 deps except SQL tokenizer (custom). All born trilingual with security best practices."
+    },
+    {
+      "date": "2026-03-12",
+      "decision": "Batch 5: 6 tools (Image Compressor, SVG to PNG, HTML Entity, Color Palette, Text Shadow, CSV to SQL)",
+      "reason": "Replaced 2 redundant tools (#32 Markdown to HTML = existing markdown-preview, #33 YAML to JSON = existing json-yaml-converter). Added Color Palette Generator and Text Shadow Generator instead — higher value, no overlap. All 0 deps, all born trilingual."
     }
   ],
   "security": {
@@ -186,9 +197,9 @@
     "blockers": []
   },
   "metrics": {
-    "tools_count": 28,
+    "tools_count": 34,
     "languages": 3,
-    "total_pages": 87,
+    "total_pages": 105,
     "monthly_visitors": 0,
     "adsense_revenue": 0
   }
