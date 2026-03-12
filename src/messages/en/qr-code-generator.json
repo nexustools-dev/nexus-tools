@@ -1,0 +1,33 @@
+{
+  "metadata": {
+    "title": "QR Code Generator — Create QR Codes Online for Free",
+    "description": "Free online QR code generator. Create QR codes from text or URLs with custom colors and sizes. Download as PNG or SVG. 100% browser-based.",
+    "keywords": "qr code generator, create qr code, qr code maker, qr code online, free qr code, text to qr code, url qr code, custom qr code"
+  },
+  "heading": "QR Code Generator",
+  "subheading": "Generate QR codes from any text or URL. Customize colors and size, then download as PNG or SVG. Everything runs in your browser.",
+  "seo": {
+    "section1Title": "What is a QR Code?",
+    "section1Text": "A QR (Quick Response) code is a two-dimensional barcode that can store text, URLs, contact information, and other data. Created in 1994 by Denso Wave for tracking automotive parts, QR codes are now used everywhere — from restaurant menus to payment systems. They can be scanned by any smartphone camera, making them an efficient way to share information in the physical world.",
+    "section2Title": "How QR Codes Work",
+    "section2Text": "QR codes encode data in a grid of black and white squares called modules. The code includes finder patterns (the three large squares in corners) for orientation, alignment patterns, timing patterns, and the actual data encoded using Reed-Solomon error correction. This error correction allows QR codes to remain readable even when partially damaged or obscured.",
+    "section3Title": "Error Correction Levels",
+    "section3Text": "QR codes support four error correction levels: L (Low, ~7% recovery), M (Medium, ~15%), Q (Quartile, ~25%), and H (High, ~30%). Higher error correction means the QR code can be more damaged and still scan, but it also requires more modules (larger code). Level M is the most common balance between size and reliability.",
+    "section4Title": "QR Code Best Practices",
+    "section4List": "Keep data short — shorter text means a simpler, more scannable code | Ensure high contrast between foreground and background colors | Use at least Level M error correction for printed codes | Test your QR code on multiple devices before distributing | Leave a quiet zone (white border) around the code for reliable scanning | Use URL shorteners for long URLs to reduce QR code complexity"
+  },
+  "ui": {
+    "howItWorksText": "Type or paste text below to generate a QR code instantly. Customize the size and colors, then download as PNG or SVG. No data is sent to any server.",
+    "inputLabel": "Text or URL",
+    "inputPlaceholder": "Enter text or URL to encode...",
+    "size": "Size",
+    "fgColor": "Foreground",
+    "bgColor": "Background",
+    "errorCorrection": "Error Correction",
+    "downloadPng": "Download PNG",
+    "downloadSvg": "Download SVG",
+    "sample": "Sample",
+    "clear": "Clear",
+    "tooLong": "Text too long for QR code (max ~900 characters)"
+  }
+}

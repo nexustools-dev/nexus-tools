@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "title": "Text Case Converter — Convert Between camelCase, snake_case & More",
+    "description": "Free online text case converter. Transform text between camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, Title Case, and more. 100% browser-based.",
+    "keywords": "text case converter, camelCase converter, snake_case converter, kebab-case converter, PascalCase, CONSTANT_CASE, title case, text transform online, case conversion tool"
+  },
+  "heading": "Text Case Converter",
+  "subheading": "Convert text between camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, and more. Instant results, 100% in your browser.",
+  "seo": {
+    "section1Title": "What is Text Case Conversion?",
+    "section1Text": "Text case conversion is the process of transforming text from one naming convention to another. Different programming languages, frameworks, and contexts use different case styles for variables, functions, constants, and file names. A case converter lets you quickly switch between these formats without manually retyping or reformatting your text.",
+    "section2Title": "Common Case Formats in Programming",
+    "section2Text": "Each case format has a specific use in software development. camelCase starts lowercase with each subsequent word capitalized (used in JavaScript and Java variables). PascalCase capitalizes every word (used for class names). snake_case uses underscores between lowercase words (common in Python and Ruby). kebab-case uses hyphens (used in CSS classes and URLs). CONSTANT_CASE is all uppercase with underscores (used for constants and environment variables).",
+    "section2List": "camelCase — JavaScript variables, Java methods, JSON keys | PascalCase — Class names, React components, TypeScript interfaces | snake_case — Python variables, Ruby methods, database columns | kebab-case — CSS classes, HTML attributes, URL slugs | CONSTANT_CASE — Environment variables, constants, enum values | dot.case — Java package names, property file keys | path/case — File paths, URL routes",
+    "section3Title": "When to Use Which Case",
+    "section3Text": "The right case format depends on your language and context. Follow your project's conventions: JavaScript/TypeScript typically uses camelCase for variables and PascalCase for components. Python prefers snake_case for variables and CONSTANT_CASE for constants. CSS uses kebab-case for class names. Database columns often use snake_case. API endpoints and URLs commonly use kebab-case or snake_case.",
+    "section3List": "JavaScript/TypeScript — camelCase for variables, PascalCase for classes | Python — snake_case for variables, CONSTANT_CASE for constants | CSS/HTML — kebab-case for classes, attributes, and custom properties | Databases — snake_case for table and column names | REST APIs — kebab-case or snake_case for endpoints | Environment variables — CONSTANT_CASE always",
+    "section4Title": "Case Conversion Tips",
+    "section4Text": "When converting between cases, keep these best practices in mind. Always be consistent within a project — mixing conventions makes code harder to read. Use your language's standard conventions rather than personal preferences. When working with APIs, match the format expected by the consumer. Automated case conversion helps when migrating between languages or adapting data from external sources.",
+    "section4List": "Stay consistent — pick one convention per context and stick to it | Respect language standards — follow what the ecosystem expects | Handle acronyms carefully — XMLParser vs XmlParser depends on your style guide | Test edge cases — single-letter words, numbers, and special characters | Use automated tools — avoid manual conversion errors on large batches"
+  },
+  "ui": {
+    "howItWorksText": "Type or paste your text in the input field, then click any case format button to convert. The tool intelligently detects word boundaries from spaces, camelCase, underscores, hyphens, and other separators to produce accurate conversions.",
+    "inputLabel": "Input Text",
+    "inputPlaceholder": "Type or paste your text here...",
+    "sample": "Sample",
+    "clear": "Clear",
+    "outputLabel": "Converted Results",
+    "wordCount": "{count} words",
+    "charCount": "{count} chars",
+    "camelCase": "camelCase",
+    "pascalCase": "PascalCase",
+    "snakeCase": "snake_case",
+    "kebabCase": "kebab-case",
+    "constantCase": "CONSTANT_CASE",
+    "uppercase": "UPPERCASE",
+    "lowercase": "lowercase",
+    "titleCase": "Title Case",
+    "sentenceCase": "Sentence case",
+    "dotCase": "dot.case",
+    "pathCase": "path/case"
+  }
+}

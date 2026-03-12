@@ -25,6 +25,12 @@ export default getRequestConfig(async ({ requestLocale }) => {
   const markdownPreview = (await import(`../messages/${locale}/markdown-preview.json`)).default;
   const cssGradientGenerator = (await import(`../messages/${locale}/css-gradient-generator.json`)).default;
   const diffChecker = (await import(`../messages/${locale}/diff-checker.json`)).default;
+  const passwordGenerator = (await import(`../messages/${locale}/password-generator.json`)).default;
+  const qrCodeGenerator = (await import(`../messages/${locale}/qr-code-generator.json`)).default;
+  const cronExpressionBuilder = (await import(`../messages/${locale}/cron-expression-builder.json`)).default;
+  const jsonCsvConverter = (await import(`../messages/${locale}/json-csv-converter.json`)).default;
+  const textCaseConverter = (await import(`../messages/${locale}/text-case-converter.json`)).default;
+  const placeholderImage = (await import(`../messages/${locale}/placeholder-image.json`)).default;
 
   return {
     locale,
@@ -46,6 +52,12 @@ export default getRequestConfig(async ({ requestLocale }) => {
       markdownPreview,
       cssGradientGenerator,
       diffChecker,
+      passwordGenerator,
+      qrCodeGenerator,
+      cronExpressionBuilder,
+      jsonCsvConverter,
+      textCaseConverter,
+      placeholderImage,
     },
   };
 });

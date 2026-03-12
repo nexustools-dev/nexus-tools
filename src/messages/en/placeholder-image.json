@@ -1,0 +1,41 @@
+{
+  "metadata": {
+    "title": "Placeholder Image Generator — Create Placeholder Images Online for Free",
+    "description": "Free online placeholder image generator. Create custom placeholder images with any dimensions, colors, and text overlay. Download as PNG or copy data URL. 100% browser-based.",
+    "keywords": "placeholder image generator, placeholder image, dummy image, placeholder png, custom placeholder, placeholder image online, free placeholder image, development placeholder"
+  },
+  "heading": "Placeholder Image Generator",
+  "subheading": "Generate custom placeholder images with any dimensions, colors, and text. Download as PNG or copy the data URL for instant use. Everything runs in your browser.",
+  "seo": {
+    "section1Title": "What are Placeholder Images?",
+    "section1Text": "Placeholder images are temporary graphics used during web and app development to represent where final images will appear. They help designers and developers visualize layouts, test responsive behavior, and build UI components without waiting for actual content. Unlike external placeholder services that require network requests, generating them locally gives you full control over dimensions, colors, and text — with zero dependencies.",
+    "section2Title": "Common Placeholder Image Sizes",
+    "section2Text": "Different contexts call for different image dimensions. Avatars typically use square sizes like 48x48, 96x96, or 128x128 pixels. Thumbnails range from 150x150 to 300x200. Banners and hero images often span 1200x400 or 1920x600. Social media has its own standards: 1080x1080 for Instagram squares, 1080x1920 for stories, and 1200x630 for Open Graph previews. Having the right placeholder size from the start prevents layout shifts when real images are swapped in.",
+    "section3Title": "Using Placeholder Images in Development",
+    "section3Text": "Placeholder images are essential in multiple development scenarios. During prototyping, they let you build complete layouts before any real content exists. In component libraries and design systems, they serve as default fallbacks. For automated testing, consistent placeholder images ensure visual regression tests are reliable. Using data URLs instead of external services means your development environment works fully offline — no broken images when you lose connectivity.",
+    "section4Title": "Placeholder Image Tips",
+    "section4List": "Include dimensions as text overlay so you can identify sizes at a glance | Use subtle background colors to distinguish placeholders from actual content | Match your project's aspect ratios to prevent layout shifts later | Use data URLs for small images to avoid extra HTTP requests | Keep a consistent color scheme across placeholders for a cleaner prototype | Generate all common sizes upfront and save them to your assets folder"
+  },
+  "ui": {
+    "howItWorksText": "Set your desired dimensions, colors, and optional text below. The placeholder image updates in real time. Download as PNG or copy the data URL to paste directly into your code. No data is sent to any server.",
+    "width": "Width",
+    "height": "Height",
+    "bgColor": "Background",
+    "textColor": "Text Color",
+    "text": "Text",
+    "fontSize": "Font Size",
+    "downloadPng": "Download PNG",
+    "copyDataUrl": "Copy Data URL",
+    "presets": "Presets",
+    "sample": "Sample",
+    "clear": "Clear",
+    "avatar": "Avatar",
+    "thumbnail": "Thumbnail",
+    "banner": "Banner",
+    "hd": "HD",
+    "fullHd": "Full HD",
+    "socialSquare": "Social Square",
+    "socialStory": "Social Story",
+    "ogImage": "OG Image"
+  }
+}

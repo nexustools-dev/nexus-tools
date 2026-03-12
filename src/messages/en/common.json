@@ -16,7 +16,13 @@
     "timestampConverter": "Timestamp",
     "markdownPreview": "Markdown",
     "cssGradientGenerator": "Gradients",
-    "diffChecker": "Diff Checker"
+    "diffChecker": "Diff Checker",
+    "passwordGenerator": "Passwords",
+    "qrCodeGenerator": "QR Code",
+    "cronExpressionBuilder": "Cron Builder",
+    "jsonCsvConverter": "JSON/CSV",
+    "textCaseConverter": "Text Case",
+    "placeholderImage": "Placeholder"
   },
   "footer": {
     "privacy": "All tools run 100% in your browser. No data is sent to any server.",
@@ -102,6 +108,30 @@
       "diffChecker": {
         "name": "Diff Checker",
         "description": "Compare two texts side by side. See additions, deletions, and unchanged lines highlighted with diff statistics."
+      },
+      "passwordGenerator": {
+        "name": "Password Generator",
+        "description": "Generate strong, random passwords with customizable length, character types, and entropy-based strength meter."
+      },
+      "qrCodeGenerator": {
+        "name": "QR Code Generator",
+        "description": "Generate QR codes from any text or URL. Customize colors and size, download as PNG or SVG."
+      },
+      "cronExpressionBuilder": {
+        "name": "Cron Expression Builder",
+        "description": "Build cron expressions visually with field editors. Human-readable descriptions, next execution preview, and presets."
+      },
+      "jsonCsvConverter": {
+        "name": "JSON to CSV Converter",
+        "description": "Convert JSON arrays to CSV or CSV back to JSON. Custom delimiters, nested object flattening, and instant download."
+      },
+      "textCaseConverter": {
+        "name": "Text Case Converter",
+        "description": "Convert text between camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, and 6 more formats."
+      },
+      "placeholderImage": {
+        "name": "Placeholder Image Generator",
+        "description": "Generate custom placeholder images with any dimensions, colors, and text overlay. Download PNG or copy data URL."
       }
     }
   },

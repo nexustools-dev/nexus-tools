@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "title": "Convertidor de Formato de Texto — Convierte entre camelCase, snake_case y Más",
+    "description": "Convertidor de formato de texto online y gratis. Transforma texto entre camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, Title Case y más. 100% en tu navegador.",
+    "keywords": "convertidor de texto, conversor camelCase, conversor snake_case, conversor kebab-case, PascalCase, CONSTANT_CASE, cambiar mayúsculas minúsculas, transformar texto online"
+  },
+  "heading": "Convertidor de Formato de Texto",
+  "subheading": "Convierte texto entre camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE y más. Resultados instantáneos, 100% en tu navegador.",
+  "seo": {
+    "section1Title": "¿Qué es la Conversión de Formato de Texto?",
+    "section1Text": "La conversión de formato de texto es el proceso de transformar texto de una convención de nomenclatura a otra. Los distintos lenguajes de programación, frameworks y contextos usan diferentes estilos para nombrar variables, funciones, constantes y archivos. Un convertidor de formato te permite cambiar rápidamente entre estos estilos sin tener que reescribir o reformatear manualmente.",
+    "section2Title": "Formatos Comunes en Programación",
+    "section2Text": "Cada formato tiene un uso específico en el desarrollo de software. camelCase empieza en minúscula y capitaliza cada palabra siguiente (se usa en JavaScript y Java). PascalCase capitaliza todas las palabras (se usa para nombres de clases). snake_case separa palabras en minúscula con guiones bajos (común en Python y Ruby). kebab-case usa guiones medios (se usa en clases CSS y URLs). CONSTANT_CASE va todo en mayúsculas con guiones bajos (se usa para constantes y variables de entorno).",
+    "section2List": "camelCase — Variables en JavaScript, métodos en Java, claves JSON | PascalCase — Nombres de clases, componentes React, interfaces TypeScript | snake_case — Variables en Python, métodos en Ruby, columnas de base de datos | kebab-case — Clases CSS, atributos HTML, slugs de URL | CONSTANT_CASE — Variables de entorno, constantes, valores de enum | dot.case — Nombres de paquetes Java, claves de archivos de propiedades | path/case — Rutas de archivos, rutas de URL",
+    "section3Title": "¿Cuándo Usar Cada Formato?",
+    "section3Text": "El formato correcto depende del lenguaje y el contexto. Sigue las convenciones de tu proyecto: JavaScript/TypeScript normalmente usa camelCase para variables y PascalCase para componentes. Python prefiere snake_case para variables y CONSTANT_CASE para constantes. CSS usa kebab-case para nombres de clases. Las columnas de base de datos suelen ir en snake_case. Los endpoints de APIs y URLs generalmente usan kebab-case o snake_case.",
+    "section3List": "JavaScript/TypeScript — camelCase para variables, PascalCase para clases | Python — snake_case para variables, CONSTANT_CASE para constantes | CSS/HTML — kebab-case para clases, atributos y propiedades custom | Bases de datos — snake_case para nombres de tablas y columnas | APIs REST — kebab-case o snake_case para endpoints | Variables de entorno — CONSTANT_CASE siempre",
+    "section4Title": "Consejos para Convertir Formatos",
+    "section4Text": "Al convertir entre formatos, ten en cuenta estas buenas prácticas. Sé siempre consistente dentro de un proyecto — mezclar convenciones dificulta la lectura del código. Usa las convenciones estándar de tu lenguaje en vez de preferencias personales. Cuando trabajes con APIs, respeta el formato que espera el consumidor. La conversión automática es especialmente útil al migrar entre lenguajes o adaptar datos de fuentes externas.",
+    "section4List": "Sé consistente — elige una convención por contexto y respétala | Respeta los estándares del lenguaje — sigue lo que el ecosistema espera | Cuidado con los acrónimos — XMLParser vs XmlParser depende de tu guía de estilo | Prueba casos extremos — palabras de una letra, números y caracteres especiales | Usa herramientas automáticas — evita errores manuales en lotes grandes"
+  },
+  "ui": {
+    "howItWorksText": "Escribe o pega tu texto en el campo de entrada y haz clic en cualquier formato para convertir. La herramienta detecta automáticamente los límites de palabras a partir de espacios, camelCase, guiones bajos, guiones medios y otros separadores para producir conversiones precisas.",
+    "inputLabel": "Texto de Entrada",
+    "inputPlaceholder": "Escribe o pega tu texto aquí...",
+    "sample": "Ejemplo",
+    "clear": "Limpiar",
+    "outputLabel": "Resultados Convertidos",
+    "wordCount": "{count} palabras",
+    "charCount": "{count} caracteres",
+    "camelCase": "camelCase",
+    "pascalCase": "PascalCase",
+    "snakeCase": "snake_case",
+    "kebabCase": "kebab-case",
+    "constantCase": "CONSTANT_CASE",
+    "uppercase": "MAYÚSCULAS",
+    "lowercase": "minúsculas",
+    "titleCase": "Tipo Título",
+    "sentenceCase": "Tipo oración",
+    "dotCase": "dot.case",
+    "pathCase": "path/case"
+  }
+}

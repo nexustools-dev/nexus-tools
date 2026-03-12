@@ -1,0 +1,41 @@
+{
+  "metadata": {
+    "title": "Generador de Imágenes Placeholder — Crea Imágenes de Relleno Online Gratis",
+    "description": "Generador de imágenes placeholder online gratis. Crea imágenes de relleno con dimensiones, colores y texto personalizados. Descarga como PNG o copia la URL de datos. 100% en el navegador.",
+    "keywords": "generador imagen placeholder, imagen placeholder, imagen de relleno, placeholder png, placeholder personalizado, imagen placeholder online, imagen placeholder gratis, placeholder desarrollo"
+  },
+  "heading": "Generador de Imágenes Placeholder",
+  "subheading": "Genera imágenes placeholder con las dimensiones, colores y texto que necesites. Descarga como PNG o copia la URL de datos para usarla al instante. Todo se ejecuta en tu navegador.",
+  "seo": {
+    "section1Title": "¿Qué son las Imágenes Placeholder?",
+    "section1Text": "Las imágenes placeholder son gráficos temporales que se usan durante el desarrollo web y de apps para representar dónde irán las imágenes finales. Ayudan a diseñadores y desarrolladores a visualizar layouts, probar el comportamiento responsive y construir componentes de interfaz sin esperar el contenido real. A diferencia de servicios externos que requieren peticiones de red, generarlas localmente te da control total sobre dimensiones, colores y texto — sin ninguna dependencia.",
+    "section2Title": "Tamaños Comunes de Imágenes Placeholder",
+    "section2Text": "Cada contexto requiere dimensiones diferentes. Los avatares suelen usar tamaños cuadrados como 48x48, 96x96 o 128x128 píxeles. Las miniaturas van de 150x150 a 300x200. Los banners e imágenes hero suelen medir 1200x400 o 1920x600. Las redes sociales tienen sus propios estándares: 1080x1080 para cuadrados de Instagram, 1080x1920 para stories y 1200x630 para previews de Open Graph. Usar el tamaño correcto de placeholder desde el principio evita saltos de layout cuando se cambien por las imágenes reales.",
+    "section3Title": "Uso de Imágenes Placeholder en Desarrollo",
+    "section3Text": "Las imágenes placeholder son esenciales en múltiples escenarios de desarrollo. Durante el prototipado, permiten construir layouts completos antes de que exista contenido real. En bibliotecas de componentes y sistemas de diseño, sirven como fallbacks por defecto. En testing automatizado, los placeholders consistentes aseguran que las pruebas de regresión visual sean fiables. Usar URLs de datos en vez de servicios externos significa que tu entorno de desarrollo funciona completamente offline — sin imágenes rotas cuando pierdes conexión.",
+    "section4Title": "Consejos para Imágenes Placeholder",
+    "section4List": "Incluye las dimensiones como texto para identificar los tamaños de un vistazo | Usa colores de fondo sutiles para distinguir placeholders del contenido real | Respeta las proporciones de tu proyecto para evitar saltos de layout después | Usa URLs de datos para imágenes pequeñas y ahorrarte peticiones HTTP extra | Mantén una paleta de colores consistente en todos los placeholders para un prototipo más limpio | Genera todos los tamaños comunes de una vez y guárdalos en tu carpeta de assets"
+  },
+  "ui": {
+    "howItWorksText": "Configura las dimensiones, colores y texto opcional abajo. La imagen placeholder se actualiza en tiempo real. Descarga como PNG o copia la URL de datos para pegarla directo en tu código. Ningún dato se envía a ningún servidor.",
+    "width": "Ancho",
+    "height": "Alto",
+    "bgColor": "Fondo",
+    "textColor": "Color de Texto",
+    "text": "Texto",
+    "fontSize": "Tamaño de Fuente",
+    "downloadPng": "Descargar PNG",
+    "copyDataUrl": "Copiar URL de Datos",
+    "presets": "Presets",
+    "sample": "Ejemplo",
+    "clear": "Limpiar",
+    "avatar": "Avatar",
+    "thumbnail": "Miniatura",
+    "banner": "Banner",
+    "hd": "HD",
+    "fullHd": "Full HD",
+    "socialSquare": "Cuadrado Social",
+    "socialStory": "Story Social",
+    "ogImage": "Imagen OG"
+  }
+}

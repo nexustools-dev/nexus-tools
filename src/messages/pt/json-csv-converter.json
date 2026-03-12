@@ -1,0 +1,41 @@
+{
+  "metadata": {
+    "title": "Conversor JSON para CSV — Converta Arrays JSON para CSV Online",
+    "description": "Conversor online grátis de JSON para CSV e de CSV para JSON. Delimitadores personalizados, opção de linha de cabeçalho, pré-visualização em tabela e download instantâneo. 100% no navegador, sem envio de dados a servidores.",
+    "keywords": "json para csv, csv para json, conversor json csv, converter json para csv online, csv json online, array json para csv, exportar json csv, json para planilha"
+  },
+  "heading": "Conversor JSON para CSV",
+  "subheading": "Converta arrays JSON para CSV ou CSV de volta para JSON. Escolha o delimitador, visualize o resultado e baixe. Tudo roda no seu navegador.",
+  "seo": {
+    "section1Title": "O que é a conversão de JSON para CSV?",
+    "section1Text": "A conversão de JSON para CSV transforma dados JSON estruturados (normalmente um array de objetos) em um formato CSV tabular e plano que planilhas e bancos de dados conseguem importar facilmente. Cada objeto do array JSON se torna uma linha, e cada chave única se torna um cabeçalho de coluna. O processo inverso — CSV para JSON — transforma cada linha em um objeto JSON usando a linha de cabeçalho como chaves.",
+    "section2Title": "JSON vs CSV — Quando usar cada um",
+    "section2Text": "JSON é ideal para representar dados hierárquicos e aninhados, e é o formato padrão para APIs e aplicações web. CSV é perfeito para dados tabulares planos e é compatível com praticamente qualquer ferramenta: planilhas (Excel, Google Sheets), bancos de dados e ferramentas de análise. Use JSON quando precisar de estruturas aninhadas ou preservação de tipos; use CSV quando compartilhar dados com usuários não técnicos ou importar para planilhas e bancos SQL.",
+    "section3Title": "Lidando com JSON aninhado",
+    "section3Text": "Arrays JSON planos se convertem perfeitamente para CSV, mas objetos e arrays aninhados precisam ser achatados. As estratégias mais comuns incluem notação com ponto (address.city vira uma coluna), serializar valores aninhados como JSON, ou expandir arrays em múltiplas linhas. Esta ferramenta achata um nível de aninhamento com notação de ponto e serializa estruturas mais profundas como strings JSON, preservando todos os seus dados e mantendo o CSV legível.",
+    "section4Title": "Dicas para conversão de dados",
+    "section4List": "Garanta que seu JSON seja um array de objetos com chaves consistentes para uma conversão limpa | Use ponto e vírgula ou tabulações como delimitadores se seus dados contêm vírgulas | Desative a linha de cabeçalho quando seu CSV já inclui cabeçalhos ou quando estiver adicionando dados | Visualize a tabela antes de baixar para identificar problemas de formatação | Para conjuntos de dados grandes, CSV é mais eficiente em memória que JSON | Coloque entre aspas os campos que contenham o caractere delimitador para evitar erros de parsing"
+  },
+  "ui": {
+    "howItWorksText": "Cole JSON ou CSV abaixo, escolha a direção da conversão, selecione o delimitador e clique em Converter. Visualize o resultado como tabela e baixe quando quiser. Nenhum dado sai do seu navegador.",
+    "jsonInput": "Entrada JSON",
+    "csvOutput": "Saída CSV",
+    "jsonToCSV": "JSON → CSV",
+    "csvToJSON": "CSV → JSON",
+    "delimiter": "Delimitador",
+    "comma": "Vírgula (,)",
+    "semicolon": "Ponto e vírgula (;)",
+    "tab": "Tabulação",
+    "headerRow": "Linha de cabeçalho",
+    "download": "Baixar",
+    "downloadJson": "Baixar JSON",
+    "downloadCsv": "Baixar CSV",
+    "preview": "Pré-visualização",
+    "sample": "Exemplo",
+    "clear": "Limpar",
+    "invalidJson": "JSON inválido — deve ser um array de objetos",
+    "invalidCsv": "CSV inválido — não foi possível processar a entrada",
+    "rows": "linhas",
+    "columns": "colunas"
+  }
+}

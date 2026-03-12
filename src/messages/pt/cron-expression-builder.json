@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "title": "Construtor de Expressões Cron — Gerador Visual de Agendamentos Cron",
+    "description": "Construtor visual de expressões cron gratuito. Crie agendamentos cron com menus suspensos, descrições legíveis, prévia das próximas 5 execuções e presets comuns. 100% no navegador.",
+    "keywords": "construtor cron, gerador cron, gerador crontab, agendador cron, sintaxe cron, editor cron visual, criador crontab, expressões cron"
+  },
+  "heading": "Construtor de Expressões Cron",
+  "subheading": "Construa expressões cron visualmente com menus suspensos. Veja descrições legíveis, prévia das execuções e use presets comuns. Tudo roda no seu navegador.",
+  "seo": {
+    "section1Title": "O que é uma Expressão Cron?",
+    "section1Text": "Uma expressão cron é uma string de cinco campos que define um agendamento para tarefas recorrentes. Originalmente do daemon cron do Unix, as expressões cron são usadas em todo lugar — pipelines de CI/CD, agendadores na nuvem (AWS EventBridge, Google Cloud Scheduler), CronJobs do Kubernetes, manutenção de bancos de dados e filas de tarefas. Cada campo especifica quando um job deve ser executado: minuto, hora, dia do mês, mês e dia da semana. Entender a sintaxe cron é essencial para qualquer desenvolvedor que gerencia processos automatizados.",
+    "section2Title": "Sintaxe Cron Explicada",
+    "section2List": "Minuto (0–59) — em qual minuto da hora o job executa | Hora (0–23) — em qual hora do dia no formato 24 horas | Dia do Mês (1–31) — qual dia do mês | Mês (1–12) — qual mês do ano | Dia da Semana (0–6) — qual dia, onde 0 é domingo e 6 é sábado",
+    "section2Text": "Cada campo aceita caracteres especiais: * (todos os valores), , (lista de valores), - (intervalo) e / (passo). Por exemplo, */5 no campo de minutos significa 'a cada 5 minutos', 1-5 no campo de dia da semana significa 'de segunda a sexta', e 0 8,12,18 * * * significa 'às 8:00, 12:00 e 18:00 todos os dias'.",
+    "section3Title": "Padrões Cron Comuns",
+    "section3List": "* * * * * — A cada minuto | 0 * * * * — A cada hora (no minuto 0) | 0 0 * * * — Diariamente à meia-noite | 0 12 * * * — Diariamente ao meio-dia | 0 9 * * 1-5 — Dias úteis às 9:00 | 0 0 * * 0 — Semanalmente aos domingos à meia-noite | 0 0 1 * * — Mensalmente no dia 1 à meia-noite | 0 0 1 1 * — Anualmente em 1 de janeiro à meia-noite",
+    "section4Title": "Boas Práticas com Cron",
+    "section4Text": "Sempre teste suas expressões cron antes de implantá-las em produção. Use uma ferramenta como este construtor para visualizar as próximas execuções e verificar se o agendamento corresponde ao que você espera. Evite agendar tarefas pesadas em horários populares como meia-noite ou o início de cada hora — adicione um deslocamento de minutos aleatório para distribuir a carga. Para tarefas críticas, implemente monitoramento e alertas para detectar falhas silenciosas. Lembre-se de que o cron usa o fuso horário do servidor, a menos que configurado explicitamente de outra forma, o que pode causar problemas nas mudanças de horário de verão. Ao usar agendadores na nuvem, prefira UTC para evitar surpresas com o horário de verão."
+  },
+  "ui": {
+    "howItWorksText": "Selecione valores nos menus suspensos para construir sua expressão cron visualmente, ou digite diretamente. A ferramenta mostra uma descrição legível e uma prévia das próximas 5 execuções. Use os presets para agendamentos comuns.",
+    "expression": "Expressão",
+    "minute": "Minuto",
+    "hour": "Hora",
+    "dayOfMonth": "Dia do Mês",
+    "month": "Mês",
+    "dayOfWeek": "Dia da Semana",
+    "every": "Cada",
+    "at": "Às",
+    "on": "No",
+    "humanReadable": "Descrição Legível",
+    "nextExecutions": "Próximas 5 Execuções",
+    "presets": "Presets",
+    "sample": "Exemplo",
+    "clear": "Limpar",
+    "copy": "Copiar",
+    "everyMinute": "A cada minuto",
+    "everyHour": "A cada hora",
+    "dailyMidnight": "Diariamente à meia-noite",
+    "dailyNoon": "Diariamente ao meio-dia",
+    "weekdaysOnly": "Dias úteis às 9:00",
+    "weekly": "Semanalmente aos domingos",
+    "monthly": "Mensalmente no dia 1",
+    "yearly": "Anualmente em 1 de janeiro"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "metadata": {
+    "title": "JSON to CSV Converter — Convert JSON Arrays to CSV Online",
+    "description": "Free online JSON to CSV converter and CSV to JSON converter. Custom delimiters, header row toggle, preview table, instant download. 100% browser-based, no data sent to servers.",
+    "keywords": "json to csv, csv to json, json csv converter, convert json to csv online, csv json online, json array to csv, export json csv, json to spreadsheet"
+  },
+  "heading": "JSON to CSV Converter",
+  "subheading": "Convert JSON arrays to CSV or CSV back to JSON. Choose your delimiter, preview the result, and download. Everything runs in your browser.",
+  "seo": {
+    "section1Title": "What is JSON to CSV Conversion?",
+    "section1Text": "JSON to CSV conversion transforms structured JSON data (typically an array of objects) into a flat, tabular CSV format that spreadsheets and databases can easily import. Each object in the JSON array becomes a row, and each unique key becomes a column header. The reverse process — CSV to JSON — turns each row into a JSON object using the header row as keys.",
+    "section2Title": "JSON vs CSV — When to Use Which",
+    "section2Text": "JSON excels at representing nested, hierarchical data and is the standard format for APIs and web applications. CSV is ideal for flat, tabular data and is universally supported by spreadsheets (Excel, Google Sheets), databases, and data analysis tools. Use JSON when you need nested structures or type preservation; use CSV when sharing data with non-technical users or importing into spreadsheets and SQL databases.",
+    "section3Title": "Handling Nested JSON",
+    "section3Text": "Flat JSON arrays convert cleanly to CSV, but nested objects and arrays require flattening. Common strategies include dot notation (address.city becomes a column), JSON-stringifying nested values, or expanding arrays into multiple rows. This tool flattens one level of nesting using dot notation and serializes deeper structures as JSON strings, preserving all your data while keeping the CSV readable.",
+    "section4Title": "Data Conversion Tips",
+    "section4List": "Ensure your JSON is an array of objects with consistent keys for clean conversion | Use semicolons or tabs as delimiters if your data contains commas | Toggle the header row off when your CSV already includes headers or when appending data | Preview the table before downloading to catch formatting issues | For large datasets, CSV is more memory-efficient than JSON | Quote fields that contain the delimiter character to avoid parsing errors"
+  },
+  "ui": {
+    "howItWorksText": "Paste JSON or CSV below, choose the conversion direction, pick your delimiter, and click Convert. Preview the result as a table and download when ready. No data leaves your browser.",
+    "jsonInput": "JSON Input",
+    "csvOutput": "CSV Output",
+    "jsonToCSV": "JSON → CSV",
+    "csvToJSON": "CSV → JSON",
+    "delimiter": "Delimiter",
+    "comma": "Comma (,)",
+    "semicolon": "Semicolon (;)",
+    "tab": "Tab",
+    "headerRow": "Header Row",
+    "download": "Download",
+    "downloadJson": "Download JSON",
+    "downloadCsv": "Download CSV",
+    "preview": "Preview",
+    "sample": "Sample",
+    "clear": "Clear",
+    "invalidJson": "Invalid JSON — must be an array of objects",
+    "invalidCsv": "Invalid CSV — could not parse the input",
+    "rows": "rows",
+    "columns": "columns"
+  }
+}

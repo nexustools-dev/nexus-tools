@@ -1,0 +1,41 @@
+{
+  "metadata": {
+    "title": "Convertidor JSON a CSV — Convierte Arrays JSON a CSV Online",
+    "description": "Convertidor online gratis de JSON a CSV y de CSV a JSON. Delimitadores personalizados, opción de fila de encabezado, vista previa en tabla y descarga instantánea. 100% en el navegador, sin enviar datos a servidores.",
+    "keywords": "json a csv, csv a json, convertidor json csv, convertir json a csv online, csv json online, array json a csv, exportar json csv, json a hoja de cálculo"
+  },
+  "heading": "Convertidor JSON a CSV",
+  "subheading": "Convierte arrays JSON a CSV o CSV de vuelta a JSON. Elige el delimitador, previsualiza el resultado y descarga. Todo se ejecuta en tu navegador.",
+  "seo": {
+    "section1Title": "¿Qué es la conversión de JSON a CSV?",
+    "section1Text": "La conversión de JSON a CSV transforma datos JSON estructurados (normalmente un array de objetos) en un formato CSV tabular y plano que hojas de cálculo y bases de datos pueden importar fácilmente. Cada objeto del array JSON se convierte en una fila, y cada clave única se convierte en un encabezado de columna. El proceso inverso — CSV a JSON — convierte cada fila en un objeto JSON usando la fila de encabezado como claves.",
+    "section2Title": "JSON vs CSV — Cuándo usar cada uno",
+    "section2Text": "JSON es ideal para representar datos jerárquicos y anidados, y es el formato estándar para APIs y aplicaciones web. CSV es perfecto para datos tabulares planos y es compatible con prácticamente cualquier herramienta: hojas de cálculo (Excel, Google Sheets), bases de datos y herramientas de análisis. Usa JSON cuando necesites estructuras anidadas o preservar tipos de datos; usa CSV cuando compartas datos con usuarios no técnicos o importes a hojas de cálculo y bases SQL.",
+    "section3Title": "Manejo de JSON anidado",
+    "section3Text": "Los arrays JSON planos se convierten limpiamente a CSV, pero los objetos y arrays anidados requieren aplanamiento. Las estrategias más comunes incluyen notación con punto (address.city se convierte en una columna), serializar valores anidados como JSON, o expandir arrays en múltiples filas. Esta herramienta aplana un nivel de anidamiento con notación de punto y serializa las estructuras más profundas como cadenas JSON, preservando todos tus datos y manteniendo el CSV legible.",
+    "section4Title": "Consejos para la conversión de datos",
+    "section4List": "Asegúrate de que tu JSON sea un array de objetos con claves consistentes para una conversión limpia | Usa punto y coma o tabulaciones como delimitadores si tus datos contienen comas | Desactiva la fila de encabezado cuando tu CSV ya incluye encabezados o cuando estés añadiendo datos | Previsualiza la tabla antes de descargar para detectar problemas de formato | Para conjuntos de datos grandes, CSV es más eficiente en memoria que JSON | Encierra entre comillas los campos que contengan el carácter delimitador para evitar errores de parseo"
+  },
+  "ui": {
+    "howItWorksText": "Pega JSON o CSV abajo, elige la dirección de conversión, selecciona el delimitador y haz clic en Convertir. Previsualiza el resultado como tabla y descarga cuando quieras. Ningún dato sale de tu navegador.",
+    "jsonInput": "Entrada JSON",
+    "csvOutput": "Salida CSV",
+    "jsonToCSV": "JSON → CSV",
+    "csvToJSON": "CSV → JSON",
+    "delimiter": "Delimitador",
+    "comma": "Coma (,)",
+    "semicolon": "Punto y coma (;)",
+    "tab": "Tabulación",
+    "headerRow": "Fila de encabezado",
+    "download": "Descargar",
+    "downloadJson": "Descargar JSON",
+    "downloadCsv": "Descargar CSV",
+    "preview": "Vista previa",
+    "sample": "Ejemplo",
+    "clear": "Limpiar",
+    "invalidJson": "JSON inválido — debe ser un array de objetos",
+    "invalidCsv": "CSV inválido — no se pudo parsear la entrada",
+    "rows": "filas",
+    "columns": "columnas"
+  }
+}

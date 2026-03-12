@@ -21,6 +21,12 @@ const TOOLS = [
   { key: "markdownPreview", href: "/tools/markdown-preview", icon: "MD" },
   { key: "cssGradientGenerator", href: "/tools/css-gradient-generator", icon: "GR" },
   { key: "diffChecker", href: "/tools/diff-checker", icon: "±" },
+  { key: "passwordGenerator", href: "/tools/password-generator", icon: "PW" },
+  { key: "qrCodeGenerator", href: "/tools/qr-code-generator", icon: "QR" },
+  { key: "cronExpressionBuilder", href: "/tools/cron-expression-builder", icon: "CR" },
+  { key: "jsonCsvConverter", href: "/tools/json-csv-converter", icon: "CSV" },
+  { key: "textCaseConverter", href: "/tools/text-case-converter", icon: "Cc" },
+  { key: "placeholderImage", href: "/tools/placeholder-image", icon: "IMG" },
 ] as const;
 
 export function NavMenu() {

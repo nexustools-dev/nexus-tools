@@ -16,7 +16,13 @@
     "timestampConverter": "Timestamp",
     "markdownPreview": "Markdown",
     "cssGradientGenerator": "Gradientes",
-    "diffChecker": "Diff Checker"
+    "diffChecker": "Diff Checker",
+    "passwordGenerator": "Contraseñas",
+    "qrCodeGenerator": "Código QR",
+    "cronExpressionBuilder": "Cron Builder",
+    "jsonCsvConverter": "JSON/CSV",
+    "textCaseConverter": "Formato Texto",
+    "placeholderImage": "Placeholder"
   },
   "footer": {
     "privacy": "Todas las herramientas funcionan 100% en tu navegador. No se envían datos a ningún servidor.",
@@ -102,6 +108,30 @@
       "diffChecker": {
         "name": "Comparador de Diferencias",
         "description": "Compara dos textos lado a lado. Ve adiciones, eliminaciones y líneas sin cambios resaltadas con estadísticas de diff."
+      },
+      "passwordGenerator": {
+        "name": "Generador de Contraseñas",
+        "description": "Genera contraseñas fuertes y aleatorias con longitud personalizable, tipos de caracteres y medidor de fuerza por entropía."
+      },
+      "qrCodeGenerator": {
+        "name": "Generador de Códigos QR",
+        "description": "Genera códigos QR desde cualquier texto o URL. Personaliza colores y tamaño, descarga como PNG o SVG."
+      },
+      "cronExpressionBuilder": {
+        "name": "Constructor de Expresiones Cron",
+        "description": "Construye expresiones cron visualmente con editores de campo. Descripciones legibles, vista previa de ejecuciones y presets."
+      },
+      "jsonCsvConverter": {
+        "name": "Convertidor JSON a CSV",
+        "description": "Convierte arrays JSON a CSV o CSV de vuelta a JSON. Delimitadores personalizados, aplanado de objetos y descarga instantánea."
+      },
+      "textCaseConverter": {
+        "name": "Convertidor de Formato de Texto",
+        "description": "Convierte texto entre camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE y 6 formatos más."
+      },
+      "placeholderImage": {
+        "name": "Generador de Imágenes Placeholder",
+        "description": "Genera imágenes placeholder con dimensiones, colores y texto personalizado. Descarga PNG o copia la URL de datos."
       }
     }
   },

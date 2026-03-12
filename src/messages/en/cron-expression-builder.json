@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "title": "Cron Expression Builder — Visual Cron Schedule Generator Online",
+    "description": "Free visual cron expression builder. Create cron schedules with dropdowns, see human-readable descriptions, preview next 5 execution times, and use common presets. 100% browser-based.",
+    "keywords": "cron expression builder, cron generator, crontab generator, cron schedule builder, cron syntax, cron job builder, crontab maker, visual cron editor"
+  },
+  "heading": "Cron Expression Builder",
+  "subheading": "Build cron expressions visually with dropdowns. Get human-readable descriptions, preview next execution times, and use common presets. Everything runs in your browser.",
+  "seo": {
+    "section1Title": "What is a Cron Expression?",
+    "section1Text": "A cron expression is a string of five fields that defines a schedule for recurring tasks. Originally from Unix cron daemons, cron expressions are now used everywhere — CI/CD pipelines, cloud schedulers (AWS EventBridge, Google Cloud Scheduler), Kubernetes CronJobs, database maintenance, and task queues. Each field specifies when a job should run: minute, hour, day of month, month, and day of week. Understanding cron syntax is essential for any developer managing automated processes.",
+    "section2Title": "Cron Syntax Explained",
+    "section2List": "Minute (0–59) — which minute of the hour the job runs | Hour (0–23) — which hour of the day in 24-hour format | Day of Month (1–31) — which day of the month | Month (1–12) — which month of the year | Day of Week (0–6) — which day, where 0 is Sunday and 6 is Saturday",
+    "section2Text": "Each field supports special characters: * (every value), , (list of values), - (range), and / (step). For example, */5 in the minute field means 'every 5 minutes', 1-5 in the day of week field means 'Monday through Friday', and 0 8,12,18 * * * means 'at 8:00, 12:00, and 18:00 every day'.",
+    "section3Title": "Common Cron Patterns",
+    "section3List": "* * * * * — Every minute | 0 * * * * — Every hour (at minute 0) | 0 0 * * * — Daily at midnight | 0 12 * * * — Daily at noon | 0 9 * * 1-5 — Weekdays at 9:00 AM | 0 0 * * 0 — Weekly on Sunday at midnight | 0 0 1 * * — Monthly on the 1st at midnight | 0 0 1 1 * — Yearly on January 1st at midnight",
+    "section4Title": "Cron Best Practices",
+    "section4Text": "Always test your cron expressions before deploying them to production. Use a tool like this builder to preview the next execution times and verify the schedule matches your intent. Avoid scheduling heavy tasks at popular times like midnight or the top of the hour — add a random minute offset to distribute load. For critical jobs, implement monitoring and alerting to catch silent failures. Remember that cron uses the server's timezone unless explicitly configured otherwise, which can cause issues around daylight saving time transitions. When using cloud schedulers, prefer UTC to avoid DST surprises."
+  },
+  "ui": {
+    "howItWorksText": "Select values from the dropdowns to build your cron expression visually, or type an expression directly. The tool shows a human-readable description and previews the next 5 execution times. Use presets for common schedules.",
+    "expression": "Expression",
+    "minute": "Minute",
+    "hour": "Hour",
+    "dayOfMonth": "Day of Month",
+    "month": "Month",
+    "dayOfWeek": "Day of Week",
+    "every": "Every",
+    "at": "At",
+    "on": "On",
+    "humanReadable": "Human-Readable",
+    "nextExecutions": "Next 5 Executions",
+    "presets": "Presets",
+    "sample": "Sample",
+    "clear": "Clear",
+    "copy": "Copy",
+    "everyMinute": "Every minute",
+    "everyHour": "Every hour",
+    "dailyMidnight": "Daily at midnight",
+    "dailyNoon": "Daily at noon",
+    "weekdaysOnly": "Weekdays at 9:00 AM",
+    "weekly": "Weekly on Sunday",
+    "monthly": "Monthly on the 1st",
+    "yearly": "Yearly on January 1st"
+  }
+}

@@ -18,6 +18,12 @@ const toolKeys = [
   { key: "markdownPreview", href: "/tools/markdown-preview", icon: "MD", color: "from-gray-500 to-slate-600" },
   { key: "cssGradientGenerator", href: "/tools/css-gradient-generator", icon: "GR", color: "from-fuchsia-500 to-violet-600" },
   { key: "diffChecker", href: "/tools/diff-checker", icon: "±", color: "from-teal-500 to-emerald-600" },
+  { key: "passwordGenerator", href: "/tools/password-generator", icon: "PW", color: "from-red-500 to-orange-600" },
+  { key: "qrCodeGenerator", href: "/tools/qr-code-generator", icon: "QR", color: "from-sky-500 to-blue-600" },
+  { key: "cronExpressionBuilder", href: "/tools/cron-expression-builder", icon: "CR", color: "from-green-500 to-emerald-600" },
+  { key: "jsonCsvConverter", href: "/tools/json-csv-converter", icon: "CSV", color: "from-amber-500 to-orange-600" },
+  { key: "textCaseConverter", href: "/tools/text-case-converter", icon: "Cc", color: "from-lime-500 to-green-600" },
+  { key: "placeholderImage", href: "/tools/placeholder-image", icon: "IMG", color: "from-pink-500 to-fuchsia-600" },
 ] as const;
 
 type Props = {

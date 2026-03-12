@@ -36,6 +36,18 @@
     "stats": "{chars} chars · {lines} lines · {keys} keys",
     "input": "Input",
     "output": "Output",
-    "placeholder": "Paste your JSON here, e.g.: {\"name\": \"John\", \"age\": 30}"
+    "placeholder": "Paste your JSON here, e.g.: {\"name\": \"John\", \"age\": 30}",
+    "repair": "Repair",
+    "repairTitle": "Fix common JSON errors (trailing commas, single quotes, comments)",
+    "repaired": "Repaired!",
+    "download": "Download",
+    "downloadTitle": "Download as .json file",
+    "sortKeys": "Sort Keys",
+    "sortKeysTitle": "Sort object keys alphabetically",
+    "viewCode": "Code",
+    "viewTree": "Tree",
+    "treeEmpty": "Valid JSON will show as an interactive tree",
+    "treeItems": "{count} items",
+    "nothingToRepair": "Nothing to repair — JSON is already valid"
   }
 }

@@ -1,0 +1,33 @@
+{
+  "metadata": {
+    "title": "Generador de Códigos QR — Crea Códigos QR Online Gratis",
+    "description": "Generador de códigos QR online gratis. Crea códigos QR desde texto o URLs con colores y tamaños personalizados. Descarga como PNG o SVG. 100% en el navegador.",
+    "keywords": "generador código qr, crear código qr, creador código qr, código qr online, código qr gratis, texto a código qr, url código qr, código qr personalizado"
+  },
+  "heading": "Generador de Códigos QR",
+  "subheading": "Genera códigos QR desde cualquier texto o URL. Personaliza colores y tamaño, luego descarga como PNG o SVG. Todo se ejecuta en tu navegador.",
+  "seo": {
+    "section1Title": "¿Qué es un Código QR?",
+    "section1Text": "Un código QR (Quick Response) es un código de barras bidimensional que puede almacenar texto, URLs, información de contacto y otros datos. Creado en 1994 por Denso Wave para rastrear partes automotrices, los códigos QR ahora se usan en todas partes — desde menús de restaurantes hasta sistemas de pago. Pueden escanearse con cualquier cámara de smartphone, haciéndolos una forma eficiente de compartir información en el mundo físico.",
+    "section2Title": "Cómo Funcionan los Códigos QR",
+    "section2Text": "Los códigos QR codifican datos en una cuadrícula de cuadrados blancos y negros llamados módulos. El código incluye patrones de búsqueda (los tres cuadrados grandes en las esquinas) para orientación, patrones de alineación, patrones de tiempo y los datos reales codificados usando corrección de errores Reed-Solomon. Esta corrección permite que los códigos QR sigan siendo legibles incluso cuando están parcialmente dañados u oscurecidos.",
+    "section3Title": "Niveles de Corrección de Errores",
+    "section3Text": "Los códigos QR soportan cuatro niveles de corrección de errores: L (Bajo, ~7% de recuperación), M (Medio, ~15%), Q (Cuartil, ~25%) y H (Alto, ~30%). Mayor corrección de errores significa que el código QR puede estar más dañado y aún escanearse, pero también requiere más módulos (código más grande). El nivel M es el balance más común entre tamaño y confiabilidad.",
+    "section4Title": "Mejores Prácticas de Códigos QR",
+    "section4List": "Mantén los datos cortos — texto más corto significa un código más simple y escaneable | Asegura alto contraste entre colores de primer plano y fondo | Usa al menos nivel M de corrección para códigos impresos | Prueba tu código QR en múltiples dispositivos antes de distribuir | Deja una zona tranquila (borde blanco) alrededor del código para escaneo confiable | Usa acortadores de URL para URLs largas para reducir complejidad"
+  },
+  "ui": {
+    "howItWorksText": "Escribe o pega texto abajo para generar un código QR al instante. Personaliza el tamaño y colores, luego descarga como PNG o SVG. Ningún dato se envía a ningún servidor.",
+    "inputLabel": "Texto o URL",
+    "inputPlaceholder": "Ingresa texto o URL para codificar...",
+    "size": "Tamaño",
+    "fgColor": "Primer plano",
+    "bgColor": "Fondo",
+    "errorCorrection": "Corrección de Errores",
+    "downloadPng": "Descargar PNG",
+    "downloadSvg": "Descargar SVG",
+    "sample": "Ejemplo",
+    "clear": "Limpiar",
+    "tooLong": "Texto demasiado largo para código QR (máx ~900 caracteres)"
+  }
+}

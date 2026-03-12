@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "title": "Constructor de Expresiones Cron — Generador Visual de Horarios Cron",
+    "description": "Constructor visual de expresiones cron gratuito. Crea horarios cron con menús desplegables, descripciones legibles, vista previa de las próximas 5 ejecuciones y presets comunes. 100% en tu navegador.",
+    "keywords": "constructor cron, generador cron, generador crontab, programador cron, sintaxis cron, editor cron visual, creador crontab, expresiones cron"
+  },
+  "heading": "Constructor de Expresiones Cron",
+  "subheading": "Construye expresiones cron visualmente con menús desplegables. Obtén descripciones legibles, vista previa de ejecuciones y usa presets comunes. Todo se ejecuta en tu navegador.",
+  "seo": {
+    "section1Title": "¿Qué es una Expresión Cron?",
+    "section1Text": "Una expresión cron es una cadena de cinco campos que define un horario para tareas recurrentes. Originarias del daemon cron de Unix, las expresiones cron se usan en todas partes — pipelines de CI/CD, schedulers en la nube (AWS EventBridge, Google Cloud Scheduler), CronJobs de Kubernetes, mantenimiento de bases de datos y colas de tareas. Cada campo especifica cuándo debe ejecutarse un trabajo: minuto, hora, día del mes, mes y día de la semana. Entender la sintaxis cron es fundamental para cualquier desarrollador que gestione procesos automatizados.",
+    "section2Title": "Sintaxis Cron Explicada",
+    "section2List": "Minuto (0–59) — en qué minuto de la hora se ejecuta | Hora (0–23) — a qué hora del día en formato 24 horas | Día del Mes (1–31) — qué día del mes | Mes (1–12) — qué mes del año | Día de la Semana (0–6) — qué día, donde 0 es domingo y 6 es sábado",
+    "section2Text": "Cada campo acepta caracteres especiales: * (todos los valores), , (lista de valores), - (rango) y / (intervalo). Por ejemplo, */5 en el campo de minutos significa 'cada 5 minutos', 1-5 en el campo de día de la semana significa 'de lunes a viernes', y 0 8,12,18 * * * significa 'a las 8:00, 12:00 y 18:00 todos los días'.",
+    "section3Title": "Patrones Cron Comunes",
+    "section3List": "* * * * * — Cada minuto | 0 * * * * — Cada hora (en el minuto 0) | 0 0 * * * — Diario a medianoche | 0 12 * * * — Diario al mediodía | 0 9 * * 1-5 — Días laborables a las 9:00 AM | 0 0 * * 0 — Semanal los domingos a medianoche | 0 0 1 * * — Mensual el día 1 a medianoche | 0 0 1 1 * — Anual el 1 de enero a medianoche",
+    "section4Title": "Buenas Prácticas con Cron",
+    "section4Text": "Siempre prueba tus expresiones cron antes de desplegarlas en producción. Usa una herramienta como este constructor para previsualizar las próximas ejecuciones y verificar que el horario coincide con lo que esperas. Evita programar tareas pesadas en horarios populares como medianoche o el inicio de cada hora — agrega un desplazamiento de minutos aleatorio para distribuir la carga. Para tareas críticas, implementa monitoreo y alertas para detectar fallos silenciosos. Recuerda que cron usa la zona horaria del servidor a menos que se configure explícitamente de otra forma, lo que puede causar problemas en los cambios de horario de verano. Si usas schedulers en la nube, prefiere UTC para evitar sorpresas con el cambio de hora."
+  },
+  "ui": {
+    "howItWorksText": "Selecciona valores de los menús desplegables para construir tu expresión cron visualmente, o escríbela directamente. La herramienta muestra una descripción legible y una vista previa de las próximas 5 ejecuciones. Usa los presets para horarios comunes.",
+    "expression": "Expresión",
+    "minute": "Minuto",
+    "hour": "Hora",
+    "dayOfMonth": "Día del Mes",
+    "month": "Mes",
+    "dayOfWeek": "Día de la Semana",
+    "every": "Cada",
+    "at": "A las",
+    "on": "El",
+    "humanReadable": "Descripción Legible",
+    "nextExecutions": "Próximas 5 Ejecuciones",
+    "presets": "Presets",
+    "sample": "Ejemplo",
+    "clear": "Limpiar",
+    "copy": "Copiar",
+    "everyMinute": "Cada minuto",
+    "everyHour": "Cada hora",
+    "dailyMidnight": "Diario a medianoche",
+    "dailyNoon": "Diario al mediodía",
+    "weekdaysOnly": "Días laborables a las 9:00 AM",
+    "weekly": "Semanal los domingos",
+    "monthly": "Mensual el día 1",
+    "yearly": "Anual el 1 de enero"
+  }
+}

@@ -36,6 +36,18 @@
     "stats": "{chars} caracteres · {lines} linhas · {keys} chaves",
     "input": "Entrada",
     "output": "Saída",
-    "placeholder": "Cole seu JSON aqui, ex.: {\"nome\": \"João\", \"idade\": 30}"
+    "placeholder": "Cole seu JSON aqui, ex.: {\"nome\": \"João\", \"idade\": 30}",
+    "repair": "Reparar",
+    "repairTitle": "Corrigir erros comuns de JSON (vírgulas finais, aspas simples, comentários)",
+    "repaired": "Reparado!",
+    "download": "Baixar",
+    "downloadTitle": "Baixar como arquivo .json",
+    "sortKeys": "Ordenar Chaves",
+    "sortKeysTitle": "Ordenar chaves de objetos alfabeticamente",
+    "viewCode": "Código",
+    "viewTree": "Árvore",
+    "treeEmpty": "O JSON válido será mostrado como uma árvore interativa",
+    "treeItems": "{count} itens",
+    "nothingToRepair": "Nada para reparar — o JSON já é válido"
   }
 }
