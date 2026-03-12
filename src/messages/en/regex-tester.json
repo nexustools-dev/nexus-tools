@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "title": "Regex Tester — Test Regular Expressions Online with Live Highlighting",
+    "description": "Free online regex tester with real-time match highlighting, capture groups, and a quick reference cheat sheet. Test JavaScript regular expressions instantly. 100% browser-based.",
+    "keywords": "regex tester, regular expression tester, regex online, regex validator, test regex, regex checker, regex match, javascript regex, regex pattern tester"
+  },
+  "heading": "Regex Tester",
+  "subheading": "Test regular expressions with real-time match highlighting, capture groups, and a quick reference cheat sheet.",
+  "seo": {
+    "section1Title": "What are Regular Expressions?",
+    "section1Text": "Regular expressions (regex) are patterns used to match character combinations in strings. They are a powerful tool for text searching, validation, and manipulation. Every programming language supports regex — JavaScript, Python, Java, Go, PHP, and more. Mastering regex lets you validate emails, extract data from text, search and replace patterns, and parse logs efficiently.",
+    "section2Title": "Regex Syntax Basics",
+    "section2Text": "A regex pattern is built from literal characters and special metacharacters. The dot (.) matches any single character. Square brackets [abc] define a character class. Quantifiers like * (zero or more), + (one or more), and ? (zero or one) control repetition. Anchors ^ and $ match the start and end of a string. Parentheses () create capture groups that extract specific parts of a match.",
+    "section3Title": "Common Regex Patterns",
+    "section3Text": "Email validation: [a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}. URL matching: https?://[\\w.-]+(?:\\.[\\w.-]+)+[\\w.,@?^=%&:/~+#-]*. Phone numbers: \\+?\\d{1,3}[-.\\s]?\\(?\\d{1,4}\\)?[-.\\s]?\\d{1,4}[-.\\s]?\\d{1,9}. IPv4 address: \\b\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\b. These patterns can be adapted and combined for specific needs.",
+    "section4Title": "Common Use Cases",
+    "section4List": "Form validation (email, phone, URL, postal codes) | Log file parsing and data extraction | Search and replace in code editors | Web scraping and text processing | Input sanitization and security filtering | Data cleaning and transformation"
+  },
+  "ui": {
+    "howItWorksText": "Enter a regex pattern and test string below. Matches are highlighted in real-time as you type. Capture groups are extracted and displayed separately. Use flags to control matching behavior.",
+    "patternLabel": "Pattern",
+    "patternPlaceholder": "Enter regex pattern, e.g.: (\\w+)@(\\w+\\.\\w+)",
+    "flagsLabel": "Flags",
+    "testStringLabel": "Test String",
+    "testStringPlaceholder": "Enter text to test against the pattern...",
+    "sample": "Sample",
+    "clear": "Clear",
+    "matchesLabel": "Matches",
+    "noMatches": "No matches found",
+    "matchCount": "{count} match(es) found",
+    "fullMatch": "Full match",
+    "group": "Group {n}",
+    "index": "Index {i}",
+    "cheatSheet": "Cheat Sheet",
+    "cheatCharClasses": "Character Classes",
+    "cheatQuantifiers": "Quantifiers",
+    "cheatAnchors": "Anchors & Boundaries",
+    "cheatGroups": "Groups & Lookaround",
+    "invalidRegex": "Invalid regex: {error}",
+    "flagGlobal": "g — global (find all matches)",
+    "flagCase": "i — case insensitive",
+    "flagMultiline": "m — multiline (^ and $ match line boundaries)",
+    "flagDotAll": "s — dotAll (. matches newlines)",
+    "flagUnicode": "u — unicode"
+  }
+}

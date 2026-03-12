@@ -10,6 +10,7 @@ const toolKeys = [
   { key: "cssUnitConverter", href: "/tools/css-unit-converter", icon: "CSS", color: "from-cyan-500 to-blue-600" },
   { key: "hashGenerator", href: "/tools/hash-generator", icon: "#", color: "from-yellow-500 to-orange-600" },
   { key: "urlEncoder", href: "/tools/url-encoder", icon: "%", color: "from-violet-500 to-purple-600" },
+  { key: "regexTester", href: "/tools/regex-tester", icon: ".*", color: "from-pink-500 to-rose-600" },
 ] as const;
 
 type Props = {

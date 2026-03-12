@@ -8,7 +8,8 @@
     "colors": "Cores",
     "cssUnits": "Unidades CSS",
     "hash": "Hash",
-    "urlEncoder": "URL Encode"
+    "urlEncoder": "URL Encode",
+    "regex": "Regex"
   },
   "footer": {
     "privacy": "Todas as ferramentas funcionam 100% no seu navegador. Nenhum dado é enviado a servidores.",
@@ -62,6 +63,10 @@
       "urlEncoder": {
         "name": "Codificador e Decodificador de URL",
         "description": "Codifique caracteres especiais para URLs ou decodifique strings percent-encoded. Suporta modos encodeURIComponent e encodeURI."
+      },
+      "regexTester": {
+        "name": "Testador de Regex",
+        "description": "Teste expressões regulares com destaque de correspondências em tempo real, grupos de captura, flags e folha de referência rápida."
       }
     }
   },

@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "title": "Probador de Regex — Prueba Expresiones Regulares Online con Resaltado en Vivo",
+    "description": "Probador de regex online gratis con resaltado de coincidencias en tiempo real, grupos de captura y hoja de referencia rápida. Prueba expresiones regulares de JavaScript al instante. 100% en el navegador.",
+    "keywords": "probador de regex, probador de expresiones regulares, regex online, validador de regex, probar regex, verificador de regex, coincidencia regex, javascript regex, probador de patrones regex"
+  },
+  "heading": "Probador de Regex",
+  "subheading": "Prueba expresiones regulares con resaltado de coincidencias en tiempo real, grupos de captura y hoja de referencia rápida.",
+  "seo": {
+    "section1Title": "¿Qué son las expresiones regulares?",
+    "section1Text": "Las expresiones regulares (regex) son patrones usados para buscar combinaciones de caracteres en cadenas de texto. Son una herramienta poderosa para búsqueda, validación y manipulación de texto. Todos los lenguajes de programación soportan regex — JavaScript, Python, Java, Go, PHP y más. Dominar regex te permite validar emails, extraer datos de texto, buscar y reemplazar patrones, y analizar logs eficientemente.",
+    "section2Title": "Sintaxis básica de Regex",
+    "section2Text": "Un patrón regex se construye con caracteres literales y metacaracteres especiales. El punto (.) coincide con cualquier carácter. Los corchetes [abc] definen una clase de caracteres. Los cuantificadores como * (cero o más), + (uno o más) y ? (cero o uno) controlan la repetición. Los anclas ^ y $ coinciden con el inicio y fin de una cadena. Los paréntesis () crean grupos de captura que extraen partes específicas de una coincidencia.",
+    "section3Title": "Patrones Regex comunes",
+    "section3Text": "Validación de email: [a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}. URLs: https?://[\\w.-]+(?:\\.[\\w.-]+)+[\\w.,@?^=%&:/~+#-]*. Números de teléfono: \\+?\\d{1,3}[-.\\s]?\\(?\\d{1,4}\\)?[-.\\s]?\\d{1,4}[-.\\s]?\\d{1,9}. Dirección IPv4: \\b\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\b. Estos patrones pueden adaptarse y combinarse según necesidades específicas.",
+    "section4Title": "Casos de uso comunes",
+    "section4List": "Validación de formularios (email, teléfono, URL, códigos postales) | Análisis de archivos de log y extracción de datos | Buscar y reemplazar en editores de código | Web scraping y procesamiento de texto | Sanitización de inputs y filtrado de seguridad | Limpieza y transformación de datos"
+  },
+  "ui": {
+    "howItWorksText": "Ingresa un patrón regex y un texto de prueba abajo. Las coincidencias se resaltan en tiempo real mientras escribes. Los grupos de captura se extraen y muestran por separado. Usa los flags para controlar el comportamiento de búsqueda.",
+    "patternLabel": "Patrón",
+    "patternPlaceholder": "Ingresa patrón regex, ej.: (\\w+)@(\\w+\\.\\w+)",
+    "flagsLabel": "Flags",
+    "testStringLabel": "Texto de Prueba",
+    "testStringPlaceholder": "Ingresa texto para probar contra el patrón...",
+    "sample": "Ejemplo",
+    "clear": "Limpiar",
+    "matchesLabel": "Coincidencias",
+    "noMatches": "No se encontraron coincidencias",
+    "matchCount": "{count} coincidencia(s) encontrada(s)",
+    "fullMatch": "Coincidencia completa",
+    "group": "Grupo {n}",
+    "index": "Índice {i}",
+    "cheatSheet": "Hoja de Referencia",
+    "cheatCharClasses": "Clases de Caracteres",
+    "cheatQuantifiers": "Cuantificadores",
+    "cheatAnchors": "Anclas y Límites",
+    "cheatGroups": "Grupos y Lookaround",
+    "invalidRegex": "Regex inválido: {error}",
+    "flagGlobal": "g — global (encontrar todas las coincidencias)",
+    "flagCase": "i — insensible a mayúsculas",
+    "flagMultiline": "m — multilínea (^ y $ coinciden con límites de línea)",
+    "flagDotAll": "s — dotAll (. coincide con saltos de línea)",
+    "flagUnicode": "u — unicode"
+  }
+}

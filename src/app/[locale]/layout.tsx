@@ -120,6 +120,12 @@ export default async function LocaleLayout({ children, params }: Props) {
                 >
                   {t("nav.urlEncoder")}
                 </Link>
+                <Link
+                  href="/tools/regex-tester"
+                  className="hover:text-zinc-100 transition-colors"
+                >
+                  {t("nav.regex")}
+                </Link>
                 <div className="border-l border-zinc-700 pl-4">
                   <LanguageSwitcher />
                 </div>

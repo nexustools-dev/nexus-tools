@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "title": "Testador de Regex — Teste Expressões Regulares Online com Destaque ao Vivo",
+    "description": "Testador de regex online grátis com destaque de correspondências em tempo real, grupos de captura e folha de referência rápida. Teste expressões regulares JavaScript instantaneamente. 100% no navegador.",
+    "keywords": "testador de regex, testador de expressões regulares, regex online, validador de regex, testar regex, verificador de regex, correspondência regex, javascript regex, testador de padrões regex"
+  },
+  "heading": "Testador de Regex",
+  "subheading": "Teste expressões regulares com destaque de correspondências em tempo real, grupos de captura e folha de referência rápida.",
+  "seo": {
+    "section1Title": "O que são expressões regulares?",
+    "section1Text": "Expressões regulares (regex) são padrões usados para encontrar combinações de caracteres em strings. São uma ferramenta poderosa para busca, validação e manipulação de texto. Todas as linguagens de programação suportam regex — JavaScript, Python, Java, Go, PHP e mais. Dominar regex permite validar emails, extrair dados de texto, buscar e substituir padrões, e analisar logs eficientemente.",
+    "section2Title": "Sintaxe básica de Regex",
+    "section2Text": "Um padrão regex é construído com caracteres literais e metacaracteres especiais. O ponto (.) corresponde a qualquer caractere. Os colchetes [abc] definem uma classe de caracteres. Os quantificadores como * (zero ou mais), + (um ou mais) e ? (zero ou um) controlam a repetição. As âncoras ^ e $ correspondem ao início e fim de uma string. Os parênteses () criam grupos de captura que extraem partes específicas de uma correspondência.",
+    "section3Title": "Padrões Regex comuns",
+    "section3Text": "Validação de email: [a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}. URLs: https?://[\\w.-]+(?:\\.[\\w.-]+)+[\\w.,@?^=%&:/~+#-]*. Números de telefone: \\+?\\d{1,3}[-.\\s]?\\(?\\d{1,4}\\)?[-.\\s]?\\d{1,4}[-.\\s]?\\d{1,9}. Endereço IPv4: \\b\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\b. Estes padrões podem ser adaptados e combinados para necessidades específicas.",
+    "section4Title": "Casos de uso comuns",
+    "section4List": "Validação de formulários (email, telefone, URL, códigos postais) | Análise de arquivos de log e extração de dados | Buscar e substituir em editores de código | Web scraping e processamento de texto | Sanitização de inputs e filtragem de segurança | Limpeza e transformação de dados"
+  },
+  "ui": {
+    "howItWorksText": "Digite um padrão regex e um texto de teste abaixo. As correspondências são destacadas em tempo real enquanto você digita. Os grupos de captura são extraídos e exibidos separadamente. Use os flags para controlar o comportamento de busca.",
+    "patternLabel": "Padrão",
+    "patternPlaceholder": "Digite padrão regex, ex.: (\\w+)@(\\w+\\.\\w+)",
+    "flagsLabel": "Flags",
+    "testStringLabel": "Texto de Teste",
+    "testStringPlaceholder": "Digite texto para testar contra o padrão...",
+    "sample": "Exemplo",
+    "clear": "Limpar",
+    "matchesLabel": "Correspondências",
+    "noMatches": "Nenhuma correspondência encontrada",
+    "matchCount": "{count} correspondência(s) encontrada(s)",
+    "fullMatch": "Correspondência completa",
+    "group": "Grupo {n}",
+    "index": "Índice {i}",
+    "cheatSheet": "Folha de Referência",
+    "cheatCharClasses": "Classes de Caracteres",
+    "cheatQuantifiers": "Quantificadores",
+    "cheatAnchors": "Âncoras e Limites",
+    "cheatGroups": "Grupos e Lookaround",
+    "invalidRegex": "Regex inválido: {error}",
+    "flagGlobal": "g — global (encontrar todas as correspondências)",
+    "flagCase": "i — insensível a maiúsculas",
+    "flagMultiline": "m — multilinha (^ e $ correspondem a limites de linha)",
+    "flagDotAll": "s — dotAll (. corresponde a quebras de linha)",
+    "flagUnicode": "u — unicode"
+  }
+}
