@@ -1,7 +1,7 @@
 {
   "project": "nexus-tools",
-  "version": "1.0.0",
-  "phase": "10 Tools Live — All planned tools complete",
+  "version": "1.1.0",
+  "phase": "SEO optimization — schema markup + competitive improvements",
   "status": "stable",
   "last_updated": "2026-03-12",
   "updated_by": "NEXUS@PC-Principal",
@@ -40,15 +40,16 @@
       "hash-generator (MD5, SHA-1, SHA-256, SHA-512 — Web Crypto API + JS MD5)",
       "url-encoder (encode/decode, encodeURIComponent vs encodeURI modes)",
       "regex-tester (live highlighting, capture groups, flags, cheat sheet)",
-      "lorem-ipsum (paragraphs/sentences/words, copy text/HTML, stats)"
+      "lorem-ipsum (paragraphs/sentences/words, copy text/HTML, stats)",
+      "json-formatter v2 (tree view, auto-repair, download, sort keys)",
+      "schema markup (WebApplication + FAQPage on all 10 tools, WebSite on homepage)"
     ],
     "in_progress": [],
     "pending": [
-      "improve existing tools (JSON tree view, auto-repair; hash HMAC support)",
+      "hash-generator HMAC support",
       "analytics (Plausible self-hosted?)",
       "adsense-integration (after ~1000 visits/month)",
-      "re-submit sitemap in Google Search Console (33 URLs)",
-      "structured data (WebApplication, FAQPage schema markup)"
+      "re-submit sitemap in Google Search Console (33 URLs)"
     ]
   },
   "decisions": [
