@@ -7,7 +7,8 @@
     "base64": "Base64",
     "colors": "Colors",
     "cssUnits": "CSS Units",
-    "hash": "Hash"
+    "hash": "Hash",
+    "urlEncoder": "URL Encode"
   },
   "footer": {
     "privacy": "All tools run 100% in your browser. No data is sent to any server.",
@@ -57,6 +58,10 @@
       "hashGenerator": {
         "name": "Hash Generator",
         "description": "Generate MD5, SHA-1, SHA-256, and SHA-512 hashes from any text. Instant, private, and browser-based."
+      },
+      "urlEncoder": {
+        "name": "URL Encoder & Decoder",
+        "description": "Encode special characters for URLs or decode percent-encoded strings. Supports encodeURIComponent and encodeURI modes."
       }
     }
   },

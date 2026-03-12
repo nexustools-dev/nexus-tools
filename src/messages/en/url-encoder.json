@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "title": "URL Encoder & Decoder — Encode and Decode URLs Online",
+    "description": "Free online URL encoder and decoder. Encode special characters for URLs or decode percent-encoded strings. Supports UTF-8, query parameters, and full URLs. 100% browser-based.",
+    "keywords": "url encoder, url decoder, percent encoding, urlencode online, urldecode online, encode url, decode url, query string encoder"
+  },
+  "heading": "URL Encoder & Decoder",
+  "subheading": "Encode special characters for URLs or decode percent-encoded strings back to readable text.",
+  "seo": {
+    "section1Title": "What is URL Encoding?",
+    "section1Text": "URL encoding (also called percent-encoding) converts characters into a format that can be safely transmitted in URLs. Characters that have special meanings in URLs (like &, =, ?, /, #) or non-ASCII characters (like accented letters and emoji) are replaced with a percent sign followed by their hexadecimal value. For example, a space becomes %20 and an ampersand becomes %26.",
+    "section2Title": "When Do You Need URL Encoding?",
+    "section2Text": "URL encoding is necessary whenever you include user input in URLs, build query strings with special characters, pass data through URL parameters, or work with APIs that require encoded values. Without proper encoding, URLs can break or be misinterpreted by browsers and servers. It is also essential for preventing injection attacks in web applications.",
+    "section3Title": "encodeURIComponent vs encodeURI",
+    "section3Text": "JavaScript provides two encoding functions. encodeURIComponent encodes everything except letters, digits, and a few safe characters (- _ . ! ~ * ' ( )). Use it for encoding individual parameter values. encodeURI encodes a full URL but preserves characters that have meaning in URLs like :, /, ?, #, and &. Use it when you want to encode a complete URL without breaking its structure.",
+    "section4Title": "Common Use Cases",
+    "section4List": "Building API query strings with special characters | Encoding form data for GET requests | Passing file paths or names in URLs | Encoding non-ASCII characters (accents, CJK, emoji) | Debugging encoded URLs from logs or analytics | Preparing redirect URLs with parameters"
+  },
+  "ui": {
+    "howItWorksText": "Paste text or a URL below. Encode converts special characters to percent-encoded format (%XX) for safe URL usage. Decode reverses the process back to readable text.",
+    "encode": "Encode",
+    "decode": "Decode",
+    "swap": "Swap",
+    "copyOutput": "Copy Output",
+    "clear": "Clear",
+    "sample": "Sample",
+    "mode": "Mode:",
+    "modeComponent": "Component",
+    "modeComponentHint": "encodeURIComponent — encodes everything, use for parameter values",
+    "modeFull": "Full URL",
+    "modeFullHint": "encodeURI — preserves URL structure (://?#&=)",
+    "invalidEncoding": "Invalid percent-encoded string",
+    "inputLabel": "Input",
+    "outputLabel": "Output",
+    "placeholderEncode": "Enter text to encode, e.g.: Hello World! café=true&name=José",
+    "placeholderDecode": "Enter encoded URL to decode, e.g.: Hello%20World%21%20caf%C3%A9",
+    "charsEncoded": "{count} characters encoded",
+    "noChange": "No encoding needed — all characters are URL-safe"
+  }
+}

@@ -16,6 +16,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
   const colorConverter = (await import(`../messages/${locale}/color-converter.json`)).default;
   const cssUnitConverter = (await import(`../messages/${locale}/css-unit-converter.json`)).default;
   const hashGenerator = (await import(`../messages/${locale}/hash-generator.json`)).default;
+  const urlEncoder = (await import(`../messages/${locale}/url-encoder.json`)).default;
 
   return {
     locale,
@@ -28,6 +29,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
       colorConverter,
       cssUnitConverter,
       hashGenerator,
+      urlEncoder,
     },
   };
 });

@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "title": "Codificador y Decodificador de URL — Codifica y Decodifica URLs Online",
+    "description": "Codificador y decodificador de URL online gratis. Codifica caracteres especiales para URLs o decodifica cadenas percent-encoded. Soporta UTF-8, parámetros de consulta y URLs completas. 100% en el navegador.",
+    "keywords": "codificador de url, decodificador de url, percent encoding, urlencode online, urldecode online, codificar url, decodificar url, codificador de query string"
+  },
+  "heading": "Codificador y Decodificador de URL",
+  "subheading": "Codifica caracteres especiales para URLs o decodifica cadenas percent-encoded a texto legible.",
+  "seo": {
+    "section1Title": "¿Qué es la codificación URL?",
+    "section1Text": "La codificación URL (también llamada percent-encoding) convierte caracteres en un formato que puede transmitirse de forma segura en URLs. Los caracteres con significados especiales en URLs (como &, =, ?, /, #) o caracteres no ASCII (como letras acentuadas y emojis) se reemplazan con un signo de porcentaje seguido de su valor hexadecimal. Por ejemplo, un espacio se convierte en %20 y un ampersand en %26.",
+    "section2Title": "¿Cuándo necesitas codificación URL?",
+    "section2Text": "La codificación URL es necesaria cuando incluyes datos del usuario en URLs, construyes query strings con caracteres especiales, pasas datos por parámetros URL o trabajas con APIs que requieren valores codificados. Sin la codificación adecuada, las URLs pueden romperse o ser malinterpretadas por navegadores y servidores. También es esencial para prevenir ataques de inyección en aplicaciones web.",
+    "section3Title": "encodeURIComponent vs encodeURI",
+    "section3Text": "JavaScript proporciona dos funciones de codificación. encodeURIComponent codifica todo excepto letras, dígitos y algunos caracteres seguros (- _ . ! ~ * ' ( )). Úsalo para codificar valores individuales de parámetros. encodeURI codifica una URL completa pero preserva caracteres con significado en URLs como :, /, ?, # y &. Úsalo cuando quieras codificar una URL completa sin romper su estructura.",
+    "section4Title": "Casos de uso comunes",
+    "section4List": "Construir query strings de API con caracteres especiales | Codificar datos de formulario para peticiones GET | Pasar rutas o nombres de archivo en URLs | Codificar caracteres no ASCII (acentos, CJK, emoji) | Depurar URLs codificadas de logs o analytics | Preparar URLs de redirección con parámetros"
+  },
+  "ui": {
+    "howItWorksText": "Pega texto o una URL abajo. Codificar convierte caracteres especiales al formato percent-encoded (%XX) para uso seguro en URLs. Decodificar revierte el proceso a texto legible.",
+    "encode": "Codificar",
+    "decode": "Decodificar",
+    "swap": "Intercambiar",
+    "copyOutput": "Copiar Resultado",
+    "clear": "Limpiar",
+    "sample": "Ejemplo",
+    "mode": "Modo:",
+    "modeComponent": "Componente",
+    "modeComponentHint": "encodeURIComponent — codifica todo, úsalo para valores de parámetros",
+    "modeFull": "URL Completa",
+    "modeFullHint": "encodeURI — preserva la estructura URL (://?#&=)",
+    "invalidEncoding": "Cadena percent-encoded inválida",
+    "inputLabel": "Entrada",
+    "outputLabel": "Salida",
+    "placeholderEncode": "Escribe texto a codificar, ej.: ¡Hola Mundo! café=true&nombre=José",
+    "placeholderDecode": "Escribe URL codificada a decodificar, ej.: %C2%A1Hola%20Mundo%21",
+    "charsEncoded": "{count} caracteres codificados",
+    "noChange": "No necesita codificación — todos los caracteres son URL-safe"
+  }
+}
