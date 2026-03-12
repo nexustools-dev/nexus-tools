@@ -1,9 +1,9 @@
 {
   "project": "nexus-tools",
-  "version": "0.5.0",
-  "phase": "i18n Complete — Full UI Translation (EN/ES/PT-BR)",
+  "version": "0.6.0",
+  "phase": "Tool Expansion — 7 tools live",
   "status": "stable",
-  "last_updated": "2026-03-11",
+  "last_updated": "2026-03-12",
   "updated_by": "NEXUS@PC-Principal",
   "task_id": "T058",
   "domain": "toolnexus.dev",
@@ -36,14 +36,15 @@
       "language-selector (EN/ES/PT buttons in nav)",
       "hreflang tags (63 cross-references)",
       "translated SEO content (metadata + educational sections per locale)",
-      "i18n UI strings — all 6 client components fully translated (F4 complete)"
+      "i18n UI strings — all 6 client components fully translated (F4 complete)",
+      "hash-generator (MD5, SHA-1, SHA-256, SHA-512 — Web Crypto API + JS MD5)"
     ],
     "in_progress": [],
     "pending": [
-      "more-tools (hash-generator, url-encoder, regex-tester, lorem-ipsum)",
+      "more-tools (url-encoder, regex-tester, lorem-ipsum)",
       "analytics (Plausible self-hosted?)",
       "adsense-integration (after ~1000 visits/month)",
-      "re-submit sitemap in Google Search Console (21 URLs)"
+      "re-submit sitemap in Google Search Console (24 URLs)"
     ]
   },
   "decisions": [
@@ -89,9 +90,9 @@
     }
   ],
   "metrics": {
-    "tools_count": 6,
+    "tools_count": 7,
     "languages": 3,
-    "total_pages": 21,
+    "total_pages": 24,
     "monthly_visitors": 0,
     "adsense_revenue": 0
   }
