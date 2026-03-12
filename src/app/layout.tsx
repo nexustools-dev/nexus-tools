@@ -73,6 +73,12 @@ export default function RootLayout({
               >
                 Colors
               </a>
+              <a
+                href="/tools/css-unit-converter"
+                className="hover:text-zinc-100 transition-colors"
+              >
+                CSS Units
+              </a>
             </div>
           </div>
         </nav>

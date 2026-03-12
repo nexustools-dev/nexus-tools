@@ -41,6 +41,14 @@ const tools = [
     icon: "CLR",
     color: "from-rose-500 to-red-600",
   },
+  {
+    name: "CSS Unit Converter",
+    description:
+      "Convert between px, rem, em, %, vh, and vw. Customizable base font size and viewport dimensions.",
+    href: "/tools/css-unit-converter",
+    icon: "CSS",
+    color: "from-cyan-500 to-blue-600",
+  },
 ];
 
 export default function Home() {
