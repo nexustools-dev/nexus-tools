@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "title": "UUID Generator — Generate UUID v4, v1, Bulk UUIDs Online",
+    "description": "Free online UUID generator. Create UUID v4 (random), v1 (timestamp), bulk generate up to 100, and validate UUIDs. 100% browser-based.",
+    "keywords": "uuid generator, uuid v4, uuid v1, generate uuid online, random uuid, bulk uuid, guid generator, unique id generator, uuid validator"
+  },
+  "heading": "UUID Generator",
+  "subheading": "Generate random UUIDs (v4), timestamp-based UUIDs (v1), or bulk generate up to 100. All generated in your browser.",
+  "seo": {
+    "section1Title": "What is a UUID?",
+    "section1Text": "A UUID (Universally Unique Identifier) is a 128-bit number used to uniquely identify information in computer systems. Also known as GUID (Globally Unique Identifier), UUIDs are formatted as 32 hexadecimal digits in five groups separated by hyphens: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. The probability of generating duplicate UUIDs is so low that they can be considered practically unique.",
+    "section2Title": "UUID Versions Explained",
+    "section2Text": "UUID v1 is generated from the current timestamp and a node identifier (typically a MAC address). UUID v4 is generated using random or pseudo-random numbers and is the most commonly used version. UUID v4 has 122 random bits, giving approximately 5.3 × 10^36 possible values — making collisions virtually impossible.",
+    "section3Title": "When to Use UUIDs",
+    "section3Text": "UUIDs are used as database primary keys (especially in distributed systems), API resource identifiers, session tokens, file names, message queue IDs, and anywhere you need a unique identifier without coordination between systems. UUID v4 is recommended for most use cases due to its simplicity and randomness.",
+    "section4Title": "Common Use Cases",
+    "section4List": "Database primary keys (PostgreSQL, MongoDB) | API resource identifiers | Distributed system node IDs | Session and correlation IDs | File and object naming | Message queue deduplication"
+  },
+  "ui": {
+    "howItWorksText": "Click Generate to create a new UUID. Choose v4 (random) or v1 (timestamp-based). Use Bulk to generate multiple UUIDs at once. Paste a UUID in the validator to check its format and version.",
+    "generate": "Generate",
+    "generateTitle": "Generate a new UUID",
+    "version": "Version:",
+    "v4": "v4 (Random)",
+    "v4Desc": "Cryptographically random — recommended for most uses",
+    "v1": "v1 (Timestamp)",
+    "v1Desc": "Based on current time — sortable by creation time",
+    "nil": "Nil UUID",
+    "nilTitle": "Generate the nil UUID (all zeros)",
+    "bulk": "Bulk Generate",
+    "bulkTitle": "Generate multiple UUIDs at once",
+    "quantity": "Quantity:",
+    "copyAll": "Copy All",
+    "copiedAll": "Copied All!",
+    "clear": "Clear",
+    "result": "Result",
+    "results": "Results",
+    "generated": "generated",
+    "validate": "Validate",
+    "validateTitle": "Check if a string is a valid UUID",
+    "validatePlaceholder": "Paste a UUID to validate...",
+    "validUuid": "Valid UUID",
+    "invalidUuid": "Invalid UUID",
+    "detectedVersion": "Version: {version}",
+    "validator": "UUID Validator"
+  }
+}

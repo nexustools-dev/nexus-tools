@@ -1,0 +1,41 @@
+{
+  "metadata": {
+    "title": "Comparador de Diferencias — Compara Textos Online",
+    "description": "Comparador de diferencias online gratis. Compara dos textos lado a lado y ve adiciones, eliminaciones y cambios resaltados. Soporta ignorar espacios y mayúsculas. 100% en el navegador.",
+    "keywords": "comparador diferencias, comparar texto, diff online, comparar archivos, encontrar diferencias, diff texto, diff código, comparar archivos online"
+  },
+  "heading": "Comparador de Diferencias",
+  "subheading": "Compara dos textos y ve las diferencias resaltadas. Adiciones en verde, eliminaciones en rojo. Todo se ejecuta en tu navegador — ningún dato se envía a ningún lado.",
+  "seo": {
+    "section1Title": "¿Qué es un Diff?",
+    "section1Text": "Un diff (abreviatura de diferencia) es una comparación entre dos piezas de texto que muestra qué ha cambiado. Las herramientas de diff identifican líneas agregadas, eliminadas y modificadas, facilitando ver exactamente qué cambió entre dos versiones de un archivo. Los diffs son fundamentales para sistemas de control de versiones como Git, procesos de revisión de código y flujos de comparación de documentos.",
+    "section2Title": "Cómo Funcionan los Algoritmos de Diff",
+    "section2Text": "Los algoritmos de diff encuentran la Subsecuencia Común Más Larga (LCS) entre dos textos para determinar el conjunto mínimo de cambios. Los algoritmos más comunes son el algoritmo de Myers (usado por Git) y el algoritmo patience diff. Las líneas presentes en el original pero no en el modificado se marcan como eliminaciones, mientras que las líneas nuevas se marcan como adiciones. Las líneas sin cambios proporcionan contexto.",
+    "section3Title": "Casos de Uso Comunes",
+    "section3Text": "Las herramientas de diff se usan para comparar versiones de código antes de commits, revisar cambios en pull requests, comparar archivos de configuración entre entornos, encontrar cambios en documentación, depurar comparando código funcional vs roto, y verificar que los cambios de formato no alteren el contenido. Son esenciales en cualquier flujo de desarrollo colaborativo.",
+    "section4Title": "Mejores Prácticas de Diff",
+    "section4List": "Revisa diffs antes de hacer commit para detectar cambios no deseados | Usa ignorar espacios cuando compares código reformateado | Compara contra la rama base, no solo el commit anterior | Mantén diffs pequeños y enfocados — cambios menores son más fáciles de revisar | Usa vista lado a lado para cambios complejos | Presta atención a las líneas de contexto alrededor de los cambios para comprensión completa"
+  },
+  "ui": {
+    "howItWorksText": "Pega o escribe texto en ambos paneles de abajo. La herramienta los compara línea por línea y resalta adiciones (verde), eliminaciones (rojo) y líneas sin cambios (gris). Activa opciones para ignorar diferencias de espacios o mayúsculas. Ningún dato se envía a ningún servidor.",
+    "original": "Original",
+    "modified": "Modificado",
+    "originalPlaceholder": "Pega el texto original aquí...",
+    "modifiedPlaceholder": "Pega el texto modificado aquí...",
+    "compare": "Comparar",
+    "swap": "Intercambiar",
+    "clear": "Limpiar",
+    "sample": "Ejemplo",
+    "added": "Agregado",
+    "removed": "Eliminado",
+    "unchanged": "Sin cambios",
+    "linesAdded": "líneas agregadas",
+    "linesRemoved": "líneas eliminadas",
+    "linesUnchanged": "líneas sin cambios",
+    "ignoreWhitespace": "Ignorar espacios",
+    "ignoreCase": "Ignorar mayúsculas",
+    "diffResult": "Resultado del Diff",
+    "noDifferences": "No se encontraron diferencias — los textos son idénticos",
+    "emptyState": "Ingresa texto en ambos paneles para comparar"
+  }
+}

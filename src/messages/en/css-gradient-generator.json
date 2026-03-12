@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "title": "CSS Gradient Generator — Create Beautiful Gradients Online",
+    "description": "Free online CSS gradient generator. Create linear and radial gradients visually with live preview. Copy CSS code instantly. 100% browser-based.",
+    "keywords": "css gradient generator, gradient maker, linear gradient, radial gradient, css background gradient, gradient css code, color gradient tool, gradient picker"
+  },
+  "heading": "CSS Gradient Generator",
+  "subheading": "Create beautiful CSS gradients visually. Pick colors, adjust angles, and copy the CSS code. Everything runs in your browser.",
+  "seo": {
+    "section1Title": "What are CSS Gradients?",
+    "section1Text": "CSS gradients are smooth transitions between two or more colors rendered by the browser. They are created using the background-image property with gradient functions. Gradients can be used for backgrounds, borders, text effects, and decorative elements. Unlike image files, CSS gradients are resolution-independent, lightweight, and can be animated with transitions.",
+    "section2Title": "Linear vs Radial Gradients",
+    "section2Text": "Linear gradients transition colors along a straight line defined by an angle or direction (e.g., to right, 45deg). Radial gradients transition colors outward from a center point in a circular or elliptical shape. Linear gradients are most common for backgrounds and section dividers, while radial gradients work well for spotlight effects and circular decorations.",
+    "section3Title": "Working with Color Stops",
+    "section3Text": "Color stops define where each color appears in the gradient. Each stop has a color value and an optional position (percentage or length). You can add multiple stops to create complex multi-color gradients. The position determines where the color is fully applied — the browser smoothly interpolates between stops. Stops at the same position create a hard color boundary.",
+    "section4Title": "Gradient Best Practices",
+    "section4List": "Use 2-3 color stops for clean, professional gradients | Stick to analogous colors for subtle gradients | Use complementary colors for bold, eye-catching effects | Test gradients on both light and dark backgrounds | Add a fallback background-color for older browsers | Use CSS custom properties for reusable gradient themes"
+  },
+  "ui": {
+    "howItWorksText": "Pick a gradient type, adjust colors and angle, then copy the CSS. The preview updates in real-time. Click any color stop to change its color or position. No data is sent to any server.",
+    "linear": "Linear",
+    "radial": "Radial",
+    "angle": "Angle",
+    "colorStops": "Color Stops",
+    "addStop": "Add Stop",
+    "removeStop": "Remove",
+    "random": "Random",
+    "copyCSS": "Copy CSS",
+    "presets": "Presets",
+    "position": "Position",
+    "cssOutput": "CSS Output",
+    "clear": "Clear",
+    "fullscreen": "Fullscreen Preview"
+  }
+}

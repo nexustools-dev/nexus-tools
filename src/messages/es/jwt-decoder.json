@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "title": "Decodificador JWT — Decodificar, Inspeccionar Tokens JWT Online",
+    "description": "Decodificador JWT online gratis. Decodifica e inspecciona header, payload y claims de JSON Web Tokens. Verifica expiración y más. 100% en el navegador.",
+    "keywords": "decodificador jwt, decoder jwt online, json web token, inspector jwt, debugger jwt, claims jwt, verificar jwt, decodificar token"
+  },
+  "heading": "Decodificador JWT",
+  "subheading": "Pega un JWT para decodificar su header, payload e inspeccionar los claims. Todo se ejecuta en tu navegador — tu token nunca sale.",
+  "seo": {
+    "section1Title": "¿Qué es un JWT?",
+    "section1Text": "Un JSON Web Token (JWT) es una forma compacta y segura para URLs de representar claims entre dos partes. Consiste en tres partes separadas por puntos: header, payload y firma. El header especifica el algoritmo usado, el payload contiene los claims (datos), y la firma verifica la integridad del token. Los JWTs son ampliamente usados para autenticación y autorización en APIs web.",
+    "section2Title": "Estructura del JWT explicada",
+    "section2Text": "Cada parte de un JWT es JSON codificado en Base64URL. El header típicamente contiene el algoritmo (HS256, RS256) y tipo de token. El payload contiene claims como sub (sujeto), iat (emitido en), exp (expiración) y datos personalizados. La firma se crea firmando el header y payload con un secreto o clave privada.",
+    "section3Title": "Claims comunes de JWT",
+    "section3Text": "Los claims estándar incluyen: iss (emisor), sub (sujeto), aud (audiencia), exp (tiempo de expiración), nbf (no antes de), iat (emitido en) y jti (ID del JWT). Los claims personalizados pueden contener cualquier dato JSON como roles de usuario, permisos o información de perfil. Siempre valida el claim exp para verificar si un token ha expirado.",
+    "section4Title": "Consideraciones de seguridad",
+    "section4List": "Nunca almacenes datos sensibles en payloads JWT — están codificados, no encriptados | Siempre verifica las firmas en el servidor | Usa tiempos de expiración cortos y refresh tokens | Prefiere RS256 sobre HS256 para APIs públicas | Nunca expongas tu secreto de firma en código del cliente | Usa HTTPS para prevenir interceptación de tokens"
+  },
+  "ui": {
+    "howItWorksText": "Pega un token JWT abajo para decodificar su header y payload al instante. La herramienta resalta el estado de expiración y muestra todos los claims en formato legible. Ningún dato se envía a ningún servidor.",
+    "inputLabel": "Token JWT",
+    "inputPlaceholder": "Pega tu JWT aquí (eyJhbGciOi...)",
+    "sample": "Ejemplo",
+    "clear": "Limpiar",
+    "header": "Header",
+    "payload": "Payload",
+    "signature": "Firma",
+    "claims": "Claims",
+    "claim": "Claim",
+    "value": "Valor",
+    "description": "Descripción",
+    "expired": "Expirado",
+    "validFor": "Válido por {time}",
+    "issuedAt": "Emitido hace {time}",
+    "notBefore": "No válido antes de {time}",
+    "invalidJwt": "JWT inválido — debe tener 3 partes separadas por puntos",
+    "invalidJson": "JSON inválido en {part}",
+    "emptyState": "Pega un token JWT para decodificarlo",
+    "claimDescriptions": {
+      "iss": "Emisor — quién creó el token",
+      "sub": "Sujeto — a quién se refiere el token",
+      "aud": "Audiencia — destinatario previsto",
+      "exp": "Expiración — cuándo expira el token",
+      "nbf": "No Antes De — token no válido antes de este momento",
+      "iat": "Emitido En — cuándo se creó el token",
+      "jti": "ID JWT — identificador único para este token",
+      "name": "Nombre completo del usuario",
+      "email": "Dirección de correo electrónico",
+      "role": "Rol o nivel de permiso del usuario",
+      "scope": "Alcances o permisos autorizados"
+    }
+  }
+}

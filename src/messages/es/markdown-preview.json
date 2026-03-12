@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "title": "Vista Previa Markdown — Editor y Renderizador Markdown Online en Vivo",
+    "description": "Herramienta de vista previa Markdown online gratis. Escribe Markdown y ve el HTML renderizado en tiempo real. Soporta encabezados, listas, tablas, bloques de código y más. 100% en el navegador.",
+    "keywords": "vista previa markdown, editor markdown online, renderizador markdown, markdown a html, markdown en vivo, visor markdown, markdown github, formateador markdown"
+  },
+  "heading": "Vista Previa Markdown",
+  "subheading": "Escribe Markdown a la izquierda, ve el HTML renderizado a la derecha. Soporta sintaxis GFM incluyendo tablas, bloques de código y listas de tareas. 100% en tu navegador.",
+  "seo": {
+    "section1Title": "¿Qué es Markdown?",
+    "section1Text": "Markdown es un lenguaje de marcado ligero creado por John Gruber en 2004. Permite escribir texto con formato usando sintaxis de texto plano que es fácil de leer y escribir. Markdown es ampliamente usado en documentación, archivos README, blogs, foros y aplicaciones de mensajería. Los archivos típicamente usan la extensión .md o .markdown. La sintaxis está diseñada para ser legible incluso sin renderizar.",
+    "section2Title": "Sintaxis Común de Markdown",
+    "section2Text": "Los encabezados usan símbolos # (# para h1, ## para h2, hasta ######). El texto en negrita usa **dobles asteriscos**, la cursiva usa *asteriscos simples*. Los enlaces usan formato [texto](url), las imágenes usan ![alt](url). Los bloques de código usan triple comillas invertidas (```) con identificadores de lenguaje opcionales. Las listas usan - o * para no ordenadas y 1. para ordenadas. Las citas usan > al inicio de la línea.",
+    "section3Title": "GitHub Flavored Markdown (GFM)",
+    "section3Text": "GitHub Flavored Markdown extiende el Markdown estándar con características adicionales como tablas (usando pipes | y guiones -), listas de tareas (usando [ ] y [x]), texto tachado (usando ~~dobles tildes~~), y bloques de código delimitados con resaltado de sintaxis. GFM es la variante de Markdown más comúnmente usada en la comunidad de desarrolladores.",
+    "section4Title": "Mejores Prácticas de Markdown",
+    "section4List": "Usa líneas en blanco entre elementos de bloque para mayor claridad | Mantén las líneas bajo 80 caracteres para mejor legibilidad | Usa enlaces estilo referencia para URLs repetidas | Usa bloques de código delimitados con identificadores de lenguaje para resaltado de sintaxis | Usa jerarquía de encabezados consistente (no saltes niveles) | Previsualiza tu Markdown antes de publicar para detectar errores de formato"
+  },
+  "ui": {
+    "howItWorksText": "Escribe o pega Markdown en el editor de abajo para verlo renderizado como HTML en tiempo real. Soporta encabezados, negrita, cursiva, enlaces, imágenes, bloques de código, tablas, listas y más. Ningún dato se envía a ningún servidor.",
+    "editor": "Editor",
+    "preview": "Vista Previa",
+    "copyHtml": "Copiar HTML",
+    "download": "Descargar HTML",
+    "clear": "Limpiar",
+    "sample": "Ejemplo",
+    "wordCount": "palabras",
+    "charCount": "caracteres",
+    "lineCount": "líneas"
+  }
+}

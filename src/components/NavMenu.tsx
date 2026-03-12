@@ -15,6 +15,12 @@ const TOOLS = [
   { key: "urlEncoder", href: "/tools/url-encoder", icon: "%" },
   { key: "regexTester", href: "/tools/regex-tester", icon: ".*" },
   { key: "loremIpsum", href: "/tools/lorem-ipsum", icon: "Aa" },
+  { key: "uuidGenerator", href: "/tools/uuid-generator", icon: "ID" },
+  { key: "jwtDecoder", href: "/tools/jwt-decoder", icon: "JWT" },
+  { key: "timestampConverter", href: "/tools/timestamp-converter", icon: "TS" },
+  { key: "markdownPreview", href: "/tools/markdown-preview", icon: "MD" },
+  { key: "cssGradientGenerator", href: "/tools/css-gradient-generator", icon: "GR" },
+  { key: "diffChecker", href: "/tools/diff-checker", icon: "±" },
 ] as const;
 
 export function NavMenu() {
@@ -51,7 +57,7 @@ export function NavMenu() {
       </button>
 
       {open && (
-        <div className="absolute right-0 top-full mt-2 w-96 bg-zinc-900 border border-zinc-800 rounded-xl shadow-2xl shadow-black/50 p-3 z-50">
+        <div className="absolute right-0 top-full mt-2 w-[28rem] bg-zinc-900 border border-zinc-800 rounded-xl shadow-2xl shadow-black/50 p-3 z-50 max-h-[80vh] overflow-y-auto">
           <div className="grid grid-cols-2 gap-1">
             {TOOLS.map((tool) => (
               <Link

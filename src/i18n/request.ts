@@ -19,6 +19,12 @@ export default getRequestConfig(async ({ requestLocale }) => {
   const urlEncoder = (await import(`../messages/${locale}/url-encoder.json`)).default;
   const regexTester = (await import(`../messages/${locale}/regex-tester.json`)).default;
   const loremIpsum = (await import(`../messages/${locale}/lorem-ipsum.json`)).default;
+  const uuidGenerator = (await import(`../messages/${locale}/uuid-generator.json`)).default;
+  const jwtDecoder = (await import(`../messages/${locale}/jwt-decoder.json`)).default;
+  const timestampConverter = (await import(`../messages/${locale}/timestamp-converter.json`)).default;
+  const markdownPreview = (await import(`../messages/${locale}/markdown-preview.json`)).default;
+  const cssGradientGenerator = (await import(`../messages/${locale}/css-gradient-generator.json`)).default;
+  const diffChecker = (await import(`../messages/${locale}/diff-checker.json`)).default;
 
   return {
     locale,
@@ -34,6 +40,12 @@ export default getRequestConfig(async ({ requestLocale }) => {
       urlEncoder,
       regexTester,
       loremIpsum,
+      uuidGenerator,
+      jwtDecoder,
+      timestampConverter,
+      markdownPreview,
+      cssGradientGenerator,
+      diffChecker,
     },
   };
 });

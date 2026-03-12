@@ -10,7 +10,13 @@
     "hash": "Hash",
     "urlEncoder": "URL Encode",
     "regex": "Regex",
-    "loremIpsum": "Lorem Ipsum"
+    "loremIpsum": "Lorem Ipsum",
+    "uuidGenerator": "UUID Generator",
+    "jwtDecoder": "JWT Decoder",
+    "timestampConverter": "Timestamp",
+    "markdownPreview": "Markdown",
+    "cssGradientGenerator": "Gradientes",
+    "diffChecker": "Diff Checker"
   },
   "footer": {
     "privacy": "Todas as ferramentas funcionam 100% no seu navegador. Nenhum dado é enviado a servidores.",
@@ -72,6 +78,30 @@
       "loremIpsum": {
         "name": "Gerador de Lorem Ipsum",
         "description": "Gere texto placeholder personalizável — parágrafos, frases ou palavras. Copie como texto simples ou HTML."
+      },
+      "uuidGenerator": {
+        "name": "Gerador de UUID",
+        "description": "Gere identificadores UUID v4 e v1. Geração em lote, validação e detecção de versão. Copie instantaneamente."
+      },
+      "jwtDecoder": {
+        "name": "Decodificador JWT",
+        "description": "Decodifique JSON Web Tokens para inspecionar header, payload e claims. Verifique status de expiração e copie dados decodificados."
+      },
+      "timestampConverter": {
+        "name": "Conversor de Timestamps",
+        "description": "Converta entre timestamps Unix e datas legíveis. Suporta segundos, milissegundos, fusos horários e tempo relativo."
+      },
+      "markdownPreview": {
+        "name": "Visualizador Markdown",
+        "description": "Editor Markdown ao vivo com visualização instantânea. Suporta sintaxe GFM incluindo tabelas, blocos de código e listas."
+      },
+      "cssGradientGenerator": {
+        "name": "Gerador de Gradientes CSS",
+        "description": "Crie gradientes CSS bonitos visualmente. Tipos linear e radial, paradas de cor, presets e saída CSS instantânea."
+      },
+      "diffChecker": {
+        "name": "Comparador de Diferenças",
+        "description": "Compare dois textos lado a lado. Veja adições, exclusões e linhas inalteradas destacadas com estatísticas de diff."
       }
     }
   },

@@ -1,0 +1,41 @@
+{
+  "metadata": {
+    "title": "Diff Checker — Compare Text Differences Online",
+    "description": "Free online diff checker. Compare two texts side by side and see additions, deletions, and changes highlighted. Supports ignore whitespace and case. 100% browser-based.",
+    "keywords": "diff checker, text compare, diff tool online, compare text, find differences, text diff, code diff, file compare online"
+  },
+  "heading": "Diff Checker",
+  "subheading": "Compare two texts and see the differences highlighted. Additions in green, deletions in red. Everything runs in your browser — no data is sent anywhere.",
+  "seo": {
+    "section1Title": "What is a Diff?",
+    "section1Text": "A diff (short for difference) is a comparison between two pieces of text that shows what has changed. Diff tools identify added, removed, and modified lines, making it easy to see exactly what changed between two versions of a file. Diffs are fundamental to version control systems like Git, code review processes, and document comparison workflows.",
+    "section2Title": "How Diff Algorithms Work",
+    "section2Text": "Diff algorithms find the Longest Common Subsequence (LCS) between two texts to determine the minimum set of changes. The most common algorithms are Myers' algorithm (used by Git) and the patience diff algorithm. Lines present in the original but not the modified text are marked as deletions, while new lines are marked as additions. Unchanged lines provide context.",
+    "section3Title": "Common Use Cases",
+    "section3Text": "Diff tools are used for comparing code versions before commits, reviewing pull request changes, comparing configuration files between environments, finding changes in documentation, debugging by comparing working vs broken code, and verifying that formatting changes don't alter content. They are essential in any collaborative development workflow.",
+    "section4Title": "Diff Best Practices",
+    "section4List": "Review diffs before committing to catch unintended changes | Use ignore-whitespace when comparing reformatted code | Compare against the base branch, not just the previous commit | Keep diffs small and focused — smaller changes are easier to review | Use side-by-side view for complex changes | Pay attention to context lines around changes for full understanding"
+  },
+  "ui": {
+    "howItWorksText": "Paste or type text in both panels below. The tool compares them line by line and highlights additions (green), deletions (red), and unchanged lines (gray). Toggle options to ignore whitespace or case differences. No data is sent to any server.",
+    "original": "Original",
+    "modified": "Modified",
+    "originalPlaceholder": "Paste original text here...",
+    "modifiedPlaceholder": "Paste modified text here...",
+    "compare": "Compare",
+    "swap": "Swap",
+    "clear": "Clear",
+    "sample": "Sample",
+    "added": "Added",
+    "removed": "Removed",
+    "unchanged": "Unchanged",
+    "linesAdded": "lines added",
+    "linesRemoved": "lines removed",
+    "linesUnchanged": "lines unchanged",
+    "ignoreWhitespace": "Ignore whitespace",
+    "ignoreCase": "Ignore case",
+    "diffResult": "Diff Result",
+    "noDifferences": "No differences found — texts are identical",
+    "emptyState": "Enter text in both panels to compare"
+  }
+}

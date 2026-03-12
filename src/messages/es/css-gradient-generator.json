@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "title": "Generador de Gradientes CSS — Crea Gradientes Hermosos Online",
+    "description": "Generador de gradientes CSS online gratis. Crea gradientes lineales y radiales visualmente con vista previa en vivo. Copia el código CSS al instante. 100% en el navegador.",
+    "keywords": "generador gradientes css, creador gradientes, gradiente lineal, gradiente radial, gradiente fondo css, código css gradiente, herramienta gradiente color, selector gradiente"
+  },
+  "heading": "Generador de Gradientes CSS",
+  "subheading": "Crea gradientes CSS hermosos visualmente. Elige colores, ajusta ángulos y copia el código CSS. Todo se ejecuta en tu navegador.",
+  "seo": {
+    "section1Title": "¿Qué son los Gradientes CSS?",
+    "section1Text": "Los gradientes CSS son transiciones suaves entre dos o más colores renderizadas por el navegador. Se crean usando la propiedad background-image con funciones de gradiente. Los gradientes pueden usarse para fondos, bordes, efectos de texto y elementos decorativos. A diferencia de archivos de imagen, los gradientes CSS son independientes de resolución, livianos y pueden animarse con transiciones.",
+    "section2Title": "Gradientes Lineales vs Radiales",
+    "section2Text": "Los gradientes lineales transicionan colores a lo largo de una línea recta definida por un ángulo o dirección (ej., to right, 45deg). Los gradientes radiales transicionan colores hacia afuera desde un punto central en forma circular o elíptica. Los gradientes lineales son más comunes para fondos y divisores de sección, mientras que los radiales funcionan bien para efectos de foco y decoraciones circulares.",
+    "section3Title": "Trabajando con Paradas de Color",
+    "section3Text": "Las paradas de color definen dónde aparece cada color en el gradiente. Cada parada tiene un valor de color y una posición opcional (porcentaje o longitud). Puedes agregar múltiples paradas para crear gradientes multicolor complejos. La posición determina dónde el color se aplica completamente — el navegador interpola suavemente entre paradas. Paradas en la misma posición crean un límite de color duro.",
+    "section4Title": "Mejores Prácticas de Gradientes",
+    "section4List": "Usa 2-3 paradas de color para gradientes limpios y profesionales | Mantén colores análogos para gradientes sutiles | Usa colores complementarios para efectos llamativos y audaces | Prueba gradientes en fondos claros y oscuros | Agrega un background-color de respaldo para navegadores antiguos | Usa propiedades personalizadas CSS para temas de gradiente reutilizables"
+  },
+  "ui": {
+    "howItWorksText": "Elige un tipo de gradiente, ajusta colores y ángulo, luego copia el CSS. La vista previa se actualiza en tiempo real. Haz clic en cualquier parada de color para cambiar su color o posición. Ningún dato se envía a ningún servidor.",
+    "linear": "Lineal",
+    "radial": "Radial",
+    "angle": "Ángulo",
+    "colorStops": "Paradas de Color",
+    "addStop": "Agregar Parada",
+    "removeStop": "Eliminar",
+    "random": "Aleatorio",
+    "copyCSS": "Copiar CSS",
+    "presets": "Presets",
+    "position": "Posición",
+    "cssOutput": "Código CSS",
+    "clear": "Limpiar",
+    "fullscreen": "Vista Previa Completa"
+  }
+}

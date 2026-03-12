@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "title": "Markdown Preview — Live Markdown Editor & Renderer Online",
+    "description": "Free online Markdown preview tool. Write Markdown and see rendered HTML in real-time. Supports headings, lists, tables, code blocks, and more. 100% browser-based.",
+    "keywords": "markdown preview, markdown editor online, markdown renderer, markdown to html, live markdown, markdown viewer, github markdown, markdown formatter"
+  },
+  "heading": "Markdown Preview",
+  "subheading": "Write Markdown on the left, see rendered HTML on the right. Supports GFM syntax including tables, code blocks, and task lists. 100% in your browser.",
+  "seo": {
+    "section1Title": "What is Markdown?",
+    "section1Text": "Markdown is a lightweight markup language created by John Gruber in 2004. It lets you write formatted text using plain-text syntax that's easy to read and write. Markdown is widely used in documentation, README files, blogs, forums, and messaging apps. Files typically use the .md or .markdown extension. The syntax is designed to be readable even without rendering.",
+    "section2Title": "Common Markdown Syntax",
+    "section2Text": "Headers use # symbols (# for h1, ## for h2, up to ######). Bold text uses **double asterisks**, italic uses *single asterisks*. Links use [text](url) format, images use ![alt](url). Code blocks use triple backticks (```) with optional language identifiers. Lists use - or * for unordered and 1. for ordered items. Blockquotes use > at the start of a line.",
+    "section3Title": "GitHub Flavored Markdown (GFM)",
+    "section3Text": "GitHub Flavored Markdown extends standard Markdown with additional features like tables (using pipes | and dashes -), task lists (using [ ] and [x]), strikethrough text (using ~~double tildes~~), and fenced code blocks with syntax highlighting. GFM is the most commonly used Markdown variant in the developer community.",
+    "section4Title": "Markdown Best Practices",
+    "section4List": "Use blank lines between block elements for clearer source | Keep lines under 80 characters for better readability | Use reference-style links for repeated URLs | Use fenced code blocks with language identifiers for syntax highlighting | Use heading hierarchy consistently (don't skip levels) | Preview your Markdown before publishing to catch formatting errors"
+  },
+  "ui": {
+    "howItWorksText": "Type or paste Markdown in the editor below to see it rendered as HTML in real-time. Supports headers, bold, italic, links, images, code blocks, tables, lists, and more. No data is sent to any server.",
+    "editor": "Editor",
+    "preview": "Preview",
+    "copyHtml": "Copy HTML",
+    "download": "Download HTML",
+    "clear": "Clear",
+    "sample": "Sample",
+    "wordCount": "words",
+    "charCount": "chars",
+    "lineCount": "lines"
+  }
+}

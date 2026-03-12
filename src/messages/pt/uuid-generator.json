@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "title": "Gerador de UUID — Gerar UUID v4, v1, UUIDs em Massa Online",
+    "description": "Gerador de UUID online grátis. Crie UUID v4 (aleatório), v1 (timestamp), gere em massa até 100, e valide UUIDs. 100% no navegador.",
+    "keywords": "gerador uuid, uuid v4, uuid v1, gerar uuid online, uuid aleatório, uuid em massa, gerador guid, gerador de id único, validador uuid"
+  },
+  "heading": "Gerador de UUID",
+  "subheading": "Gere UUIDs aleatórios (v4), baseados em timestamp (v1), ou gere em massa até 100. Tudo gerado no seu navegador.",
+  "seo": {
+    "section1Title": "O que é um UUID?",
+    "section1Text": "Um UUID (Identificador Único Universal) é um número de 128 bits usado para identificar informações de forma única em sistemas de computador. Também conhecido como GUID (Identificador Único Global), os UUIDs são formatados como 32 dígitos hexadecimais em cinco grupos separados por hífens: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. A probabilidade de gerar UUIDs duplicados é tão baixa que podem ser considerados praticamente únicos.",
+    "section2Title": "Versões de UUID explicadas",
+    "section2Text": "UUID v1 é gerado a partir do timestamp atual e um identificador de nó (tipicamente um endereço MAC). UUID v4 é gerado usando números aleatórios ou pseudoaleatórios e é a versão mais usada. UUID v4 tem 122 bits aleatórios, dando aproximadamente 5.3 × 10^36 valores possíveis — tornando colisões virtualmente impossíveis.",
+    "section3Title": "Quando usar UUIDs",
+    "section3Text": "UUIDs são usados como chaves primárias de bancos de dados (especialmente em sistemas distribuídos), identificadores de recursos de API, tokens de sessão, nomes de arquivos, IDs de filas de mensagens, e em qualquer lugar onde você precise de um identificador único sem coordenação entre sistemas. UUID v4 é recomendado para a maioria dos casos pela sua simplicidade e aleatoriedade.",
+    "section4Title": "Casos de uso comuns",
+    "section4List": "Chaves primárias de bancos de dados (PostgreSQL, MongoDB) | Identificadores de recursos de API | IDs de nós em sistemas distribuídos | IDs de sessão e correlação | Nomes de arquivos e objetos | Deduplicação em filas de mensagens"
+  },
+  "ui": {
+    "howItWorksText": "Clique em Gerar para criar um novo UUID. Escolha v4 (aleatório) ou v1 (baseado em timestamp). Use Gerar em Massa para criar vários UUIDs de uma vez. Cole um UUID no validador para verificar seu formato e versão.",
+    "generate": "Gerar",
+    "generateTitle": "Gerar um novo UUID",
+    "version": "Versão:",
+    "v4": "v4 (Aleatório)",
+    "v4Desc": "Criptograficamente aleatório — recomendado para a maioria dos usos",
+    "v1": "v1 (Timestamp)",
+    "v1Desc": "Baseado na hora atual — ordenável por tempo de criação",
+    "nil": "UUID Nulo",
+    "nilTitle": "Gerar o UUID nulo (todos zeros)",
+    "bulk": "Gerar em Massa",
+    "bulkTitle": "Gerar múltiplos UUIDs de uma vez",
+    "quantity": "Quantidade:",
+    "copyAll": "Copiar Tudo",
+    "copiedAll": "Tudo Copiado!",
+    "clear": "Limpar",
+    "result": "Resultado",
+    "results": "Resultados",
+    "generated": "gerados",
+    "validate": "Validar",
+    "validateTitle": "Verificar se um texto é um UUID válido",
+    "validatePlaceholder": "Cole um UUID para validar...",
+    "validUuid": "UUID Válido",
+    "invalidUuid": "UUID Inválido",
+    "detectedVersion": "Versão: {version}",
+    "validator": "Validador de UUID"
+  }
+}

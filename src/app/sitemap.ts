@@ -16,6 +16,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/tools/url-encoder", changeFrequency: "monthly" as const, priority: 0.8 },
     { path: "/tools/regex-tester", changeFrequency: "monthly" as const, priority: 0.8 },
     { path: "/tools/lorem-ipsum", changeFrequency: "monthly" as const, priority: 0.8 },
+    { path: "/tools/uuid-generator", changeFrequency: "monthly" as const, priority: 0.8 },
+    { path: "/tools/jwt-decoder", changeFrequency: "monthly" as const, priority: 0.8 },
+    { path: "/tools/timestamp-converter", changeFrequency: "monthly" as const, priority: 0.8 },
+    { path: "/tools/markdown-preview", changeFrequency: "monthly" as const, priority: 0.8 },
+    { path: "/tools/css-gradient-generator", changeFrequency: "monthly" as const, priority: 0.8 },
+    { path: "/tools/diff-checker", changeFrequency: "monthly" as const, priority: 0.8 },
   ];
 
   return paths.flatMap(({ path, changeFrequency, priority }) =>

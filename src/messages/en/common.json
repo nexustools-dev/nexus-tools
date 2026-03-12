@@ -10,7 +10,13 @@
     "hash": "Hash",
     "urlEncoder": "URL Encode",
     "regex": "Regex",
-    "loremIpsum": "Lorem Ipsum"
+    "loremIpsum": "Lorem Ipsum",
+    "uuidGenerator": "UUID Generator",
+    "jwtDecoder": "JWT Decoder",
+    "timestampConverter": "Timestamp",
+    "markdownPreview": "Markdown",
+    "cssGradientGenerator": "Gradients",
+    "diffChecker": "Diff Checker"
   },
   "footer": {
     "privacy": "All tools run 100% in your browser. No data is sent to any server.",
@@ -72,6 +78,30 @@
       "loremIpsum": {
         "name": "Lorem Ipsum Generator",
         "description": "Generate customizable placeholder text — paragraphs, sentences, or words. Copy as plain text or HTML."
+      },
+      "uuidGenerator": {
+        "name": "UUID Generator",
+        "description": "Generate UUID v4 and v1 identifiers. Bulk generation, validation, and version detection. Copy instantly."
+      },
+      "jwtDecoder": {
+        "name": "JWT Decoder",
+        "description": "Decode JSON Web Tokens to inspect header, payload, and claims. Check expiration status and copy decoded data."
+      },
+      "timestampConverter": {
+        "name": "Timestamp Converter",
+        "description": "Convert between Unix timestamps and human-readable dates. Supports seconds, milliseconds, timezones, and relative time."
+      },
+      "markdownPreview": {
+        "name": "Markdown Preview",
+        "description": "Live Markdown editor with instant preview. Supports GFM syntax including tables, code blocks, and lists."
+      },
+      "cssGradientGenerator": {
+        "name": "CSS Gradient Generator",
+        "description": "Create beautiful CSS gradients visually. Linear and radial types, color stops, presets, and instant CSS output."
+      },
+      "diffChecker": {
+        "name": "Diff Checker",
+        "description": "Compare two texts side by side. See additions, deletions, and unchanged lines highlighted with diff statistics."
       }
     }
   },

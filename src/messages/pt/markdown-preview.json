@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "title": "Visualizador Markdown — Editor e Renderizador Markdown Online ao Vivo",
+    "description": "Ferramenta de visualização Markdown online grátis. Escreva Markdown e veja o HTML renderizado em tempo real. Suporta cabeçalhos, listas, tabelas, blocos de código e mais. 100% no navegador.",
+    "keywords": "visualizador markdown, editor markdown online, renderizador markdown, markdown para html, markdown ao vivo, visor markdown, markdown github, formatador markdown"
+  },
+  "heading": "Visualizador Markdown",
+  "subheading": "Escreva Markdown à esquerda, veja o HTML renderizado à direita. Suporta sintaxe GFM incluindo tabelas, blocos de código e listas de tarefas. 100% no seu navegador.",
+  "seo": {
+    "section1Title": "O que é Markdown?",
+    "section1Text": "Markdown é uma linguagem de marcação leve criada por John Gruber em 2004. Permite escrever texto formatado usando sintaxe de texto simples que é fácil de ler e escrever. Markdown é amplamente usado em documentação, arquivos README, blogs, fóruns e aplicativos de mensagens. Os arquivos tipicamente usam a extensão .md ou .markdown. A sintaxe é projetada para ser legível mesmo sem renderização.",
+    "section2Title": "Sintaxe Comum de Markdown",
+    "section2Text": "Cabeçalhos usam símbolos # (# para h1, ## para h2, até ######). Texto em negrito usa **asteriscos duplos**, itálico usa *asteriscos simples*. Links usam formato [texto](url), imagens usam ![alt](url). Blocos de código usam crases triplas (```) com identificadores de linguagem opcionais. Listas usam - ou * para não ordenadas e 1. para ordenadas. Citações usam > no início da linha.",
+    "section3Title": "GitHub Flavored Markdown (GFM)",
+    "section3Text": "GitHub Flavored Markdown estende o Markdown padrão com funcionalidades adicionais como tabelas (usando pipes | e traços -), listas de tarefas (usando [ ] e [x]), texto riscado (usando ~~tils duplos~~), e blocos de código delimitados com destaque de sintaxe. GFM é a variante de Markdown mais comumente usada na comunidade de desenvolvedores.",
+    "section4Title": "Melhores Práticas de Markdown",
+    "section4List": "Use linhas em branco entre elementos de bloco para maior clareza | Mantenha linhas com menos de 80 caracteres para melhor legibilidade | Use links estilo referência para URLs repetidas | Use blocos de código delimitados com identificadores de linguagem para destaque de sintaxe | Use hierarquia de cabeçalhos consistente (não pule níveis) | Visualize seu Markdown antes de publicar para detectar erros de formatação"
+  },
+  "ui": {
+    "howItWorksText": "Digite ou cole Markdown no editor abaixo para vê-lo renderizado como HTML em tempo real. Suporta cabeçalhos, negrito, itálico, links, imagens, blocos de código, tabelas, listas e mais. Nenhum dado é enviado a nenhum servidor.",
+    "editor": "Editor",
+    "preview": "Visualização",
+    "copyHtml": "Copiar HTML",
+    "download": "Baixar HTML",
+    "clear": "Limpar",
+    "sample": "Exemplo",
+    "wordCount": "palavras",
+    "charCount": "caracteres",
+    "lineCount": "linhas"
+  }
+}

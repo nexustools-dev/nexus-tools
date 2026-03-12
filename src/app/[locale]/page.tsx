@@ -12,6 +12,12 @@ const toolKeys = [
   { key: "urlEncoder", href: "/tools/url-encoder", icon: "%", color: "from-violet-500 to-purple-600" },
   { key: "regexTester", href: "/tools/regex-tester", icon: ".*", color: "from-pink-500 to-rose-600" },
   { key: "loremIpsum", href: "/tools/lorem-ipsum", icon: "Aa", color: "from-slate-500 to-zinc-600" },
+  { key: "uuidGenerator", href: "/tools/uuid-generator", icon: "ID", color: "from-indigo-500 to-blue-600" },
+  { key: "jwtDecoder", href: "/tools/jwt-decoder", icon: "JWT", color: "from-rose-500 to-red-600" },
+  { key: "timestampConverter", href: "/tools/timestamp-converter", icon: "TS", color: "from-amber-500 to-yellow-600" },
+  { key: "markdownPreview", href: "/tools/markdown-preview", icon: "MD", color: "from-gray-500 to-slate-600" },
+  { key: "cssGradientGenerator", href: "/tools/css-gradient-generator", icon: "GR", color: "from-fuchsia-500 to-violet-600" },
+  { key: "diffChecker", href: "/tools/diff-checker", icon: "±", color: "from-teal-500 to-emerald-600" },
 ] as const;
 
 type Props = {

@@ -10,7 +10,13 @@
     "hash": "Hash",
     "urlEncoder": "URL Encode",
     "regex": "Regex",
-    "loremIpsum": "Lorem Ipsum"
+    "loremIpsum": "Lorem Ipsum",
+    "uuidGenerator": "UUID Generator",
+    "jwtDecoder": "JWT Decoder",
+    "timestampConverter": "Timestamp",
+    "markdownPreview": "Markdown",
+    "cssGradientGenerator": "Gradientes",
+    "diffChecker": "Diff Checker"
   },
   "footer": {
     "privacy": "Todas las herramientas funcionan 100% en tu navegador. No se envían datos a ningún servidor.",
@@ -72,6 +78,30 @@
       "loremIpsum": {
         "name": "Generador de Lorem Ipsum",
         "description": "Genera texto de relleno personalizable — párrafos, oraciones o palabras. Copia como texto plano o HTML."
+      },
+      "uuidGenerator": {
+        "name": "Generador de UUID",
+        "description": "Genera identificadores UUID v4 y v1. Generación en lote, validación y detección de versión. Copia al instante."
+      },
+      "jwtDecoder": {
+        "name": "Decodificador JWT",
+        "description": "Decodifica JSON Web Tokens para inspeccionar header, payload y claims. Verifica estado de expiración y copia datos decodificados."
+      },
+      "timestampConverter": {
+        "name": "Convertidor de Timestamps",
+        "description": "Convierte entre timestamps Unix y fechas legibles. Soporta segundos, milisegundos, zonas horarias y tiempo relativo."
+      },
+      "markdownPreview": {
+        "name": "Vista Previa Markdown",
+        "description": "Editor Markdown en vivo con vista previa instantánea. Soporta sintaxis GFM incluyendo tablas, bloques de código y listas."
+      },
+      "cssGradientGenerator": {
+        "name": "Generador de Gradientes CSS",
+        "description": "Crea gradientes CSS hermosos visualmente. Tipos lineal y radial, paradas de color, presets y salida CSS instantánea."
+      },
+      "diffChecker": {
+        "name": "Comparador de Diferencias",
+        "description": "Compara dos textos lado a lado. Ve adiciones, eliminaciones y líneas sin cambios resaltadas con estadísticas de diff."
       }
     }
   },
