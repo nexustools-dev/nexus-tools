@@ -1,9 +1,9 @@
 {
   "project": "nexus-tools",
-  "version": "0.3.0",
-  "phase": "6 Tools Polished — SEO Indexing",
+  "version": "0.4.0",
+  "phase": "i18n Live — 3 Languages × 6 Tools",
   "status": "in_progress",
-  "last_updated": "2026-03-12",
+  "last_updated": "2026-03-11",
   "updated_by": "NEXUS@PC-Principal",
   "task_id": "T058",
   "domain": "toolnexus.dev",
@@ -29,16 +29,22 @@
       "ssl-letsencrypt",
       "production-deploy",
       "systemd-service",
-      "robots.txt + sitemap.xml",
-      "opengraph-metadata",
-      "google-search-console (verified + sitemap submitted)"
+      "robots.txt + sitemap.xml (21 URLs multi-locale)",
+      "opengraph-metadata (per locale)",
+      "google-search-console (verified + sitemap submitted)",
+      "i18n EN+ES+PT-BR (next-intl, [locale] routing, proxy.ts)",
+      "language-selector (EN/ES/PT buttons in nav)",
+      "hreflang tags (63 cross-references)",
+      "translated SEO content (metadata + educational sections per locale)"
     ],
-    "in_progress": [],
+    "in_progress": [
+      "i18n-ui-strings (client component labels/buttons still EN-only — F4 pending)"
+    ],
     "pending": [
-      "i18n (multi-language — structural change, next major feature)",
       "more-tools (hash-generator, url-encoder, regex-tester, lorem-ipsum)",
       "analytics (Plausible self-hosted?)",
-      "adsense-integration (after ~1000 visits/month)"
+      "adsense-integration (after ~1000 visits/month)",
+      "re-submit sitemap in Google Search Console (21 URLs)"
     ]
   },
   "decisions": [
@@ -68,13 +74,25 @@
       "reason": "Ricardo feedback: usuarios (incluso devs) prefieren interfaces obvias. Paletas de color, hints, datos de ejemplo al abrir."
     },
     {
-      "date": "2026-03-12",
-      "decision": "i18n como próximo paso estructural",
-      "reason": "Multi-idioma multiplica tráfico SEO sin crear herramientas nuevas. Menos competencia en español/portugués."
+      "date": "2026-03-11",
+      "decision": "i18n antes de más herramientas, con EN+ES+PT-BR",
+      "reason": "Menor costo total: setup i18n es fijo, herramientas nuevas nacen bilingües. 3 idiomas cubren Americas. Análisis conjunto Ricardo+NEXUS."
+    },
+    {
+      "date": "2026-03-11",
+      "decision": "next-intl para i18n (no react-i18next, no manual)",
+      "reason": "Diseñada para App Router, Server Components nativos, middleware incluido, type-safe, ~15KB"
+    },
+    {
+      "date": "2026-03-11",
+      "decision": "proxy.ts en vez de middleware.ts (Next.js 16)",
+      "reason": "Next.js 16 deprecó middleware.ts, renombrado a proxy.ts. next-intl compatible."
     }
   ],
   "metrics": {
     "tools_count": 6,
+    "languages": 3,
+    "total_pages": 21,
     "monthly_visitors": 0,
     "adsense_revenue": 0
   }
