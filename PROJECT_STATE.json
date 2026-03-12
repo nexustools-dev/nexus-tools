@@ -1,7 +1,7 @@
 {
   "project": "nexus-tools",
-  "version": "1.1.0",
-  "phase": "SEO optimization — schema markup + competitive improvements",
+  "version": "1.2.0",
+  "phase": "Analytics live — monitoring traffic",
   "status": "stable",
   "last_updated": "2026-03-12",
   "updated_by": "NEXUS@PC-Principal",
@@ -14,7 +14,8 @@
     "path": "/home/ricardo/nexus-tools/",
     "proxy": "VPS nginx (76.13.109.80)",
     "ssl": "Let's Encrypt (expires 2026-06-09)",
-    "process": "systemd (nexus-tools.service)"
+    "process": "systemd (nexus-tools.service)",
+    "analytics": "Umami at analytics.toolnexus.dev (Docker, port 3500)"
   },
   "features": {
     "completed": [
@@ -42,14 +43,13 @@
       "regex-tester (live highlighting, capture groups, flags, cheat sheet)",
       "lorem-ipsum (paragraphs/sentences/words, copy text/HTML, stats)",
       "json-formatter v2 (tree view, auto-repair, download, sort keys)",
-      "schema markup (WebApplication + FAQPage on all 10 tools, WebSite on homepage)"
+      "schema markup (WebApplication + FAQPage on all 10 tools, WebSite on homepage)",
+      "hash-generator HMAC support (MD5, SHA-1, SHA-256, SHA-512 with secret key)",
+      "umami analytics (self-hosted at analytics.toolnexus.dev, Docker on Mini PC)"
     ],
     "in_progress": [],
     "pending": [
-      "hash-generator HMAC support",
-      "analytics (Plausible self-hosted?)",
-      "adsense-integration (after ~1000 visits/month)",
-      "re-submit sitemap in Google Search Console (33 URLs)"
+      "adsense-integration (after ~1000 visits/month)"
     ]
   },
   "decisions": [
@@ -92,6 +92,11 @@
       "date": "2026-03-11",
       "decision": "proxy.ts en vez de middleware.ts (Next.js 16)",
       "reason": "Next.js 16 deprecó middleware.ts, renombrado a proxy.ts. next-intl compatible."
+    },
+    {
+      "date": "2026-03-12",
+      "decision": "Umami over Plausible for analytics",
+      "reason": "Plausible needs 2GB RAM (ClickHouse). Umami uses ~300MB (PostgreSQL). Both privacy-friendly, no cookies. Umami sufficient for our needs."
     }
   ],
   "metrics": {
