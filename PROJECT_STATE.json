@@ -1,7 +1,7 @@
 {
   "project": "nexus-tools",
-  "version": "1.3.0",
-  "phase": "Hardened — security audit complete, ready for growth",
+  "version": "2.0.0",
+  "phase": "16 tools live — Batch 2 deployed, ready for growth",
   "status": "stable",
   "last_updated": "2026-03-12",
   "updated_by": "NEXUS@PC-Principal",
@@ -46,7 +46,13 @@
       "schema markup (WebApplication + FAQPage on all 10 tools, WebSite on homepage)",
       "hash-generator HMAC support (MD5, SHA-1, SHA-256, SHA-512 with secret key)",
       "umami analytics (self-hosted at analytics.toolnexus.dev, Docker on Mini PC)",
-      "security hardening (rate limiting, security headers, TLS 1.2+, server version hidden)"
+      "security hardening (rate limiting, security headers, TLS 1.2+, server version hidden)",
+      "uuid-generator (v4 crypto.randomUUID + v1 pure JS, bulk, validator)",
+      "jwt-decoder (base64url decode, color-coded, expiration check, claims table)",
+      "timestamp-converter (Unix ↔ human, s/ms, timezone selector, relative time)",
+      "markdown-preview (custom parser, side-by-side, tables, code blocks, download HTML)",
+      "css-gradient-generator (linear/radial, color stops, presets, copy CSS)",
+      "diff-checker (LCS algorithm, line diff, ignore whitespace/case, stats)"
     ],
     "in_progress": [],
     "pending": [
@@ -129,9 +135,9 @@
     }
   },
   "metrics": {
-    "tools_count": 10,
+    "tools_count": 16,
     "languages": 3,
-    "total_pages": 33,
+    "total_pages": 51,
     "monthly_visitors": 0,
     "adsense_revenue": 0
   }
