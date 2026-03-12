@@ -1,7 +1,7 @@
 {
   "project": "nexus-tools",
-  "version": "2.0.0",
-  "phase": "16 tools live — Batch 2 deployed, ready for growth",
+  "version": "3.0.0",
+  "phase": "22 tools live — Batch 3 deployed, ready for growth",
   "status": "stable",
   "last_updated": "2026-03-12",
   "updated_by": "NEXUS@PC-Principal",
@@ -52,7 +52,16 @@
       "timestamp-converter (Unix ↔ human, s/ms, timezone selector, relative time)",
       "markdown-preview (custom parser, side-by-side, tables, code blocks, download HTML)",
       "css-gradient-generator (linear/radial, color stops, presets, copy CSS)",
-      "diff-checker (LCS algorithm, line diff, ignore whitespace/case, stats)"
+      "diff-checker (LCS algorithm, line diff, ignore whitespace/case, stats)",
+      "password-generator (crypto.getRandomValues, entropy strength meter, bulk gen)",
+      "qr-code-generator (qrcode npm, Canvas+SVG, custom colors, error correction)",
+      "cron-expression-builder (field editors, human-readable, next 5 executions, presets)",
+      "json-csv-converter (bidirectional, nested flattening, custom delimiters)",
+      "text-case-converter (11 formats: camelCase, PascalCase, snake_case, kebab-case, etc.)",
+      "placeholder-image (Canvas API, dimensions/colors/text, 8 presets, data URL)",
+      "PWA support (manifest.json, icons, installable from Brave/Chrome/Edge)",
+      "NavMenu search (Ctrl+K, filter tools, Escape to close)",
+      "browser auto-translate fix (translate=no on html, meta notranslate)"
     ],
     "in_progress": [],
     "pending": [
@@ -109,6 +118,11 @@
       "date": "2026-03-12",
       "decision": "Batch 2: 6 tools (UUID, JWT, Timestamp, Markdown, Gradient, Diff) — all pure JS, 0 deps",
       "reason": "High-traffic dev tools selected by search volume. Custom markdown parser + LCS diff algorithm to avoid external dependencies. All born trilingual."
+    },
+    {
+      "date": "2026-03-12",
+      "decision": "Batch 3: 6 tools (Password, QR, Cron, JSON/CSV, Text Case, Placeholder Image)",
+      "reason": "Utility tools with high search volume. QR uses qrcode npm (Reed-Solomon too complex). Password uses crypto.getRandomValues for real security. All born trilingual."
     }
   ],
   "security": {
@@ -140,9 +154,9 @@
     }
   },
   "metrics": {
-    "tools_count": 16,
+    "tools_count": 22,
     "languages": 3,
-    "total_pages": 51,
+    "total_pages": 69,
     "monthly_visitors": 0,
     "adsense_revenue": 0
   }
