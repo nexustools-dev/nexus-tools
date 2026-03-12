@@ -344,6 +344,9 @@ export function FaviconGenerator() {
         {mode === "emoji" && (
           <div>
             <label className="block text-sm text-zinc-400 mb-1">Emoji</label>
+            <p className="text-xs text-zinc-500 mb-2">
+              Pick one below or paste any emoji from sites like emojipedia.org
+            </p>
             <div className="flex gap-2">
               <input
                 type="text"
@@ -401,7 +404,17 @@ export function FaviconGenerator() {
         {mode !== "image" && (
           <div className="space-y-4">
             <ColorPalette label="Background" value={bgColor} onChange={setBgColor} />
-            <ColorPalette label="Text Color" value={textColor} onChange={setTextColor} />
+            {mode === "text" && (
+              <ColorPalette label="Text Color" value={textColor} onChange={setTextColor} />
+            )}
+          </div>
+        )}
+        {mode === "image" && (
+          <div className="space-y-4">
+            <ColorPalette label="Background (behind image)" value={bgColor} onChange={setBgColor} />
+            <p className="text-xs text-zinc-500">
+              Visible with transparent images (PNG, SVG). For JPG/JPEG the image covers the entire background.
+            </p>
           </div>
         )}
 
