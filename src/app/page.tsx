@@ -25,6 +25,14 @@ const tools = [
     icon: "<>",
     color: "from-purple-500 to-pink-600",
   },
+  {
+    name: "Base64 Encoder & Decoder",
+    description:
+      "Encode text to Base64 or decode Base64 back to text. Supports UTF-8 and URL-safe variants.",
+    href: "/tools/base64-encoder",
+    icon: "B64",
+    color: "from-orange-500 to-amber-600",
+  },
 ];
 
 export default function Home() {

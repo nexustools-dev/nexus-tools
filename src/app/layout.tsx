@@ -61,6 +61,12 @@ export default function RootLayout({
               >
                 Meta Tags
               </a>
+              <a
+                href="/tools/base64-encoder"
+                className="hover:text-zinc-100 transition-colors"
+              >
+                Base64
+              </a>
             </div>
           </div>
         </nav>
