@@ -1,7 +1,7 @@
 {
   "project": "nexus-tools",
-  "version": "0.7.0",
-  "phase": "Tool Expansion — 8 tools live",
+  "version": "1.0.0",
+  "phase": "10 Tools Live — All planned tools complete",
   "status": "stable",
   "last_updated": "2026-03-12",
   "updated_by": "NEXUS@PC-Principal",
@@ -29,7 +29,7 @@
       "ssl-letsencrypt",
       "production-deploy",
       "systemd-service",
-      "robots.txt + sitemap.xml (21 URLs multi-locale)",
+      "robots.txt + sitemap.xml (33 URLs multi-locale)",
       "opengraph-metadata (per locale)",
       "google-search-console (verified + sitemap submitted)",
       "i18n EN+ES+PT-BR (next-intl, [locale] routing, proxy.ts)",
@@ -38,14 +38,17 @@
       "translated SEO content (metadata + educational sections per locale)",
       "i18n UI strings — all 6 client components fully translated (F4 complete)",
       "hash-generator (MD5, SHA-1, SHA-256, SHA-512 — Web Crypto API + JS MD5)",
-      "url-encoder (encode/decode, encodeURIComponent vs encodeURI modes)"
+      "url-encoder (encode/decode, encodeURIComponent vs encodeURI modes)",
+      "regex-tester (live highlighting, capture groups, flags, cheat sheet)",
+      "lorem-ipsum (paragraphs/sentences/words, copy text/HTML, stats)"
     ],
     "in_progress": [],
     "pending": [
-      "more-tools (regex-tester, lorem-ipsum)",
+      "improve existing tools (JSON tree view, auto-repair; hash HMAC support)",
       "analytics (Plausible self-hosted?)",
       "adsense-integration (after ~1000 visits/month)",
-      "re-submit sitemap in Google Search Console (24 URLs)"
+      "re-submit sitemap in Google Search Console (33 URLs)",
+      "structured data (WebApplication, FAQPage schema markup)"
     ]
   },
   "decisions": [
@@ -91,9 +94,9 @@
     }
   ],
   "metrics": {
-    "tools_count": 8,
+    "tools_count": 10,
     "languages": 3,
-    "total_pages": 27,
+    "total_pages": 33,
     "monthly_visitors": 0,
     "adsense_revenue": 0
   }
