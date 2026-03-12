@@ -1,7 +1,7 @@
 {
   "project": "nexus-tools",
-  "version": "0.6.0",
-  "phase": "Tool Expansion — 7 tools live",
+  "version": "0.7.0",
+  "phase": "Tool Expansion — 8 tools live",
   "status": "stable",
   "last_updated": "2026-03-12",
   "updated_by": "NEXUS@PC-Principal",
@@ -37,11 +37,12 @@
       "hreflang tags (63 cross-references)",
       "translated SEO content (metadata + educational sections per locale)",
       "i18n UI strings — all 6 client components fully translated (F4 complete)",
-      "hash-generator (MD5, SHA-1, SHA-256, SHA-512 — Web Crypto API + JS MD5)"
+      "hash-generator (MD5, SHA-1, SHA-256, SHA-512 — Web Crypto API + JS MD5)",
+      "url-encoder (encode/decode, encodeURIComponent vs encodeURI modes)"
     ],
     "in_progress": [],
     "pending": [
-      "more-tools (url-encoder, regex-tester, lorem-ipsum)",
+      "more-tools (regex-tester, lorem-ipsum)",
       "analytics (Plausible self-hosted?)",
       "adsense-integration (after ~1000 visits/month)",
       "re-submit sitemap in Google Search Console (24 URLs)"
@@ -90,9 +91,9 @@
     }
   ],
   "metrics": {
-    "tools_count": 7,
+    "tools_count": 8,
     "languages": 3,
-    "total_pages": 24,
+    "total_pages": 27,
     "monthly_visitors": 0,
     "adsense_revenue": 0
   }
