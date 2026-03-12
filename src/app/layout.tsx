@@ -67,6 +67,12 @@ export default function RootLayout({
               >
                 Base64
               </a>
+              <a
+                href="/tools/color-converter"
+                className="hover:text-zinc-100 transition-colors"
+              >
+                Colors
+              </a>
             </div>
           </div>
         </nav>

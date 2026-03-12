@@ -33,6 +33,14 @@ const tools = [
     icon: "B64",
     color: "from-orange-500 to-amber-600",
   },
+  {
+    name: "Color Converter",
+    description:
+      "Convert colors between HEX, RGB, and HSL. Visual color picker with live preview and CSS output.",
+    href: "/tools/color-converter",
+    icon: "CLR",
+    color: "from-rose-500 to-red-600",
+  },
 ];
 
 export default function Home() {
