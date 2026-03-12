@@ -38,7 +38,8 @@
   },
   "footer": {
     "privacy": "Todas as ferramentas funcionam 100% no seu navegador. Nenhum dado é enviado a servidores.",
-    "copyright": "NexusTools © {year}"
+    "copyright": "NexusTools © {year}",
+    "suggest": "Sugerir Ferramenta"
   },
   "metadata": {
     "title": "NexusTools — Ferramentas Grátis para Desenvolvedores",

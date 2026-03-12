@@ -38,7 +38,8 @@
   },
   "footer": {
     "privacy": "All tools run 100% in your browser. No data is sent to any server.",
-    "copyright": "NexusTools © {year}"
+    "copyright": "NexusTools © {year}",
+    "suggest": "Suggest a Tool"
   },
   "metadata": {
     "title": "NexusTools — Free Developer Tools",
