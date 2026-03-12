@@ -1,10 +1,10 @@
 {
   "project": "nexus-tools",
-  "version": "0.1.0",
-  "phase": "MVP Deployed — Polish + SEO",
+  "version": "0.2.0",
+  "phase": "6 Tools Live — SEO + Growth",
   "status": "in_progress",
   "last_updated": "2026-03-11",
-  "updated_by": "NEXUS@PC-Principal (RED INTERNA terminal)",
+  "updated_by": "NEXUS@PC-Principal",
   "task_id": "T058",
   "domain": "toolnexus.dev",
   "url": "https://toolnexus.dev",
@@ -14,27 +14,29 @@
     "path": "/home/ricardo/nexus-tools/",
     "proxy": "VPS nginx (76.13.109.80)",
     "ssl": "Let's Encrypt (expires 2026-06-09)",
-    "process": "npx next start -p 3456 (needs systemd)"
+    "process": "systemd (nexus-tools.service)"
   },
   "features": {
     "completed": [
-      "favicon-generator MVP",
-      "json-formatter MVP",
-      "domain-purchase (toolnexus.dev)",
-      "nginx-reverse-proxy",
-      "ssl-letsencrypt",
-      "production-deploy"
-    ],
-    "in_progress": [],
-    "pending": [
-      "systemd-service (survive reboots)",
-      "robots.txt + sitemap.xml",
+      "favicon-generator",
+      "json-formatter",
       "meta-tag-generator",
       "base64-encoder",
       "color-converter",
       "css-unit-converter",
+      "domain-purchase (toolnexus.dev)",
+      "nginx-reverse-proxy",
+      "ssl-letsencrypt",
+      "production-deploy",
+      "systemd-service",
+      "robots.txt + sitemap.xml",
+      "opengraph-metadata"
+    ],
+    "in_progress": [],
+    "pending": [
       "google-search-console",
-      "adsense-integration"
+      "adsense-integration",
+      "more-tools (hash-generator, url-encoder, regex-tester, etc.)"
     ]
   },
   "decisions": [
@@ -50,11 +52,6 @@
     },
     {
       "date": "2026-03-11",
-      "decision": "Favicon generator + JSON formatter como primeras herramientas",
-      "reason": "Favicon: menor competencia (solo 2 rivales serios). JSON: rápido de construir, RPM alto ($10-18)"
-    },
-    {
-      "date": "2026-03-11",
       "decision": "100% client-side, sin backend",
       "reason": "$0 costo servidor, privacidad como feature, simplicidad"
     },
@@ -67,10 +64,15 @@
       "date": "2026-03-11",
       "decision": "Deploy en Mini PC port 3456, nginx VPS reverse proxy",
       "reason": "Mismo patrón que Nextcloud/CEREBRO — $0 hosting, infra existente"
+    },
+    {
+      "date": "2026-03-11",
+      "decision": "Deploy via rsync (no git en Mini PC), systemd service",
+      "reason": "Mini PC no necesita git repo, solo build files. systemd para persistencia"
     }
   ],
   "metrics": {
-    "tools_count": 2,
+    "tools_count": 6,
     "monthly_visitors": 0,
     "adsense_revenue": 0
   }
