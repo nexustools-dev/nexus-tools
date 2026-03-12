@@ -51,19 +51,19 @@ export function NavMenu() {
       </button>
 
       {open && (
-        <div className="absolute right-0 top-full mt-2 w-80 bg-zinc-900 border border-zinc-800 rounded-xl shadow-2xl shadow-black/50 p-3 z-50">
+        <div className="absolute right-0 top-full mt-2 w-96 bg-zinc-900 border border-zinc-800 rounded-xl shadow-2xl shadow-black/50 p-3 z-50">
           <div className="grid grid-cols-2 gap-1">
             {TOOLS.map((tool) => (
               <Link
                 key={tool.href}
                 href={tool.href}
                 onClick={() => setOpen(false)}
-                className="flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800 transition-colors"
+                className="flex items-center gap-2 px-2.5 py-2 rounded-lg text-xs text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800 transition-colors"
               >
-                <span className="w-7 h-7 flex items-center justify-center rounded-md bg-zinc-800 text-[10px] font-mono font-bold text-emerald-400 shrink-0">
+                <span className="w-5 h-5 flex items-center justify-center rounded bg-zinc-800 text-[8px] font-mono font-bold text-emerald-400 shrink-0">
                   {tool.icon}
                 </span>
-                <span className="truncate">{t(`${tool.key}.name`)}</span>
+                <span>{t(`${tool.key}.name`)}</span>
               </Link>
             ))}
           </div>
