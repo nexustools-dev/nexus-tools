@@ -18,6 +18,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
   const hashGenerator = (await import(`../messages/${locale}/hash-generator.json`)).default;
   const urlEncoder = (await import(`../messages/${locale}/url-encoder.json`)).default;
   const regexTester = (await import(`../messages/${locale}/regex-tester.json`)).default;
+  const loremIpsum = (await import(`../messages/${locale}/lorem-ipsum.json`)).default;
 
   return {
     locale,
@@ -32,6 +33,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
       hashGenerator,
       urlEncoder,
       regexTester,
+      loremIpsum,
     },
   };
 });

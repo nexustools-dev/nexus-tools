@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "title": "Gerador de Lorem Ipsum — Gere Texto Placeholder Online",
+    "description": "Gerador de Lorem Ipsum online grátis. Gere parágrafos, frases ou palavras de texto placeholder para seus designs e layouts. Comprimento personalizável. 100% no navegador.",
+    "keywords": "gerador de lorem ipsum, texto placeholder, texto fictício, texto de preenchimento, lorem ipsum online, gerar lorem ipsum, gerador de texto de exemplo, placeholder de design"
+  },
+  "heading": "Gerador de Lorem Ipsum",
+  "subheading": "Gere texto placeholder personalizável para seus designs, mockups e layouts.",
+  "seo": {
+    "section1Title": "O que é Lorem Ipsum?",
+    "section1Text": "Lorem Ipsum é texto placeholder usado na indústria de impressão e tipografia desde os anos 1500. É derivado de seções de 'De Finibus Bonorum et Malorum' (Os Extremos do Bem e do Mal) de Cícero, escrito em 45 a.C. Designers e desenvolvedores usam Lorem Ipsum para preencher layouts com texto de aparência realista antes que o conteúdo final esteja pronto, permitindo que se concentrem no design visual sem se distrair com conteúdo legível.",
+    "section2Title": "Por que usar texto placeholder?",
+    "section2Text": "O texto placeholder serve a vários propósitos importantes em design e desenvolvimento. Permite visualizar como o texto fluirá em um layout sem esperar pelo conteúdo real. Evita que stakeholders foquem na redação em vez das decisões de design. Fornece densidade de texto realista para testar layouts responsivos, tipografia e espaçamento. E é universalmente reconhecido por designers e desenvolvedores como conteúdo de rascunho.",
+    "section3Title": "Alternativas ao Lorem Ipsum",
+    "section3Text": "Embora Lorem Ipsum seja o texto placeholder mais popular, existem alternativas para necessidades específicas. Hipster Ipsum usa vocabulário moderno, Bacon Ipsum usa palavras relacionadas a carne para humor, e Cupcake Ipsum usa terminologia de sobremesas. Para testes mais realistas, algumas equipes preferem usar rascunhos de conteúdo real ou conteúdo de projetos similares. A chave é escolher texto que corresponda ao comprimento e estrutura aproximados do conteúdo final.",
+    "section4Title": "Casos de uso comuns",
+    "section4List": "Mockups e wireframes de design web | Design de layouts impressos (folhetos, revistas, livros) | Prototipagem UI/UX e testes de usuário | Design de templates de email | Layouts de apresentações e slides | Telas placeholder em desenvolvimento de apps"
+  },
+  "ui": {
+    "howItWorksText": "Escolha o tipo (parágrafos, frases ou palavras) e a quantidade, depois clique em Gerar. O texto clássico de Lorem Ipsum é usado como fonte, garantindo texto placeholder em latim de aparência natural.",
+    "type": "Tipo",
+    "paragraphs": "Parágrafos",
+    "sentences": "Frases",
+    "words": "Palavras",
+    "quantity": "Quantidade",
+    "generate": "Gerar",
+    "copyText": "Copiar Texto",
+    "copyHtml": "Copiar como HTML",
+    "startWithLorem": "Começar com \"Lorem ipsum dolor sit amet...\"",
+    "outputLabel": "Texto Gerado",
+    "paragraphCount": "{count} parágrafo(s)",
+    "sentenceCount": "{count} frase(s)",
+    "wordCount": "{count} palavra(s)",
+    "statsWords": "{words} palavras",
+    "statsChars": "{chars} caracteres"
+  }
+}

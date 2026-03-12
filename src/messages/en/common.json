@@ -9,7 +9,8 @@
     "cssUnits": "CSS Units",
     "hash": "Hash",
     "urlEncoder": "URL Encode",
-    "regex": "Regex"
+    "regex": "Regex",
+    "loremIpsum": "Lorem Ipsum"
   },
   "footer": {
     "privacy": "All tools run 100% in your browser. No data is sent to any server.",
@@ -67,6 +68,10 @@
       "regexTester": {
         "name": "Regex Tester",
         "description": "Test regular expressions with real-time match highlighting, capture groups, flags, and a quick reference cheat sheet."
+      },
+      "loremIpsum": {
+        "name": "Lorem Ipsum Generator",
+        "description": "Generate customizable placeholder text — paragraphs, sentences, or words. Copy as plain text or HTML."
       }
     }
   },

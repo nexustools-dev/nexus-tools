@@ -9,7 +9,8 @@
     "cssUnits": "Unidades CSS",
     "hash": "Hash",
     "urlEncoder": "URL Encode",
-    "regex": "Regex"
+    "regex": "Regex",
+    "loremIpsum": "Lorem Ipsum"
   },
   "footer": {
     "privacy": "Todas las herramientas funcionan 100% en tu navegador. No se envían datos a ningún servidor.",
@@ -67,6 +68,10 @@
       "regexTester": {
         "name": "Probador de Regex",
         "description": "Prueba expresiones regulares con resaltado de coincidencias en tiempo real, grupos de captura, flags y hoja de referencia rápida."
+      },
+      "loremIpsum": {
+        "name": "Generador de Lorem Ipsum",
+        "description": "Genera texto de relleno personalizable — párrafos, oraciones o palabras. Copia como texto plano o HTML."
       }
     }
   },

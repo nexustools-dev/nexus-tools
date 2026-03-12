@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "title": "Generador de Lorem Ipsum — Genera Texto de Relleno Online",
+    "description": "Generador de Lorem Ipsum online gratis. Genera párrafos, oraciones o palabras de texto de relleno para tus diseños y maquetas. Longitud personalizable. 100% en el navegador.",
+    "keywords": "generador de lorem ipsum, texto de relleno, texto placeholder, texto ficticio, lorem ipsum online, generar lorem ipsum, generador de texto de ejemplo, placeholder de diseño"
+  },
+  "heading": "Generador de Lorem Ipsum",
+  "subheading": "Genera texto de relleno personalizable para tus diseños, mockups y maquetas.",
+  "seo": {
+    "section1Title": "¿Qué es Lorem Ipsum?",
+    "section1Text": "Lorem Ipsum es texto de relleno usado en la industria de la impresión y la tipografía desde los años 1500. Se deriva de secciones de 'De Finibus Bonorum et Malorum' (Los Extremos del Bien y del Mal) de Cicerón, escrito en el 45 a.C. Los diseñadores y desarrolladores usan Lorem Ipsum para llenar maquetas con texto de apariencia realista antes de que el contenido final esté listo, permitiéndoles enfocarse en el diseño visual sin distraerse con contenido legible.",
+    "section2Title": "¿Por qué usar texto de relleno?",
+    "section2Text": "El texto de relleno cumple varios propósitos importantes en diseño y desarrollo. Te permite visualizar cómo fluirá el texto en un diseño sin esperar el contenido real. Evita que los stakeholders se enfoquen en la redacción en lugar de las decisiones de diseño. Proporciona densidad de texto realista para probar diseños responsivos, tipografía y espaciado. Y es universalmente reconocido por diseñadores y desarrolladores como contenido borrador.",
+    "section3Title": "Alternativas a Lorem Ipsum",
+    "section3Text": "Aunque Lorem Ipsum es el texto de relleno más popular, existen alternativas para necesidades específicas. Hipster Ipsum usa vocabulario trendy, Bacon Ipsum usa palabras relacionadas con carne para humor, y Cupcake Ipsum usa terminología de postres. Para pruebas más realistas, algunos equipos prefieren usar borradores de contenido real o contenido de proyectos similares. La clave es elegir texto que coincida con la longitud y estructura aproximada del contenido final.",
+    "section4Title": "Casos de uso comunes",
+    "section4List": "Mockups y wireframes de diseño web | Diseño de maquetas impresas (folletos, revistas, libros) | Prototipado UI/UX y pruebas de usuario | Diseño de plantillas de email | Maquetas de presentaciones y slides | Pantallas de placeholder en desarrollo de apps"
+  },
+  "ui": {
+    "howItWorksText": "Elige el tipo (párrafos, oraciones o palabras) y la cantidad, luego haz clic en Generar. Se usa el texto clásico de Lorem Ipsum como fuente, asegurando texto de relleno en latín de apariencia natural.",
+    "type": "Tipo",
+    "paragraphs": "Párrafos",
+    "sentences": "Oraciones",
+    "words": "Palabras",
+    "quantity": "Cantidad",
+    "generate": "Generar",
+    "copyText": "Copiar Texto",
+    "copyHtml": "Copiar como HTML",
+    "startWithLorem": "Empezar con \"Lorem ipsum dolor sit amet...\"",
+    "outputLabel": "Texto Generado",
+    "paragraphCount": "{count} párrafo(s)",
+    "sentenceCount": "{count} oración(es)",
+    "wordCount": "{count} palabra(s)",
+    "statsWords": "{words} palabras",
+    "statsChars": "{chars} caracteres"
+  }
+}

@@ -126,6 +126,12 @@ export default async function LocaleLayout({ children, params }: Props) {
                 >
                   {t("nav.regex")}
                 </Link>
+                <Link
+                  href="/tools/lorem-ipsum"
+                  className="hover:text-zinc-100 transition-colors"
+                >
+                  {t("nav.loremIpsum")}
+                </Link>
                 <div className="border-l border-zinc-700 pl-4">
                   <LanguageSwitcher />
                 </div>

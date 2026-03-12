@@ -11,6 +11,7 @@ const toolKeys = [
   { key: "hashGenerator", href: "/tools/hash-generator", icon: "#", color: "from-yellow-500 to-orange-600" },
   { key: "urlEncoder", href: "/tools/url-encoder", icon: "%", color: "from-violet-500 to-purple-600" },
   { key: "regexTester", href: "/tools/regex-tester", icon: ".*", color: "from-pink-500 to-rose-600" },
+  { key: "loremIpsum", href: "/tools/lorem-ipsum", icon: "Aa", color: "from-slate-500 to-zinc-600" },
 ] as const;
 
 type Props = {

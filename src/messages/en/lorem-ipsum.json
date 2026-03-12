@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "title": "Lorem Ipsum Generator — Generate Placeholder Text Online",
+    "description": "Free online Lorem Ipsum generator. Generate paragraphs, sentences, or words of placeholder text for your designs and layouts. Customizable length. 100% browser-based.",
+    "keywords": "lorem ipsum generator, placeholder text, dummy text, filler text, lorem ipsum online, generate lorem ipsum, sample text generator, design placeholder"
+  },
+  "heading": "Lorem Ipsum Generator",
+  "subheading": "Generate customizable placeholder text for your designs, mockups, and layouts.",
+  "seo": {
+    "section1Title": "What is Lorem Ipsum?",
+    "section1Text": "Lorem Ipsum is placeholder text used in the printing and typesetting industry since the 1500s. It is derived from sections of 'De Finibus Bonorum et Malorum' (The Extremes of Good and Evil) by Cicero, written in 45 BC. Designers and developers use Lorem Ipsum to fill layouts with realistic-looking text before the final content is ready, allowing them to focus on visual design without being distracted by readable content.",
+    "section2Title": "Why Use Placeholder Text?",
+    "section2Text": "Placeholder text serves several important purposes in design and development. It allows you to visualize how text will flow in a layout without waiting for real content. It prevents stakeholders from focusing on content wording instead of design decisions. It provides realistic text density for testing responsive layouts, typography, and spacing. And it is universally recognized by designers and developers as draft content.",
+    "section3Title": "Alternatives to Lorem Ipsum",
+    "section3Text": "While Lorem Ipsum is the most popular placeholder text, alternatives exist for specific needs. Hipster Ipsum uses trendy vocabulary, Bacon Ipsum uses meat-related words for humor, and Cupcake Ipsum uses dessert terminology. For more realistic testing, some teams prefer using actual draft content or content from similar projects. The key is choosing text that matches the approximate length and structure of the final content.",
+    "section4Title": "Common Use Cases",
+    "section4List": "Web design mockups and wireframes | Print layout design (brochures, magazines, books) | UI/UX prototyping and user testing | Email template design | Presentation and slide deck layouts | App development placeholder screens"
+  },
+  "ui": {
+    "howItWorksText": "Choose the type (paragraphs, sentences, or words) and quantity, then click Generate. The classic Lorem Ipsum text is used as the source, ensuring natural-looking Latin placeholder text.",
+    "type": "Type",
+    "paragraphs": "Paragraphs",
+    "sentences": "Sentences",
+    "words": "Words",
+    "quantity": "Quantity",
+    "generate": "Generate",
+    "copyText": "Copy Text",
+    "copyHtml": "Copy as HTML",
+    "startWithLorem": "Start with \"Lorem ipsum dolor sit amet...\"",
+    "outputLabel": "Generated Text",
+    "paragraphCount": "{count} paragraph(s)",
+    "sentenceCount": "{count} sentence(s)",
+    "wordCount": "{count} word(s)",
+    "statsWords": "{words} words",
+    "statsChars": "{chars} characters"
+  }
+}
