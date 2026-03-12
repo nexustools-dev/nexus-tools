@@ -30,6 +30,15 @@
     "md5Note": "MD5 — 128-bit, rápido pero no seguro",
     "sha1Note": "SHA-1 — 160-bit, deprecado para seguridad",
     "sha256Note": "SHA-256 — 256-bit, recomendado",
-    "sha512Note": "SHA-512 — 512-bit, el más fuerte"
+    "sha512Note": "SHA-512 — 512-bit, el más fuerte",
+    "hmacMode": "HMAC",
+    "hmacModeTitle": "Activar HMAC (Código de Autenticación de Mensajes basado en Hash)",
+    "hmacKey": "Clave Secreta",
+    "hmacKeyPlaceholder": "Ingresa tu clave secreta...",
+    "hmacHint": "HMAC usa una clave secreta para crear un hash autenticado — útil para verificar la integridad y autenticidad de los datos.",
+    "hmacMd5Note": "HMAC-MD5 — 128-bit, solo uso legacy",
+    "hmacSha1Note": "HMAC-SHA1 — 160-bit, amplio soporte",
+    "hmacSha256Note": "HMAC-SHA256 — 256-bit, recomendado para APIs",
+    "hmacSha512Note": "HMAC-SHA512 — 512-bit, máxima seguridad"
   }
 }
