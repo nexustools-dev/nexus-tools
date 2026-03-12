@@ -150,7 +150,9 @@ export default async function Home({ params }: Props) {
             {t("suggestText")}
           </p>
           <a
-            href="mailto:tools@toolnexus.dev?subject=Tool%20Suggestion"
+            href="https://github.com/nexustools-dev/nexus-tools/discussions/categories/ideas"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-sm font-medium transition-colors"
           >
             {t("suggestButton")}
