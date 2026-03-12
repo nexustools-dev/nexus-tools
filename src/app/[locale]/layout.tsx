@@ -63,6 +63,13 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <html lang={locale} className="dark">
+      <head>
+        <script
+          defer
+          src="https://analytics.toolnexus.dev/script.js"
+          data-website-id="e227f13c-29c5-4713-9c80-c397cc866525"
+        />
+      </head>
       <body
         className={`${inter.className} bg-zinc-950 text-zinc-100 min-h-screen`}
       >
