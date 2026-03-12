@@ -27,8 +27,11 @@ function fromBase64(text: string, variant: Variant): string {
   return new TextDecoder().decode(bytes);
 }
 
+const SAMPLE_TEXT = "Hello, World! This is a Base64 encoding example.";
+const SAMPLE_ENCODED = "SGVsbG8sIFdvcmxkISBUaGlzIGlzIGEgQmFzZTY0IGVuY29kaW5nIGV4YW1wbGUu";
+
 export function Base64Encoder() {
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState(SAMPLE_TEXT);
   const [mode, setMode] = useState<Mode>("encode");
   const [variant, setVariant] = useState<Variant>("standard");
   const [copied, setCopied] = useState(false);
@@ -72,8 +75,25 @@ export function Base64Encoder() {
   const inputSize = new TextEncoder().encode(input).length;
   const outputSize = output ? new TextEncoder().encode(output).length : 0;
 
+  const loadSample = () => {
+    if (mode === "encode") {
+      setInput(SAMPLE_TEXT);
+    } else {
+      setInput(SAMPLE_ENCODED);
+    }
+  };
+
   return (
     <div className="space-y-4">
+      {/* How it works */}
+      <div className="bg-zinc-900/50 border border-zinc-800 rounded-lg p-3">
+        <p className="text-xs text-zinc-400">
+          <span className="text-emerald-400 font-medium">How it works:</span>{" "}
+          <strong>Encode</strong> converts normal text into Base64 format (used in APIs, emails, and data URIs).{" "}
+          <strong>Decode</strong> converts Base64 back to readable text. Paste your text on the left and see the result on the right.
+        </p>
+      </div>
+
       {/* Controls */}
       <div className="flex flex-wrap items-center gap-3">
         <div className="flex gap-1 bg-zinc-900 rounded-lg p-1">
@@ -116,6 +136,12 @@ export function Base64Encoder() {
           className="px-4 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-sm font-medium transition-colors"
         >
           Clear
+        </button>
+        <button
+          onClick={loadSample}
+          className="px-4 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-sm font-medium transition-colors"
+        >
+          Sample
         </button>
 
         <div className="ml-auto flex items-center gap-2">

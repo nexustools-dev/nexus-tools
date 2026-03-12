@@ -92,35 +92,49 @@ export function JsonFormatter() {
 
   return (
     <div className="space-y-4">
+      {/* How it works */}
+      <div className="bg-zinc-900/50 border border-zinc-800 rounded-lg p-3">
+        <p className="text-xs text-zinc-400">
+          <span className="text-emerald-400 font-medium">How it works:</span>{" "}
+          Paste your JSON on the left &rarr; see the formatted result on the right.
+          Use the buttons to format, minify, or copy. The status indicator shows if your JSON is valid.
+        </p>
+      </div>
+
       {/* Toolbar */}
       <div className="flex flex-wrap items-center gap-3">
         <button
           onClick={format}
           className="px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-sm font-medium text-white transition-colors"
+          title="Beautify and indent the JSON"
         >
           Format
         </button>
         <button
           onClick={minify}
           className="px-4 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-sm font-medium transition-colors"
+          title="Remove all whitespace to make JSON smaller"
         >
           Minify
         </button>
         <button
           onClick={copyOutput}
           className="px-4 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-sm font-medium transition-colors"
+          title="Copy the formatted output to clipboard"
         >
           {copied ? "Copied!" : "Copy Output"}
         </button>
         <button
           onClick={clear}
           className="px-4 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-sm font-medium transition-colors"
+          title="Clear both input and output"
         >
           Clear
         </button>
         <button
           onClick={loadSample}
           className="px-4 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-sm font-medium transition-colors"
+          title="Load example JSON to see how it works"
         >
           Sample
         </button>
@@ -177,7 +191,7 @@ export function JsonFormatter() {
             onChange={(e) => setInput(e.target.value)}
             spellCheck={false}
             className="w-full h-96 bg-zinc-900 border border-zinc-800 rounded-lg p-4 font-mono text-sm resize-none focus:outline-none focus:border-emerald-500 placeholder-zinc-600"
-            placeholder="Paste your JSON here..."
+            placeholder='Paste your JSON here, e.g.: {"name": "John", "age": 30}'
           />
         </div>
         <div>

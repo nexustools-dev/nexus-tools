@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useCallback } from "react";
 
 type Unit = "px" | "rem" | "em" | "%" | "vh" | "vw";
 
@@ -73,6 +73,23 @@ export function CssUnitConverter() {
   const [viewportW, setViewportW] = useState(1920);
   const [viewportH, setViewportH] = useState(1080);
 
+  const [copiedUnit, setCopiedUnit] = useState<string | null>(null);
+
+  const copyValue = useCallback(async (cssValue: string, unit: string) => {
+    await navigator.clipboard.writeText(cssValue);
+    setCopiedUnit(unit);
+    setTimeout(() => setCopiedUnit(null), 1500);
+  }, []);
+
+  const unitHints: Record<Unit, string> = {
+    px: "Pixels — fixed size",
+    rem: "Root em — scales with browser settings",
+    em: "Em — scales with parent font",
+    "%": "Percentage — relative to parent",
+    vh: "Viewport height",
+    vw: "Viewport width",
+  };
+
   const numValue = parseFloat(value);
   const isValid = !isNaN(numValue);
 
@@ -96,6 +113,15 @@ export function CssUnitConverter() {
 
   return (
     <div className="space-y-6">
+      {/* How it works */}
+      <div className="bg-zinc-900/50 border border-zinc-800 rounded-lg p-3">
+        <p className="text-xs text-zinc-400">
+          <span className="text-emerald-400 font-medium">How it works:</span>{" "}
+          Enter a value and pick a unit &rarr; see all conversions instantly. Click any result to copy it.
+          Adjust settings below if your project uses a different base font size or viewport.
+        </p>
+      </div>
+
       {/* Input */}
       <div className="bg-zinc-900 border border-zinc-800 rounded-lg p-4 space-y-4">
         <div className="grid grid-cols-2 gap-4">
@@ -132,12 +158,15 @@ export function CssUnitConverter() {
 
       {/* Settings */}
       <div className="bg-zinc-900 border border-zinc-800 rounded-lg p-4">
-        <label className="block text-xs text-zinc-500 uppercase tracking-wide mb-3">
+        <label className="block text-xs text-zinc-500 uppercase tracking-wide mb-1">
           Settings
         </label>
+        <p className="text-xs text-zinc-600 mb-3">
+          These affect how rem, em, %, vh, and vw are calculated. Most projects use 16px as default.
+        </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div>
-            <label className="block text-xs text-zinc-600 mb-1">
+            <label className="block text-xs text-zinc-600 mb-1" title="The base font size set on <html>. Default in browsers is 16px. Used for rem calculations.">
               Root font (px)
             </label>
             <input
@@ -201,9 +230,7 @@ export function CssUnitConverter() {
               return (
                 <button
                   key={unit}
-                  onClick={async () => {
-                    await navigator.clipboard.writeText(cssValue);
-                  }}
+                  onClick={() => copyValue(cssValue, unit)}
                   className={`p-3 rounded-lg border text-left transition-colors hover:border-emerald-600 ${
                     isSource
                       ? "border-emerald-700 bg-emerald-900/20"
@@ -217,7 +244,11 @@ export function CssUnitConverter() {
                     {val}
                   </span>
                   <span className="block text-xs text-zinc-600 mt-1">
-                    Click to copy
+                    {copiedUnit === unit ? (
+                      <span className="text-emerald-400">Copied!</span>
+                    ) : (
+                      unitHints[unit]
+                    )}
                   </span>
                 </button>
               );

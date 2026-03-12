@@ -91,6 +91,13 @@ function hslToRgb(hsl: HSL): RGB {
   };
 }
 
+// Quick-pick palette
+const COLOR_PALETTE = [
+  "#ef4444", "#f97316", "#f59e0b", "#eab308", "#84cc16", "#22c55e", "#10b981", "#14b8a6",
+  "#06b6d4", "#0ea5e9", "#3b82f6", "#6366f1", "#8b5cf6", "#a855f7", "#d946ef", "#ec4899",
+  "#f43f5e", "#78716c", "#64748b", "#000000", "#ffffff", "#1e293b", "#374151", "#6b7280",
+];
+
 function CopyButton({ text }: { text: string }) {
   const [copied, setCopied] = useState(false);
   const copy = async () => {
@@ -143,20 +150,52 @@ export function ColorConverter() {
 
   return (
     <div className="space-y-6">
-      {/* Color preview + picker */}
-      <div className="flex items-stretch gap-4">
-        <div
-          className="w-32 h-32 rounded-xl border border-zinc-700 flex-shrink-0"
-          style={{ backgroundColor: hex }}
-        />
-        <div className="flex flex-col justify-center gap-3">
-          <input
-            type="color"
-            value={hex}
-            onChange={handlePickerChange}
-            className="w-16 h-10 rounded cursor-pointer bg-transparent border-0"
+      {/* How it works */}
+      <div className="bg-zinc-900/50 border border-zinc-800 rounded-lg p-3">
+        <p className="text-xs text-zinc-400">
+          <span className="text-emerald-400 font-medium">How it works:</span>{" "}
+          Pick a color from the palette, use the color picker, or adjust the sliders below.
+          All formats (HEX, RGB, HSL) update in real time. Click &quot;Copy&quot; to grab any value.
+        </p>
+      </div>
+
+      {/* Color preview + picker + palette */}
+      <div className="bg-zinc-900 border border-zinc-800 rounded-lg p-4 space-y-4">
+        <div className="flex items-stretch gap-4">
+          <div
+            className="w-28 h-28 rounded-xl border border-zinc-700 flex-shrink-0"
+            style={{ backgroundColor: hex }}
           />
-          <p className="text-xs text-zinc-500">Click to pick a color</p>
+          <div className="flex flex-col justify-center gap-2">
+            <input
+              type="color"
+              value={hex}
+              onChange={handlePickerChange}
+              className="w-14 h-10 rounded cursor-pointer bg-transparent border-0"
+            />
+            <p className="text-xs text-zinc-500">Color picker</p>
+          </div>
+        </div>
+        <div>
+          <p className="text-xs text-zinc-500 mb-2">Quick pick a color:</p>
+          <div className="grid grid-cols-12 gap-1">
+            {COLOR_PALETTE.map((color) => (
+              <button
+                key={color}
+                onClick={() => {
+                  const parsed = hexToRgb(color);
+                  if (parsed) setRgb(parsed);
+                }}
+                className={`aspect-square rounded-md border-2 transition-all hover:scale-110 ${
+                  hex.toLowerCase() === color.toLowerCase()
+                    ? "border-white scale-110"
+                    : "border-transparent"
+                }`}
+                style={{ backgroundColor: color }}
+                title={color}
+              />
+            ))}
+          </div>
         </div>
       </div>
 
@@ -164,7 +203,7 @@ export function ColorConverter() {
       <div className="bg-zinc-900 border border-zinc-800 rounded-lg p-4 space-y-3">
         <div className="flex items-center justify-between">
           <label className="text-xs text-zinc-500 uppercase tracking-wide">
-            HEX
+            HEX <span className="normal-case text-zinc-600 ml-1">— most common in CSS</span>
           </label>
           <CopyButton text={hexStr} />
         </div>
@@ -184,7 +223,7 @@ export function ColorConverter() {
       <div className="bg-zinc-900 border border-zinc-800 rounded-lg p-4 space-y-3">
         <div className="flex items-center justify-between">
           <label className="text-xs text-zinc-500 uppercase tracking-wide">
-            RGB
+            RGB <span className="normal-case text-zinc-600 ml-1">— Red, Green, Blue (0-255)</span>
           </label>
           <CopyButton text={rgbStr} />
         </div>
@@ -212,7 +251,7 @@ export function ColorConverter() {
       <div className="bg-zinc-900 border border-zinc-800 rounded-lg p-4 space-y-3">
         <div className="flex items-center justify-between">
           <label className="text-xs text-zinc-500 uppercase tracking-wide">
-            HSL
+            HSL <span className="normal-case text-zinc-600 ml-1">— Hue, Saturation, Lightness</span>
           </label>
           <CopyButton text={hslStr} />
         </div>

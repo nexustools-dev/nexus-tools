@@ -20,10 +20,10 @@ interface MetaData {
 }
 
 const DEFAULT: MetaData = {
-  title: "",
-  description: "",
-  url: "",
-  siteName: "",
+  title: "My Awesome Website — Build Something Great",
+  description: "A modern web application that helps developers build better products faster. Free tools, guides, and resources.",
+  url: "https://example.com",
+  siteName: "My Awesome Website",
   ogImage: "",
   ogType: "website",
   twitterCard: "summary_large_image",
@@ -256,6 +256,15 @@ export function MetaTagGenerator() {
 
   return (
     <div className="space-y-6">
+      {/* How it works */}
+      <div className="bg-zinc-900/50 border border-zinc-800 rounded-lg p-3">
+        <p className="text-xs text-zinc-400">
+          <span className="text-emerald-400 font-medium">How it works:</span>{" "}
+          Fill in your page details below &rarr; see live previews of how it will look on Google and social media
+          &rarr; copy the generated HTML and paste it in your website&apos;s &lt;head&gt; tag.
+        </p>
+      </div>
+
       {/* Tabs */}
       <div className="flex gap-1 bg-zinc-900 rounded-lg p-1">
         {tabs.map((tab) => (
@@ -281,30 +290,31 @@ export function MetaTagGenerator() {
               label="Title"
               value={data.title}
               onChange={(v) => update("title", v)}
-              placeholder="My Awesome Website"
+              placeholder="My Awesome Website — Build Something Great"
               maxLength={60}
-              hint="Recommended: 50-60 characters"
+              hint="This appears as the clickable headline in Google results. Keep it under 60 characters."
             />
             <Input
               label="Description"
               value={data.description}
               onChange={(v) => update("description", v)}
-              placeholder="A brief description of your page content..."
+              placeholder="A brief description of what your page is about..."
               maxLength={160}
-              hint="Recommended: 150-160 characters"
+              hint="This appears below the title in Google results. Keep it under 160 characters. Make it compelling!"
             />
             <Input
-              label="URL"
+              label="Page URL"
               value={data.url}
               onChange={(v) => update("url", v)}
               placeholder="https://example.com/page"
+              hint="The full URL of your page. Used in social media previews."
             />
             <Input
               label="Canonical URL"
               value={data.canonical}
               onChange={(v) => update("canonical", v)}
               placeholder="https://example.com/page"
-              hint="Use if this page has duplicate URLs"
+              hint="Only needed if your page is accessible from multiple URLs. Tells Google which one is the 'official' version."
             />
             <Select
               label="Robots"
@@ -326,14 +336,15 @@ export function MetaTagGenerator() {
               label="Site Name"
               value={data.siteName}
               onChange={(v) => update("siteName", v)}
-              placeholder="NexusTools"
+              placeholder="My Website"
+              hint="Your website or brand name. Shown on social media cards."
             />
             <Input
               label="OG Image URL"
               value={data.ogImage}
               onChange={(v) => update("ogImage", v)}
               placeholder="https://example.com/og-image.jpg"
-              hint="Recommended: 1200x630px"
+              hint="The image shown when your page is shared on social media. Recommended size: 1200x630 pixels."
             />
             <Select
               label="OG Type"
