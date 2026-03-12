@@ -1,7 +1,7 @@
 {
   "project": "nexus-tools",
-  "version": "1.2.0",
-  "phase": "Analytics live — monitoring traffic",
+  "version": "1.3.0",
+  "phase": "Hardened — security audit complete, ready for growth",
   "status": "stable",
   "last_updated": "2026-03-12",
   "updated_by": "NEXUS@PC-Principal",
@@ -45,7 +45,8 @@
       "json-formatter v2 (tree view, auto-repair, download, sort keys)",
       "schema markup (WebApplication + FAQPage on all 10 tools, WebSite on homepage)",
       "hash-generator HMAC support (MD5, SHA-1, SHA-256, SHA-512 with secret key)",
-      "umami analytics (self-hosted at analytics.toolnexus.dev, Docker on Mini PC)"
+      "umami analytics (self-hosted at analytics.toolnexus.dev, Docker on Mini PC)",
+      "security hardening (rate limiting, security headers, TLS 1.2+, server version hidden)"
     ],
     "in_progress": [],
     "pending": [
@@ -99,6 +100,34 @@
       "reason": "Plausible needs 2GB RAM (ClickHouse). Umami uses ~300MB (PostgreSQL). Both privacy-friendly, no cookies. Umami sufficient for our needs."
     }
   ],
+  "security": {
+    "last_audit": "2026-03-12",
+    "rate_limiting": {
+      "general": "10 req/s per IP, burst 20 (nginx limit_req)",
+      "analytics": "5 req/s per IP, burst 10",
+      "analytics_login": "5 req/s per IP, burst 3",
+      "status_code": 429
+    },
+    "headers": {
+      "X-Content-Type-Options": "nosniff",
+      "X-Frame-Options": "DENY",
+      "X-XSS-Protection": "1; mode=block",
+      "Referrer-Policy": "strict-origin-when-cross-origin",
+      "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+      "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+      "Content-Security-Policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' analytics.toolnexus.dev; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' analytics.toolnexus.dev"
+    },
+    "tls": "TLS 1.2 + TLS 1.3 only (1.0/1.1 disabled)",
+    "server_info_hidden": true,
+    "x_powered_by_hidden": true,
+    "mini_pc_exposure": "Not directly exposed — only via Tailscale VPN through VPS nginx proxy",
+    "vps_firewall": "UFW: only 22, 80, 443, 21115-21119 (RustDesk)",
+    "config_files": {
+      "security_headers": "/etc/nginx/conf.d/security.conf (VPS)",
+      "toolnexus_site": "/etc/nginx/sites-available/toolnexus (VPS)",
+      "analytics_site": "/etc/nginx/sites-available/analytics-toolnexus (VPS)"
+    }
+  },
   "metrics": {
     "tools_count": 10,
     "languages": 3,
