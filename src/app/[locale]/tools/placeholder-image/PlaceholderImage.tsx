@@ -69,9 +69,13 @@ export function PlaceholderImage() {
   const copyDataUrl = useCallback(async () => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    await navigator.clipboard.writeText(canvas.toDataURL("image/png"));
-    setCopiedField("dataurl");
-    setTimeout(() => setCopiedField(null), 2000);
+    try {
+      await navigator.clipboard.writeText(canvas.toDataURL("image/png"));
+      setCopiedField("dataurl");
+      setTimeout(() => setCopiedField(null), 2000);
+    } catch {
+      // Clipboard API not available (HTTP or iframe)
+    }
   }, []);
 
   return (

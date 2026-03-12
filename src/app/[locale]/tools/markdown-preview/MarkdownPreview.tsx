@@ -64,12 +64,23 @@ function escapeHtml(str: string): string {
     .replace(/"/g, "&quot;");
 }
 
+function isSafeUrl(url: string): boolean {
+  const decoded = url.replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"');
+  const trimmed = decoded.trim().toLowerCase();
+  if (trimmed.startsWith("javascript:") || trimmed.startsWith("vbscript:") || trimmed.startsWith("data:")) return false;
+  return true;
+}
+
 function parseInline(text: string): string {
   let result = escapeHtml(text);
-  // Images: ![alt](src)
-  result = result.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" class="max-w-full rounded" />');
-  // Links: [text](url)
-  result = result.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-blue-400 underline">$1</a>');
+  // Images: ![alt](src) — only safe URLs
+  result = result.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (_, alt, src) =>
+    isSafeUrl(src) ? `<img src="${src}" alt="${alt}" class="max-w-full rounded" />` : `<span class="text-red-400">[blocked image: unsafe URL]</span>`
+  );
+  // Links: [text](url) — only safe URLs
+  result = result.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, text, href) =>
+    isSafeUrl(href) ? `<a href="${href}" target="_blank" rel="noopener noreferrer" class="text-blue-400 underline">${text}</a>` : `<span class="text-red-400">${text} [blocked: unsafe URL]</span>`
+  );
   // Bold+Italic: ***text***
   result = result.replace(/\*\*\*(.+?)\*\*\*/g, "<strong><em>$1</em></strong>");
   // Bold: **text**

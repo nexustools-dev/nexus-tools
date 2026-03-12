@@ -29,6 +29,7 @@ const converters: Record<string, (words: string[]) => string> = {
   titleCase: (w) => w.map((s) => s[0].toUpperCase() + s.slice(1)).join(" "),
   sentenceCase: (w) => {
     const joined = w.join(" ");
+    if (!joined) return "";
     return joined[0].toUpperCase() + joined.slice(1);
   },
 };

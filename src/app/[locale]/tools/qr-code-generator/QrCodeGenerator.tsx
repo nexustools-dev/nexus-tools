@@ -38,7 +38,7 @@ export function QrCodeGenerator() {
     if (canvasRef.current) {
       QRCode.toCanvas(canvasRef.current, input, opts, (err) => {
         if (err) {
-          setError(input.length > 900 ? "tooLong" : "tooLong");
+          setError("tooLong");
         } else {
           setError(null);
         }
