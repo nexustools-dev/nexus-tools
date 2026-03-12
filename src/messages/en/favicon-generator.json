@@ -14,5 +14,26 @@
     "section3Title": "How to Add a Favicon to Your Website",
     "section3Text": "Place your favicon files in the root of your website and add the following tags inside the <head> section of your HTML:",
     "faviconCode": "<link rel=\"icon\" type=\"image/x-icon\" href=\"/favicon.ico\">\n<link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/favicon-32x32.png\">\n<link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/favicon-16x16.png\">\n<link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/apple-touch-icon.png\">\n<link rel=\"manifest\" href=\"/site.webmanifest\">"
+  },
+  "ui": {
+    "modeText": "Text",
+    "modeEmoji": "Emoji",
+    "modeImage": "Image",
+    "textLabel": "Text (1-3 characters)",
+    "emojiLabel": "Emoji",
+    "emojiHint": "Pick one below or paste any emoji from sites like emojipedia.org",
+    "browse": "Browse",
+    "uploadImage": "Upload Image",
+    "background": "Background",
+    "textColor": "Text Color",
+    "backgroundBehind": "Background (behind image)",
+    "transparentHint": "Visible with transparent images (PNG, SVG). For JPG/JPEG the image covers the entire background.",
+    "fontSize": "Font Size: {value}%",
+    "borderRadius": "Border Radius: {value}%",
+    "font": "Font",
+    "googleFonts": "Google Fonts",
+    "systemFonts": "System Fonts",
+    "preview": "Preview (256x256)",
+    "downloadAll": "Download All (ICO + PNG)"
   }
 }

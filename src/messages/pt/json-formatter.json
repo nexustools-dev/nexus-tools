@@ -13,5 +13,29 @@
     "section2Text": "Cole seu JSON bruto no campo de entrada e clique em Formatar. A ferramenta validará seu JSON instantaneamente, destacará erros de sintaxe com a linha e posição exata, e exibirá o resultado formatado com indentação correta. Você também pode minificar JSON para reduzir seu tamanho para produção.",
     "section3Title": "Funcionalidades",
     "section3List": "Formatar JSON com indentação de 2 espaços | Validar JSON com localização exata do erro | Minificar JSON para reduzir o tamanho do arquivo | Copiar saída formatada para a área de transferência | 100% no cliente — seus dados nunca saem do seu navegador"
+  },
+  "ui": {
+    "howItWorksText": "Cole seu JSON à esquerda → veja o resultado formatado à direita. Use os botões para formatar, minificar ou copiar. O indicador de status mostra se seu JSON é válido.",
+    "format": "Formatar",
+    "formatTitle": "Embelezar e indentar o JSON",
+    "minify": "Minificar",
+    "minifyTitle": "Remover espaços para reduzir o tamanho do JSON",
+    "copyOutput": "Copiar Saída",
+    "copyTitle": "Copiar a saída formatada para a área de transferência",
+    "clear": "Limpar",
+    "clearTitle": "Limpar entrada e saída",
+    "sample": "Exemplo",
+    "sampleTitle": "Carregar um JSON de exemplo para ver como funciona",
+    "indent": "Indentação:",
+    "spaces2": "2 espaços",
+    "spaces4": "4 espaços",
+    "tabs": "Tabulações",
+    "empty": "Vazio",
+    "validJson": "JSON Válido",
+    "invalidJson": "JSON Inválido",
+    "stats": "{chars} caracteres · {lines} linhas · {keys} chaves",
+    "input": "Entrada",
+    "output": "Saída",
+    "placeholder": "Cole seu JSON aqui, ex.: {\"nome\": \"João\", \"idade\": 30}"
   }
 }

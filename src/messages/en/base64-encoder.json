@@ -15,5 +15,28 @@
     "section3Text": "Standard Base64 uses + and / characters that have special meanings in URLs. URL-safe Base64 (also called Base64url) replaces + with - and / with _, making the output safe to use directly in URLs and filenames without percent-encoding. It is commonly used in JWT tokens and OAuth flows.",
     "section4Title": "Common Use Cases",
     "section4List": "Embedding images in HTML/CSS as data URIs | Encoding binary data in JSON APIs | Basic data obfuscation (not encryption) | JWT token payloads | Email attachments (MIME encoding) | Storing binary data in text-only formats"
+  },
+  "ui": {
+    "howItWorksText": "Encode converts normal text into Base64 format (used in APIs, emails, and data URIs). Decode converts Base64 back to readable text. Paste your text on the left and see the result on the right.",
+    "encode": "Encode",
+    "decode": "Decode",
+    "swap": "Swap",
+    "copyOutput": "Copy Output",
+    "clear": "Clear",
+    "sample": "Sample",
+    "variant": "Variant:",
+    "standard": "Standard",
+    "urlSafe": "URL-safe",
+    "invalidBase64": "Invalid Base64 string",
+    "encodingError": "Encoding error",
+    "inputBytes": "Input: {input} bytes",
+    "outputBytes": "Output: {output} bytes",
+    "sizePercent": "{percent}% size",
+    "textInput": "Text Input",
+    "base64Input": "Base64 Input",
+    "base64Output": "Base64 Output",
+    "textOutput": "Text Output",
+    "placeholderEncode": "Enter text to encode...",
+    "placeholderDecode": "Enter Base64 to decode..."
   }
 }

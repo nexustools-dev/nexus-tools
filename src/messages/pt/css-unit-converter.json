@@ -17,5 +17,25 @@
     "section4Text": "em é relativo ao tamanho de fonte do elemento atual (ou do pai mais próximo para propriedades que não são de fonte). É útil para escalonamento em nível de componente — por exemplo, definir padding em em significa que o espaçamento escala automaticamente se você alterar o tamanho de fonte do componente. No entanto, valores em se acumulam em elementos aninhados, tornando-os mais difíceis de gerenciar que rem em escala.",
     "section5Title": "Unidades de Viewport",
     "section5Text": "vw (viewport width) e vh (viewport height) são porcentagens do tamanho da janela do navegador. 100vw = largura total, 50vh = metade da altura da tela. São excelentes para seções em tela cheia, imagens hero e layouts que precisam preencher a tela. O CSS moderno também introduz svh, lvh e dvh para lidar com a altura dinâmica do viewport em navegadores móveis com maior precisão."
+  },
+  "ui": {
+    "howItWorksText": "Digite um valor e escolha uma unidade → veja todas as conversões instantaneamente. Clique em qualquer resultado para copiá-lo. Ajuste as configurações se seu projeto usa um tamanho de fonte base ou viewport diferente.",
+    "value": "Valor",
+    "unit": "Unidade",
+    "settings": "Configurações",
+    "settingsDesc": "Estes valores afetam como rem, em, %, vh e vw são calculados. A maioria dos projetos usa 16px como padrão.",
+    "rootFont": "Fonte raiz (px)",
+    "parentFont": "Fonte pai (px)",
+    "viewportW": "Viewport largura (px)",
+    "viewportH": "Viewport altura (px)",
+    "conversions": "Conversões",
+    "enterValid": "Digite um número válido acima",
+    "quickRef": "Referência Rápida (base: {base}px)",
+    "hintPx": "Pixels — tamanho fixo",
+    "hintRem": "Root em — escala com configurações do navegador",
+    "hintEm": "Em — escala com a fonte pai",
+    "hintPercent": "Porcentagem — relativo ao pai",
+    "hintVh": "Altura do viewport",
+    "hintVw": "Largura do viewport"
   }
 }

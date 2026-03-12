@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import { useTranslations } from "next-intl";
 
 type IndentType = "2" | "4" | "tab";
 
@@ -15,6 +16,8 @@ const SAMPLE_JSON = `{
 }`;
 
 export function JsonFormatter() {
+  const t = useTranslations("jsonFormatter.ui");
+  const tc = useTranslations("ui");
   const [input, setInput] = useState(SAMPLE_JSON);
   const [indent, setIndent] = useState<IndentType>("2");
   const [copied, setCopied] = useState(false);
@@ -95,9 +98,8 @@ export function JsonFormatter() {
       {/* How it works */}
       <div className="bg-zinc-900/50 border border-zinc-800 rounded-lg p-3">
         <p className="text-xs text-zinc-400">
-          <span className="text-emerald-400 font-medium">How it works:</span>{" "}
-          Paste your JSON on the left &rarr; see the formatted result on the right.
-          Use the buttons to format, minify, or copy. The status indicator shows if your JSON is valid.
+          <span className="text-emerald-400 font-medium">{tc("howItWorks")}</span>{" "}
+          {t("howItWorksText")}
         </p>
       </div>
 
@@ -106,49 +108,49 @@ export function JsonFormatter() {
         <button
           onClick={format}
           className="px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-sm font-medium text-white transition-colors"
-          title="Beautify and indent the JSON"
+          title={t("formatTitle")}
         >
-          Format
+          {t("format")}
         </button>
         <button
           onClick={minify}
           className="px-4 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-sm font-medium transition-colors"
-          title="Remove all whitespace to make JSON smaller"
+          title={t("minifyTitle")}
         >
-          Minify
+          {t("minify")}
         </button>
         <button
           onClick={copyOutput}
           className="px-4 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-sm font-medium transition-colors"
-          title="Copy the formatted output to clipboard"
+          title={t("copyTitle")}
         >
-          {copied ? "Copied!" : "Copy Output"}
+          {copied ? tc("copied") : t("copyOutput")}
         </button>
         <button
           onClick={clear}
           className="px-4 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-sm font-medium transition-colors"
-          title="Clear both input and output"
+          title={t("clearTitle")}
         >
-          Clear
+          {t("clear")}
         </button>
         <button
           onClick={loadSample}
           className="px-4 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-sm font-medium transition-colors"
-          title="Load example JSON to see how it works"
+          title={t("sampleTitle")}
         >
-          Sample
+          {t("sample")}
         </button>
 
         <div className="ml-auto flex items-center gap-2">
-          <label className="text-sm text-zinc-400">Indent:</label>
+          <label className="text-sm text-zinc-400">{t("indent")}</label>
           <select
             value={indent}
             onChange={(e) => setIndent(e.target.value as IndentType)}
             className="bg-zinc-800 border border-zinc-700 rounded-lg px-3 py-1.5 text-sm focus:outline-none focus:border-emerald-500"
           >
-            <option value="2">2 spaces</option>
-            <option value="4">4 spaces</option>
-            <option value="tab">Tabs</option>
+            <option value="2">{t("spaces2")}</option>
+            <option value="4">{t("spaces4")}</option>
+            <option value="tab">{t("tabs")}</option>
           </select>
         </div>
       </div>
@@ -169,12 +171,11 @@ export function JsonFormatter() {
               !input.trim() ? "bg-zinc-600" : valid ? "bg-emerald-400" : "bg-red-400"
             }`}
           />
-          {!input.trim() ? "Empty" : valid ? "Valid JSON" : "Invalid JSON"}
+          {!input.trim() ? t("empty") : valid ? t("validJson") : t("invalidJson")}
         </span>
         {stats && (
           <span className="text-zinc-500">
-            {stats.chars.toLocaleString()} chars &middot; {stats.lines} lines &middot;{" "}
-            {stats.keys} keys
+            {t("stats", { chars: stats.chars.toLocaleString(), lines: stats.lines, keys: stats.keys })}
           </span>
         )}
         {error && <span className="text-red-400 text-xs">{error}</span>}
@@ -184,19 +185,19 @@ export function JsonFormatter() {
       <div className="grid md:grid-cols-2 gap-4">
         <div>
           <label className="block text-xs text-zinc-500 mb-1 uppercase tracking-wide">
-            Input
+            {t("input")}
           </label>
           <textarea
             value={input}
             onChange={(e) => setInput(e.target.value)}
             spellCheck={false}
             className="w-full h-96 bg-zinc-900 border border-zinc-800 rounded-lg p-4 font-mono text-sm resize-none focus:outline-none focus:border-emerald-500 placeholder-zinc-600"
-            placeholder='Paste your JSON here, e.g.: {"name": "John", "age": 30}'
+            placeholder={t("placeholder")}
           />
         </div>
         <div>
           <label className="block text-xs text-zinc-500 mb-1 uppercase tracking-wide">
-            Output
+            {t("output")}
           </label>
           <textarea
             value={output || (error ? `Error: ${error}` : "")}

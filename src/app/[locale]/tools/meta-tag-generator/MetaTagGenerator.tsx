@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 interface MetaData {
   title: string;
@@ -188,7 +189,7 @@ function GooglePreview({ data }: { data: MetaData }) {
   );
 }
 
-function SocialPreview({ data }: { data: MetaData }) {
+function SocialPreview({ data, noImageText }: { data: MetaData; noImageText: string }) {
   const title = data.title || "Page Title";
   const desc = data.description || "Page description will appear here...";
   const domain = data.url
@@ -211,7 +212,7 @@ function SocialPreview({ data }: { data: MetaData }) {
         </div>
       ) : (
         <div className="w-full h-40 bg-zinc-800 flex items-center justify-center text-zinc-600 text-sm">
-          No image set
+          {noImageText}
         </div>
       )}
       <div className="p-3">
@@ -226,6 +227,8 @@ function SocialPreview({ data }: { data: MetaData }) {
 }
 
 export function MetaTagGenerator() {
+  const t = useTranslations("metaTagGenerator.ui");
+  const tc = useTranslations("ui");
   const [data, setData] = useState<MetaData>(DEFAULT);
   const [copied, setCopied] = useState(false);
   const [activeTab, setActiveTab] = useState<"basic" | "social" | "advanced">(
@@ -249,9 +252,9 @@ export function MetaTagGenerator() {
   };
 
   const tabs = [
-    { id: "basic" as const, label: "Basic SEO" },
-    { id: "social" as const, label: "Social Media" },
-    { id: "advanced" as const, label: "Advanced" },
+    { id: "basic" as const, label: t("tabBasicSeo") },
+    { id: "social" as const, label: t("tabSocialMedia") },
+    { id: "advanced" as const, label: t("tabAdvanced") },
   ];
 
   return (
@@ -259,9 +262,8 @@ export function MetaTagGenerator() {
       {/* How it works */}
       <div className="bg-zinc-900/50 border border-zinc-800 rounded-lg p-3">
         <p className="text-xs text-zinc-400">
-          <span className="text-emerald-400 font-medium">How it works:</span>{" "}
-          Fill in your page details below &rarr; see live previews of how it will look on Google and social media
-          &rarr; copy the generated HTML and paste it in your website&apos;s &lt;head&gt; tag.
+          <span className="text-emerald-400 font-medium">{tc("howItWorks")}</span>{" "}
+          {t("howItWorksText")}
         </p>
       </div>
 
@@ -287,44 +289,44 @@ export function MetaTagGenerator() {
         {activeTab === "basic" && (
           <>
             <Input
-              label="Title"
+              label={t("titleLabel")}
               value={data.title}
               onChange={(v) => update("title", v)}
-              placeholder="My Awesome Website — Build Something Great"
+              placeholder={t("titlePlaceholder")}
               maxLength={60}
-              hint="This appears as the clickable headline in Google results. Keep it under 60 characters."
+              hint={t("titleHint")}
             />
             <Input
-              label="Description"
+              label={t("descriptionLabel")}
               value={data.description}
               onChange={(v) => update("description", v)}
-              placeholder="A brief description of what your page is about..."
+              placeholder={t("descriptionPlaceholder")}
               maxLength={160}
-              hint="This appears below the title in Google results. Keep it under 160 characters. Make it compelling!"
+              hint={t("descriptionHint")}
             />
             <Input
-              label="Page URL"
+              label={t("pageUrl")}
               value={data.url}
               onChange={(v) => update("url", v)}
               placeholder="https://example.com/page"
-              hint="The full URL of your page. Used in social media previews."
+              hint={t("pageUrlHint")}
             />
             <Input
-              label="Canonical URL"
+              label={t("canonicalUrl")}
               value={data.canonical}
               onChange={(v) => update("canonical", v)}
               placeholder="https://example.com/page"
-              hint="Only needed if your page is accessible from multiple URLs. Tells Google which one is the 'official' version."
+              hint={t("canonicalUrlHint")}
             />
             <Select
-              label="Robots"
+              label={t("robots")}
               value={data.robots}
               onChange={(v) => update("robots", v)}
               options={[
-                { value: "index, follow", label: "Index, Follow (default)" },
-                { value: "noindex, follow", label: "No Index, Follow" },
-                { value: "index, nofollow", label: "Index, No Follow" },
-                { value: "noindex, nofollow", label: "No Index, No Follow" },
+                { value: "index, follow", label: t("robotsIndex") },
+                { value: "noindex, follow", label: t("robotsNoindex") },
+                { value: "index, nofollow", label: t("robotsNofollow") },
+                { value: "noindex, nofollow", label: t("robotsNone") },
               ]}
             />
           </>
@@ -333,41 +335,41 @@ export function MetaTagGenerator() {
         {activeTab === "social" && (
           <>
             <Input
-              label="Site Name"
+              label={t("siteName")}
               value={data.siteName}
               onChange={(v) => update("siteName", v)}
-              placeholder="My Website"
-              hint="Your website or brand name. Shown on social media cards."
+              placeholder={t("siteNamePlaceholder")}
+              hint={t("siteNameHint")}
             />
             <Input
-              label="OG Image URL"
+              label={t("ogImageUrl")}
               value={data.ogImage}
               onChange={(v) => update("ogImage", v)}
               placeholder="https://example.com/og-image.jpg"
-              hint="The image shown when your page is shared on social media. Recommended size: 1200x630 pixels."
+              hint={t("ogImageHint")}
             />
             <Select
-              label="OG Type"
+              label={t("ogType")}
               value={data.ogType}
               onChange={(v) => update("ogType", v)}
               options={[
-                { value: "website", label: "Website" },
-                { value: "article", label: "Article" },
-                { value: "product", label: "Product" },
-                { value: "profile", label: "Profile" },
+                { value: "website", label: t("ogTypeWebsite") },
+                { value: "article", label: t("ogTypeArticle") },
+                { value: "product", label: t("ogTypeProduct") },
+                { value: "profile", label: t("ogTypeProfile") },
               ]}
             />
             <Select
-              label="Twitter Card"
+              label={t("twitterCard")}
               value={data.twitterCard}
               onChange={(v) => update("twitterCard", v)}
               options={[
-                { value: "summary_large_image", label: "Summary Large Image" },
-                { value: "summary", label: "Summary" },
+                { value: "summary_large_image", label: t("twitterCardLarge") },
+                { value: "summary", label: t("twitterCardSummary") },
               ]}
             />
             <Input
-              label="Twitter @username"
+              label={t("twitterUsername")}
               value={data.twitterSite}
               onChange={(v) => update("twitterSite", v)}
               placeholder="@username"
@@ -378,37 +380,37 @@ export function MetaTagGenerator() {
         {activeTab === "advanced" && (
           <>
             <Input
-              label="Author"
+              label={t("author")}
               value={data.author}
               onChange={(v) => update("author", v)}
               placeholder="John Doe"
             />
             <Select
-              label="Language"
+              label={t("language")}
               value={data.language}
               onChange={(v) => update("language", v)}
               options={[
-                { value: "en", label: "English" },
-                { value: "es", label: "Spanish" },
-                { value: "fr", label: "French" },
-                { value: "de", label: "German" },
-                { value: "pt", label: "Portuguese" },
-                { value: "ja", label: "Japanese" },
-                { value: "zh", label: "Chinese" },
-                { value: "ko", label: "Korean" },
+                { value: "en", label: t("langEn") },
+                { value: "es", label: t("langEs") },
+                { value: "fr", label: t("langFr") },
+                { value: "de", label: t("langDe") },
+                { value: "pt", label: t("langPt") },
+                { value: "ja", label: t("langJa") },
+                { value: "zh", label: t("langZh") },
+                { value: "ko", label: t("langKo") },
               ]}
             />
             <Select
-              label="Charset"
+              label={t("charset")}
               value={data.charset}
               onChange={(v) => update("charset", v)}
               options={[
-                { value: "UTF-8", label: "UTF-8 (recommended)" },
-                { value: "ISO-8859-1", label: "ISO-8859-1" },
+                { value: "UTF-8", label: t("charsetUtf8") },
+                { value: "ISO-8859-1", label: t("charsetIso") },
               ]}
             />
             <Input
-              label="Viewport"
+              label={t("viewport")}
               value={data.viewport}
               onChange={(v) => update("viewport", v)}
               placeholder="width=device-width, initial-scale=1"
@@ -419,31 +421,31 @@ export function MetaTagGenerator() {
 
       {/* Previews */}
       <div className="space-y-4">
-        <h3 className="text-sm font-medium text-zinc-300">Google Preview</h3>
+        <h3 className="text-sm font-medium text-zinc-300">{t("googlePreview")}</h3>
         <GooglePreview data={data} />
 
-        <h3 className="text-sm font-medium text-zinc-300">Social Media Preview</h3>
-        <SocialPreview data={data} />
+        <h3 className="text-sm font-medium text-zinc-300">{t("socialPreview")}</h3>
+        <SocialPreview data={data} noImageText={t("noImage")} />
       </div>
 
       {/* Output */}
       <div>
         <div className="flex items-center justify-between mb-2">
           <label className="block text-xs text-zinc-500 uppercase tracking-wide">
-            Generated HTML
+            {t("generatedHtml")}
           </label>
           <div className="flex gap-2">
             <button
               onClick={reset}
               className="px-3 py-1.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-sm font-medium transition-colors"
             >
-              Reset
+              {t("reset")}
             </button>
             <button
               onClick={copyOutput}
               className="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-sm font-medium text-white transition-colors"
             >
-              {copied ? "Copied!" : "Copy HTML"}
+              {copied ? tc("copied") : t("copyHtml")}
             </button>
           </div>
         </div>

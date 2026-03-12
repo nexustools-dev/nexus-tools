@@ -13,5 +13,29 @@
     "section2Text": "Pega tu JSON crudo en el campo de entrada y haz clic en Formatear. La herramienta validará tu JSON al instante, resaltará cualquier error de sintaxis con la línea y posición exactas, y mostrará el resultado formateado con sangría correcta. También puedes minificar el JSON para reducir su tamaño en producción.",
     "section3Title": "Características",
     "section3List": "Formatea JSON con sangría de 2 espacios | Valida JSON con ubicación exacta del error | Minifica JSON para reducir el tamaño del archivo | Copia el resultado al portapapeles | 100% del lado del cliente — tus datos nunca salen de tu navegador"
+  },
+  "ui": {
+    "howItWorksText": "Pega tu JSON a la izquierda → ve el resultado formateado a la derecha. Usa los botones para formatear, minificar o copiar. El indicador de estado muestra si tu JSON es válido.",
+    "format": "Formatear",
+    "formatTitle": "Embellecer e indentar el JSON",
+    "minify": "Minificar",
+    "minifyTitle": "Eliminar espacios para reducir el tamaño del JSON",
+    "copyOutput": "Copiar Salida",
+    "copyTitle": "Copiar la salida formateada al portapapeles",
+    "clear": "Limpiar",
+    "clearTitle": "Limpiar entrada y salida",
+    "sample": "Ejemplo",
+    "sampleTitle": "Cargar un JSON de ejemplo para ver cómo funciona",
+    "indent": "Sangría:",
+    "spaces2": "2 espacios",
+    "spaces4": "4 espacios",
+    "tabs": "Tabulaciones",
+    "empty": "Vacío",
+    "validJson": "JSON Válido",
+    "invalidJson": "JSON Inválido",
+    "stats": "{chars} caracteres · {lines} líneas · {keys} claves",
+    "input": "Entrada",
+    "output": "Salida",
+    "placeholder": "Pega tu JSON aquí, ej.: {\"nombre\": \"Juan\", \"edad\": 30}"
   }
 }

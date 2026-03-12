@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useCallback, useEffect } from "react";
+import { useTranslations } from "next-intl";
 
 type Mode = "text" | "emoji" | "image";
 
@@ -123,6 +124,7 @@ function ColorPalette({
 }
 
 export function FaviconGenerator() {
+  const t = useTranslations("faviconGenerator.ui");
   const [mode, setMode] = useState<Mode>("text");
   const [text, setText] = useState("A");
   const [emoji, setEmoji] = useState("\u{1F680}");
@@ -305,6 +307,12 @@ export function FaviconGenerator() {
     }
   };
 
+  const modeLabels: Record<Mode, string> = {
+    text: t("modeText"),
+    emoji: t("modeEmoji"),
+    image: t("modeImage"),
+  };
+
   return (
     <div className="grid md:grid-cols-2 gap-8">
       {/* Controls */}
@@ -321,7 +329,7 @@ export function FaviconGenerator() {
                   : "bg-zinc-800 text-zinc-400 hover:text-zinc-200"
               }`}
             >
-              {m.charAt(0).toUpperCase() + m.slice(1)}
+              {modeLabels[m]}
             </button>
           ))}
         </div>
@@ -329,7 +337,7 @@ export function FaviconGenerator() {
         {/* Text input */}
         {mode === "text" && (
           <div>
-            <label className="block text-sm text-zinc-400 mb-1">Text (1-3 characters)</label>
+            <label className="block text-sm text-zinc-400 mb-1">{t("textLabel")}</label>
             <input
               type="text"
               value={text}
@@ -343,9 +351,9 @@ export function FaviconGenerator() {
         {/* Emoji input + picker */}
         {mode === "emoji" && (
           <div>
-            <label className="block text-sm text-zinc-400 mb-1">Emoji</label>
+            <label className="block text-sm text-zinc-400 mb-1">{t("emojiLabel")}</label>
             <p className="text-xs text-zinc-500 mb-2">
-              Pick one below or paste any emoji from sites like emojipedia.org
+              {t("emojiHint")}
             </p>
             <div className="flex gap-2">
               <input
@@ -362,7 +370,7 @@ export function FaviconGenerator() {
                     : "bg-zinc-800 hover:bg-zinc-700 text-zinc-400"
                 }`}
               >
-                Browse
+                {t("browse")}
               </button>
             </div>
             {showEmojiPicker && (
@@ -389,7 +397,7 @@ export function FaviconGenerator() {
         {/* Image upload */}
         {mode === "image" && (
           <div>
-            <label className="block text-sm text-zinc-400 mb-1">Upload Image</label>
+            <label className="block text-sm text-zinc-400 mb-1">{t("uploadImage")}</label>
             <input
               ref={fileInputRef}
               type="file"
@@ -403,17 +411,17 @@ export function FaviconGenerator() {
         {/* Colors */}
         {mode !== "image" && (
           <div className="space-y-4">
-            <ColorPalette label="Background" value={bgColor} onChange={setBgColor} />
+            <ColorPalette label={t("background")} value={bgColor} onChange={setBgColor} />
             {mode === "text" && (
-              <ColorPalette label="Text Color" value={textColor} onChange={setTextColor} />
+              <ColorPalette label={t("textColor")} value={textColor} onChange={setTextColor} />
             )}
           </div>
         )}
         {mode === "image" && (
           <div className="space-y-4">
-            <ColorPalette label="Background (behind image)" value={bgColor} onChange={setBgColor} />
+            <ColorPalette label={t("backgroundBehind")} value={bgColor} onChange={setBgColor} />
             <p className="text-xs text-zinc-500">
-              Visible with transparent images (PNG, SVG). For JPG/JPEG the image covers the entire background.
+              {t("transparentHint")}
             </p>
           </div>
         )}
@@ -422,7 +430,7 @@ export function FaviconGenerator() {
         {mode !== "image" && (
           <div>
             <label className="block text-sm text-zinc-400 mb-1">
-              Font Size: {fontSize}%
+              {t("fontSize", { value: fontSize })}
             </label>
             <input
               type="range"
@@ -438,7 +446,7 @@ export function FaviconGenerator() {
         {/* Border radius */}
         <div>
           <label className="block text-sm text-zinc-400 mb-1">
-            Border Radius: {borderRadius}%
+            {t("borderRadius", { value: borderRadius })}
           </label>
           <input
             type="range"
@@ -453,20 +461,20 @@ export function FaviconGenerator() {
         {/* Font family */}
         {mode === "text" && (
           <div>
-            <label className="block text-sm text-zinc-400 mb-1">Font</label>
+            <label className="block text-sm text-zinc-400 mb-1">{t("font")}</label>
             <select
               value={isGoogleFont ? fontFamily : fontFamily}
               onChange={(e) => handleFontChange(e.target.value)}
               className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-emerald-500"
             >
-              <optgroup label="Google Fonts">
+              <optgroup label={t("googleFonts")}>
                 {GOOGLE_FONTS.map((f) => (
                   <option key={f.value} value={f.value}>
                     {f.name}
                   </option>
                 ))}
               </optgroup>
-              <optgroup label="System Fonts">
+              <optgroup label={t("systemFonts")}>
                 {SYSTEM_FONTS.map((f) => (
                   <option key={f.value} value={f.value}>
                     {f.name}
@@ -490,7 +498,7 @@ export function FaviconGenerator() {
               style={{ width: 192, height: 192 }}
             />
           </div>
-          <p className="text-xs text-zinc-500 mt-2">Preview (256x256)</p>
+          <p className="text-xs text-zinc-500 mt-2">{t("preview")}</p>
         </div>
 
         {/* Size previews */}
@@ -516,7 +524,7 @@ export function FaviconGenerator() {
             onClick={downloadAll}
             className="w-full py-3 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-semibold transition-colors"
           >
-            Download All (ICO + PNG)
+            {t("downloadAll")}
           </button>
           <div className="grid grid-cols-2 gap-2">
             <button

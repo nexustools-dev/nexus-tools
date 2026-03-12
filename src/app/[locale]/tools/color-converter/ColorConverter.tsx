@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import { useTranslations } from "next-intl";
 
 interface RGB {
   r: number;
@@ -132,7 +133,7 @@ function parseAnyColor(input: string): RGB | null {
   return null;
 }
 
-function CopyButton({ text }: { text: string }) {
+function CopyButton({ text, copiedLabel, copyLabel }: { text: string; copiedLabel: string; copyLabel: string }) {
   const [copied, setCopied] = useState(false);
   const copy = async () => {
     await navigator.clipboard.writeText(text);
@@ -144,12 +145,14 @@ function CopyButton({ text }: { text: string }) {
       onClick={copy}
       className="px-2 py-1 rounded text-xs bg-zinc-800 hover:bg-zinc-700 transition-colors"
     >
-      {copied ? "Copied!" : "Copy"}
+      {copied ? copiedLabel : copyLabel}
     </button>
   );
 }
 
 export function ColorConverter() {
+  const t = useTranslations("colorConverter.ui");
+  const tc = useTranslations("ui");
   const [rgb, setRgb] = useState<RGB>({ r: 59, g: 130, b: 246 });
 
   const hex = rgbToHex(rgb);
@@ -182,14 +185,19 @@ export function ColorConverter() {
     if (parsed) setRgb(parsed);
   }, []);
 
+  const hslLabels: Record<string, string> = {
+    h: t("hue"),
+    s: t("saturation"),
+    l: t("lightness"),
+  };
+
   return (
     <div className="space-y-6">
       {/* How it works */}
       <div className="bg-zinc-900/50 border border-zinc-800 rounded-lg p-3">
         <p className="text-xs text-zinc-400">
-          <span className="text-emerald-400 font-medium">How it works:</span>{" "}
-          Pick a color from the palette, use the color picker, or <strong>paste any color value</strong> (HEX, RGB, or HSL)
-          into any text field. All formats update in real time. Click &quot;Copy&quot; to grab any value.
+          <span className="text-emerald-400 font-medium">{tc("howItWorks")}</span>{" "}
+          {t("howItWorksText")}
         </p>
       </div>
 
@@ -207,11 +215,11 @@ export function ColorConverter() {
               onChange={handlePickerChange}
               className="w-14 h-10 rounded cursor-pointer bg-transparent border-0"
             />
-            <p className="text-xs text-zinc-500">Color picker</p>
+            <p className="text-xs text-zinc-500">{t("colorPicker")}</p>
           </div>
         </div>
         <div>
-          <p className="text-xs text-zinc-500 mb-2">Quick pick a color:</p>
+          <p className="text-xs text-zinc-500 mb-2">{t("quickPick")}</p>
           <div className="grid grid-cols-12 gap-1">
             {COLOR_PALETTE.map((color) => (
               <button
@@ -237,9 +245,9 @@ export function ColorConverter() {
       <div className="bg-zinc-900 border border-zinc-800 rounded-lg p-4 space-y-3">
         <div className="flex items-center justify-between">
           <label className="text-xs text-zinc-500 uppercase tracking-wide">
-            HEX <span className="normal-case text-zinc-600 ml-1">— most common in CSS</span>
+            HEX <span className="normal-case text-zinc-600 ml-1">&mdash; {t("hexDesc")}</span>
           </label>
-          <CopyButton text={hexStr} />
+          <CopyButton text={hexStr} copiedLabel={tc("copied")} copyLabel={tc("copy")} />
         </div>
         <input
           type="text"
@@ -257,9 +265,9 @@ export function ColorConverter() {
       <div className="bg-zinc-900 border border-zinc-800 rounded-lg p-4 space-y-3">
         <div className="flex items-center justify-between">
           <label className="text-xs text-zinc-500 uppercase tracking-wide">
-            RGB <span className="normal-case text-zinc-600 ml-1">— Red, Green, Blue (0-255)</span>
+            RGB <span className="normal-case text-zinc-600 ml-1">&mdash; {t("rgbDesc")}</span>
           </label>
-          <CopyButton text={rgbStr} />
+          <CopyButton text={rgbStr} copiedLabel={tc("copied")} copyLabel={tc("copy")} />
         </div>
         <div className="grid grid-cols-3 gap-3">
           {(["r", "g", "b"] as const).map((ch) => (
@@ -292,7 +300,7 @@ export function ColorConverter() {
               if (parsed) setRgb(parsed);
             }
           }}
-          placeholder="Paste: rgb(59, 130, 246) or 59, 130, 246"
+          placeholder={t("placeholderRgb")}
           className="w-full bg-zinc-950 border border-zinc-700 rounded-lg px-3 py-2 font-mono text-sm focus:outline-none focus:border-emerald-500"
         />
       </div>
@@ -301,19 +309,18 @@ export function ColorConverter() {
       <div className="bg-zinc-900 border border-zinc-800 rounded-lg p-4 space-y-3">
         <div className="flex items-center justify-between">
           <label className="text-xs text-zinc-500 uppercase tracking-wide">
-            HSL <span className="normal-case text-zinc-600 ml-1">— Hue, Saturation, Lightness</span>
+            HSL <span className="normal-case text-zinc-600 ml-1">&mdash; {t("hslDesc")}</span>
           </label>
-          <CopyButton text={hslStr} />
+          <CopyButton text={hslStr} copiedLabel={tc("copied")} copyLabel={tc("copy")} />
         </div>
         <div className="grid grid-cols-3 gap-3">
           {(["h", "s", "l"] as const).map((ch) => {
             const max = ch === "h" ? 360 : 100;
-            const unit = ch === "h" ? "°" : "%";
-            const labels = { h: "Hue", s: "Saturation", l: "Lightness" };
+            const unit = ch === "h" ? "\u00b0" : "%";
             return (
               <div key={ch}>
                 <label className="block text-xs text-zinc-600 mb-1">
-                  {labels[ch]} ({hsl[ch]}{unit})
+                  {hslLabels[ch]} ({hsl[ch]}{unit})
                 </label>
                 <input
                   type="range"
@@ -341,7 +348,7 @@ export function ColorConverter() {
               if (parsed) setRgb(parsed);
             }
           }}
-          placeholder="Paste: hsl(217, 91%, 60%) or 217, 91, 60"
+          placeholder={t("placeholderHsl")}
           className="w-full bg-zinc-950 border border-zinc-700 rounded-lg px-3 py-2 font-mono text-sm focus:outline-none focus:border-emerald-500"
         />
       </div>
@@ -349,7 +356,7 @@ export function ColorConverter() {
       {/* CSS output */}
       <div className="bg-zinc-900 border border-zinc-800 rounded-lg p-4">
         <label className="block text-xs text-zinc-500 uppercase tracking-wide mb-2">
-          CSS Values
+          {t("cssValues")}
         </label>
         <div className="font-mono text-sm space-y-1">
           <p className="text-zinc-300">

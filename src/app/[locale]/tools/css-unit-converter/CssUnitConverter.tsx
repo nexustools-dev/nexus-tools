@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo, useCallback } from "react";
+import { useTranslations } from "next-intl";
 
 type Unit = "px" | "rem" | "em" | "%" | "vh" | "vw";
 
@@ -66,6 +67,8 @@ function formatValue(n: number): string {
 }
 
 export function CssUnitConverter() {
+  const t = useTranslations("cssUnitConverter.ui");
+  const tc = useTranslations("ui");
   const [value, setValue] = useState("16");
   const [fromUnit, setFromUnit] = useState<Unit>("px");
   const [baseFontSize, setBaseFontSize] = useState(16);
@@ -81,13 +84,13 @@ export function CssUnitConverter() {
     setTimeout(() => setCopiedUnit(null), 1500);
   }, []);
 
-  const unitHints: Record<Unit, string> = {
-    px: "Pixels — fixed size",
-    rem: "Root em — scales with browser settings",
-    em: "Em — scales with parent font",
-    "%": "Percentage — relative to parent",
-    vh: "Viewport height",
-    vw: "Viewport width",
+  const unitHintKeys: Record<Unit, string> = {
+    px: "hintPx",
+    rem: "hintRem",
+    em: "hintEm",
+    "%": "hintPercent",
+    vh: "hintVh",
+    vw: "hintVw",
   };
 
   const numValue = parseFloat(value);
@@ -116,9 +119,8 @@ export function CssUnitConverter() {
       {/* How it works */}
       <div className="bg-zinc-900/50 border border-zinc-800 rounded-lg p-3">
         <p className="text-xs text-zinc-400">
-          <span className="text-emerald-400 font-medium">How it works:</span>{" "}
-          Enter a value and pick a unit &rarr; see all conversions instantly. Click any result to copy it.
-          Adjust settings below if your project uses a different base font size or viewport.
+          <span className="text-emerald-400 font-medium">{tc("howItWorks")}</span>{" "}
+          {t("howItWorksText")}
         </p>
       </div>
 
@@ -127,7 +129,7 @@ export function CssUnitConverter() {
         <div className="grid grid-cols-2 gap-4">
           <div>
             <label className="block text-xs text-zinc-500 uppercase tracking-wide mb-1">
-              Value
+              {t("value")}
             </label>
             <input
               type="number"
@@ -139,7 +141,7 @@ export function CssUnitConverter() {
           </div>
           <div>
             <label className="block text-xs text-zinc-500 uppercase tracking-wide mb-1">
-              Unit
+              {t("unit")}
             </label>
             <select
               value={fromUnit}
@@ -159,15 +161,15 @@ export function CssUnitConverter() {
       {/* Settings */}
       <div className="bg-zinc-900 border border-zinc-800 rounded-lg p-4">
         <label className="block text-xs text-zinc-500 uppercase tracking-wide mb-1">
-          Settings
+          {t("settings")}
         </label>
         <p className="text-xs text-zinc-600 mb-3">
-          These affect how rem, em, %, vh, and vw are calculated. Most projects use 16px as default.
+          {t("settingsDesc")}
         </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div>
-            <label className="block text-xs text-zinc-600 mb-1" title="The base font size set on <html>. Default in browsers is 16px. Used for rem calculations.">
-              Root font (px)
+            <label className="block text-xs text-zinc-600 mb-1">
+              {t("rootFont")}
             </label>
             <input
               type="number"
@@ -179,7 +181,7 @@ export function CssUnitConverter() {
           </div>
           <div>
             <label className="block text-xs text-zinc-600 mb-1">
-              Parent font (px)
+              {t("parentFont")}
             </label>
             <input
               type="number"
@@ -191,7 +193,7 @@ export function CssUnitConverter() {
           </div>
           <div>
             <label className="block text-xs text-zinc-600 mb-1">
-              Viewport W (px)
+              {t("viewportW")}
             </label>
             <input
               type="number"
@@ -203,7 +205,7 @@ export function CssUnitConverter() {
           </div>
           <div>
             <label className="block text-xs text-zinc-600 mb-1">
-              Viewport H (px)
+              {t("viewportH")}
             </label>
             <input
               type="number"
@@ -219,7 +221,7 @@ export function CssUnitConverter() {
       {/* Results */}
       <div className="bg-zinc-900 border border-zinc-800 rounded-lg p-4">
         <label className="block text-xs text-zinc-500 uppercase tracking-wide mb-3">
-          Conversions
+          {t("conversions")}
         </label>
         {results ? (
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
@@ -245,9 +247,9 @@ export function CssUnitConverter() {
                   </span>
                   <span className="block text-xs text-zinc-600 mt-1">
                     {copiedUnit === unit ? (
-                      <span className="text-emerald-400">Copied!</span>
+                      <span className="text-emerald-400">{tc("copied")}</span>
                     ) : (
-                      unitHints[unit]
+                      t(unitHintKeys[unit])
                     )}
                   </span>
                 </button>
@@ -255,14 +257,14 @@ export function CssUnitConverter() {
             })}
           </div>
         ) : (
-          <p className="text-sm text-zinc-500">Enter a valid number above</p>
+          <p className="text-sm text-zinc-500">{t("enterValid")}</p>
         )}
       </div>
 
       {/* Quick reference */}
       <div className="bg-zinc-900 border border-zinc-800 rounded-lg p-4">
         <label className="block text-xs text-zinc-500 uppercase tracking-wide mb-3">
-          Quick Reference (base: {baseFontSize}px)
+          {t("quickRef", { base: baseFontSize })}
         </label>
         <div className="grid grid-cols-4 md:grid-cols-8 gap-2 text-center">
           {[8, 10, 12, 14, 16, 18, 20, 24, 28, 32, 36, 40, 48, 56, 64, 72].map(

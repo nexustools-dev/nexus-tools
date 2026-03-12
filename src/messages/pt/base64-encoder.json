@@ -15,5 +15,28 @@
     "section3Text": "O Base64 padrão usa os caracteres + e / que têm significados especiais em URLs. O Base64 seguro para URL (também chamado Base64url) substitui + por - e / por _, tornando a saída segura para usar diretamente em URLs e nomes de arquivo sem codificação percentual. É comumente usado em tokens JWT e fluxos OAuth.",
     "section4Title": "Casos de Uso Comuns",
     "section4List": "Incorporar imagens em HTML/CSS como data URIs | Codificar dados binários em APIs JSON | Ofuscação básica de dados (não é criptografia) | Payloads de tokens JWT | Anexos de e-mail (codificação MIME) | Armazenar dados binários em formatos somente texto"
+  },
+  "ui": {
+    "howItWorksText": "Codificar converte texto normal para formato Base64 (usado em APIs, e-mails e data URIs). Decodificar converte Base64 de volta para texto legível. Cole seu texto à esquerda e veja o resultado à direita.",
+    "encode": "Codificar",
+    "decode": "Decodificar",
+    "swap": "Inverter",
+    "copyOutput": "Copiar Saída",
+    "clear": "Limpar",
+    "sample": "Exemplo",
+    "variant": "Variante:",
+    "standard": "Padrão",
+    "urlSafe": "URL-safe",
+    "invalidBase64": "String Base64 inválida",
+    "encodingError": "Erro de codificação",
+    "inputBytes": "Entrada: {input} bytes",
+    "outputBytes": "Saída: {output} bytes",
+    "sizePercent": "{percent}% do tamanho",
+    "textInput": "Entrada de Texto",
+    "base64Input": "Entrada Base64",
+    "base64Output": "Saída Base64",
+    "textOutput": "Saída de Texto",
+    "placeholderEncode": "Digite texto para codificar...",
+    "placeholderDecode": "Digite Base64 para decodificar..."
   }
 }

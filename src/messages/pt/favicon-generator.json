@@ -14,5 +14,26 @@
     "section3Title": "Como Adicionar um Favicon ao Seu Site",
     "section3Text": "Coloque os arquivos de favicon na raiz do seu site e adicione as seguintes tags dentro da seção <head> do seu HTML:",
     "faviconCode": "<link rel=\"icon\" type=\"image/x-icon\" href=\"/favicon.ico\">\n<link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/favicon-32x32.png\">\n<link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/favicon-16x16.png\">\n<link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/apple-touch-icon.png\">\n<link rel=\"manifest\" href=\"/site.webmanifest\">"
+  },
+  "ui": {
+    "modeText": "Texto",
+    "modeEmoji": "Emoji",
+    "modeImage": "Imagem",
+    "textLabel": "Texto (1-3 caracteres)",
+    "emojiLabel": "Emoji",
+    "emojiHint": "Escolha um abaixo ou cole qualquer emoji de sites como emojipedia.org",
+    "browse": "Explorar",
+    "uploadImage": "Enviar Imagem",
+    "background": "Fundo",
+    "textColor": "Cor do Texto",
+    "backgroundBehind": "Fundo (atrás da imagem)",
+    "transparentHint": "Visível com imagens transparentes (PNG, SVG). Para JPG/JPEG a imagem cobre todo o fundo.",
+    "fontSize": "Tamanho da Fonte: {value}%",
+    "borderRadius": "Borda Arredondada: {value}%",
+    "font": "Fonte",
+    "googleFonts": "Google Fonts",
+    "systemFonts": "Fontes do Sistema",
+    "preview": "Pré-visualização (256x256)",
+    "downloadAll": "Baixar Tudo (ICO + PNG)"
   }
 }

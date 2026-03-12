@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import { useTranslations } from "next-intl";
 
 type Mode = "encode" | "decode";
 type Variant = "standard" | "url-safe";
@@ -31,6 +32,8 @@ const SAMPLE_TEXT = "Hello, World! This is a Base64 encoding example.";
 const SAMPLE_ENCODED = "SGVsbG8sIFdvcmxkISBUaGlzIGlzIGEgQmFzZTY0IGVuY29kaW5nIGV4YW1wbGUu";
 
 export function Base64Encoder() {
+  const t = useTranslations("base64Encoder.ui");
+  const tc = useTranslations("ui");
   const [input, setInput] = useState(SAMPLE_TEXT);
   const [mode, setMode] = useState<Mode>("encode");
   const [variant, setVariant] = useState<Variant>("standard");
@@ -47,10 +50,10 @@ export function Base64Encoder() {
     } catch {
       return {
         output: "",
-        error: mode === "decode" ? "Invalid Base64 string" : "Encoding error",
+        error: mode === "decode" ? t("invalidBase64") : t("encodingError"),
       };
     }
-  }, [input, mode, variant]);
+  }, [input, mode, variant, t]);
 
   const { output, error } = result();
 
@@ -88,9 +91,8 @@ export function Base64Encoder() {
       {/* How it works */}
       <div className="bg-zinc-900/50 border border-zinc-800 rounded-lg p-3">
         <p className="text-xs text-zinc-400">
-          <span className="text-emerald-400 font-medium">How it works:</span>{" "}
-          <strong>Encode</strong> converts normal text into Base64 format (used in APIs, emails, and data URIs).{" "}
-          <strong>Decode</strong> converts Base64 back to readable text. Paste your text on the left and see the result on the right.
+          <span className="text-emerald-400 font-medium">{tc("howItWorks")}</span>{" "}
+          {t("howItWorksText")}
         </p>
       </div>
 
@@ -105,7 +107,7 @@ export function Base64Encoder() {
                 : "text-zinc-400 hover:text-zinc-200"
             }`}
           >
-            Encode
+            {t("encode")}
           </button>
           <button
             onClick={() => setMode("decode")}
@@ -115,7 +117,7 @@ export function Base64Encoder() {
                 : "text-zinc-400 hover:text-zinc-200"
             }`}
           >
-            Decode
+            {t("decode")}
           </button>
         </div>
 
@@ -123,36 +125,36 @@ export function Base64Encoder() {
           onClick={swap}
           className="px-4 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-sm font-medium transition-colors"
         >
-          Swap
+          {t("swap")}
         </button>
         <button
           onClick={copyOutput}
           className="px-4 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-sm font-medium transition-colors"
         >
-          {copied ? "Copied!" : "Copy Output"}
+          {copied ? tc("copied") : t("copyOutput")}
         </button>
         <button
           onClick={clear}
           className="px-4 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-sm font-medium transition-colors"
         >
-          Clear
+          {t("clear")}
         </button>
         <button
           onClick={loadSample}
           className="px-4 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-sm font-medium transition-colors"
         >
-          Sample
+          {t("sample")}
         </button>
 
         <div className="ml-auto flex items-center gap-2">
-          <label className="text-sm text-zinc-400">Variant:</label>
+          <label className="text-sm text-zinc-400">{t("variant")}</label>
           <select
             value={variant}
             onChange={(e) => setVariant(e.target.value as Variant)}
             className="bg-zinc-800 border border-zinc-700 rounded-lg px-3 py-1.5 text-sm focus:outline-none focus:border-emerald-500"
           >
-            <option value="standard">Standard</option>
-            <option value="url-safe">URL-safe</option>
+            <option value="standard">{t("standard")}</option>
+            <option value="url-safe">{t("urlSafe")}</option>
           </select>
         </div>
       </div>
@@ -166,10 +168,10 @@ export function Base64Encoder() {
           </span>
         ) : input.trim() ? (
           <span className="text-zinc-500">
-            Input: {inputSize.toLocaleString()} bytes &middot; Output:{" "}
-            {outputSize.toLocaleString()} bytes
+            {t("inputBytes", { input: inputSize.toLocaleString() })} &middot;{" "}
+            {t("outputBytes", { output: outputSize.toLocaleString() })}
             {mode === "encode" && inputSize > 0 && (
-              <> &middot; {Math.round((outputSize / inputSize) * 100)}% size</>
+              <> &middot; {t("sizePercent", { percent: Math.round((outputSize / inputSize) * 100) })}</>
             )}
           </span>
         ) : null}
@@ -179,7 +181,7 @@ export function Base64Encoder() {
       <div className="grid md:grid-cols-2 gap-4">
         <div>
           <label className="block text-xs text-zinc-500 mb-1 uppercase tracking-wide">
-            {mode === "encode" ? "Text Input" : "Base64 Input"}
+            {mode === "encode" ? t("textInput") : t("base64Input")}
           </label>
           <textarea
             value={input}
@@ -188,14 +190,14 @@ export function Base64Encoder() {
             className="w-full h-72 bg-zinc-900 border border-zinc-800 rounded-lg p-4 font-mono text-sm resize-none focus:outline-none focus:border-emerald-500 placeholder-zinc-600"
             placeholder={
               mode === "encode"
-                ? "Enter text to encode..."
-                : "Enter Base64 to decode..."
+                ? t("placeholderEncode")
+                : t("placeholderDecode")
             }
           />
         </div>
         <div>
           <label className="block text-xs text-zinc-500 mb-1 uppercase tracking-wide">
-            {mode === "encode" ? "Base64 Output" : "Text Output"}
+            {mode === "encode" ? t("base64Output") : t("textOutput")}
           </label>
           <textarea
             value={output || (error ? `Error: ${error}` : "")}

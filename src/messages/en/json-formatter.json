@@ -13,5 +13,29 @@
     "section2Text": "Paste your raw JSON into the input field and click Format. The tool will instantly validate your JSON, highlight any syntax errors with the exact line and position, and display the formatted result with proper indentation. You can also minify JSON to reduce its size for production use.",
     "section3Title": "Features",
     "section3List": "Format JSON with 2-space indentation | Validate JSON with exact error location | Minify JSON to reduce file size | Copy formatted output to clipboard | 100% client-side — your data never leaves your browser"
+  },
+  "ui": {
+    "howItWorksText": "Paste your JSON on the left → see the formatted result on the right. Use the buttons to format, minify, or copy. The status indicator shows if your JSON is valid.",
+    "format": "Format",
+    "formatTitle": "Beautify and indent the JSON",
+    "minify": "Minify",
+    "minifyTitle": "Remove all whitespace to make JSON smaller",
+    "copyOutput": "Copy Output",
+    "copyTitle": "Copy the formatted output to clipboard",
+    "clear": "Clear",
+    "clearTitle": "Clear both input and output",
+    "sample": "Sample",
+    "sampleTitle": "Load example JSON to see how it works",
+    "indent": "Indent:",
+    "spaces2": "2 spaces",
+    "spaces4": "4 spaces",
+    "tabs": "Tabs",
+    "empty": "Empty",
+    "validJson": "Valid JSON",
+    "invalidJson": "Invalid JSON",
+    "stats": "{chars} chars · {lines} lines · {keys} keys",
+    "input": "Input",
+    "output": "Output",
+    "placeholder": "Paste your JSON here, e.g.: {\"name\": \"John\", \"age\": 30}"
   }
 }

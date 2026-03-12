@@ -54,5 +54,10 @@
         "description": "Converta entre px, rem, em, %, vh e vw. Tamanho de fonte base e dimensões do viewport personalizáveis."
       }
     }
+  },
+  "ui": {
+    "howItWorks": "Como funciona:",
+    "copied": "Copiado!",
+    "copy": "Copiar"
   }
 }

@@ -15,5 +15,19 @@
     "section3Text": "RGB (Red, Green, Blue) defines colors using three integer values from 0 to 255. For example, rgb(255, 87, 51) is a vivid orange-red. CSS also supports rgba() with an alpha channel for transparency (0.0 to 1.0). RGB is commonly used in JavaScript color manipulation and canvas drawing.",
     "section4Title": "HSL Colors",
     "section4Text": "HSL (Hue, Saturation, Lightness) is arguably the most intuitive color model for humans. Hue is a degree on the color wheel (0–360), Saturation is a percentage (0% = gray, 100% = full color), and Lightness is a percentage (0% = black, 100% = white). HSL makes it easy to create color variations — just adjust lightness to get tints and shades of the same hue."
+  },
+  "ui": {
+    "howItWorksText": "Pick a color from the palette, use the color picker, or paste any color value (HEX, RGB, or HSL) into any text field. All formats update in real time. Click \"Copy\" to grab any value.",
+    "colorPicker": "Color picker",
+    "quickPick": "Quick pick a color:",
+    "hexDesc": "most common in CSS",
+    "rgbDesc": "Red, Green, Blue (0-255)",
+    "hslDesc": "Hue, Saturation, Lightness",
+    "hue": "Hue",
+    "saturation": "Saturation",
+    "lightness": "Lightness",
+    "cssValues": "CSS Values",
+    "placeholderRgb": "Paste: rgb(59, 130, 246) or 59, 130, 246",
+    "placeholderHsl": "Paste: hsl(217, 91%, 60%) or 217, 91, 60"
   }
 }
