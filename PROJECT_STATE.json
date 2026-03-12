@@ -124,6 +124,11 @@
       "date": "2026-03-12",
       "decision": "Batch 3: 6 tools (Password, QR, Cron, JSON/CSV, Text Case, Placeholder Image)",
       "reason": "Utility tools with high search volume. QR uses qrcode npm (Reed-Solomon too complex). Password uses crypto.getRandomValues for real security. All born trilingual."
+    },
+    {
+      "date": "2026-03-12",
+      "decision": "Security audit of Batch 3 + MarkdownPreview completed",
+      "reason": "Found 1 CRITICAL XSS vulnerability in MarkdownPreview (dangerouslySetInnerHTML without URL validation). 3 ALTO items require fix before production. PasswordGenerator, PlaceholderImage, TextCaseConverter are secure. 0 npm vulnerabilities detected."
     }
   ],
   "security": {
@@ -152,7 +157,28 @@
       "security_headers": "/etc/nginx/conf.d/security.conf (VPS)",
       "toolnexus_site": "/etc/nginx/sites-available/toolnexus (VPS)",
       "analytics_site": "/etc/nginx/sites-available/analytics-toolnexus (VPS)"
-    }
+    },
+    "audit_findings": {
+      "critical": [
+        "MarkdownPreview: XSS via dangerouslySetInnerHTML (href/src validation missing)"
+      ],
+      "high": [
+        "MarkdownPreview: HTML descargado puede contener scripts",
+        "QrCodeGenerator: Falta validación de colores (hex format)",
+        "CronExpressionBuilder: Inputs sin validar (cron fields)",
+        "JsonCsvConverter: Riesgo XSS futuro si se renderiza como HTML"
+      ],
+      "medium": [
+        "CronExpressionBuilder: ReDoS potencial en parsing",
+        "JsonCsvConverter: Error handling genérico"
+      ]
+    },
+    "blockers": [
+      "Fix MarkdownPreview XSS - CRITICAL",
+      "Sanitize downloaded HTML - HIGH",
+      "Validate QR colors - HIGH",
+      "Validate cron fields - HIGH"
+    ]
   },
   "metrics": {
     "tools_count": 22,
