@@ -1,6 +1,14 @@
 # NexusTools — Launch Posts (Copy-Paste Ready)
 
+> **Cuenta a usar:** Gmail personal para comunidades, tools@toolnexus.dev para directorios.
+
+---
+
 ## 1. Product Hunt
+
+> **URL:** https://www.producthunt.com/posts/new
+> **Cuenta:** Gmail personal
+> **Mejor día:** Martes 00:01 PST
 
 **Tagline (60 chars):** Free dev tools that run 100% in your browser
 **Description:**
@@ -29,6 +37,9 @@ I'd love your feedback — what tools would you like to see next? Drop an idea o
 
 ## 2. Hacker News (Show HN)
 
+> **URL:** https://news.ycombinator.com/submit
+> **Cuenta:** Gmail personal
+
 **Title:** Show HN: NexusTools – 34 free dev tools that run 100% in your browser (open source)
 
 **Text:**
@@ -52,6 +63,9 @@ Feedback welcome — especially on which tools to add next.
 ---
 
 ## 3. Reddit r/webdev
+
+> **URL:** https://www.reddit.com/r/webdev/submit
+> **Cuenta:** Gmail personal
 
 **Title:** I built 34 free dev tools that run 100% in your browser — no accounts, no tracking, open source
 
@@ -81,6 +95,9 @@ What tools do you wish existed? I'm taking suggestions via [GitHub Discussions](
 
 ## 4. Reddit r/SideProject
 
+> **URL:** https://www.reddit.com/r/SideProject/submit
+> **Cuenta:** Gmail personal
+
 **Title:** From zero to 34 tools in 2 days — I built a free dev tools site that runs 100% client-side
 
 **Body:**
@@ -101,7 +118,29 @@ Happy to answer questions about the architecture or build process!
 
 ---
 
-## 5. Dev.to Article
+## 5. Reddit r/opensource
+
+> **URL:** https://www.reddit.com/r/opensource/submit
+> **Cuenta:** Gmail personal
+
+**Title:** NexusTools — 34 free, open-source developer tools that run 100% in your browser (MIT)
+
+**Body:**
+I open-sourced [NexusTools](https://github.com/nexustools-dev/nexus-tools) — a collection of 34 developer tools that run entirely client-side.
+
+The philosophy: near-zero dependencies. Custom parsers for SQL, markdown, YAML, and diff (LCS algorithm). Only 1 npm dep for tool logic (qrcode — Reed-Solomon is genuinely complex). Everything else uses browser APIs: Canvas, Web Crypto, Clipboard.
+
+MIT licensed. Contributions welcome — each tool follows a simple pattern (server component for SEO + client component for logic).
+
+**Site:** [toolnexus.dev](https://toolnexus.dev)
+**Repo:** [github.com/nexustools-dev/nexus-tools](https://github.com/nexustools-dev/nexus-tools)
+
+---
+
+## 6. Dev.to Article
+
+> **URL:** https://dev.to/enter (login) → https://dev.to/new (new post)
+> **Cuenta:** Gmail personal
 
 **Title:** I Built 34 Free Developer Tools That Run 100% in Your Browser
 
@@ -160,45 +199,157 @@ Each tool is completely independent — no shared state, no cross-dependencies b
 
 ---
 
-## 6. AlternativeTo
+## 7. AlternativeTo
 
-**Submit as alternative to:** DevUtils, CyberChef, IT Tools, SmallDev.tools
+> **URL:** https://alternativeto.net/manage/new/
+> **Cuenta:** tools@toolnexus.dev
+> **Submit como alternativa a:** DevUtils, CyberChef, IT Tools, SmallDev.tools
+
+**Name:** NexusTools
 **Description:** Free online developer tools (34+) that run 100% in your browser. JSON formatter, SQL formatter, regex tester, password generator, image compressor, CSS generators, and more. No sign-ups, no tracking, open source (MIT). Available in English, Spanish, and Portuguese.
 **Tags:** Developer Tools, Online Tools, Browser-Based, Free, Open Source
 **Platforms:** Web
 **License:** MIT (Free, Open Source)
+**Website:** https://toolnexus.dev
 
 ---
 
-## 7. DevHunt
+## 8. DevHunt
+
+> **URL:** https://devhunt.org/submit
+> **Cuenta:** tools@toolnexus.dev (o login con GitHub)
 
 **Tagline:** 34+ free dev tools — 100% browser-based, open source
 **Description:** Collection of developer tools that run entirely client-side. JSON/SQL/YAML formatters, CSS visual generators, image compressor, regex tester, JWT decoder, and more. No accounts, no tracking. Built with Next.js 15, TypeScript, Tailwind CSS. MIT licensed.
 **GitHub:** https://github.com/nexustools-dev/nexus-tools
+**Website:** https://toolnexus.dev
 
 ---
 
-## 8. SaaSHub
+## 9. SaaSHub
 
+> **URL:** https://www.saashub.com/submit
+> **Cuenta:** tools@toolnexus.dev
+
+**Name:** NexusTools
 **Category:** Developer Tools
 **Description:** Free collection of 34+ browser-based developer tools. Formatters, converters, generators, CSS visual tools, and dev utilities. No backend — everything runs client-side. Open source, multilingual (EN/ES/PT).
 **Alternative to:** DevUtils, CyberChef, IT Tools
+**Website:** https://toolnexus.dev
+
+---
+
+## 10. BetaList
+
+> **URL:** https://betalist.com/submit
+> **Cuenta:** tools@toolnexus.dev
+
+**Name:** NexusTools
+**Tagline:** Free developer tools that run 100% in your browser
+**Description:** 34+ browser-based developer tools — JSON/SQL formatters, CSS generators, image compressor, regex tester, and more. No accounts, no tracking, open source.
+**Website:** https://toolnexus.dev
+
+---
+
+## 11. Indie Hackers
+
+> **URL:** https://www.indiehackers.com/products/new
+> **Cuenta:** Gmail personal
+
+**Name:** NexusTools
+**Tagline:** Free dev tools that run 100% in your browser
+**Description:** I'm building a growing collection of 34+ developer tools. All client-side, no tracking, open source. Monetization plan: minimal AdSense once traffic hits ~1000/month.
+**Website:** https://toolnexus.dev
+**Revenue:** $0 (pre-revenue, building traffic)
+
+---
+
+## 12. Twitter/X Thread
+
+> **URL:** https://twitter.com/compose/tweet
+> **Cuenta:** Gmail personal (tu cuenta personal)
+
+**Tweet 1:**
+I built 34 free developer tools that run 100% in your browser.
+
+No accounts. No tracking. No uploads. Open source.
+
+toolnexus.dev
+
+Thread 🧵👇
+
+**Tweet 2:**
+Tools include:
+- JSON/SQL/YAML formatters
+- CSS gradient, shadow, border-radius generators
+- Image compressor & SVG to PNG
+- Regex tester, JWT decoder, chmod calc
+- Password & UUID generators
+- Color palette generator
+- And 20+ more...
+
+**Tweet 3:**
+The tech philosophy: near-zero dependencies.
+
+Custom SQL tokenizer. Custom markdown parser. Custom diff algorithm.
+
+Only 1 npm dep (qrcode). Everything else = browser APIs.
+
+Next.js 15 + TypeScript + Tailwind CSS v4.
+
+**Tweet 4:**
+Available in 3 languages (EN/ES/PT) and growing.
+
+8 more tools coming soon. Suggest what you need:
+github.com/nexustools-dev/nexus-tools/discussions
+
+MIT licensed. Star it if it's useful ⭐
+github.com/nexustools-dev/nexus-tools
+
+---
+
+## 13. LinkedIn Post
+
+> **URL:** https://www.linkedin.com/feed/ (Start a post)
+> **Cuenta:** Gmail personal (tu perfil profesional)
+
+I built something I wish existed years ago.
+
+NexusTools is a collection of 34 free developer tools that run entirely in your browser. No accounts, no data uploads, no paywalls.
+
+Why? Because I was tired of simple utilities (JSON formatter, regex tester, base64 encoder) requiring sign-ups or sending my data to unknown servers.
+
+Every tool processes data locally using Canvas API, Web Crypto, and native JavaScript. The codebase has near-zero npm dependencies — custom parsers for SQL, markdown, YAML, and diff algorithms.
+
+Available in English, Spanish, and Portuguese. Open source (MIT).
+
+🔗 toolnexus.dev
+📂 github.com/nexustools-dev/nexus-tools
+
+If you're a developer who uses online tools daily, I'd love your feedback on what to build next.
+
+#webdev #opensource #developertools #javascript #nextjs
 
 ---
 
 ## Submission Checklist
 
-- [ ] Product Hunt (producthunt.com — schedule for Tuesday 00:01 PST)
-- [ ] Hacker News Show HN (news.ycombinator.com/submit)
-- [ ] Reddit r/webdev
-- [ ] Reddit r/SideProject
-- [ ] Reddit r/opensource
-- [ ] Dev.to article
-- [ ] AlternativeTo (alternativeto.net/claim)
-- [ ] DevHunt (devhunt.org)
-- [ ] SaaSHub (saashub.com/submit)
-- [ ] BetaList (betalist.com/submit)
-- [ ] Indie Hackers (indiehackers.com — post in Products)
-- [ ] GitHub star — star your own repo (it counts!)
-- [ ] Twitter/X — thread with screenshots
-- [ ] LinkedIn — post with project story
+### Comunidades (usar Gmail personal)
+- [ ] **Product Hunt** — https://www.producthunt.com/posts/new (martes 00:01 PST)
+- [ ] **Hacker News** — https://news.ycombinator.com/submit
+- [ ] **Reddit r/webdev** — https://www.reddit.com/r/webdev/submit
+- [ ] **Reddit r/SideProject** — https://www.reddit.com/r/SideProject/submit
+- [ ] **Reddit r/opensource** — https://www.reddit.com/r/opensource/submit
+- [ ] **Dev.to** — https://dev.to/new
+- [ ] **Indie Hackers** — https://www.indiehackers.com/products/new
+- [ ] **Twitter/X** — https://twitter.com/compose/tweet
+- [ ] **LinkedIn** — https://www.linkedin.com/feed/
+
+### Directorios (usar tools@toolnexus.dev)
+- [ ] **AlternativeTo** — https://alternativeto.net/manage/new/
+- [ ] **DevHunt** — https://devhunt.org/submit
+- [ ] **SaaSHub** — https://www.saashub.com/submit
+- [ ] **BetaList** — https://betalist.com/submit
+
+### Ya hecho ✅
+- [x] **GitHub** — repo público, starred, Discussions activas
