@@ -191,7 +191,8 @@
         "FIXED: CronExpressionBuilder — field syntax validation + skip invalid execs",
         "FIXED: TextCaseConverter — sentenceCase crash on empty string",
         "FIXED: PlaceholderImage/Markdown/Cron/CSV/TextCase — clipboard try/catch",
-        "FIXED: JsonCsvConverter — correct MIME types (text/csv, application/json)"
+        "FIXED: JsonCsvConverter — correct MIME types (text/csv, application/json)",
+        "FIXED: ImageCompressor — URL.revokeObjectURL() cleanup to prevent memory leaks"
       ]
     },
     "blockers": []
