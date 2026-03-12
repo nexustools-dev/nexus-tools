@@ -159,26 +159,20 @@
       "analytics_site": "/etc/nginx/sites-available/analytics-toolnexus (VPS)"
     },
     "audit_findings": {
-      "critical": [
-        "MarkdownPreview: XSS via dangerouslySetInnerHTML (href/src validation missing)"
-      ],
-      "high": [
-        "MarkdownPreview: HTML descargado puede contener scripts",
-        "QrCodeGenerator: Falta validación de colores (hex format)",
-        "CronExpressionBuilder: Inputs sin validar (cron fields)",
-        "JsonCsvConverter: Riesgo XSS futuro si se renderiza como HTML"
-      ],
-      "medium": [
-        "CronExpressionBuilder: ReDoS potencial en parsing",
-        "JsonCsvConverter: Error handling genérico"
+      "critical": [],
+      "high": [],
+      "medium": [],
+      "resolved_2026_03_12": [
+        "FIXED: MarkdownPreview XSS — blocked javascript:/vbscript:/data: URLs",
+        "FIXED: MarkdownPreview HTML download — inherits URL sanitization",
+        "FIXED: QrCodeGenerator — hex color validation with sanitizeHex()",
+        "FIXED: CronExpressionBuilder — field syntax validation + skip invalid execs",
+        "FIXED: TextCaseConverter — sentenceCase crash on empty string",
+        "FIXED: PlaceholderImage/Markdown/Cron/CSV/TextCase — clipboard try/catch",
+        "FIXED: JsonCsvConverter — correct MIME types (text/csv, application/json)"
       ]
     },
-    "blockers": [
-      "Fix MarkdownPreview XSS - CRITICAL",
-      "Sanitize downloaded HTML - HIGH",
-      "Validate QR colors - HIGH",
-      "Validate cron fields - HIGH"
-    ]
+    "blockers": []
   },
   "metrics": {
     "tools_count": 22,
