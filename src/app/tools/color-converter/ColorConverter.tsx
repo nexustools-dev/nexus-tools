@@ -98,6 +98,40 @@ const COLOR_PALETTE = [
   "#f43f5e", "#78716c", "#64748b", "#000000", "#ffffff", "#1e293b", "#374151", "#6b7280",
 ];
 
+// Parse any color format: hex, rgb(), hsl(), or just numbers
+function parseAnyColor(input: string): RGB | null {
+  const trimmed = input.trim();
+
+  // Try HEX
+  if (trimmed.startsWith("#") || /^[0-9a-fA-F]{3,6}$/.test(trimmed)) {
+    return hexToRgb(trimmed);
+  }
+
+  // Try rgb(r, g, b) or r, g, b
+  const rgbMatch = trimmed.match(/^(?:rgb\s*\(\s*)?(\d{1,3})\s*[,\s]\s*(\d{1,3})\s*[,\s]\s*(\d{1,3})\s*\)?$/);
+  if (rgbMatch) {
+    const r = parseInt(rgbMatch[1]);
+    const g = parseInt(rgbMatch[2]);
+    const b = parseInt(rgbMatch[3]);
+    if (r <= 255 && g <= 255 && b <= 255) {
+      return { r, g, b };
+    }
+  }
+
+  // Try hsl(h, s%, l%) or h, s%, l%
+  const hslMatch = trimmed.match(/^(?:hsl\s*\(\s*)?(\d{1,3})\s*[,\s]\s*(\d{1,3})%?\s*[,\s]\s*(\d{1,3})%?\s*\)?$/);
+  if (hslMatch) {
+    const h = parseInt(hslMatch[1]);
+    const s = parseInt(hslMatch[2]);
+    const l = parseInt(hslMatch[3]);
+    if (h <= 360 && s <= 100 && l <= 100) {
+      return hslToRgb({ h, s, l });
+    }
+  }
+
+  return null;
+}
+
 function CopyButton({ text }: { text: string }) {
   const [copied, setCopied] = useState(false);
   const copy = async () => {
@@ -154,8 +188,8 @@ export function ColorConverter() {
       <div className="bg-zinc-900/50 border border-zinc-800 rounded-lg p-3">
         <p className="text-xs text-zinc-400">
           <span className="text-emerald-400 font-medium">How it works:</span>{" "}
-          Pick a color from the palette, use the color picker, or adjust the sliders below.
-          All formats (HEX, RGB, HSL) update in real time. Click &quot;Copy&quot; to grab any value.
+          Pick a color from the palette, use the color picker, or <strong>paste any color value</strong> (HEX, RGB, or HSL)
+          into any text field. All formats update in real time. Click &quot;Copy&quot; to grab any value.
         </p>
       </div>
 
@@ -244,7 +278,23 @@ export function ColorConverter() {
             </div>
           ))}
         </div>
-        <p className="font-mono text-sm text-zinc-300">{rgbStr}</p>
+        <input
+          type="text"
+          defaultValue={rgbStr}
+          key={`rgb-${rgbStr}`}
+          onBlur={(e) => {
+            const parsed = parseAnyColor(e.target.value);
+            if (parsed) setRgb(parsed);
+          }}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              const parsed = parseAnyColor(e.currentTarget.value);
+              if (parsed) setRgb(parsed);
+            }
+          }}
+          placeholder="Paste: rgb(59, 130, 246) or 59, 130, 246"
+          className="w-full bg-zinc-950 border border-zinc-700 rounded-lg px-3 py-2 font-mono text-sm focus:outline-none focus:border-emerald-500"
+        />
       </div>
 
       {/* HSL */}
@@ -277,7 +327,23 @@ export function ColorConverter() {
             );
           })}
         </div>
-        <p className="font-mono text-sm text-zinc-300">{hslStr}</p>
+        <input
+          type="text"
+          defaultValue={hslStr}
+          key={`hsl-${hslStr}`}
+          onBlur={(e) => {
+            const parsed = parseAnyColor(e.target.value);
+            if (parsed) setRgb(parsed);
+          }}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              const parsed = parseAnyColor(e.currentTarget.value);
+              if (parsed) setRgb(parsed);
+            }
+          }}
+          placeholder="Paste: hsl(217, 91%, 60%) or 217, 91, 60"
+          className="w-full bg-zinc-950 border border-zinc-700 rounded-lg px-3 py-2 font-mono text-sm focus:outline-none focus:border-emerald-500"
+        />
       </div>
 
       {/* CSS output */}
