@@ -17,7 +17,8 @@
 |--------|----------|-----------------|---------------|-------------------|---------------------|
 | `src/components/` | ~5 | — | — | — | — |
 | `src/i18n/` | 3 | — | — | — | — |
-| `tools/batch-1/` | 10 tools | — | — | — | — |
+| `tools/favicon-generator/` | 3 files | 🔄 8/10 | — | — | — |
+| `tools/batch-1 (rest)/` | 9 tools | — | — | — | — |
 | `tools/batch-2/` | 6 tools | — | — | — | — |
 | `tools/batch-3/` | 6 tools | — | — | — | — |
 | `tools/batch-4/` | 6 tools | — | — | — | — |
@@ -35,6 +36,7 @@
 ## Historial de Scores
 
 <!-- Formato: YYYY-MM-DD | módulo | fase | score anterior -> score nuevo -->
+| 2026-03-17 | favicon-generator | Quality | 6/10 | 8/10 | 5 fixes (extract constants, extract ICO logic, remove dead code, fix key, fix ternary) |
 
 ### Nota
 La auditoría de seguridad informal de 2026-03-12 encontró y resolvió 8 issues.

@@ -46,6 +46,26 @@ Issues ya corregidos. **Leer ANTES de cualquier auditoría para no re-reportar.*
 - **Fix:** text/csv para CSV downloads, application/json para JSON
 - **Commit:** security audit batch 3
 
+### 2026-03-17 FaviconGenerator — 140+ lines of inline constants
+- **Severidad:** MEDIUM
+- **Archivo:** `src/app/[locale]/tools/favicon-generator/FaviconGenerator.tsx`
+- **Fix:** Extracted EMOJI_GRID, GOOGLE_FONTS, SYSTEM_FONTS, COLOR_PALETTE to favicon-constants.ts
+
+### 2026-03-17 FaviconGenerator — downloadICO 55-line binary logic inline
+- **Severidad:** HIGH
+- **Archivo:** `src/app/[locale]/tools/favicon-generator/FaviconGenerator.tsx`
+- **Fix:** Extracted createIcoBlob() and loadGoogleFont() to favicon-utils.ts
+
+### 2026-03-17 FaviconGenerator — Dead code (SIZES, canvasRef, redundant ternary)
+- **Severidad:** MEDIUM
+- **Archivo:** `src/app/[locale]/tools/favicon-generator/FaviconGenerator.tsx`
+- **Fix:** Removed unused SIZES constant, unused canvasRef, and `isGoogleFont ? fontFamily : fontFamily` redundancy
+
+### 2026-03-17 FaviconGenerator — Emoji grid using array index as key
+- **Severidad:** LOW
+- **Archivo:** `src/app/[locale]/tools/favicon-generator/FaviconGenerator.tsx`
+- **Fix:** Changed key={i} to key={e} (emoji string itself is unique)
+
 ### 2026-03-12 ImageCompressor — Memory leak ObjectURL
 - **Severidad:** MEDIUM
 - **Archivo:** `src/app/[locale]/tools/image-compressor/ImageCompressor.tsx`
