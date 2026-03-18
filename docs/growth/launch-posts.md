@@ -35,7 +35,7 @@ I'd love your feedback — what tools would you like to see next? Drop an idea o
 
 ---
 
-## 2. Hacker News (Show HN)
+## 2. Hacker News (Show HN) Listo
 
 > **URL:** https://news.ycombinator.com/submit
 > **Cuenta:** Gmail personal
@@ -60,9 +60,13 @@ Site: https://toolnexus.dev
 
 Feedback welcome — especially on which tools to add next.
 
+Para Nexus: 
+cuenta:rrojas-nexus
+contraseña: Rojas1509$
+API: https://github.com/HackerNews/API
 ---
 
-## 3. Reddit r/webdev
+## 3. Reddit r/webdev :: Bloqueado
 
 > **URL:** https://www.reddit.com/r/webdev/submit
 > **Cuenta:** Gmail personal
@@ -91,9 +95,14 @@ I've been building [NexusTools](https://toolnexus.dev) — a growing collection 
 
 What tools do you wish existed? I'm taking suggestions via [GitHub Discussions](https://github.com/nexustools-dev/nexus-tools/discussions/categories/ideas).
 
+
+Para Nexus:
+
+No me dejaron publicar, la cuenta tiene que tener un mes de antiguedas y participar en otras conversaciones para poder publicar
 ---
 
-## 4. Reddit r/SideProject
+## 4. Reddit r/SideProject :: Bloqueado
+
 
 > **URL:** https://www.reddit.com/r/SideProject/submit
 > **Cuenta:** Gmail personal
@@ -116,9 +125,15 @@ Highlights of the build:
 
 Happy to answer questions about the architecture or build process!
 
+
+Para Nexus:
+
+No me dejaron publicar, la cuenta tiene que tener un mes de antiguedas y participar en otras conversaciones para poder publicar, mismo que el punto ##3
 ---
 
-## 5. Reddit r/opensource
+---
+
+## 5. Reddit r/opensource :: :: Bloqueado
 
 > **URL:** https://www.reddit.com/r/opensource/submit
 > **Cuenta:** Gmail personal
@@ -137,7 +152,11 @@ MIT licensed. Contributions welcome — each tool follows a simple pattern (serv
 
 ---
 
-## 6. Dev.to Article
+Para Nexus:
+
+No me dejaron publicar, la cuenta tiene que tener un mes de antiguedas y participar en otras conversaciones para poder publicar, mismo que el punto ##3
+
+## 6. Dev.to Article  :: STAND BY mejor directo que por Rust Desktop
 
 > **URL:** https://dev.to/enter (login) → https://dev.to/new (new post)
 > **Cuenta:** Gmail personal
@@ -336,7 +355,7 @@ If you're a developer who uses online tools daily, I'd love your feedback on wha
 
 ### Comunidades (usar Gmail personal)
 - [ ] **Product Hunt** — https://www.producthunt.com/posts/new (martes 00:01 PST)
-- [ ] **Hacker News** — https://news.ycombinator.com/submit
+- [Listo] **Hacker News** — https://news.ycombinator.com/submit
 - [ ] **Reddit r/webdev** — https://www.reddit.com/r/webdev/submit
 - [ ] **Reddit r/SideProject** — https://www.reddit.com/r/SideProject/submit
 - [ ] **Reddit r/opensource** — https://www.reddit.com/r/opensource/submit

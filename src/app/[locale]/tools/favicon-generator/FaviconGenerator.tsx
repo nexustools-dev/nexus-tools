@@ -1,80 +1,167 @@
-"use client";
+'use client';
 
-import { useState, useRef, useCallback, useEffect } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations } from 'next-intl';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
-type Mode = "text" | "emoji" | "image";
+type Mode = 'text' | 'emoji' | 'image';
 
 const SIZES = [16, 32, 48, 64, 128, 180, 192, 512];
 
 const EMOJI_GRID = [
   // Tech & Dev
-  "\u{1F680}", "\u{1F4BB}", "\u{2699}\uFE0F", "\u{1F529}", "\u{1F4A1}", "\u{26A1}", "\u{1F50C}", "\u{1F4E1}",
-  "\u{1F916}", "\u{1F4BE}", "\u{1F5A5}\uFE0F", "\u{2328}\uFE0F", "\u{1F579}\uFE0F", "\u{1F4F1}", "\u{1F50D}", "\u{1F517}",
+  '\u{1F680}',
+  '\u{1F4BB}',
+  '\u{2699}\uFE0F',
+  '\u{1F529}',
+  '\u{1F4A1}',
+  '\u{26A1}',
+  '\u{1F50C}',
+  '\u{1F4E1}',
+  '\u{1F916}',
+  '\u{1F4BE}',
+  '\u{1F5A5}\uFE0F',
+  '\u{2328}\uFE0F',
+  '\u{1F579}\uFE0F',
+  '\u{1F4F1}',
+  '\u{1F50D}',
+  '\u{1F517}',
   // Objects & Symbols
-  "\u{2B50}", "\u{1F525}", "\u{1F4A7}", "\u{2744}\uFE0F", "\u{1F308}", "\u{2600}\uFE0F", "\u{1F319}", "\u{2601}\uFE0F",
-  "\u{1F3AF}", "\u{1F4CC}", "\u{1F4CB}", "\u{1F4CA}", "\u{1F3C6}", "\u{1F48E}", "\u{1F511}", "\u{1F512}",
+  '\u{2B50}',
+  '\u{1F525}',
+  '\u{1F4A7}',
+  '\u{2744}\uFE0F',
+  '\u{1F308}',
+  '\u{2600}\uFE0F',
+  '\u{1F319}',
+  '\u{2601}\uFE0F',
+  '\u{1F3AF}',
+  '\u{1F4CC}',
+  '\u{1F4CB}',
+  '\u{1F4CA}',
+  '\u{1F3C6}',
+  '\u{1F48E}',
+  '\u{1F511}',
+  '\u{1F512}',
   // Nature & Animals
-  "\u{1F33F}", "\u{1F331}", "\u{1F340}", "\u{1F33A}", "\u{1F338}", "\u{1F335}", "\u{1F30D}", "\u{1F30A}",
-  "\u{1F981}", "\u{1F43B}", "\u{1F427}", "\u{1F989}", "\u{1F41D}", "\u{1F98B}", "\u{1F40D}", "\u{1F422}",
+  '\u{1F33F}',
+  '\u{1F331}',
+  '\u{1F340}',
+  '\u{1F33A}',
+  '\u{1F338}',
+  '\u{1F335}',
+  '\u{1F30D}',
+  '\u{1F30A}',
+  '\u{1F981}',
+  '\u{1F43B}',
+  '\u{1F427}',
+  '\u{1F989}',
+  '\u{1F41D}',
+  '\u{1F98B}',
+  '\u{1F40D}',
+  '\u{1F422}',
   // Food & Fun
-  "\u{2615}", "\u{1F37A}", "\u{1F355}", "\u{1F382}", "\u{1F3B5}", "\u{1F3A8}", "\u{1F3AC}", "\u{1F3AE}",
+  '\u{2615}',
+  '\u{1F37A}',
+  '\u{1F355}',
+  '\u{1F382}',
+  '\u{1F3B5}',
+  '\u{1F3A8}',
+  '\u{1F3AC}',
+  '\u{1F3AE}',
   // Faces & People
-  "\u{1F60E}", "\u{1F47B}", "\u{1F4AA}", "\u{270C}\uFE0F", "\u{1F44D}", "\u{2764}\uFE0F", "\u{1F64C}", "\u{1F918}",
+  '\u{1F60E}',
+  '\u{1F47B}',
+  '\u{1F4AA}',
+  '\u{270C}\uFE0F',
+  '\u{1F44D}',
+  '\u{2764}\uFE0F',
+  '\u{1F64C}',
+  '\u{1F918}',
 ];
 
 const GOOGLE_FONTS = [
-  { name: "Inter", value: "Inter" },
-  { name: "Roboto", value: "Roboto" },
-  { name: "Open Sans", value: "Open Sans" },
-  { name: "Montserrat", value: "Montserrat" },
-  { name: "Poppins", value: "Poppins" },
-  { name: "Playfair Display", value: "Playfair Display" },
-  { name: "Oswald", value: "Oswald" },
-  { name: "Raleway", value: "Raleway" },
-  { name: "Ubuntu", value: "Ubuntu" },
-  { name: "Fira Code", value: "Fira Code" },
-  { name: "JetBrains Mono", value: "JetBrains Mono" },
-  { name: "Space Grotesk", value: "Space Grotesk" },
-  { name: "Bebas Neue", value: "Bebas Neue" },
-  { name: "Pacifico", value: "Pacifico" },
-  { name: "Permanent Marker", value: "Permanent Marker" },
-  { name: "Righteous", value: "Righteous" },
-  { name: "Archivo Black", value: "Archivo Black" },
-  { name: "Abril Fatface", value: "Abril Fatface" },
+  { name: 'Inter', value: 'Inter' },
+  { name: 'Roboto', value: 'Roboto' },
+  { name: 'Open Sans', value: 'Open Sans' },
+  { name: 'Montserrat', value: 'Montserrat' },
+  { name: 'Poppins', value: 'Poppins' },
+  { name: 'Playfair Display', value: 'Playfair Display' },
+  { name: 'Oswald', value: 'Oswald' },
+  { name: 'Raleway', value: 'Raleway' },
+  { name: 'Ubuntu', value: 'Ubuntu' },
+  { name: 'Fira Code', value: 'Fira Code' },
+  { name: 'JetBrains Mono', value: 'JetBrains Mono' },
+  { name: 'Space Grotesk', value: 'Space Grotesk' },
+  { name: 'Bebas Neue', value: 'Bebas Neue' },
+  { name: 'Pacifico', value: 'Pacifico' },
+  { name: 'Permanent Marker', value: 'Permanent Marker' },
+  { name: 'Righteous', value: 'Righteous' },
+  { name: 'Archivo Black', value: 'Archivo Black' },
+  { name: 'Abril Fatface', value: 'Abril Fatface' },
 ];
 
 const SYSTEM_FONTS = [
-  { name: "Georgia", value: "Georgia, serif" },
-  { name: "Courier New", value: "Courier New, monospace" },
-  { name: "Arial Black", value: "Arial Black, sans-serif" },
-  { name: "Impact", value: "Impact, sans-serif" },
+  { name: 'Georgia', value: 'Georgia, serif' },
+  { name: 'Courier New', value: 'Courier New, monospace' },
+  { name: 'Arial Black', value: 'Arial Black, sans-serif' },
+  { name: 'Impact', value: 'Impact, sans-serif' },
 ];
 
 // Paint-style color palette
 const COLOR_PALETTE = [
   // Row 1 - Reds, browns, warm tones
-  "#ed1c24", "#ff3f34", "#ff6b6b", "#ee5a24", "#f39c12", "#f1c40f", "#fdcb6e",  "#ffeaa7",
+  '#ed1c24',
+  '#ff3f34',
+  '#ff6b6b',
+  '#ee5a24',
+  '#f39c12',
+  '#f1c40f',
+  '#fdcb6e',
+  '#ffeaa7',
   // Row 2 - Greens
-  "#27ae60", "#2ecc71", "#00b894", "#55efc4", "#10b981", "#6ab04c", "#badc58", "#c7ecee",
+  '#27ae60',
+  '#2ecc71',
+  '#00b894',
+  '#55efc4',
+  '#10b981',
+  '#6ab04c',
+  '#badc58',
+  '#c7ecee',
   // Row 3 - Blues
-  "#2980b9", "#3498db", "#0984e3", "#74b9ff", "#0652dd", "#1e3799", "#4a69bd", "#6c5ce7",
+  '#2980b9',
+  '#3498db',
+  '#0984e3',
+  '#74b9ff',
+  '#0652dd',
+  '#1e3799',
+  '#4a69bd',
+  '#6c5ce7',
   // Row 4 - Purples, pinks, neutrals
-  "#8e44ad", "#be2edd", "#e84393", "#fd79a8", "#2d3436", "#636e72", "#b2bec3", "#ffffff",
+  '#8e44ad',
+  '#be2edd',
+  '#e84393',
+  '#fd79a8',
+  '#2d3436',
+  '#636e72',
+  '#b2bec3',
+  '#ffffff',
 ];
 
 function loadGoogleFont(fontName: string): Promise<void> {
   return new Promise((resolve) => {
-    const id = `gfont-${fontName.replace(/\s+/g, "-")}`;
+    const id = `gfont-${fontName.replace(/\s+/g, '-')}`;
     if (!document.getElementById(id)) {
-      const link = document.createElement("link");
+      const link = document.createElement('link');
       link.id = id;
-      link.rel = "stylesheet";
+      link.rel = 'stylesheet';
       link.href = `https://fonts.googleapis.com/css2?family=${encodeURIComponent(fontName)}:wght@700&display=swap`;
       document.head.appendChild(link);
     }
     // Wait for the specific font face to be loaded and usable by Canvas
-    document.fonts.load(`bold 48px "${fontName}"`).then(() => resolve()).catch(() => resolve());
+    document.fonts
+      .load(`bold 48px "${fontName}"`)
+      .then(() => resolve())
+      .catch(() => resolve());
   });
 }
 
@@ -97,8 +184,8 @@ function ColorPalette({
             onClick={() => onChange(color)}
             className={`w-full aspect-square rounded-md border-2 transition-all hover:scale-110 ${
               value.toLowerCase() === color.toLowerCase()
-                ? "border-white scale-110"
-                : "border-transparent"
+                ? 'border-white scale-110'
+                : 'border-transparent'
             }`}
             style={{ backgroundColor: color }}
             title={color}
@@ -124,14 +211,14 @@ function ColorPalette({
 }
 
 export function FaviconGenerator() {
-  const t = useTranslations("faviconGenerator.ui");
-  const [mode, setMode] = useState<Mode>("text");
-  const [text, setText] = useState("A");
-  const [emoji, setEmoji] = useState("\u{1F680}");
-  const [bgColor, setBgColor] = useState("#10b981");
-  const [textColor, setTextColor] = useState("#ffffff");
+  const t = useTranslations('faviconGenerator.ui');
+  const [mode, setMode] = useState<Mode>('text');
+  const [text, setText] = useState('A');
+  const [emoji, setEmoji] = useState('\u{1F680}');
+  const [bgColor, setBgColor] = useState('#10b981');
+  const [textColor, setTextColor] = useState('#ffffff');
   const [fontSize, setFontSize] = useState(70);
-  const [fontFamily, setFontFamily] = useState("Inter");
+  const [fontFamily, setFontFamily] = useState('Inter');
   const [isGoogleFont, setIsGoogleFont] = useState(true);
   const [fontLoaded, setFontLoaded] = useState(0);
   const [borderRadius, setBorderRadius] = useState(20);
@@ -168,13 +255,11 @@ export function FaviconGenerator() {
     }
   }, [fontFamily, isGoogleFont]);
 
-  const resolvedFontFamily = isGoogleFont
-    ? `"${fontFamily}", sans-serif`
-    : fontFamily;
+  const resolvedFontFamily = isGoogleFont ? `"${fontFamily}", sans-serif` : fontFamily;
 
   const drawFavicon = useCallback(
     (canvas: HTMLCanvasElement, size: number) => {
-      const ctx = canvas.getContext("2d")!;
+      const ctx = canvas.getContext('2d')!;
       canvas.width = size;
       canvas.height = size;
 
@@ -186,24 +271,36 @@ export function FaviconGenerator() {
       ctx.fill();
       ctx.clip();
 
-      if (mode === "image" && loadedImageRef.current) {
+      if (mode === 'image' && loadedImageRef.current) {
         ctx.drawImage(loadedImageRef.current, 0, 0, size, size);
-      } else if (mode !== "image") {
-        const content = mode === "emoji" ? emoji : text;
+      } else if (mode !== 'image') {
+        const content = mode === 'emoji' ? emoji : text;
         const computedFontSize = (fontSize / 100) * size;
         const fontFam =
-          mode === "emoji"
-            ? "Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif"
+          mode === 'emoji'
+            ? 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif'
             : resolvedFontFamily;
         ctx.font = `bold ${computedFontSize}px ${fontFam}`;
         ctx.fillStyle = textColor;
-        ctx.textAlign = "center";
-        ctx.textBaseline = "middle";
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
         ctx.fillText(content, size / 2, size / 2 + computedFontSize * 0.05);
       }
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [mode, text, emoji, bgColor, textColor, fontSize, resolvedFontFamily, borderRadius, uploadedImage, imageReady, fontLoaded]
+    [
+      mode,
+      text,
+      emoji,
+      bgColor,
+      textColor,
+      fontSize,
+      resolvedFontFamily,
+      borderRadius,
+      uploadedImage,
+      imageReady,
+      fontLoaded,
+    ],
   );
 
   useEffect(() => {
@@ -218,7 +315,7 @@ export function FaviconGenerator() {
     const reader = new FileReader();
     reader.onload = (ev) => {
       setUploadedImage(ev.target?.result as string);
-      setMode("image");
+      setMode('image');
     };
     reader.readAsDataURL(file);
   };
@@ -235,11 +332,11 @@ export function FaviconGenerator() {
   };
 
   const downloadPNG = (size: number) => {
-    const canvas = document.createElement("canvas");
+    const canvas = document.createElement('canvas');
     drawFavicon(canvas, size);
-    const link = document.createElement("a");
+    const link = document.createElement('a');
     link.download = `favicon-${size}x${size}.png`;
-    link.href = canvas.toDataURL("image/png");
+    link.href = canvas.toDataURL('image/png');
     link.click();
   };
 
@@ -248,10 +345,10 @@ export function FaviconGenerator() {
     const images: { size: number; data: Uint8Array }[] = [];
 
     for (const size of icoSizes) {
-      const canvas = document.createElement("canvas");
+      const canvas = document.createElement('canvas');
       drawFavicon(canvas, size);
-      const dataUrl = canvas.toDataURL("image/png");
-      const base64 = dataUrl.split(",")[1];
+      const dataUrl = canvas.toDataURL('image/png');
+      const base64 = dataUrl.split(',')[1];
       const binary = atob(base64);
       const bytes = new Uint8Array(binary.length);
       for (let i = 0; i < binary.length; i++) {
@@ -292,9 +389,9 @@ export function FaviconGenerator() {
       currentOffset += img.data.length;
     }
 
-    const blob = new Blob([buffer], { type: "image/x-icon" });
-    const link = document.createElement("a");
-    link.download = "favicon.ico";
+    const blob = new Blob([buffer], { type: 'image/x-icon' });
+    const link = document.createElement('a');
+    link.download = 'favicon.ico';
     link.href = URL.createObjectURL(blob);
     link.click();
     URL.revokeObjectURL(link.href);
@@ -308,9 +405,9 @@ export function FaviconGenerator() {
   };
 
   const modeLabels: Record<Mode, string> = {
-    text: t("modeText"),
-    emoji: t("modeEmoji"),
-    image: t("modeImage"),
+    text: t('modeText'),
+    emoji: t('modeEmoji'),
+    image: t('modeImage'),
   };
 
   return (
@@ -319,14 +416,14 @@ export function FaviconGenerator() {
       <div className="space-y-6">
         {/* Mode selector */}
         <div className="flex gap-2">
-          {(["text", "emoji", "image"] as Mode[]).map((m) => (
+          {(['text', 'emoji', 'image'] as Mode[]).map((m) => (
             <button
               key={m}
               onClick={() => setMode(m)}
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                 mode === m
-                  ? "bg-emerald-600 text-white"
-                  : "bg-zinc-800 text-zinc-400 hover:text-zinc-200"
+                  ? 'bg-emerald-600 text-white'
+                  : 'bg-zinc-800 text-zinc-400 hover:text-zinc-200'
               }`}
             >
               {modeLabels[m]}
@@ -335,9 +432,9 @@ export function FaviconGenerator() {
         </div>
 
         {/* Text input */}
-        {mode === "text" && (
+        {mode === 'text' && (
           <div>
-            <label className="block text-sm text-zinc-400 mb-1">{t("textLabel")}</label>
+            <label className="block text-sm text-zinc-400 mb-1">{t('textLabel')}</label>
             <input
               type="text"
               value={text}
@@ -349,12 +446,10 @@ export function FaviconGenerator() {
         )}
 
         {/* Emoji input + picker */}
-        {mode === "emoji" && (
+        {mode === 'emoji' && (
           <div>
-            <label className="block text-sm text-zinc-400 mb-1">{t("emojiLabel")}</label>
-            <p className="text-xs text-zinc-500 mb-2">
-              {t("emojiHint")}
-            </p>
+            <label className="block text-sm text-zinc-400 mb-1">{t('emojiLabel')}</label>
+            <p className="text-xs text-zinc-500 mb-2">{t('emojiHint')}</p>
             <div className="flex gap-2">
               <input
                 type="text"
@@ -366,11 +461,11 @@ export function FaviconGenerator() {
                 onClick={() => setShowEmojiPicker(!showEmojiPicker)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                   showEmojiPicker
-                    ? "bg-emerald-600 text-white"
-                    : "bg-zinc-800 hover:bg-zinc-700 text-zinc-400"
+                    ? 'bg-emerald-600 text-white'
+                    : 'bg-zinc-800 hover:bg-zinc-700 text-zinc-400'
                 }`}
               >
-                {t("browse")}
+                {t('browse')}
               </button>
             </div>
             {showEmojiPicker && (
@@ -383,7 +478,7 @@ export function FaviconGenerator() {
                       setShowEmojiPicker(false);
                     }}
                     className={`text-2xl p-1.5 rounded-lg hover:bg-zinc-700 transition-colors ${
-                      emoji === e ? "bg-zinc-700 ring-1 ring-emerald-500" : ""
+                      emoji === e ? 'bg-zinc-700 ring-1 ring-emerald-500' : ''
                     }`}
                   >
                     {e}
@@ -395,9 +490,9 @@ export function FaviconGenerator() {
         )}
 
         {/* Image upload */}
-        {mode === "image" && (
+        {mode === 'image' && (
           <div>
-            <label className="block text-sm text-zinc-400 mb-1">{t("uploadImage")}</label>
+            <label className="block text-sm text-zinc-400 mb-1">{t('uploadImage')}</label>
             <input
               ref={fileInputRef}
               type="file"
@@ -409,28 +504,26 @@ export function FaviconGenerator() {
         )}
 
         {/* Colors */}
-        {mode !== "image" && (
+        {mode !== 'image' && (
           <div className="space-y-4">
-            <ColorPalette label={t("background")} value={bgColor} onChange={setBgColor} />
-            {mode === "text" && (
-              <ColorPalette label={t("textColor")} value={textColor} onChange={setTextColor} />
+            <ColorPalette label={t('background')} value={bgColor} onChange={setBgColor} />
+            {mode === 'text' && (
+              <ColorPalette label={t('textColor')} value={textColor} onChange={setTextColor} />
             )}
           </div>
         )}
-        {mode === "image" && (
+        {mode === 'image' && (
           <div className="space-y-4">
-            <ColorPalette label={t("backgroundBehind")} value={bgColor} onChange={setBgColor} />
-            <p className="text-xs text-zinc-500">
-              {t("transparentHint")}
-            </p>
+            <ColorPalette label={t('backgroundBehind')} value={bgColor} onChange={setBgColor} />
+            <p className="text-xs text-zinc-500">{t('transparentHint')}</p>
           </div>
         )}
 
         {/* Font size slider */}
-        {mode !== "image" && (
+        {mode !== 'image' && (
           <div>
             <label className="block text-sm text-zinc-400 mb-1">
-              {t("fontSize", { value: fontSize })}
+              {t('fontSize', { value: fontSize })}
             </label>
             <input
               type="range"
@@ -446,7 +539,7 @@ export function FaviconGenerator() {
         {/* Border radius */}
         <div>
           <label className="block text-sm text-zinc-400 mb-1">
-            {t("borderRadius", { value: borderRadius })}
+            {t('borderRadius', { value: borderRadius })}
           </label>
           <input
             type="range"
@@ -459,22 +552,22 @@ export function FaviconGenerator() {
         </div>
 
         {/* Font family */}
-        {mode === "text" && (
+        {mode === 'text' && (
           <div>
-            <label className="block text-sm text-zinc-400 mb-1">{t("font")}</label>
+            <label className="block text-sm text-zinc-400 mb-1">{t('font')}</label>
             <select
               value={isGoogleFont ? fontFamily : fontFamily}
               onChange={(e) => handleFontChange(e.target.value)}
               className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-emerald-500"
             >
-              <optgroup label={t("googleFonts")}>
+              <optgroup label={t('googleFonts')}>
                 {GOOGLE_FONTS.map((f) => (
                   <option key={f.value} value={f.value}>
                     {f.name}
                   </option>
                 ))}
               </optgroup>
-              <optgroup label={t("systemFonts")}>
+              <optgroup label={t('systemFonts')}>
                 {SYSTEM_FONTS.map((f) => (
                   <option key={f.value} value={f.value}>
                     {f.name}
@@ -498,7 +591,7 @@ export function FaviconGenerator() {
               style={{ width: 192, height: 192 }}
             />
           </div>
-          <p className="text-xs text-zinc-500 mt-2">{t("preview")}</p>
+          <p className="text-xs text-zinc-500 mt-2">{t('preview')}</p>
         </div>
 
         {/* Size previews */}
@@ -511,7 +604,7 @@ export function FaviconGenerator() {
                 }}
                 width={size}
                 height={size}
-                style={{ width: size, height: size, imageRendering: "pixelated" }}
+                style={{ width: size, height: size, imageRendering: 'pixelated' }}
               />
               <span className="text-xs text-zinc-500">{size}px</span>
             </div>
@@ -524,7 +617,7 @@ export function FaviconGenerator() {
             onClick={downloadAll}
             className="w-full py-3 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-semibold transition-colors"
           >
-            {t("downloadAll")}
+            {t('downloadAll')}
           </button>
           <div className="grid grid-cols-2 gap-2">
             <button

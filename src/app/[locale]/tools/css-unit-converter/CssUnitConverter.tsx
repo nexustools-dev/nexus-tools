@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import { useState, useMemo, useCallback } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations } from 'next-intl';
+import { useCallback, useMemo, useState } from 'react';
 
-type Unit = "px" | "rem" | "em" | "%" | "vh" | "vw";
+type Unit = 'px' | 'rem' | 'em' | '%' | 'vh' | 'vw';
 
-const UNITS: Unit[] = ["px", "rem", "em", "%", "vh", "vw"];
+const UNITS: Unit[] = ['px', 'rem', 'em', '%', 'vh', 'vw'];
 
 function convert(
   value: number,
@@ -14,27 +14,27 @@ function convert(
   baseFontSize: number,
   parentFontSize: number,
   viewportW: number,
-  viewportH: number
+  viewportH: number,
 ): number | null {
   // Convert everything to px first
   let px: number;
   switch (from) {
-    case "px":
+    case 'px':
       px = value;
       break;
-    case "rem":
+    case 'rem':
       px = value * baseFontSize;
       break;
-    case "em":
+    case 'em':
       px = value * parentFontSize;
       break;
-    case "%":
+    case '%':
       px = (value / 100) * parentFontSize;
       break;
-    case "vh":
+    case 'vh':
       px = (value / 100) * viewportH;
       break;
-    case "vw":
+    case 'vw':
       px = (value / 100) * viewportW;
       break;
     default:
@@ -43,17 +43,17 @@ function convert(
 
   // Convert px to target
   switch (to) {
-    case "px":
+    case 'px':
       return px;
-    case "rem":
+    case 'rem':
       return baseFontSize ? px / baseFontSize : null;
-    case "em":
+    case 'em':
       return parentFontSize ? px / parentFontSize : null;
-    case "%":
+    case '%':
       return parentFontSize ? (px / parentFontSize) * 100 : null;
-    case "vh":
+    case 'vh':
       return viewportH ? (px / viewportH) * 100 : null;
-    case "vw":
+    case 'vw':
       return viewportW ? (px / viewportW) * 100 : null;
     default:
       return null;
@@ -67,10 +67,10 @@ function formatValue(n: number): string {
 }
 
 export function CssUnitConverter() {
-  const t = useTranslations("cssUnitConverter.ui");
-  const tc = useTranslations("ui");
-  const [value, setValue] = useState("16");
-  const [fromUnit, setFromUnit] = useState<Unit>("px");
+  const t = useTranslations('cssUnitConverter.ui');
+  const tc = useTranslations('ui');
+  const [value, setValue] = useState('16');
+  const [fromUnit, setFromUnit] = useState<Unit>('px');
   const [baseFontSize, setBaseFontSize] = useState(16);
   const [parentFontSize, setParentFontSize] = useState(16);
   const [viewportW, setViewportW] = useState(1920);
@@ -85,12 +85,12 @@ export function CssUnitConverter() {
   }, []);
 
   const unitHintKeys: Record<Unit, string> = {
-    px: "hintPx",
-    rem: "hintRem",
-    em: "hintEm",
-    "%": "hintPercent",
-    vh: "hintVh",
-    vw: "hintVw",
+    px: 'hintPx',
+    rem: 'hintRem',
+    em: 'hintEm',
+    '%': 'hintPercent',
+    vh: 'hintVh',
+    vw: 'hintVw',
   };
 
   const numValue = parseFloat(value);
@@ -107,9 +107,9 @@ export function CssUnitConverter() {
         baseFontSize,
         parentFontSize,
         viewportW,
-        viewportH
+        viewportH,
       );
-      conversions[unit] = result !== null ? formatValue(result) : "N/A";
+      conversions[unit] = result !== null ? formatValue(result) : 'N/A';
     }
     return conversions;
   }, [numValue, fromUnit, baseFontSize, parentFontSize, viewportW, viewportH, isValid]);
@@ -119,8 +119,8 @@ export function CssUnitConverter() {
       {/* How it works */}
       <div className="bg-zinc-900/50 border border-zinc-800 rounded-lg p-3">
         <p className="text-xs text-zinc-400">
-          <span className="text-emerald-400 font-medium">{tc("howItWorks")}</span>{" "}
-          {t("howItWorksText")}
+          <span className="text-emerald-400 font-medium">{tc('howItWorks')}</span>{' '}
+          {t('howItWorksText')}
         </p>
       </div>
 
@@ -129,7 +129,7 @@ export function CssUnitConverter() {
         <div className="grid grid-cols-2 gap-4">
           <div>
             <label className="block text-xs text-zinc-500 uppercase tracking-wide mb-1">
-              {t("value")}
+              {t('value')}
             </label>
             <input
               type="number"
@@ -141,7 +141,7 @@ export function CssUnitConverter() {
           </div>
           <div>
             <label className="block text-xs text-zinc-500 uppercase tracking-wide mb-1">
-              {t("unit")}
+              {t('unit')}
             </label>
             <select
               value={fromUnit}
@@ -161,16 +161,12 @@ export function CssUnitConverter() {
       {/* Settings */}
       <div className="bg-zinc-900 border border-zinc-800 rounded-lg p-4">
         <label className="block text-xs text-zinc-500 uppercase tracking-wide mb-1">
-          {t("settings")}
+          {t('settings')}
         </label>
-        <p className="text-xs text-zinc-600 mb-3">
-          {t("settingsDesc")}
-        </p>
+        <p className="text-xs text-zinc-600 mb-3">{t('settingsDesc')}</p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div>
-            <label className="block text-xs text-zinc-600 mb-1">
-              {t("rootFont")}
-            </label>
+            <label className="block text-xs text-zinc-600 mb-1">{t('rootFont')}</label>
             <input
               type="number"
               value={baseFontSize}
@@ -180,9 +176,7 @@ export function CssUnitConverter() {
             />
           </div>
           <div>
-            <label className="block text-xs text-zinc-600 mb-1">
-              {t("parentFont")}
-            </label>
+            <label className="block text-xs text-zinc-600 mb-1">{t('parentFont')}</label>
             <input
               type="number"
               value={parentFontSize}
@@ -192,9 +186,7 @@ export function CssUnitConverter() {
             />
           </div>
           <div>
-            <label className="block text-xs text-zinc-600 mb-1">
-              {t("viewportW")}
-            </label>
+            <label className="block text-xs text-zinc-600 mb-1">{t('viewportW')}</label>
             <input
               type="number"
               value={viewportW}
@@ -204,9 +196,7 @@ export function CssUnitConverter() {
             />
           </div>
           <div>
-            <label className="block text-xs text-zinc-600 mb-1">
-              {t("viewportH")}
-            </label>
+            <label className="block text-xs text-zinc-600 mb-1">{t('viewportH')}</label>
             <input
               type="number"
               value={viewportH}
@@ -221,7 +211,7 @@ export function CssUnitConverter() {
       {/* Results */}
       <div className="bg-zinc-900 border border-zinc-800 rounded-lg p-4">
         <label className="block text-xs text-zinc-500 uppercase tracking-wide mb-3">
-          {t("conversions")}
+          {t('conversions')}
         </label>
         {results ? (
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
@@ -235,19 +225,15 @@ export function CssUnitConverter() {
                   onClick={() => copyValue(cssValue, unit)}
                   className={`p-3 rounded-lg border text-left transition-colors hover:border-emerald-600 ${
                     isSource
-                      ? "border-emerald-700 bg-emerald-900/20"
-                      : "border-zinc-700 bg-zinc-950"
+                      ? 'border-emerald-700 bg-emerald-900/20'
+                      : 'border-zinc-700 bg-zinc-950'
                   }`}
                 >
-                  <span className="block text-xs text-zinc-500 uppercase">
-                    {unit}
-                  </span>
-                  <span className="block font-mono text-lg text-zinc-100 mt-1">
-                    {val}
-                  </span>
+                  <span className="block text-xs text-zinc-500 uppercase">{unit}</span>
+                  <span className="block font-mono text-lg text-zinc-100 mt-1">{val}</span>
                   <span className="block text-xs text-zinc-600 mt-1">
                     {copiedUnit === unit ? (
-                      <span className="text-emerald-400">{tc("copied")}</span>
+                      <span className="text-emerald-400">{tc('copied')}</span>
                     ) : (
                       t(unitHintKeys[unit])
                     )}
@@ -257,33 +243,31 @@ export function CssUnitConverter() {
             })}
           </div>
         ) : (
-          <p className="text-sm text-zinc-500">{t("enterValid")}</p>
+          <p className="text-sm text-zinc-500">{t('enterValid')}</p>
         )}
       </div>
 
       {/* Quick reference */}
       <div className="bg-zinc-900 border border-zinc-800 rounded-lg p-4">
         <label className="block text-xs text-zinc-500 uppercase tracking-wide mb-3">
-          {t("quickRef", { base: baseFontSize })}
+          {t('quickRef', { base: baseFontSize })}
         </label>
         <div className="grid grid-cols-4 md:grid-cols-8 gap-2 text-center">
-          {[8, 10, 12, 14, 16, 18, 20, 24, 28, 32, 36, 40, 48, 56, 64, 72].map(
-            (px) => (
-              <button
-                key={px}
-                onClick={() => {
-                  setValue(px.toString());
-                  setFromUnit("px");
-                }}
-                className="p-2 rounded border border-zinc-700 hover:border-emerald-600 transition-colors bg-zinc-950"
-              >
-                <span className="block text-xs text-zinc-400">{px}px</span>
-                <span className="block text-xs text-emerald-400 font-mono">
-                  {formatValue(px / baseFontSize)}rem
-                </span>
-              </button>
-            )
-          )}
+          {[8, 10, 12, 14, 16, 18, 20, 24, 28, 32, 36, 40, 48, 56, 64, 72].map((px) => (
+            <button
+              key={px}
+              onClick={() => {
+                setValue(px.toString());
+                setFromUnit('px');
+              }}
+              className="p-2 rounded border border-zinc-700 hover:border-emerald-600 transition-colors bg-zinc-950"
+            >
+              <span className="block text-xs text-zinc-400">{px}px</span>
+              <span className="block text-xs text-emerald-400 font-mono">
+                {formatValue(px / baseFontSize)}rem
+              </span>
+            </button>
+          ))}
         </div>
       </div>
     </div>

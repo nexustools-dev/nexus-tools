@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { useState, useMemo, useCallback } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations } from 'next-intl';
+import { useCallback, useMemo, useState } from 'react';
 
 /* ── Sample Markdown ── */
 const SAMPLE_MD = `# Welcome to Markdown Preview
@@ -58,16 +58,25 @@ That's it! Start editing to see your Markdown rendered.`;
 /* ── Minimal Markdown Parser (pure JS, no deps) ── */
 function escapeHtml(str: string): string {
   return str
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
 }
 
 function isSafeUrl(url: string): boolean {
-  const decoded = url.replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"');
+  const decoded = url
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"');
   const trimmed = decoded.trim().toLowerCase();
-  if (trimmed.startsWith("javascript:") || trimmed.startsWith("vbscript:") || trimmed.startsWith("data:")) return false;
+  if (
+    trimmed.startsWith('javascript:') ||
+    trimmed.startsWith('vbscript:') ||
+    trimmed.startsWith('data:')
+  )
+    return false;
   return true;
 }
 
@@ -75,38 +84,45 @@ function parseInline(text: string): string {
   let result = escapeHtml(text);
   // Images: ![alt](src) — only safe URLs
   result = result.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (_, alt, src) =>
-    isSafeUrl(src) ? `<img src="${src}" alt="${alt}" class="max-w-full rounded" />` : `<span class="text-red-400">[blocked image: unsafe URL]</span>`
+    isSafeUrl(src)
+      ? `<img src="${src}" alt="${alt}" class="max-w-full rounded" />`
+      : `<span class="text-red-400">[blocked image: unsafe URL]</span>`,
   );
   // Links: [text](url) — only safe URLs
   result = result.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, text, href) =>
-    isSafeUrl(href) ? `<a href="${href}" target="_blank" rel="noopener noreferrer" class="text-blue-400 underline">${text}</a>` : `<span class="text-red-400">${text} [blocked: unsafe URL]</span>`
+    isSafeUrl(href)
+      ? `<a href="${href}" target="_blank" rel="noopener noreferrer" class="text-blue-400 underline">${text}</a>`
+      : `<span class="text-red-400">${text} [blocked: unsafe URL]</span>`,
   );
   // Bold+Italic: ***text***
-  result = result.replace(/\*\*\*(.+?)\*\*\*/g, "<strong><em>$1</em></strong>");
+  result = result.replace(/\*\*\*(.+?)\*\*\*/g, '<strong><em>$1</em></strong>');
   // Bold: **text**
-  result = result.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+  result = result.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
   // Italic: *text*
-  result = result.replace(/\*(.+?)\*/g, "<em>$1</em>");
+  result = result.replace(/\*(.+?)\*/g, '<em>$1</em>');
   // Strikethrough: ~~text~~
-  result = result.replace(/~~(.+?)~~/g, "<del>$1</del>");
+  result = result.replace(/~~(.+?)~~/g, '<del>$1</del>');
   // Inline code: `code`
-  result = result.replace(/`([^`]+)`/g, '<code class="bg-zinc-700 px-1.5 py-0.5 rounded text-sm font-mono text-emerald-300">$1</code>');
+  result = result.replace(
+    /`([^`]+)`/g,
+    '<code class="bg-zinc-700 px-1.5 py-0.5 rounded text-sm font-mono text-emerald-300">$1</code>',
+  );
   return result;
 }
 
 function parseMarkdown(md: string): string {
-  const lines = md.split("\n");
+  const lines = md.split('\n');
   const html: string[] = [];
   let i = 0;
   let inCodeBlock = false;
   let codeContent: string[] = [];
-  let codeLang = "";
+  let codeLang = '';
 
   while (i < lines.length) {
     const line = lines[i];
 
     // Fenced code blocks
-    if (line.startsWith("```")) {
+    if (line.startsWith('```')) {
       if (!inCodeBlock) {
         inCodeBlock = true;
         codeLang = line.slice(3).trim();
@@ -116,7 +132,7 @@ function parseMarkdown(md: string): string {
       } else {
         inCodeBlock = false;
         html.push(
-          `<pre class="bg-zinc-800 rounded-lg p-4 overflow-x-auto my-3"><code class="text-sm font-mono text-zinc-300${codeLang ? ` language-${codeLang}` : ""}">${escapeHtml(codeContent.join("\n"))}</code></pre>`
+          `<pre class="bg-zinc-800 rounded-lg p-4 overflow-x-auto my-3"><code class="text-sm font-mono text-zinc-300${codeLang ? ` language-${codeLang}` : ''}">${escapeHtml(codeContent.join('\n'))}</code></pre>`,
         );
         i++;
         continue;
@@ -139,48 +155,64 @@ function parseMarkdown(md: string): string {
     const headerMatch = line.match(/^(#{1,6})\s+(.+)/);
     if (headerMatch) {
       const level = headerMatch[1].length;
-      const sizes = ["text-2xl font-bold mt-6 mb-3", "text-xl font-bold mt-5 mb-2", "text-lg font-semibold mt-4 mb-2", "text-base font-semibold mt-3 mb-1", "text-sm font-semibold mt-3 mb-1", "text-sm font-medium mt-2 mb-1"];
-      html.push(`<h${level} class="${sizes[level - 1]}">${parseInline(headerMatch[2])}</h${level}>`);
+      const sizes = [
+        'text-2xl font-bold mt-6 mb-3',
+        'text-xl font-bold mt-5 mb-2',
+        'text-lg font-semibold mt-4 mb-2',
+        'text-base font-semibold mt-3 mb-1',
+        'text-sm font-semibold mt-3 mb-1',
+        'text-sm font-medium mt-2 mb-1',
+      ];
+      html.push(
+        `<h${level} class="${sizes[level - 1]}">${parseInline(headerMatch[2])}</h${level}>`,
+      );
       i++;
       continue;
     }
 
     // Blockquote
-    if (line.startsWith("> ") || line === ">") {
+    if (line.startsWith('> ') || line === '>') {
       const quoteLines: string[] = [];
-      while (i < lines.length && (lines[i].startsWith("> ") || lines[i] === ">")) {
-        quoteLines.push(lines[i].replace(/^>\s?/, ""));
+      while (i < lines.length && (lines[i].startsWith('> ') || lines[i] === '>')) {
+        quoteLines.push(lines[i].replace(/^>\s?/, ''));
         i++;
       }
-      html.push(`<blockquote class="border-l-4 border-zinc-600 pl-4 my-3 text-zinc-400 italic">${quoteLines.map(parseInline).join("<br />")}</blockquote>`);
+      html.push(
+        `<blockquote class="border-l-4 border-zinc-600 pl-4 my-3 text-zinc-400 italic">${quoteLines.map(parseInline).join('<br />')}</blockquote>`,
+      );
       continue;
     }
 
     // Table
-    if (line.includes("|") && i + 1 < lines.length && /^\|?\s*[-:]+[-| :]*$/.test(lines[i + 1])) {
+    if (line.includes('|') && i + 1 < lines.length && /^\|?\s*[-:]+[-| :]*$/.test(lines[i + 1])) {
       const parseRow = (row: string) =>
-        row.split("|").map((c) => c.trim()).filter(Boolean);
+        row
+          .split('|')
+          .map((c) => c.trim())
+          .filter(Boolean);
       const headers = parseRow(line);
       i += 2; // skip header + separator
       const rows: string[][] = [];
-      while (i < lines.length && lines[i].includes("|")) {
+      while (i < lines.length && lines[i].includes('|')) {
         rows.push(parseRow(lines[i]));
         i++;
       }
       html.push('<div class="overflow-x-auto my-3"><table class="w-full text-sm">');
-      html.push("<thead><tr>");
+      html.push('<thead><tr>');
       for (const h of headers) {
-        html.push(`<th class="px-3 py-2 text-left text-zinc-400 border-b border-zinc-700 font-medium">${parseInline(h)}</th>`);
+        html.push(
+          `<th class="px-3 py-2 text-left text-zinc-400 border-b border-zinc-700 font-medium">${parseInline(h)}</th>`,
+        );
       }
-      html.push("</tr></thead><tbody>");
+      html.push('</tr></thead><tbody>');
       for (const row of rows) {
-        html.push("<tr>");
+        html.push('<tr>');
         for (const cell of row) {
           html.push(`<td class="px-3 py-2 border-b border-zinc-800">${parseInline(cell)}</td>`);
         }
-        html.push("</tr>");
+        html.push('</tr>');
       }
-      html.push("</tbody></table></div>");
+      html.push('</tbody></table></div>');
       continue;
     }
 
@@ -188,11 +220,11 @@ function parseMarkdown(md: string): string {
     if (/^\s*[-*+]\s+/.test(line)) {
       html.push('<ul class="list-disc list-inside my-2 space-y-1">');
       while (i < lines.length && /^\s*[-*+]\s+/.test(lines[i])) {
-        const content = lines[i].replace(/^\s*[-*+]\s+/, "");
+        const content = lines[i].replace(/^\s*[-*+]\s+/, '');
         html.push(`<li>${parseInline(content)}</li>`);
         i++;
       }
-      html.push("</ul>");
+      html.push('</ul>');
       continue;
     }
 
@@ -200,42 +232,53 @@ function parseMarkdown(md: string): string {
     if (/^\s*\d+\.\s+/.test(line)) {
       html.push('<ol class="list-decimal list-inside my-2 space-y-1">');
       while (i < lines.length && /^\s*\d+\.\s+/.test(lines[i])) {
-        const content = lines[i].replace(/^\s*\d+\.\s+/, "");
+        const content = lines[i].replace(/^\s*\d+\.\s+/, '');
         html.push(`<li>${parseInline(content)}</li>`);
         i++;
       }
-      html.push("</ol>");
+      html.push('</ol>');
       continue;
     }
 
     // Empty line
-    if (line.trim() === "") {
+    if (line.trim() === '') {
       i++;
       continue;
     }
 
     // Paragraph
     const paraLines: string[] = [];
-    while (i < lines.length && lines[i].trim() !== "" && !lines[i].startsWith("#") && !lines[i].startsWith(">") && !lines[i].startsWith("```") && !/^\s*[-*+]\s+/.test(lines[i]) && !/^\s*\d+\.\s+/.test(lines[i]) && !/^(-{3,}|\*{3,}|_{3,})\s*$/.test(lines[i])) {
+    while (
+      i < lines.length &&
+      lines[i].trim() !== '' &&
+      !lines[i].startsWith('#') &&
+      !lines[i].startsWith('>') &&
+      !lines[i].startsWith('```') &&
+      !/^\s*[-*+]\s+/.test(lines[i]) &&
+      !/^\s*\d+\.\s+/.test(lines[i]) &&
+      !/^(-{3,}|\*{3,}|_{3,})\s*$/.test(lines[i])
+    ) {
       paraLines.push(lines[i]);
       i++;
     }
     if (paraLines.length > 0) {
-      html.push(`<p class="my-2 leading-relaxed">${paraLines.map(parseInline).join(" ")}</p>`);
+      html.push(`<p class="my-2 leading-relaxed">${paraLines.map(parseInline).join(' ')}</p>`);
     }
   }
 
   // Close unclosed code block
   if (inCodeBlock) {
-    html.push(`<pre class="bg-zinc-800 rounded-lg p-4 overflow-x-auto my-3"><code class="text-sm font-mono text-zinc-300">${escapeHtml(codeContent.join("\n"))}</code></pre>`);
+    html.push(
+      `<pre class="bg-zinc-800 rounded-lg p-4 overflow-x-auto my-3"><code class="text-sm font-mono text-zinc-300">${escapeHtml(codeContent.join('\n'))}</code></pre>`,
+    );
   }
 
-  return html.join("\n");
+  return html.join('\n');
 }
 
 export function MarkdownPreview() {
-  const t = useTranslations("markdownPreview.ui");
-  const tc = useTranslations("ui");
+  const t = useTranslations('markdownPreview.ui');
+  const tc = useTranslations('ui');
   const [input, setInput] = useState(SAMPLE_MD);
   const [copiedField, setCopiedField] = useState<string | null>(null);
 
@@ -247,7 +290,7 @@ export function MarkdownPreview() {
     return {
       words: text.split(/\s+/).filter(Boolean).length,
       chars: text.length,
-      lines: text.split("\n").length,
+      lines: text.split('\n').length,
     };
   }, [input]);
 
@@ -256,7 +299,9 @@ export function MarkdownPreview() {
       await navigator.clipboard.writeText(text);
       setCopiedField(field);
       setTimeout(() => setCopiedField(null), 2000);
-    } catch { /* clipboard unavailable */ }
+    } catch {
+      /* clipboard unavailable */
+    }
   }, []);
 
   const downloadHtml = useCallback(() => {
@@ -267,11 +312,11 @@ export function MarkdownPreview() {
 </head>
 <body>${rendered}</body>
 </html>`;
-    const blob = new Blob([fullHtml], { type: "text/html" });
+    const blob = new Blob([fullHtml], { type: 'text/html' });
     const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
+    const a = document.createElement('a');
     a.href = url;
-    a.download = "markdown-export.html";
+    a.download = 'markdown-export.html';
     a.click();
     URL.revokeObjectURL(url);
   }, [rendered]);
@@ -281,8 +326,8 @@ export function MarkdownPreview() {
       {/* How it works */}
       <div className="bg-zinc-900/50 border border-zinc-800 rounded-lg p-3">
         <p className="text-xs text-zinc-400">
-          <span className="text-gray-300 font-medium">{tc("howItWorks")}</span>{" "}
-          {t("howItWorksText")}
+          <span className="text-gray-300 font-medium">{tc('howItWorks')}</span>{' '}
+          {t('howItWorksText')}
         </p>
       </div>
 
@@ -293,27 +338,27 @@ export function MarkdownPreview() {
             onClick={() => setInput(SAMPLE_MD)}
             className="px-3 py-1.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-sm font-medium transition-colors"
           >
-            {t("sample")}
+            {t('sample')}
           </button>
           <button
-            onClick={() => setInput("")}
+            onClick={() => setInput('')}
             className="px-3 py-1.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-sm font-medium transition-colors"
           >
-            {t("clear")}
+            {t('clear')}
           </button>
         </div>
         <div className="flex gap-2">
           <button
-            onClick={() => copyText(rendered, "html")}
+            onClick={() => copyText(rendered, 'html')}
             className="px-3 py-1.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-sm font-medium transition-colors"
           >
-            {copiedField === "html" ? tc("copied") : t("copyHtml")}
+            {copiedField === 'html' ? tc('copied') : t('copyHtml')}
           </button>
           <button
             onClick={downloadHtml}
             className="px-3 py-1.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-sm font-medium transition-colors"
           >
-            {t("download")}
+            {t('download')}
           </button>
         </div>
       </div>
@@ -322,7 +367,9 @@ export function MarkdownPreview() {
       <div className="grid md:grid-cols-2 gap-4 min-h-[500px]">
         {/* Editor */}
         <div className="flex flex-col">
-          <label className="text-xs text-zinc-500 uppercase tracking-wide mb-2">{t("editor")}</label>
+          <label className="text-xs text-zinc-500 uppercase tracking-wide mb-2">
+            {t('editor')}
+          </label>
           <textarea
             value={input}
             onChange={(e) => setInput(e.target.value)}
@@ -334,7 +381,9 @@ export function MarkdownPreview() {
 
         {/* Preview */}
         <div className="flex flex-col">
-          <label className="text-xs text-zinc-500 uppercase tracking-wide mb-2">{t("preview")}</label>
+          <label className="text-xs text-zinc-500 uppercase tracking-wide mb-2">
+            {t('preview')}
+          </label>
           <div
             className="flex-1 bg-zinc-900 border border-zinc-800 rounded-lg p-4 overflow-auto text-sm text-zinc-300 leading-relaxed"
             dangerouslySetInnerHTML={{ __html: rendered }}
@@ -344,9 +393,15 @@ export function MarkdownPreview() {
 
       {/* Stats bar */}
       <div className="flex gap-4 text-xs text-zinc-500">
-        <span>{stats.words} {t("wordCount")}</span>
-        <span>{stats.chars} {t("charCount")}</span>
-        <span>{stats.lines} {t("lineCount")}</span>
+        <span>
+          {stats.words} {t('wordCount')}
+        </span>
+        <span>
+          {stats.chars} {t('charCount')}
+        </span>
+        <span>
+          {stats.lines} {t('lineCount')}
+        </span>
       </div>
     </div>
   );

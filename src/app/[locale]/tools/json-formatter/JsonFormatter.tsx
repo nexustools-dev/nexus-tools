@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import { useState, useCallback, useMemo } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations } from 'next-intl';
+import { useCallback, useMemo, useState } from 'react';
 
-type IndentType = "2" | "4" | "tab";
-type ViewMode = "code" | "tree";
+type IndentType = '2' | '4' | 'tab';
+type ViewMode = 'code' | 'tree';
 
 const SAMPLE_JSON = `{
   "name": "NexusTools",
@@ -21,15 +21,15 @@ function repairJson(raw: string): { repaired: string; changed: boolean } {
   let s = raw;
 
   // Strip single-line comments (// ...)
-  s = s.replace(/(?<!")\/\/[^\n]*/g, "");
+  s = s.replace(/(?<!")\/\/[^\n]*/g, '');
   // Strip multi-line comments (/* ... */)
-  s = s.replace(/\/\*[\s\S]*?\*\//g, "");
+  s = s.replace(/\/\*[\s\S]*?\*\//g, '');
 
   // Single quotes → double quotes (simple heuristic: outside existing double-quoted strings)
   s = s.replace(/'/g, '"');
 
   // Trailing commas before } or ]
-  s = s.replace(/,\s*([\]}])/g, "$1");
+  s = s.replace(/,\s*([\]}])/g, '$1');
 
   // Unquoted keys: word before colon
   s = s.replace(/([{,]\s*)([a-zA-Z_$][\w$]*)\s*:/g, '$1"$2":');
@@ -41,7 +41,7 @@ function repairJson(raw: string): { repaired: string; changed: boolean } {
 /* ── Sort keys recursively ── */
 function sortKeysDeep(val: unknown): unknown {
   if (Array.isArray(val)) return val.map(sortKeysDeep);
-  if (val !== null && typeof val === "object") {
+  if (val !== null && typeof val === 'object') {
     const sorted: Record<string, unknown> = {};
     for (const k of Object.keys(val as Record<string, unknown>).sort()) {
       sorted[k] = sortKeysDeep((val as Record<string, unknown>)[k]);
@@ -63,7 +63,7 @@ function JsonTree({ data, label }: { data: unknown; label?: string }) {
       </span>
     );
 
-  if (typeof data === "boolean")
+  if (typeof data === 'boolean')
     return (
       <span>
         {label && <span className="text-violet-400">{label}: </span>}
@@ -71,7 +71,7 @@ function JsonTree({ data, label }: { data: unknown; label?: string }) {
       </span>
     );
 
-  if (typeof data === "number")
+  if (typeof data === 'number')
     return (
       <span>
         {label && <span className="text-violet-400">{label}: </span>}
@@ -79,7 +79,7 @@ function JsonTree({ data, label }: { data: unknown; label?: string }) {
       </span>
     );
 
-  if (typeof data === "string")
+  if (typeof data === 'string')
     return (
       <span>
         {label && <span className="text-violet-400">{label}: </span>}
@@ -91,7 +91,7 @@ function JsonTree({ data, label }: { data: unknown; label?: string }) {
   const entries = isArray
     ? (data as unknown[]).map((v, i) => [String(i), v] as const)
     : Object.entries(data as Record<string, unknown>);
-  const bracket = isArray ? ["[", "]"] : ["{", "}"];
+  const bracket = isArray ? ['[', ']'] : ['{', '}'];
 
   return (
     <div className="leading-relaxed">
@@ -100,13 +100,13 @@ function JsonTree({ data, label }: { data: unknown; label?: string }) {
         className="cursor-pointer select-none hover:text-emerald-400 transition-colors"
       >
         <span className="inline-block w-4 text-center text-zinc-500 text-xs">
-          {collapsed ? "▶" : "▼"}
+          {collapsed ? '▶' : '▼'}
         </span>
         {label && <span className="text-violet-400">{label}: </span>}
         <span className="text-zinc-500">{bracket[0]}</span>
         {collapsed && (
           <span className="text-zinc-600 text-xs ml-1">
-            {entries.length} {entries.length === 1 ? "item" : "items"} …{bracket[1]}
+            {entries.length} {entries.length === 1 ? 'item' : 'items'} …{bracket[1]}
           </span>
         )}
       </span>
@@ -127,22 +127,22 @@ function JsonTree({ data, label }: { data: unknown; label?: string }) {
 }
 
 export function JsonFormatter() {
-  const t = useTranslations("jsonFormatter.ui");
-  const tc = useTranslations("ui");
+  const t = useTranslations('jsonFormatter.ui');
+  const tc = useTranslations('ui');
   const [input, setInput] = useState(SAMPLE_JSON);
-  const [indent, setIndent] = useState<IndentType>("2");
+  const [indent, setIndent] = useState<IndentType>('2');
   const [copied, setCopied] = useState(false);
-  const [viewMode, setViewMode] = useState<ViewMode>("code");
+  const [viewMode, setViewMode] = useState<ViewMode>('code');
   const [repairFlash, setRepairFlash] = useState(false);
 
   const getIndent = (): string | number => {
-    if (indent === "tab") return "\t";
+    if (indent === 'tab') return '\t';
     return Number(indent);
   };
 
   const formatResult = useCallback(() => {
     if (!input.trim()) {
-      return { output: "", error: null, valid: true, parsed: null };
+      return { output: '', error: null, valid: true, parsed: null };
     }
     try {
       const parsed = JSON.parse(input);
@@ -150,7 +150,7 @@ export function JsonFormatter() {
       return { output: formatted, error: null, valid: true, parsed };
     } catch (e) {
       const error = e as SyntaxError;
-      return { output: "", error: error.message, valid: false, parsed: null };
+      return { output: '', error: error.message, valid: false, parsed: null };
     }
   }, [input, indent]);
 
@@ -181,7 +181,7 @@ export function JsonFormatter() {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const clear = () => setInput("");
+  const clear = () => setInput('');
   const loadSample = () => setInput(SAMPLE_JSON);
 
   const handleRepair = () => {
@@ -215,11 +215,11 @@ export function JsonFormatter() {
 
   const handleDownload = () => {
     if (!output) return;
-    const blob = new Blob([output], { type: "application/json" });
+    const blob = new Blob([output], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
+    const a = document.createElement('a');
     a.href = url;
-    a.download = "formatted.json";
+    a.download = 'formatted.json';
     a.click();
     URL.revokeObjectURL(url);
   };
@@ -231,7 +231,7 @@ export function JsonFormatter() {
       const keys = JSON.stringify(p).match(/"[^"]+"\s*:/g);
       return {
         chars: input.length,
-        lines: output.split("\n").length,
+        lines: output.split('\n').length,
         keys: keys?.length ?? 0,
       };
     } catch {
@@ -240,19 +240,15 @@ export function JsonFormatter() {
   }, [input, output, valid]);
 
   // Determine repair button label
-  const repairLabel = repairFlash
-    ? valid
-      ? t("nothingToRepair")
-      : t("repaired")
-    : t("repair");
+  const repairLabel = repairFlash ? (valid ? t('nothingToRepair') : t('repaired')) : t('repair');
 
   return (
     <div className="space-y-4">
       {/* How it works */}
       <div className="bg-zinc-900/50 border border-zinc-800 rounded-lg p-3">
         <p className="text-xs text-zinc-400">
-          <span className="text-emerald-400 font-medium">{tc("howItWorks")}</span>{" "}
-          {t("howItWorksText")}
+          <span className="text-emerald-400 font-medium">{tc('howItWorks')}</span>{' '}
+          {t('howItWorksText')}
         </p>
       </div>
 
@@ -261,34 +257,34 @@ export function JsonFormatter() {
         <button
           onClick={format}
           className="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-sm font-medium text-white transition-colors"
-          title={t("formatTitle")}
+          title={t('formatTitle')}
         >
-          {t("format")}
+          {t('format')}
         </button>
         <button
           onClick={minify}
           className="px-3 py-1.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-sm font-medium transition-colors"
-          title={t("minifyTitle")}
+          title={t('minifyTitle')}
         >
-          {t("minify")}
+          {t('minify')}
         </button>
         <button
           onClick={handleRepair}
           className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
             repairFlash
-              ? "bg-amber-900/50 text-amber-400 border border-amber-800"
-              : "bg-zinc-800 hover:bg-zinc-700"
+              ? 'bg-amber-900/50 text-amber-400 border border-amber-800'
+              : 'bg-zinc-800 hover:bg-zinc-700'
           }`}
-          title={t("repairTitle")}
+          title={t('repairTitle')}
         >
           {repairLabel}
         </button>
         <button
           onClick={handleSortKeys}
           className="px-3 py-1.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-sm font-medium transition-colors"
-          title={t("sortKeysTitle")}
+          title={t('sortKeysTitle')}
         >
-          {t("sortKeys")}
+          {t('sortKeys')}
         </button>
 
         <div className="w-px h-6 bg-zinc-700" />
@@ -296,42 +292,42 @@ export function JsonFormatter() {
         <button
           onClick={copyOutput}
           className="px-3 py-1.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-sm font-medium transition-colors"
-          title={t("copyTitle")}
+          title={t('copyTitle')}
         >
-          {copied ? tc("copied") : t("copyOutput")}
+          {copied ? tc('copied') : t('copyOutput')}
         </button>
         <button
           onClick={handleDownload}
           className="px-3 py-1.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-sm font-medium transition-colors"
-          title={t("downloadTitle")}
+          title={t('downloadTitle')}
         >
-          {t("download")}
+          {t('download')}
         </button>
         <button
           onClick={clear}
           className="px-3 py-1.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-sm font-medium transition-colors"
-          title={t("clearTitle")}
+          title={t('clearTitle')}
         >
-          {t("clear")}
+          {t('clear')}
         </button>
         <button
           onClick={loadSample}
           className="px-3 py-1.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-sm font-medium transition-colors"
-          title={t("sampleTitle")}
+          title={t('sampleTitle')}
         >
-          {t("sample")}
+          {t('sample')}
         </button>
 
         <div className="ml-auto flex items-center gap-2">
-          <label className="text-sm text-zinc-400">{t("indent")}</label>
+          <label className="text-sm text-zinc-400">{t('indent')}</label>
           <select
             value={indent}
             onChange={(e) => setIndent(e.target.value as IndentType)}
             className="bg-zinc-800 border border-zinc-700 rounded-lg px-3 py-1.5 text-sm focus:outline-none focus:border-emerald-500"
           >
-            <option value="2">{t("spaces2")}</option>
-            <option value="4">{t("spaces4")}</option>
-            <option value="tab">{t("tabs")}</option>
+            <option value="2">{t('spaces2')}</option>
+            <option value="4">{t('spaces4')}</option>
+            <option value="tab">{t('tabs')}</option>
           </select>
         </div>
       </div>
@@ -341,22 +337,26 @@ export function JsonFormatter() {
         <span
           className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium ${
             !input.trim()
-              ? "bg-zinc-800 text-zinc-400"
+              ? 'bg-zinc-800 text-zinc-400'
               : valid
-              ? "bg-emerald-900/50 text-emerald-400 border border-emerald-800"
-              : "bg-red-900/50 text-red-400 border border-red-800"
+                ? 'bg-emerald-900/50 text-emerald-400 border border-emerald-800'
+                : 'bg-red-900/50 text-red-400 border border-red-800'
           }`}
         >
           <span
             className={`w-2 h-2 rounded-full ${
-              !input.trim() ? "bg-zinc-600" : valid ? "bg-emerald-400" : "bg-red-400"
+              !input.trim() ? 'bg-zinc-600' : valid ? 'bg-emerald-400' : 'bg-red-400'
             }`}
           />
-          {!input.trim() ? t("empty") : valid ? t("validJson") : t("invalidJson")}
+          {!input.trim() ? t('empty') : valid ? t('validJson') : t('invalidJson')}
         </span>
         {stats && (
           <span className="text-zinc-500">
-            {t("stats", { chars: stats.chars.toLocaleString(), lines: stats.lines, keys: stats.keys })}
+            {t('stats', {
+              chars: stats.chars.toLocaleString(),
+              lines: stats.lines,
+              keys: stats.keys,
+            })}
           </span>
         )}
         {error && <span className="text-red-400 text-xs">{error}</span>}
@@ -367,67 +367,65 @@ export function JsonFormatter() {
         {/* Input */}
         <div>
           <label className="block text-xs text-zinc-500 mb-1 uppercase tracking-wide">
-            {t("input")}
+            {t('input')}
           </label>
           <textarea
             value={input}
             onChange={(e) => setInput(e.target.value)}
             spellCheck={false}
             className="w-full h-96 bg-zinc-900 border border-zinc-800 rounded-lg p-4 font-mono text-sm resize-none focus:outline-none focus:border-emerald-500 placeholder-zinc-600"
-            placeholder={t("placeholder")}
+            placeholder={t('placeholder')}
           />
         </div>
 
         {/* Output */}
         <div>
           <div className="flex items-center justify-between mb-1">
-            <label className="text-xs text-zinc-500 uppercase tracking-wide">
-              {t("output")}
-            </label>
+            <label className="text-xs text-zinc-500 uppercase tracking-wide">{t('output')}</label>
             {/* View toggle */}
             <div className="flex rounded-lg overflow-hidden border border-zinc-700">
               <button
-                onClick={() => setViewMode("code")}
+                onClick={() => setViewMode('code')}
                 className={`px-2.5 py-0.5 text-xs font-medium transition-colors ${
-                  viewMode === "code"
-                    ? "bg-emerald-600 text-white"
-                    : "bg-zinc-800 text-zinc-400 hover:text-zinc-200"
+                  viewMode === 'code'
+                    ? 'bg-emerald-600 text-white'
+                    : 'bg-zinc-800 text-zinc-400 hover:text-zinc-200'
                 }`}
               >
-                {t("viewCode")}
+                {t('viewCode')}
               </button>
               <button
-                onClick={() => setViewMode("tree")}
+                onClick={() => setViewMode('tree')}
                 className={`px-2.5 py-0.5 text-xs font-medium transition-colors ${
-                  viewMode === "tree"
-                    ? "bg-emerald-600 text-white"
-                    : "bg-zinc-800 text-zinc-400 hover:text-zinc-200"
+                  viewMode === 'tree'
+                    ? 'bg-emerald-600 text-white'
+                    : 'bg-zinc-800 text-zinc-400 hover:text-zinc-200'
                 }`}
               >
-                {t("viewTree")}
+                {t('viewTree')}
               </button>
             </div>
           </div>
 
-          {viewMode === "code" ? (
+          {viewMode === 'code' ? (
             <textarea
-              value={output || (error ? `Error: ${error}` : "")}
+              value={output || (error ? `Error: ${error}` : '')}
               readOnly
               spellCheck={false}
               className={`w-full h-96 bg-zinc-900 border rounded-lg p-4 font-mono text-sm resize-none ${
-                error ? "border-red-800 text-red-400" : "border-zinc-800"
+                error ? 'border-red-800 text-red-400' : 'border-zinc-800'
               }`}
             />
           ) : (
             <div
               className={`w-full h-96 bg-zinc-900 border rounded-lg p-4 font-mono text-sm overflow-auto ${
-                error ? "border-red-800" : "border-zinc-800"
+                error ? 'border-red-800' : 'border-zinc-800'
               }`}
             >
               {parsed !== null ? (
                 <JsonTree data={parsed} />
               ) : (
-                <p className="text-zinc-600 text-sm">{t("treeEmpty")}</p>
+                <p className="text-zinc-600 text-sm">{t('treeEmpty')}</p>
               )}
             </div>
           )}

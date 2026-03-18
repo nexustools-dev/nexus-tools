@@ -1,50 +1,50 @@
-"use client";
+'use client';
 
-import { useState, useRef, useEffect, useMemo } from "react";
-import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import { useTranslations } from 'next-intl';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { Link } from '@/i18n/navigation';
 
 const TOOLS = [
-  { key: "faviconGenerator", href: "/tools/favicon-generator", icon: "FI" },
-  { key: "jsonFormatter", href: "/tools/json-formatter", icon: "{}" },
-  { key: "metaTagGenerator", href: "/tools/meta-tag-generator", icon: "<>" },
-  { key: "base64Encoder", href: "/tools/base64-encoder", icon: "B64" },
-  { key: "colorConverter", href: "/tools/color-converter", icon: "CLR" },
-  { key: "cssUnitConverter", href: "/tools/css-unit-converter", icon: "CSS" },
-  { key: "hashGenerator", href: "/tools/hash-generator", icon: "#" },
-  { key: "urlEncoder", href: "/tools/url-encoder", icon: "%" },
-  { key: "regexTester", href: "/tools/regex-tester", icon: ".*" },
-  { key: "loremIpsum", href: "/tools/lorem-ipsum", icon: "Aa" },
-  { key: "uuidGenerator", href: "/tools/uuid-generator", icon: "ID" },
-  { key: "jwtDecoder", href: "/tools/jwt-decoder", icon: "JWT" },
-  { key: "timestampConverter", href: "/tools/timestamp-converter", icon: "TS" },
-  { key: "markdownPreview", href: "/tools/markdown-preview", icon: "MD" },
-  { key: "cssGradientGenerator", href: "/tools/css-gradient-generator", icon: "GR" },
-  { key: "diffChecker", href: "/tools/diff-checker", icon: "±" },
-  { key: "passwordGenerator", href: "/tools/password-generator", icon: "PW" },
-  { key: "qrCodeGenerator", href: "/tools/qr-code-generator", icon: "QR" },
-  { key: "cronExpressionBuilder", href: "/tools/cron-expression-builder", icon: "CR" },
-  { key: "jsonCsvConverter", href: "/tools/json-csv-converter", icon: "CSV" },
-  { key: "textCaseConverter", href: "/tools/text-case-converter", icon: "Cc" },
-  { key: "placeholderImage", href: "/tools/placeholder-image", icon: "IMG" },
-  { key: "sqlFormatter", href: "/tools/sql-formatter", icon: "SQL" },
-  { key: "jsonYamlConverter", href: "/tools/json-yaml-converter", icon: "YML" },
-  { key: "chmodCalculator", href: "/tools/chmod-calculator", icon: "777" },
-  { key: "boxShadowGenerator", href: "/tools/box-shadow-generator", icon: "SH" },
-  { key: "borderRadiusGenerator", href: "/tools/border-radius-generator", icon: "BR" },
-  { key: "aspectRatioCalculator", href: "/tools/aspect-ratio-calculator", icon: "16:9" },
-  { key: "imageCompressor", href: "/tools/image-compressor", icon: "ZIP" },
-  { key: "svgToPng", href: "/tools/svg-to-png", icon: "SVG" },
-  { key: "htmlEntityEncoder", href: "/tools/html-entity-encoder", icon: "&;" },
-  { key: "colorPaletteGenerator", href: "/tools/color-palette-generator", icon: "PAL" },
-  { key: "textShadowGenerator", href: "/tools/text-shadow-generator", icon: "TxS" },
-  { key: "csvToSql", href: "/tools/csv-to-sql", icon: "C→S" },
+  { key: 'faviconGenerator', href: '/tools/favicon-generator', icon: 'FI' },
+  { key: 'jsonFormatter', href: '/tools/json-formatter', icon: '{}' },
+  { key: 'metaTagGenerator', href: '/tools/meta-tag-generator', icon: '<>' },
+  { key: 'base64Encoder', href: '/tools/base64-encoder', icon: 'B64' },
+  { key: 'colorConverter', href: '/tools/color-converter', icon: 'CLR' },
+  { key: 'cssUnitConverter', href: '/tools/css-unit-converter', icon: 'CSS' },
+  { key: 'hashGenerator', href: '/tools/hash-generator', icon: '#' },
+  { key: 'urlEncoder', href: '/tools/url-encoder', icon: '%' },
+  { key: 'regexTester', href: '/tools/regex-tester', icon: '.*' },
+  { key: 'loremIpsum', href: '/tools/lorem-ipsum', icon: 'Aa' },
+  { key: 'uuidGenerator', href: '/tools/uuid-generator', icon: 'ID' },
+  { key: 'jwtDecoder', href: '/tools/jwt-decoder', icon: 'JWT' },
+  { key: 'timestampConverter', href: '/tools/timestamp-converter', icon: 'TS' },
+  { key: 'markdownPreview', href: '/tools/markdown-preview', icon: 'MD' },
+  { key: 'cssGradientGenerator', href: '/tools/css-gradient-generator', icon: 'GR' },
+  { key: 'diffChecker', href: '/tools/diff-checker', icon: '±' },
+  { key: 'passwordGenerator', href: '/tools/password-generator', icon: 'PW' },
+  { key: 'qrCodeGenerator', href: '/tools/qr-code-generator', icon: 'QR' },
+  { key: 'cronExpressionBuilder', href: '/tools/cron-expression-builder', icon: 'CR' },
+  { key: 'jsonCsvConverter', href: '/tools/json-csv-converter', icon: 'CSV' },
+  { key: 'textCaseConverter', href: '/tools/text-case-converter', icon: 'Cc' },
+  { key: 'placeholderImage', href: '/tools/placeholder-image', icon: 'IMG' },
+  { key: 'sqlFormatter', href: '/tools/sql-formatter', icon: 'SQL' },
+  { key: 'jsonYamlConverter', href: '/tools/json-yaml-converter', icon: 'YML' },
+  { key: 'chmodCalculator', href: '/tools/chmod-calculator', icon: '777' },
+  { key: 'boxShadowGenerator', href: '/tools/box-shadow-generator', icon: 'SH' },
+  { key: 'borderRadiusGenerator', href: '/tools/border-radius-generator', icon: 'BR' },
+  { key: 'aspectRatioCalculator', href: '/tools/aspect-ratio-calculator', icon: '16:9' },
+  { key: 'imageCompressor', href: '/tools/image-compressor', icon: 'ZIP' },
+  { key: 'svgToPng', href: '/tools/svg-to-png', icon: 'SVG' },
+  { key: 'htmlEntityEncoder', href: '/tools/html-entity-encoder', icon: '&;' },
+  { key: 'colorPaletteGenerator', href: '/tools/color-palette-generator', icon: 'PAL' },
+  { key: 'textShadowGenerator', href: '/tools/text-shadow-generator', icon: 'TxS' },
+  { key: 'csvToSql', href: '/tools/csv-to-sql', icon: 'C→S' },
 ] as const;
 
 export function NavMenu() {
-  const t = useTranslations("home.tools");
+  const t = useTranslations('home.tools');
   const [open, setOpen] = useState(false);
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState('');
   const ref = useRef<HTMLDivElement>(null);
   const searchRef = useRef<HTMLInputElement>(null);
 
@@ -52,11 +52,11 @@ export function NavMenu() {
     function handleClick(e: MouseEvent) {
       if (ref.current && !ref.current.contains(e.target as Node)) {
         setOpen(false);
-        setSearch("");
+        setSearch('');
       }
     }
-    document.addEventListener("mousedown", handleClick);
-    return () => document.removeEventListener("mousedown", handleClick);
+    document.addEventListener('mousedown', handleClick);
+    return () => document.removeEventListener('mousedown', handleClick);
   }, []);
 
   // Focus search when dropdown opens
@@ -69,20 +69,20 @@ export function NavMenu() {
   // Keyboard shortcut: Ctrl+K to toggle
   useEffect(() => {
     function handleKey(e: KeyboardEvent) {
-      if ((e.ctrlKey || e.metaKey) && e.key === "k") {
+      if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
         e.preventDefault();
         setOpen((prev) => {
-          if (prev) setSearch("");
+          if (prev) setSearch('');
           return !prev;
         });
       }
-      if (e.key === "Escape" && open) {
+      if (e.key === 'Escape' && open) {
         setOpen(false);
-        setSearch("");
+        setSearch('');
       }
     }
-    document.addEventListener("keydown", handleKey);
-    return () => document.removeEventListener("keydown", handleKey);
+    document.addEventListener('keydown', handleKey);
+    return () => document.removeEventListener('keydown', handleKey);
   }, [open]);
 
   const filtered = useMemo(() => {
@@ -101,7 +101,7 @@ export function NavMenu() {
       <button
         onClick={() => {
           setOpen(!open);
-          if (open) setSearch("");
+          if (open) setSearch('');
         }}
         className="flex items-center gap-1.5 text-sm text-zinc-400 hover:text-zinc-100 transition-colors px-3 py-1.5 rounded-lg hover:bg-zinc-800/50"
       >
@@ -110,7 +110,7 @@ export function NavMenu() {
           Ctrl+K
         </kbd>
         <svg
-          className={`w-3.5 h-3.5 transition-transform ${open ? "rotate-180" : ""}`}
+          className={`w-3.5 h-3.5 transition-transform ${open ? 'rotate-180' : ''}`}
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -141,11 +141,14 @@ export function NavMenu() {
                 href={tool.href}
                 onClick={() => {
                   setOpen(false);
-                  setSearch("");
+                  setSearch('');
                 }}
                 className="flex items-center gap-2 px-2.5 py-2 rounded-lg text-xs text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800 transition-colors"
               >
-                <span className="w-5 h-5 flex items-center justify-center rounded bg-zinc-800 text-[8px] font-mono font-bold text-emerald-400 shrink-0" translate="no">
+                <span
+                  className="w-5 h-5 flex items-center justify-center rounded bg-zinc-800 text-[8px] font-mono font-bold text-emerald-400 shrink-0"
+                  translate="no"
+                >
                   {tool.icon}
                 </span>
                 <span>{t(`${tool.key}.name`)}</span>
@@ -154,9 +157,7 @@ export function NavMenu() {
           </div>
 
           {filtered.length === 0 && (
-            <div className="text-center text-xs text-zinc-500 py-4">
-              No tools found
-            </div>
+            <div className="text-center text-xs text-zinc-500 py-4">No tools found</div>
           )}
         </div>
       )}

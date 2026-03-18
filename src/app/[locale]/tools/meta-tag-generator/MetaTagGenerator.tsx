@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations } from 'next-intl';
+import { useState } from 'react';
 
 interface MetaData {
   title: string;
@@ -21,20 +21,21 @@ interface MetaData {
 }
 
 const DEFAULT: MetaData = {
-  title: "My Awesome Website — Build Something Great",
-  description: "A modern web application that helps developers build better products faster. Free tools, guides, and resources.",
-  url: "https://example.com",
-  siteName: "My Awesome Website",
-  ogImage: "",
-  ogType: "website",
-  twitterCard: "summary_large_image",
-  twitterSite: "",
-  author: "",
-  robots: "index, follow",
-  canonical: "",
-  language: "en",
-  charset: "UTF-8",
-  viewport: "width=device-width, initial-scale=1",
+  title: 'My Awesome Website — Build Something Great',
+  description:
+    'A modern web application that helps developers build better products faster. Free tools, guides, and resources.',
+  url: 'https://example.com',
+  siteName: 'My Awesome Website',
+  ogImage: '',
+  ogType: 'website',
+  twitterCard: 'summary_large_image',
+  twitterSite: '',
+  author: '',
+  robots: 'index, follow',
+  canonical: '',
+  language: 'en',
+  charset: 'UTF-8',
+  viewport: 'width=device-width, initial-scale=1',
 };
 
 function generateTags(data: MetaData): string {
@@ -65,11 +66,12 @@ function generateTags(data: MetaData): string {
   // Open Graph
   const hasOg = data.title || data.description || data.url || data.ogImage;
   if (hasOg) {
-    lines.push("");
-    lines.push("<!-- Open Graph -->");
+    lines.push('');
+    lines.push('<!-- Open Graph -->');
     if (data.ogType) lines.push(`<meta property="og:type" content="${data.ogType}">`);
     if (data.title) lines.push(`<meta property="og:title" content="${data.title}">`);
-    if (data.description) lines.push(`<meta property="og:description" content="${data.description}">`);
+    if (data.description)
+      lines.push(`<meta property="og:description" content="${data.description}">`);
     if (data.url) lines.push(`<meta property="og:url" content="${data.url}">`);
     if (data.siteName) lines.push(`<meta property="og:site_name" content="${data.siteName}">`);
     if (data.ogImage) lines.push(`<meta property="og:image" content="${data.ogImage}">`);
@@ -78,16 +80,17 @@ function generateTags(data: MetaData): string {
   // Twitter
   const hasTwitter = data.title || data.description || data.ogImage;
   if (hasTwitter) {
-    lines.push("");
-    lines.push("<!-- Twitter Card -->");
+    lines.push('');
+    lines.push('<!-- Twitter Card -->');
     lines.push(`<meta name="twitter:card" content="${data.twitterCard}">`);
     if (data.title) lines.push(`<meta name="twitter:title" content="${data.title}">`);
-    if (data.description) lines.push(`<meta name="twitter:description" content="${data.description}">`);
+    if (data.description)
+      lines.push(`<meta name="twitter:description" content="${data.description}">`);
     if (data.ogImage) lines.push(`<meta name="twitter:image" content="${data.ogImage}">`);
     if (data.twitterSite) lines.push(`<meta name="twitter:site" content="${data.twitterSite}">`);
   }
 
-  return lines.join("\n");
+  return lines.join('\n');
 }
 
 function Input({
@@ -109,13 +112,9 @@ function Input({
   return (
     <div>
       <div className="flex items-center justify-between mb-1">
-        <label className="block text-xs text-zinc-500 uppercase tracking-wide">
-          {label}
-        </label>
+        <label className="block text-xs text-zinc-500 uppercase tracking-wide">{label}</label>
         {maxLength && value.length > 0 && (
-          <span
-            className={`text-xs ${overLimit ? "text-red-400" : "text-zinc-500"}`}
-          >
+          <span className={`text-xs ${overLimit ? 'text-red-400' : 'text-zinc-500'}`}>
             {value.length}/{maxLength}
           </span>
         )}
@@ -145,9 +144,7 @@ function Select({
 }) {
   return (
     <div>
-      <label className="block text-xs text-zinc-500 uppercase tracking-wide mb-1">
-        {label}
-      </label>
+      <label className="block text-xs text-zinc-500 uppercase tracking-wide mb-1">{label}</label>
       <select
         value={value}
         onChange={(e) => onChange(e.target.value)}
@@ -164,24 +161,24 @@ function Select({
 }
 
 function GooglePreview({ data }: { data: MetaData }) {
-  const title = data.title || "Page Title";
-  const desc = data.description || "Page description will appear here...";
-  const url = data.url || "https://example.com";
+  const title = data.title || 'Page Title';
+  const desc = data.description || 'Page description will appear here...';
+  const url = data.url || 'https://example.com';
 
   return (
     <div className="bg-white rounded-lg p-4 text-left">
-      <p className="text-sm text-[#202124] truncate" style={{ fontFamily: "Arial, sans-serif" }}>
+      <p className="text-sm text-[#202124] truncate" style={{ fontFamily: 'Arial, sans-serif' }}>
         {url}
       </p>
       <h3
         className="text-xl text-[#1a0dab] truncate leading-tight mt-0.5"
-        style={{ fontFamily: "Arial, sans-serif" }}
+        style={{ fontFamily: 'Arial, sans-serif' }}
       >
         {title}
       </h3>
       <p
         className="text-sm text-[#4d5156] mt-1 line-clamp-2"
-        style={{ fontFamily: "Arial, sans-serif" }}
+        style={{ fontFamily: 'Arial, sans-serif' }}
       >
         {desc}
       </p>
@@ -190,11 +187,9 @@ function GooglePreview({ data }: { data: MetaData }) {
 }
 
 function SocialPreview({ data, noImageText }: { data: MetaData; noImageText: string }) {
-  const title = data.title || "Page Title";
-  const desc = data.description || "Page description will appear here...";
-  const domain = data.url
-    ? data.url.replace(/^https?:\/\//, "").split("/")[0]
-    : "example.com";
+  const title = data.title || 'Page Title';
+  const desc = data.description || 'Page description will appear here...';
+  const domain = data.url ? data.url.replace(/^https?:\/\//, '').split('/')[0] : 'example.com';
 
   return (
     <div className="rounded-lg border border-zinc-700 overflow-hidden bg-zinc-900">
@@ -206,7 +201,7 @@ function SocialPreview({ data, noImageText }: { data: MetaData; noImageText: str
             alt="OG Preview"
             className="w-full h-full object-cover"
             onError={(e) => {
-              (e.target as HTMLImageElement).style.display = "none";
+              (e.target as HTMLImageElement).style.display = 'none';
             }}
           />
         </div>
@@ -217,9 +212,7 @@ function SocialPreview({ data, noImageText }: { data: MetaData; noImageText: str
       )}
       <div className="p-3">
         <p className="text-xs text-zinc-500 uppercase">{domain}</p>
-        <h3 className="text-sm font-semibold text-zinc-100 mt-1 truncate">
-          {title}
-        </h3>
+        <h3 className="text-sm font-semibold text-zinc-100 mt-1 truncate">{title}</h3>
         <p className="text-xs text-zinc-400 mt-1 line-clamp-2">{desc}</p>
       </div>
     </div>
@@ -227,13 +220,11 @@ function SocialPreview({ data, noImageText }: { data: MetaData; noImageText: str
 }
 
 export function MetaTagGenerator() {
-  const t = useTranslations("metaTagGenerator.ui");
-  const tc = useTranslations("ui");
+  const t = useTranslations('metaTagGenerator.ui');
+  const tc = useTranslations('ui');
   const [data, setData] = useState<MetaData>(DEFAULT);
   const [copied, setCopied] = useState(false);
-  const [activeTab, setActiveTab] = useState<"basic" | "social" | "advanced">(
-    "basic"
-  );
+  const [activeTab, setActiveTab] = useState<'basic' | 'social' | 'advanced'>('basic');
 
   const update = (field: keyof MetaData, value: string) => {
     setData((prev) => ({ ...prev, [field]: value }));
@@ -252,9 +243,9 @@ export function MetaTagGenerator() {
   };
 
   const tabs = [
-    { id: "basic" as const, label: t("tabBasicSeo") },
-    { id: "social" as const, label: t("tabSocialMedia") },
-    { id: "advanced" as const, label: t("tabAdvanced") },
+    { id: 'basic' as const, label: t('tabBasicSeo') },
+    { id: 'social' as const, label: t('tabSocialMedia') },
+    { id: 'advanced' as const, label: t('tabAdvanced') },
   ];
 
   return (
@@ -262,8 +253,8 @@ export function MetaTagGenerator() {
       {/* How it works */}
       <div className="bg-zinc-900/50 border border-zinc-800 rounded-lg p-3">
         <p className="text-xs text-zinc-400">
-          <span className="text-emerald-400 font-medium">{tc("howItWorks")}</span>{" "}
-          {t("howItWorksText")}
+          <span className="text-emerald-400 font-medium">{tc('howItWorks')}</span>{' '}
+          {t('howItWorksText')}
         </p>
       </div>
 
@@ -274,9 +265,7 @@ export function MetaTagGenerator() {
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
             className={`flex-1 px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-              activeTab === tab.id
-                ? "bg-zinc-800 text-white"
-                : "text-zinc-400 hover:text-zinc-200"
+              activeTab === tab.id ? 'bg-zinc-800 text-white' : 'text-zinc-400 hover:text-zinc-200'
             }`}
           >
             {tab.label}
@@ -286,133 +275,133 @@ export function MetaTagGenerator() {
 
       {/* Form */}
       <div className="space-y-4">
-        {activeTab === "basic" && (
+        {activeTab === 'basic' && (
           <>
             <Input
-              label={t("titleLabel")}
+              label={t('titleLabel')}
               value={data.title}
-              onChange={(v) => update("title", v)}
-              placeholder={t("titlePlaceholder")}
+              onChange={(v) => update('title', v)}
+              placeholder={t('titlePlaceholder')}
               maxLength={60}
-              hint={t("titleHint")}
+              hint={t('titleHint')}
             />
             <Input
-              label={t("descriptionLabel")}
+              label={t('descriptionLabel')}
               value={data.description}
-              onChange={(v) => update("description", v)}
-              placeholder={t("descriptionPlaceholder")}
+              onChange={(v) => update('description', v)}
+              placeholder={t('descriptionPlaceholder')}
               maxLength={160}
-              hint={t("descriptionHint")}
+              hint={t('descriptionHint')}
             />
             <Input
-              label={t("pageUrl")}
+              label={t('pageUrl')}
               value={data.url}
-              onChange={(v) => update("url", v)}
+              onChange={(v) => update('url', v)}
               placeholder="https://example.com/page"
-              hint={t("pageUrlHint")}
+              hint={t('pageUrlHint')}
             />
             <Input
-              label={t("canonicalUrl")}
+              label={t('canonicalUrl')}
               value={data.canonical}
-              onChange={(v) => update("canonical", v)}
+              onChange={(v) => update('canonical', v)}
               placeholder="https://example.com/page"
-              hint={t("canonicalUrlHint")}
+              hint={t('canonicalUrlHint')}
             />
             <Select
-              label={t("robots")}
+              label={t('robots')}
               value={data.robots}
-              onChange={(v) => update("robots", v)}
+              onChange={(v) => update('robots', v)}
               options={[
-                { value: "index, follow", label: t("robotsIndex") },
-                { value: "noindex, follow", label: t("robotsNoindex") },
-                { value: "index, nofollow", label: t("robotsNofollow") },
-                { value: "noindex, nofollow", label: t("robotsNone") },
+                { value: 'index, follow', label: t('robotsIndex') },
+                { value: 'noindex, follow', label: t('robotsNoindex') },
+                { value: 'index, nofollow', label: t('robotsNofollow') },
+                { value: 'noindex, nofollow', label: t('robotsNone') },
               ]}
             />
           </>
         )}
 
-        {activeTab === "social" && (
+        {activeTab === 'social' && (
           <>
             <Input
-              label={t("siteName")}
+              label={t('siteName')}
               value={data.siteName}
-              onChange={(v) => update("siteName", v)}
-              placeholder={t("siteNamePlaceholder")}
-              hint={t("siteNameHint")}
+              onChange={(v) => update('siteName', v)}
+              placeholder={t('siteNamePlaceholder')}
+              hint={t('siteNameHint')}
             />
             <Input
-              label={t("ogImageUrl")}
+              label={t('ogImageUrl')}
               value={data.ogImage}
-              onChange={(v) => update("ogImage", v)}
+              onChange={(v) => update('ogImage', v)}
               placeholder="https://example.com/og-image.jpg"
-              hint={t("ogImageHint")}
+              hint={t('ogImageHint')}
             />
             <Select
-              label={t("ogType")}
+              label={t('ogType')}
               value={data.ogType}
-              onChange={(v) => update("ogType", v)}
+              onChange={(v) => update('ogType', v)}
               options={[
-                { value: "website", label: t("ogTypeWebsite") },
-                { value: "article", label: t("ogTypeArticle") },
-                { value: "product", label: t("ogTypeProduct") },
-                { value: "profile", label: t("ogTypeProfile") },
+                { value: 'website', label: t('ogTypeWebsite') },
+                { value: 'article', label: t('ogTypeArticle') },
+                { value: 'product', label: t('ogTypeProduct') },
+                { value: 'profile', label: t('ogTypeProfile') },
               ]}
             />
             <Select
-              label={t("twitterCard")}
+              label={t('twitterCard')}
               value={data.twitterCard}
-              onChange={(v) => update("twitterCard", v)}
+              onChange={(v) => update('twitterCard', v)}
               options={[
-                { value: "summary_large_image", label: t("twitterCardLarge") },
-                { value: "summary", label: t("twitterCardSummary") },
+                { value: 'summary_large_image', label: t('twitterCardLarge') },
+                { value: 'summary', label: t('twitterCardSummary') },
               ]}
             />
             <Input
-              label={t("twitterUsername")}
+              label={t('twitterUsername')}
               value={data.twitterSite}
-              onChange={(v) => update("twitterSite", v)}
+              onChange={(v) => update('twitterSite', v)}
               placeholder="@username"
             />
           </>
         )}
 
-        {activeTab === "advanced" && (
+        {activeTab === 'advanced' && (
           <>
             <Input
-              label={t("author")}
+              label={t('author')}
               value={data.author}
-              onChange={(v) => update("author", v)}
+              onChange={(v) => update('author', v)}
               placeholder="John Doe"
             />
             <Select
-              label={t("language")}
+              label={t('language')}
               value={data.language}
-              onChange={(v) => update("language", v)}
+              onChange={(v) => update('language', v)}
               options={[
-                { value: "en", label: t("langEn") },
-                { value: "es", label: t("langEs") },
-                { value: "fr", label: t("langFr") },
-                { value: "de", label: t("langDe") },
-                { value: "pt", label: t("langPt") },
-                { value: "ja", label: t("langJa") },
-                { value: "zh", label: t("langZh") },
-                { value: "ko", label: t("langKo") },
+                { value: 'en', label: t('langEn') },
+                { value: 'es', label: t('langEs') },
+                { value: 'fr', label: t('langFr') },
+                { value: 'de', label: t('langDe') },
+                { value: 'pt', label: t('langPt') },
+                { value: 'ja', label: t('langJa') },
+                { value: 'zh', label: t('langZh') },
+                { value: 'ko', label: t('langKo') },
               ]}
             />
             <Select
-              label={t("charset")}
+              label={t('charset')}
               value={data.charset}
-              onChange={(v) => update("charset", v)}
+              onChange={(v) => update('charset', v)}
               options={[
-                { value: "UTF-8", label: t("charsetUtf8") },
-                { value: "ISO-8859-1", label: t("charsetIso") },
+                { value: 'UTF-8', label: t('charsetUtf8') },
+                { value: 'ISO-8859-1', label: t('charsetIso') },
               ]}
             />
             <Input
-              label={t("viewport")}
+              label={t('viewport')}
               value={data.viewport}
-              onChange={(v) => update("viewport", v)}
+              onChange={(v) => update('viewport', v)}
               placeholder="width=device-width, initial-scale=1"
             />
           </>
@@ -421,31 +410,31 @@ export function MetaTagGenerator() {
 
       {/* Previews */}
       <div className="space-y-4">
-        <h3 className="text-sm font-medium text-zinc-300">{t("googlePreview")}</h3>
+        <h3 className="text-sm font-medium text-zinc-300">{t('googlePreview')}</h3>
         <GooglePreview data={data} />
 
-        <h3 className="text-sm font-medium text-zinc-300">{t("socialPreview")}</h3>
-        <SocialPreview data={data} noImageText={t("noImage")} />
+        <h3 className="text-sm font-medium text-zinc-300">{t('socialPreview')}</h3>
+        <SocialPreview data={data} noImageText={t('noImage')} />
       </div>
 
       {/* Output */}
       <div>
         <div className="flex items-center justify-between mb-2">
           <label className="block text-xs text-zinc-500 uppercase tracking-wide">
-            {t("generatedHtml")}
+            {t('generatedHtml')}
           </label>
           <div className="flex gap-2">
             <button
               onClick={reset}
               className="px-3 py-1.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-sm font-medium transition-colors"
             >
-              {t("reset")}
+              {t('reset')}
             </button>
             <button
               onClick={copyOutput}
               className="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-sm font-medium text-white transition-colors"
             >
-              {copied ? tc("copied") : t("copyHtml")}
+              {copied ? tc('copied') : t('copyHtml')}
             </button>
           </div>
         </div>

@@ -9,29 +9,29 @@ type Props = {
 
 export function ToolJsonLd({ name, description, url, faq }: Props) {
   const webApp = {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
     name,
     url,
     description,
-    applicationCategory: "DeveloperApplication",
-    operatingSystem: "Any",
-    browserRequirements: "Requires JavaScript",
+    applicationCategory: 'DeveloperApplication',
+    operatingSystem: 'Any',
+    browserRequirements: 'Requires JavaScript',
     offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "USD",
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
     },
   };
 
   const faqPage = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
     mainEntity: faq.map((item) => ({
-      "@type": "Question",
+      '@type': 'Question',
       name: item.question,
       acceptedAnswer: {
-        "@type": "Answer",
+        '@type': 'Answer',
         text: item.answer,
       },
     })),

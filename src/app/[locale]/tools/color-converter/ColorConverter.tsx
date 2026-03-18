@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { useState, useCallback } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations } from 'next-intl';
+import { useCallback, useState } from 'react';
 
 interface RGB {
   r: number;
@@ -16,7 +16,7 @@ interface HSL {
 }
 
 function hexToRgb(hex: string): RGB | null {
-  const clean = hex.replace(/^#/, "");
+  const clean = hex.replace(/^#/, '');
   let full = clean;
   if (full.length === 3) {
     full = full[0] + full[0] + full[1] + full[1] + full[2] + full[2];
@@ -33,7 +33,7 @@ function rgbToHex(rgb: RGB): string {
   const toHex = (n: number) =>
     Math.max(0, Math.min(255, Math.round(n)))
       .toString(16)
-      .padStart(2, "0");
+      .padStart(2, '0');
   return `#${toHex(rgb.r)}${toHex(rgb.g)}${toHex(rgb.b)}`;
 }
 
@@ -94,9 +94,30 @@ function hslToRgb(hsl: HSL): RGB {
 
 // Quick-pick palette
 const COLOR_PALETTE = [
-  "#ef4444", "#f97316", "#f59e0b", "#eab308", "#84cc16", "#22c55e", "#10b981", "#14b8a6",
-  "#06b6d4", "#0ea5e9", "#3b82f6", "#6366f1", "#8b5cf6", "#a855f7", "#d946ef", "#ec4899",
-  "#f43f5e", "#78716c", "#64748b", "#000000", "#ffffff", "#1e293b", "#374151", "#6b7280",
+  '#ef4444',
+  '#f97316',
+  '#f59e0b',
+  '#eab308',
+  '#84cc16',
+  '#22c55e',
+  '#10b981',
+  '#14b8a6',
+  '#06b6d4',
+  '#0ea5e9',
+  '#3b82f6',
+  '#6366f1',
+  '#8b5cf6',
+  '#a855f7',
+  '#d946ef',
+  '#ec4899',
+  '#f43f5e',
+  '#78716c',
+  '#64748b',
+  '#000000',
+  '#ffffff',
+  '#1e293b',
+  '#374151',
+  '#6b7280',
 ];
 
 // Parse any color format: hex, rgb(), hsl(), or just numbers
@@ -104,12 +125,14 @@ function parseAnyColor(input: string): RGB | null {
   const trimmed = input.trim();
 
   // Try HEX
-  if (trimmed.startsWith("#") || /^[0-9a-fA-F]{3,6}$/.test(trimmed)) {
+  if (trimmed.startsWith('#') || /^[0-9a-fA-F]{3,6}$/.test(trimmed)) {
     return hexToRgb(trimmed);
   }
 
   // Try rgb(r, g, b) or r, g, b
-  const rgbMatch = trimmed.match(/^(?:rgb\s*\(\s*)?(\d{1,3})\s*[,\s]\s*(\d{1,3})\s*[,\s]\s*(\d{1,3})\s*\)?$/);
+  const rgbMatch = trimmed.match(
+    /^(?:rgb\s*\(\s*)?(\d{1,3})\s*[,\s]\s*(\d{1,3})\s*[,\s]\s*(\d{1,3})\s*\)?$/,
+  );
   if (rgbMatch) {
     const r = parseInt(rgbMatch[1]);
     const g = parseInt(rgbMatch[2]);
@@ -120,7 +143,9 @@ function parseAnyColor(input: string): RGB | null {
   }
 
   // Try hsl(h, s%, l%) or h, s%, l%
-  const hslMatch = trimmed.match(/^(?:hsl\s*\(\s*)?(\d{1,3})\s*[,\s]\s*(\d{1,3})%?\s*[,\s]\s*(\d{1,3})%?\s*\)?$/);
+  const hslMatch = trimmed.match(
+    /^(?:hsl\s*\(\s*)?(\d{1,3})\s*[,\s]\s*(\d{1,3})%?\s*[,\s]\s*(\d{1,3})%?\s*\)?$/,
+  );
   if (hslMatch) {
     const h = parseInt(hslMatch[1]);
     const s = parseInt(hslMatch[2]);
@@ -133,7 +158,15 @@ function parseAnyColor(input: string): RGB | null {
   return null;
 }
 
-function CopyButton({ text, copiedLabel, copyLabel }: { text: string; copiedLabel: string; copyLabel: string }) {
+function CopyButton({
+  text,
+  copiedLabel,
+  copyLabel,
+}: {
+  text: string;
+  copiedLabel: string;
+  copyLabel: string;
+}) {
   const [copied, setCopied] = useState(false);
   const copy = async () => {
     await navigator.clipboard.writeText(text);
@@ -151,8 +184,8 @@ function CopyButton({ text, copiedLabel, copyLabel }: { text: string; copiedLabe
 }
 
 export function ColorConverter() {
-  const t = useTranslations("colorConverter.ui");
-  const tc = useTranslations("ui");
+  const t = useTranslations('colorConverter.ui');
+  const tc = useTranslations('ui');
   const [rgb, setRgb] = useState<RGB>({ r: 59, g: 130, b: 246 });
 
   const hex = rgbToHex(rgb);
@@ -167,18 +200,18 @@ export function ColorConverter() {
     if (parsed) setRgb(parsed);
   }, []);
 
-  const handleRgbChange = useCallback(
-    (channel: "r" | "g" | "b", value: number) => {
-      setRgb((prev) => ({ ...prev, [channel]: Math.max(0, Math.min(255, value)) }));
-    },
-    []
-  );
+  const handleRgbChange = useCallback((channel: 'r' | 'g' | 'b', value: number) => {
+    setRgb((prev) => ({ ...prev, [channel]: Math.max(0, Math.min(255, value)) }));
+  }, []);
 
-  const handleHslChange = useCallback((channel: "h" | "s" | "l", value: number) => {
-    const maxVal = channel === "h" ? 360 : 100;
-    const newHsl = { ...rgbToHsl(rgb), [channel]: Math.max(0, Math.min(maxVal, value)) };
-    setRgb(hslToRgb(newHsl));
-  }, [rgb]);
+  const handleHslChange = useCallback(
+    (channel: 'h' | 's' | 'l', value: number) => {
+      const maxVal = channel === 'h' ? 360 : 100;
+      const newHsl = { ...rgbToHsl(rgb), [channel]: Math.max(0, Math.min(maxVal, value)) };
+      setRgb(hslToRgb(newHsl));
+    },
+    [rgb],
+  );
 
   const handlePickerChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const parsed = hexToRgb(e.target.value);
@@ -186,9 +219,9 @@ export function ColorConverter() {
   }, []);
 
   const hslLabels: Record<string, string> = {
-    h: t("hue"),
-    s: t("saturation"),
-    l: t("lightness"),
+    h: t('hue'),
+    s: t('saturation'),
+    l: t('lightness'),
   };
 
   return (
@@ -196,8 +229,8 @@ export function ColorConverter() {
       {/* How it works */}
       <div className="bg-zinc-900/50 border border-zinc-800 rounded-lg p-3">
         <p className="text-xs text-zinc-400">
-          <span className="text-emerald-400 font-medium">{tc("howItWorks")}</span>{" "}
-          {t("howItWorksText")}
+          <span className="text-emerald-400 font-medium">{tc('howItWorks')}</span>{' '}
+          {t('howItWorksText')}
         </p>
       </div>
 
@@ -215,11 +248,11 @@ export function ColorConverter() {
               onChange={handlePickerChange}
               className="w-14 h-10 rounded cursor-pointer bg-transparent border-0"
             />
-            <p className="text-xs text-zinc-500">{t("colorPicker")}</p>
+            <p className="text-xs text-zinc-500">{t('colorPicker')}</p>
           </div>
         </div>
         <div>
-          <p className="text-xs text-zinc-500 mb-2">{t("quickPick")}</p>
+          <p className="text-xs text-zinc-500 mb-2">{t('quickPick')}</p>
           <div className="grid grid-cols-12 gap-1">
             {COLOR_PALETTE.map((color) => (
               <button
@@ -230,8 +263,8 @@ export function ColorConverter() {
                 }}
                 className={`aspect-square rounded-md border-2 transition-all hover:scale-110 ${
                   hex.toLowerCase() === color.toLowerCase()
-                    ? "border-white scale-110"
-                    : "border-transparent"
+                    ? 'border-white scale-110'
+                    : 'border-transparent'
                 }`}
                 style={{ backgroundColor: color }}
                 title={color}
@@ -245,9 +278,9 @@ export function ColorConverter() {
       <div className="bg-zinc-900 border border-zinc-800 rounded-lg p-4 space-y-3">
         <div className="flex items-center justify-between">
           <label className="text-xs text-zinc-500 uppercase tracking-wide">
-            HEX <span className="normal-case text-zinc-600 ml-1">&mdash; {t("hexDesc")}</span>
+            HEX <span className="normal-case text-zinc-600 ml-1">&mdash; {t('hexDesc')}</span>
           </label>
-          <CopyButton text={hexStr} copiedLabel={tc("copied")} copyLabel={tc("copy")} />
+          <CopyButton text={hexStr} copiedLabel={tc('copied')} copyLabel={tc('copy')} />
         </div>
         <input
           type="text"
@@ -255,7 +288,7 @@ export function ColorConverter() {
           key={hexStr}
           onBlur={(e) => handleHexChange(e.target.value)}
           onKeyDown={(e) => {
-            if (e.key === "Enter") handleHexChange(e.currentTarget.value);
+            if (e.key === 'Enter') handleHexChange(e.currentTarget.value);
           }}
           className="w-full bg-zinc-950 border border-zinc-700 rounded-lg px-3 py-2 font-mono text-sm focus:outline-none focus:border-emerald-500"
         />
@@ -265,12 +298,12 @@ export function ColorConverter() {
       <div className="bg-zinc-900 border border-zinc-800 rounded-lg p-4 space-y-3">
         <div className="flex items-center justify-between">
           <label className="text-xs text-zinc-500 uppercase tracking-wide">
-            RGB <span className="normal-case text-zinc-600 ml-1">&mdash; {t("rgbDesc")}</span>
+            RGB <span className="normal-case text-zinc-600 ml-1">&mdash; {t('rgbDesc')}</span>
           </label>
-          <CopyButton text={rgbStr} copiedLabel={tc("copied")} copyLabel={tc("copy")} />
+          <CopyButton text={rgbStr} copiedLabel={tc('copied')} copyLabel={tc('copy')} />
         </div>
         <div className="grid grid-cols-3 gap-3">
-          {(["r", "g", "b"] as const).map((ch) => (
+          {(['r', 'g', 'b'] as const).map((ch) => (
             <div key={ch}>
               <label className="block text-xs text-zinc-600 mb-1">
                 {ch.toUpperCase()} ({rgb[ch]})
@@ -295,12 +328,12 @@ export function ColorConverter() {
             if (parsed) setRgb(parsed);
           }}
           onKeyDown={(e) => {
-            if (e.key === "Enter") {
+            if (e.key === 'Enter') {
               const parsed = parseAnyColor(e.currentTarget.value);
               if (parsed) setRgb(parsed);
             }
           }}
-          placeholder={t("placeholderRgb")}
+          placeholder={t('placeholderRgb')}
           className="w-full bg-zinc-950 border border-zinc-700 rounded-lg px-3 py-2 font-mono text-sm focus:outline-none focus:border-emerald-500"
         />
       </div>
@@ -309,18 +342,19 @@ export function ColorConverter() {
       <div className="bg-zinc-900 border border-zinc-800 rounded-lg p-4 space-y-3">
         <div className="flex items-center justify-between">
           <label className="text-xs text-zinc-500 uppercase tracking-wide">
-            HSL <span className="normal-case text-zinc-600 ml-1">&mdash; {t("hslDesc")}</span>
+            HSL <span className="normal-case text-zinc-600 ml-1">&mdash; {t('hslDesc')}</span>
           </label>
-          <CopyButton text={hslStr} copiedLabel={tc("copied")} copyLabel={tc("copy")} />
+          <CopyButton text={hslStr} copiedLabel={tc('copied')} copyLabel={tc('copy')} />
         </div>
         <div className="grid grid-cols-3 gap-3">
-          {(["h", "s", "l"] as const).map((ch) => {
-            const max = ch === "h" ? 360 : 100;
-            const unit = ch === "h" ? "\u00b0" : "%";
+          {(['h', 's', 'l'] as const).map((ch) => {
+            const max = ch === 'h' ? 360 : 100;
+            const unit = ch === 'h' ? '\u00b0' : '%';
             return (
               <div key={ch}>
                 <label className="block text-xs text-zinc-600 mb-1">
-                  {hslLabels[ch]} ({hsl[ch]}{unit})
+                  {hslLabels[ch]} ({hsl[ch]}
+                  {unit})
                 </label>
                 <input
                   type="range"
@@ -343,12 +377,12 @@ export function ColorConverter() {
             if (parsed) setRgb(parsed);
           }}
           onKeyDown={(e) => {
-            if (e.key === "Enter") {
+            if (e.key === 'Enter') {
               const parsed = parseAnyColor(e.currentTarget.value);
               if (parsed) setRgb(parsed);
             }
           }}
-          placeholder={t("placeholderHsl")}
+          placeholder={t('placeholderHsl')}
           className="w-full bg-zinc-950 border border-zinc-700 rounded-lg px-3 py-2 font-mono text-sm focus:outline-none focus:border-emerald-500"
         />
       </div>
@@ -356,7 +390,7 @@ export function ColorConverter() {
       {/* CSS output */}
       <div className="bg-zinc-900 border border-zinc-800 rounded-lg p-4">
         <label className="block text-xs text-zinc-500 uppercase tracking-wide mb-2">
-          {t("cssValues")}
+          {t('cssValues')}
         </label>
         <div className="font-mono text-sm space-y-1">
           <p className="text-zinc-300">

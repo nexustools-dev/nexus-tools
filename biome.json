@@ -1,13 +1,11 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.0.0/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.4.7/schema.json",
   "vcs": {
     "enabled": true,
     "clientKind": "git",
     "useIgnoreFile": true
   },
-  "organizeImports": {
-    "enabled": true
-  },
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "formatter": {
     "enabled": true,
     "indentStyle": "space",
@@ -47,14 +45,15 @@
     }
   },
   "files": {
-    "ignore": [
-      "node_modules",
-      ".next",
-      "dist",
-      "build",
-      "coverage",
-      "public",
-      "*.min.js"
+    "includes": [
+      "**",
+      "!**/node_modules",
+      "!**/.next",
+      "!**/dist",
+      "!**/build",
+      "!**/coverage",
+      "!**/public",
+      "!**/*.min.js"
     ]
   }
 }
