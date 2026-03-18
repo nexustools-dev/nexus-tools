@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { DM_Sans, Space_Grotesk } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
@@ -9,7 +9,17 @@ import { Link } from '@/i18n/navigation';
 import { routing } from '@/i18n/routing';
 import '../globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-heading',
+  display: 'swap',
+});
+
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  variable: '--font-body',
+  display: 'swap',
+});
 
 type Props = {
   children: React.ReactNode;
@@ -74,7 +84,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           data-website-id="e227f13c-29c5-4713-9c80-c397cc866525"
         />
       </head>
-      <body className={`${inter.className} bg-zinc-950 text-zinc-100 min-h-screen`}>
+      <body className={`${dmSans.variable} ${spaceGrotesk.variable} font-[family-name:var(--font-body)] bg-[#0F172A] text-slate-100 min-h-screen`}>
         <NextIntlClientProvider>
           <nav className="border-b border-zinc-800 px-6 py-4">
             <div className="max-w-6xl mx-auto flex items-center justify-between">

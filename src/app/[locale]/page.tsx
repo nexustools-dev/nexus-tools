@@ -7,12 +7,14 @@ const toolKeys = [
     href: '/tools/favicon-generator',
     icon: 'FI',
     color: 'from-emerald-500 to-teal-600',
+    featured: true,
   },
   {
     key: 'jsonFormatter',
     href: '/tools/json-formatter',
     icon: '{}',
     color: 'from-blue-500 to-indigo-600',
+    featured: true,
   },
   {
     key: 'metaTagGenerator',
@@ -31,6 +33,7 @@ const toolKeys = [
     href: '/tools/color-converter',
     icon: 'CLR',
     color: 'from-rose-500 to-red-600',
+    featured: true,
   },
   {
     key: 'cssUnitConverter',
@@ -55,12 +58,13 @@ const toolKeys = [
     href: '/tools/regex-tester',
     icon: '.*',
     color: 'from-pink-500 to-rose-600',
+    featured: true,
   },
   {
     key: 'loremIpsum',
     href: '/tools/lorem-ipsum',
     icon: 'Aa',
-    color: 'from-slate-500 to-zinc-600',
+    color: 'from-slate-400 to-zinc-500',
   },
   {
     key: 'uuidGenerator',
@@ -79,25 +83,25 @@ const toolKeys = [
     key: 'markdownPreview',
     href: '/tools/markdown-preview',
     icon: 'MD',
-    color: 'from-gray-500 to-slate-600',
+    color: 'from-emerald-500 to-green-600',
   },
   {
     key: 'cssGradientGenerator',
     href: '/tools/css-gradient-generator',
     icon: 'GR',
-    color: 'from-fuchsia-500 to-violet-600',
+    color: 'from-fuchsia-500 to-purple-600',
   },
   {
     key: 'diffChecker',
     href: '/tools/diff-checker',
     icon: '±',
-    color: 'from-teal-500 to-emerald-600',
+    color: 'from-teal-500 to-cyan-600',
   },
   {
     key: 'passwordGenerator',
     href: '/tools/password-generator',
     icon: 'PW',
-    color: 'from-red-500 to-orange-600',
+    color: 'from-red-500 to-rose-600',
   },
   {
     key: 'qrCodeGenerator',
@@ -109,73 +113,73 @@ const toolKeys = [
     key: 'cronExpressionBuilder',
     href: '/tools/cron-expression-builder',
     icon: 'CR',
-    color: 'from-green-500 to-emerald-600',
+    color: 'from-lime-500 to-green-600',
   },
   {
     key: 'jsonCsvConverter',
     href: '/tools/json-csv-converter',
     icon: 'CSV',
-    color: 'from-amber-500 to-orange-600',
+    color: 'from-blue-500 to-cyan-600',
   },
   {
     key: 'textCaseConverter',
     href: '/tools/text-case-converter',
     icon: 'Cc',
-    color: 'from-lime-500 to-green-600',
+    color: 'from-violet-500 to-indigo-600',
   },
   {
     key: 'placeholderImage',
     href: '/tools/placeholder-image',
     icon: 'IMG',
-    color: 'from-pink-500 to-fuchsia-600',
+    color: 'from-orange-500 to-red-600',
   },
   {
     key: 'sqlFormatter',
     href: '/tools/sql-formatter',
     icon: 'SQL',
-    color: 'from-blue-500 to-cyan-600',
+    color: 'from-blue-500 to-indigo-600',
   },
   {
     key: 'jsonYamlConverter',
     href: '/tools/json-yaml-converter',
     icon: 'YML',
-    color: 'from-orange-500 to-red-600',
+    color: 'from-amber-500 to-orange-600',
   },
   {
     key: 'chmodCalculator',
     href: '/tools/chmod-calculator',
     icon: '777',
-    color: 'from-green-500 to-teal-600',
+    color: 'from-green-500 to-emerald-600',
   },
   {
     key: 'boxShadowGenerator',
     href: '/tools/box-shadow-generator',
-    icon: 'SH',
-    color: 'from-violet-500 to-purple-600',
+    icon: 'BSH',
+    color: 'from-slate-400 to-zinc-500',
   },
   {
     key: 'borderRadiusGenerator',
     href: '/tools/border-radius-generator',
-    icon: 'BR',
+    icon: 'BRD',
     color: 'from-pink-500 to-rose-600',
   },
   {
     key: 'aspectRatioCalculator',
     href: '/tools/aspect-ratio-calculator',
-    icon: '16:9',
-    color: 'from-amber-500 to-yellow-600',
+    icon: 'AR',
+    color: 'from-cyan-500 to-teal-600',
   },
   {
     key: 'imageCompressor',
     href: '/tools/image-compressor',
-    icon: 'ZIP',
-    color: 'from-teal-500 to-cyan-600',
+    icon: 'IMG',
+    color: 'from-emerald-500 to-green-600',
   },
   {
     key: 'svgToPng',
     href: '/tools/svg-to-png',
     icon: 'SVG',
-    color: 'from-indigo-500 to-violet-600',
+    color: 'from-orange-500 to-amber-600',
   },
   {
     key: 'htmlEntityEncoder',
@@ -234,68 +238,89 @@ export default async function Home({ params }: Props) {
   };
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-16">
+    <div className="max-w-6xl mx-auto px-6">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
       />
-      <section className="text-center mb-16">
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">{t('heading')}</h1>
-        <p className="text-lg text-zinc-400 max-w-2xl mx-auto">{t('subheading')}</p>
+
+      {/* Hero */}
+      <section className="relative text-center pt-24 pb-20 overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-emerald-500/10 rounded-full blur-[120px] pointer-events-none" />
+
+        <div className="relative z-10">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-emerald-500/20 bg-emerald-500/5 text-emerald-400 text-sm font-medium mb-8">
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            {toolKeys.length} tools — 100% client-side
+          </div>
+
+          <h1 className="font-[family-name:var(--font-heading)] text-5xl md:text-7xl font-bold tracking-tight mb-6 bg-gradient-to-b from-white to-slate-400 bg-clip-text text-transparent">
+            {t('heading')}
+          </h1>
+          <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+            {t('subheading')}
+          </p>
+        </div>
       </section>
 
-      <section className="grid md:grid-cols-2 gap-6">
+      {/* Tools Grid */}
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {toolKeys.map((tool) => (
           <Link
             key={tool.href}
             href={tool.href}
-            className="group block p-6 rounded-xl border border-zinc-800 bg-zinc-900/50 hover:border-zinc-700 hover:bg-zinc-900 transition-all"
+            className="group relative flex flex-col p-6 rounded-2xl border border-white/[0.06] bg-white/[0.02] hover:bg-white/[0.05] hover:border-white/[0.1] transition-all duration-300 cursor-pointer"
           >
-            <div
-              className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-br ${tool.color} text-white font-mono font-bold text-sm mb-4`}
-              translate="no"
-            >
-              {tool.icon}
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+            <div className="relative z-10">
+              <div
+                className={`inline-flex items-center justify-center w-11 h-11 rounded-xl bg-gradient-to-br ${tool.color} text-white font-mono font-bold text-xs mb-4 shadow-lg`}
+                translate="no"
+              >
+                {tool.icon}
+              </div>
+              <h2 className="font-[family-name:var(--font-heading)] text-lg font-semibold mb-1.5 text-white group-hover:text-emerald-400 transition-colors duration-200">
+                {t(`tools.${tool.key}.name`)}
+              </h2>
+              <p className="text-sm text-slate-400 leading-relaxed">
+                {t(`tools.${tool.key}.description`)}
+              </p>
             </div>
-            <h2 className="text-xl font-semibold mb-2 group-hover:text-emerald-400 transition-colors">
-              {t(`tools.${tool.key}.name`)}
-            </h2>
-            <p className="text-zinc-400 text-sm leading-relaxed">
-              {t(`tools.${tool.key}.description`)}
-            </p>
           </Link>
         ))}
       </section>
 
       {/* Coming Soon */}
-      <section className="mt-16">
-        <div className="flex items-center gap-3 mb-6">
-          <h2 className="text-2xl font-bold">{t('comingSoonHeading')}</h2>
-          <span className="px-2.5 py-0.5 rounded-full bg-amber-500/10 text-amber-400 text-xs font-medium border border-amber-500/20">
+      <section className="mt-20">
+        <div className="flex items-center gap-3 mb-8">
+          <h2 className="font-[family-name:var(--font-heading)] text-2xl font-bold">{t('comingSoonHeading')}</h2>
+          <span className="px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 text-xs font-medium border border-amber-500/20">
             {comingSoonKeys.length} {t('comingSoonBadge')}
           </span>
         </div>
-        <div className="grid md:grid-cols-2 gap-4">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-3">
           {comingSoonKeys.map((tool) => (
             <div
               key={tool.key}
-              className="p-5 rounded-xl border border-zinc-800/60 bg-zinc-900/30 opacity-60 relative overflow-hidden"
+              className="p-5 rounded-xl border border-white/[0.04] bg-white/[0.01] opacity-50 relative"
             >
               <div className="absolute top-3 right-3">
-                <span className="px-2 py-0.5 rounded-full bg-zinc-800 text-zinc-500 text-[10px] font-medium uppercase tracking-wider">
+                <span className="px-2 py-0.5 rounded-full bg-slate-800 text-slate-500 text-[10px] font-medium uppercase tracking-wider">
                   {t('comingSoonLabel')}
                 </span>
               </div>
               <div
-                className={`inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gradient-to-br ${tool.color} text-white font-mono font-bold text-xs mb-3 opacity-50`}
+                className={`inline-flex items-center justify-center w-9 h-9 rounded-lg bg-gradient-to-br ${tool.color} text-white font-mono font-bold text-[10px] mb-3 opacity-50`}
                 translate="no"
               >
                 {tool.icon}
               </div>
-              <h3 className="text-lg font-semibold text-zinc-400 mb-1">
+              <h3 className="text-base font-semibold text-slate-400 mb-1">
                 {t(`upcoming.${tool.key}.name`)}
               </h3>
-              <p className="text-zinc-500 text-sm leading-relaxed">
+              <p className="text-slate-500 text-sm leading-relaxed">
                 {t(`upcoming.${tool.key}.description`)}
               </p>
             </div>
@@ -303,36 +328,55 @@ export default async function Home({ params }: Props) {
         </div>
       </section>
 
-      {/* Suggest a Tool */}
-      <section className="mt-12">
-        <div className="rounded-xl border border-dashed border-zinc-700 bg-zinc-900/30 p-8 text-center">
-          <h3 className="text-xl font-bold mb-2">{t('suggestHeading')}</h3>
-          <p className="text-zinc-400 text-sm mb-5 max-w-lg mx-auto">{t('suggestText')}</p>
-          <a
-            href="https://github.com/nexustools-dev/nexus-tools/discussions/categories/ideas"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-sm font-medium transition-colors"
-          >
-            {t('suggestButton')}
-          </a>
+      {/* Why NexusTools */}
+      <section className="mt-20 mb-8">
+        <h2 className="font-[family-name:var(--font-heading)] text-2xl font-bold text-center mb-12">{t('whyHeading')}</h2>
+        <div className="grid md:grid-cols-3 gap-6">
+          <div className="relative p-8 rounded-2xl border border-white/[0.06] bg-white/[0.02] text-center group hover:border-emerald-500/20 transition-colors duration-300">
+            <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 mb-5">
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+              </svg>
+            </div>
+            <h3 className="font-[family-name:var(--font-heading)] font-semibold text-white mb-2">{t('feature1Title')}</h3>
+            <p className="text-sm text-slate-400 leading-relaxed">{t('feature1Desc')}</p>
+          </div>
+          <div className="relative p-8 rounded-2xl border border-white/[0.06] bg-white/[0.02] text-center group hover:border-emerald-500/20 transition-colors duration-300">
+            <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 mb-5">
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+              </svg>
+            </div>
+            <h3 className="font-[family-name:var(--font-heading)] font-semibold text-white mb-2">{t('feature2Title')}</h3>
+            <p className="text-sm text-slate-400 leading-relaxed">{t('feature2Desc')}</p>
+          </div>
+          <div className="relative p-8 rounded-2xl border border-white/[0.06] bg-white/[0.02] text-center group hover:border-emerald-500/20 transition-colors duration-300">
+            <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 mb-5">
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+              </svg>
+            </div>
+            <h3 className="font-[family-name:var(--font-heading)] font-semibold text-white mb-2">{t('feature3Title')}</h3>
+            <p className="text-sm text-slate-400 leading-relaxed">{t('feature3Desc')}</p>
+          </div>
         </div>
       </section>
 
-      <section className="mt-16 text-center">
-        <h2 className="text-2xl font-bold mb-4">{t('whyHeading')}</h2>
-        <div className="grid md:grid-cols-3 gap-8 text-sm">
-          <div>
-            <h3 className="font-semibold text-emerald-400 mb-2">{t('feature1Title')}</h3>
-            <p className="text-zinc-400">{t('feature1Desc')}</p>
-          </div>
-          <div>
-            <h3 className="font-semibold text-emerald-400 mb-2">{t('feature2Title')}</h3>
-            <p className="text-zinc-400">{t('feature2Desc')}</p>
-          </div>
-          <div>
-            <h3 className="font-semibold text-emerald-400 mb-2">{t('feature3Title')}</h3>
-            <p className="text-zinc-400">{t('feature3Desc')}</p>
+      {/* Suggest a Tool */}
+      <section className="mt-12 mb-16">
+        <div className="relative rounded-2xl border border-emerald-500/20 bg-gradient-to-br from-emerald-500/5 to-transparent p-10 text-center overflow-hidden">
+          <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-emerald-500/5 rounded-full blur-[100px] pointer-events-none" />
+          <div className="relative z-10">
+            <h3 className="font-[family-name:var(--font-heading)] text-xl font-bold mb-2">{t('suggestHeading')}</h3>
+            <p className="text-slate-400 text-sm mb-6 max-w-lg mx-auto">{t('suggestText')}</p>
+            <a
+              href="https://github.com/nexustools-dev/nexus-tools/discussions/categories/ideas"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-sm font-medium transition-colors duration-200"
+            >
+              {t('suggestButton')}
+            </a>
           </div>
         </div>
       </section>
