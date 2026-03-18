@@ -66,15 +66,23 @@ export function UuidGenerator() {
   const generateNil = () => setUuids([NIL_UUID]);
 
   const copyOne = async (uuid: string, idx: number) => {
-    await navigator.clipboard.writeText(uuid);
-    setCopiedIdx(idx);
-    setTimeout(() => setCopiedIdx(null), 2000);
+    try {
+      await navigator.clipboard.writeText(uuid);
+      setCopiedIdx(idx);
+      setTimeout(() => setCopiedIdx(null), 2000);
+    } catch {
+      /* clipboard unavailable */
+    }
   };
 
   const copyAll = async () => {
-    await navigator.clipboard.writeText(uuids.join('\n'));
-    setCopiedAll(true);
-    setTimeout(() => setCopiedAll(false), 2000);
+    try {
+      await navigator.clipboard.writeText(uuids.join('\n'));
+      setCopiedAll(true);
+      setTimeout(() => setCopiedAll(false), 2000);
+    } catch {
+      /* clipboard unavailable */
+    }
   };
 
   const validationResult = validateInput.trim() ? UUID_REGEX.test(validateInput.trim()) : null;

@@ -36,7 +36,10 @@ export function PasswordGenerator() {
   const [useDigits, setUseDigits] = useState(true);
   const [useSymbols, setUseSymbols] = useState(true);
   const [quantity, setQuantity] = useState(1);
-  const [passwords, setPasswords] = useState<string[]>([]);
+  const [passwords, setPasswords] = useState<string[]>(() => {
+    const cs = UPPER + LOWER + DIGITS + SYMBOLS;
+    return [generatePassword(16, cs)];
+  });
   const [copiedIdx, setCopiedIdx] = useState<number | null>(null);
 
   const charset = useMemo(() => {
@@ -62,22 +65,24 @@ export function PasswordGenerator() {
   }, [length, charset, quantity]);
 
   const copyText = useCallback(async (text: string, idx: number) => {
-    await navigator.clipboard.writeText(text);
-    setCopiedIdx(idx);
-    setTimeout(() => setCopiedIdx(null), 2000);
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopiedIdx(idx);
+      setTimeout(() => setCopiedIdx(null), 2000);
+    } catch {
+      // Clipboard access denied — silently ignore
+    }
   }, []);
 
   const copyAll = useCallback(async () => {
-    await navigator.clipboard.writeText(passwords.join('\n'));
-    setCopiedIdx(-1);
-    setTimeout(() => setCopiedIdx(null), 2000);
+    try {
+      await navigator.clipboard.writeText(passwords.join('\n'));
+      setCopiedIdx(-1);
+      setTimeout(() => setCopiedIdx(null), 2000);
+    } catch {
+      // Clipboard access denied — silently ignore
+    }
   }, [passwords]);
-
-  // Generate on mount
-  useState(() => {
-    const cs = UPPER + LOWER + DIGITS + SYMBOLS;
-    setPasswords([generatePassword(16, cs)]);
-  });
 
   return (
     <div className="space-y-6">

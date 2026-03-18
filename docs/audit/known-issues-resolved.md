@@ -46,6 +46,16 @@ Issues ya corregidos. **Leer ANTES de cualquier auditoría para no re-reportar.*
 - **Fix:** text/csv para CSV downloads, application/json para JSON
 - **Commit:** security audit batch 3
 
+### 2026-03-17 Systemic — Clipboard operations without try/catch (9 tools)
+- **Severidad:** MEDIUM
+- **Archivos:** HashGenerator, MetaTagGenerator, ColorConverter, LoremIpsum, CssGradientGenerator, TimestampConverter, Base64Encoder, UrlEncoder, UuidGenerator
+- **Fix:** Wrapped all navigator.clipboard.writeText() calls in try/catch blocks
+
+### 2026-03-17 PasswordGenerator — useState misuse for side effect
+- **Severidad:** HIGH
+- **Archivo:** `src/app/[locale]/tools/password-generator/PasswordGenerator.tsx`
+- **Fix:** Changed useState side-effect hack to lazy initializer pattern: `useState<string[]>(() => [generatePassword(...)])`
+
 ### 2026-03-17 SqlFormatter — 140-line monolithic tokenize() function
 - **Severidad:** HIGH
 - **Archivo:** `src/app/[locale]/tools/sql-formatter/SqlFormatter.tsx`

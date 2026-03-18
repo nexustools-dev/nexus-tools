@@ -275,19 +275,27 @@ export function LoremIpsum() {
   });
 
   const copyText = async () => {
-    await navigator.clipboard.writeText(output);
-    setCopied('text');
-    setTimeout(() => setCopied(null), 2000);
+    try {
+      await navigator.clipboard.writeText(output);
+      setCopied('text');
+      setTimeout(() => setCopied(null), 2000);
+    } catch {
+      /* clipboard unavailable */
+    }
   };
 
   const copyHtml = async () => {
-    const html = output
-      .split('\n\n')
-      .map((p) => `<p>${p}</p>`)
-      .join('\n');
-    await navigator.clipboard.writeText(html);
-    setCopied('html');
-    setTimeout(() => setCopied(null), 2000);
+    try {
+      const html = output
+        .split('\n\n')
+        .map((p) => `<p>${p}</p>`)
+        .join('\n');
+      await navigator.clipboard.writeText(html);
+      setCopied('html');
+      setTimeout(() => setCopied(null), 2000);
+    } catch {
+      /* clipboard unavailable */
+    }
   };
 
   const wordCount = output ? output.split(/\s+/).filter(Boolean).length : 0;

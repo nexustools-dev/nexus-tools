@@ -345,19 +345,27 @@ export function HashGenerator() {
   }, [input, hmacEnabled, hmacKey, computeHashes]);
 
   const copyHash = async (hash: string, idx: number) => {
-    const text = uppercase ? hash.toUpperCase() : hash;
-    await navigator.clipboard.writeText(text);
-    setCopiedIdx(idx);
-    setTimeout(() => setCopiedIdx(null), 2000);
+    try {
+      const text = uppercase ? hash.toUpperCase() : hash;
+      await navigator.clipboard.writeText(text);
+      setCopiedIdx(idx);
+      setTimeout(() => setCopiedIdx(null), 2000);
+    } catch {
+      /* clipboard unavailable */
+    }
   };
 
   const copyAll = async () => {
-    const text = hashes
-      .map((h) => `${h.algorithm}: ${uppercase ? h.hash.toUpperCase() : h.hash}`)
-      .join('\n');
-    await navigator.clipboard.writeText(text);
-    setCopiedAll(true);
-    setTimeout(() => setCopiedAll(false), 2000);
+    try {
+      const text = hashes
+        .map((h) => `${h.algorithm}: ${uppercase ? h.hash.toUpperCase() : h.hash}`)
+        .join('\n');
+      await navigator.clipboard.writeText(text);
+      setCopiedAll(true);
+      setTimeout(() => setCopiedAll(false), 2000);
+    } catch {
+      /* clipboard unavailable */
+    }
   };
 
   return (
