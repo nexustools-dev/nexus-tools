@@ -46,6 +46,21 @@ Issues ya corregidos. **Leer ANTES de cualquier auditoría para no re-reportar.*
 - **Fix:** text/csv para CSV downloads, application/json para JSON
 - **Commit:** security audit batch 3
 
+### 2026-03-17 SqlFormatter — 140-line monolithic tokenize() function
+- **Severidad:** HIGH
+- **Archivo:** `src/app/[locale]/tools/sql-formatter/SqlFormatter.tsx`
+- **Fix:** Extracted to sql-engine.ts, decomposed into 7 helper functions (readWhitespace, readLineComment, readBlockComment, readString, readNumber, readOperator, readBacktickIdentifier, readIdentifierOrKeyword)
+
+### 2026-03-17 SqlFormatter — CLAUSE_STARTERS defined independently from KEYWORDS
+- **Severidad:** MEDIUM
+- **Archivo:** `src/app/[locale]/tools/sql-formatter/SqlFormatter.tsx`
+- **Fix:** Derived CLAUSE_STARTERS from explicit list with `as const`, collocated with KEYWORDS in sql-engine.ts
+
+### 2026-03-17 SqlFormatter — dangerouslySetInnerHTML without explicit security comment
+- **Severidad:** MEDIUM
+- **Archivo:** `src/app/[locale]/tools/sql-formatter/SqlFormatter.tsx`
+- **Fix:** Added SECURITY comment documenting HTML escaping in highlightSql()
+
 ### 2026-03-17 FaviconGenerator — 140+ lines of inline constants
 - **Severidad:** MEDIUM
 - **Archivo:** `src/app/[locale]/tools/favicon-generator/FaviconGenerator.tsx`

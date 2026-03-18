@@ -21,7 +21,8 @@
 | `tools/batch-1 (rest)/` | 9 tools | — | — | — | — |
 | `tools/batch-2/` | 6 tools | — | — | — | — |
 | `tools/batch-3/` | 6 tools | — | — | — | — |
-| `tools/batch-4/` | 6 tools | — | — | — | — |
+| `tools/sql-formatter/` | 2 files | 🔄 9/10 | — | — | — |
+| `tools/batch-4 (rest)/` | 5 tools | — | — | — | — |
 | `tools/batch-5/` | 6 tools | — | — | — | — |
 
 ### Leyenda
@@ -37,6 +38,7 @@
 
 <!-- Formato: YYYY-MM-DD | módulo | fase | score anterior -> score nuevo -->
 | 2026-03-17 | favicon-generator | Quality | 6/10 | 8/10 | 5 fixes (extract constants, extract ICO logic, remove dead code, fix key, fix ternary) |
+| 2026-03-17 | sql-formatter | Quality | 7/10 | 9/10 | 3 fixes (extract tokenizer+formatter to sql-engine.ts, decompose tokenize into helpers, add security comment on highlightSql) |
 
 ### Nota
 La auditoría de seguridad informal de 2026-03-12 encontró y resolvió 8 issues.
