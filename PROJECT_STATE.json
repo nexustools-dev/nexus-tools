@@ -3,9 +3,32 @@
   "version": "5.0.0",
   "phase": "34 tools live — Batch 5 deployed, 105 pages (34×3 locales + extras)",
   "status": "stable",
-  "last_updated": "2026-03-12",
+  "last_updated": "2026-03-17",
   "updated_by": "NEXUS@PC-Principal",
   "task_id": "T058",
+  "last_session": {
+    "date": "2026-03-17",
+    "summary": "Protocol alignment — NEXUS Development Protocol v1.0 retrofit",
+    "files_created": [
+      "agent_docs/tools-catalog.md",
+      "agent_docs/roadmap.md",
+      "agent_docs/growth-strategy.md",
+      "agent_docs/tool-pattern.md",
+      "agent_docs/deploy-flow.md",
+      "agent_docs/i18n-integration.md",
+      "docs/PRD.md",
+      "docs/PROGRESS.md",
+      "docs/audit/progress-tracker.md",
+      "docs/audit/known-issues-resolved.md",
+      "docs/audit/approved-modules.md",
+      "tasks/lessons.md",
+      ".claude/commands/catchup.md",
+      "biome.json"
+    ],
+    "files_modified": ["CLAUDE.md", "PROJECT_STATE.json"],
+    "next_step": "Run biome check --write in separate session, continue growth phase"
+  },
+  "prd": "docs/PRD.md",
   "domain": "toolnexus.dev",
   "url": "https://toolnexus.dev",
   "deploy": {
@@ -76,8 +99,11 @@
       "text-shadow-generator (multi-layer, 6 presets: neon/glow/fire/retro/emboss)",
       "csv-to-sql (CSV parser, INSERT generation, 4 SQL dialects, batch insert)"
     ],
-    "in_progress": [],
+    "in_progress": [
+      "growth-launch (HN done, AlternativeTo verified, Reddit blocked 1mo, Dev.to standby)"
+    ],
     "pending": [
+      "i18n-expansion (data-driven: FR first, then DE, then PL — review after 2 weeks of analytics)",
       "adsense-integration (after ~1000 visits/month)"
     ]
   },
@@ -151,6 +177,21 @@
       "date": "2026-03-12",
       "decision": "Batch 5: 6 tools (Image Compressor, SVG to PNG, HTML Entity, Color Palette, Text Shadow, CSV to SQL)",
       "reason": "Replaced 2 redundant tools (#32 Markdown to HTML = existing markdown-preview, #33 YAML to JSON = existing json-yaml-converter). Added Color Palette Generator and Text Shadow Generator instead — higher value, no overlap. All 0 deps, all born trilingual."
+    },
+    {
+      "date": "2026-03-12",
+      "decision": "i18n expansion: FR → DE → PL (data-driven, review after 2 weeks)",
+      "reason": "First day analytics: PL=5, FR=3, BR=2, US=2, GB=1. French first (300M speakers, Africa dev growth). German second (largest EU dev market). Polish third (strong early signal but 45M speakers). Decision to be confirmed with 2 weeks of traffic data."
+    },
+    {
+      "date": "2026-03-12",
+      "decision": "Email tools@toolnexus.dev created on Stalwart (own mail server)",
+      "reason": "Direct Stalwart integration, no Zoho needed. IP 187.77.6.24 with 2 months warming. Full DNS (MX, SPF, DKIM, DMARC). Integrated into CEREBRO MCP via Python IMAP/SMTP helper."
+    },
+    {
+      "date": "2026-03-17",
+      "decision": "Aligned project with NEXUS Development Protocol v1.0",
+      "reason": "Project grew from 0 to 34 tools without formal protocol. CLAUDE.md was 251 lines (max 200), mixed rules with catalog/roadmap, metrics stale. Created agent_docs/, PRD, PROGRESS, lessons, catchup command, biome.json, audit templates. Slimmed CLAUDE.md to ~120 lines."
     }
   ],
   "security": {
@@ -201,7 +242,17 @@
     "tools_count": 34,
     "languages": 3,
     "total_pages": 105,
-    "monthly_visitors": 0,
+    "monthly_visitors": "18 (first day, 2026-03-12)",
+    "first_day_stats": {
+      "date": "2026-03-12",
+      "pageviews": 149,
+      "visitors": 18,
+      "sessions": 28,
+      "bounce_rate": "39%",
+      "avg_session": "6.6 min",
+      "top_countries": ["PA", "PL", "FR", "BR", "US", "GB"],
+      "top_referrer": "news.ycombinator.com"
+    },
     "adsense_revenue": 0
   }
 }

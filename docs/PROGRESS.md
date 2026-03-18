@@ -1,0 +1,69 @@
+# PROGRESS — NexusTools
+
+Resumen diario para continuidad entre sesiones. Actualizar al final de cada sesión de trabajo.
+
+---
+
+## 2026-03-17 — Protocol Alignment
+
+### Completado
+- Alineación con NEXUS Development Protocol v1.0
+- Creación de agent_docs/ (6 archivos: catalog, roadmap, growth, pattern, deploy, i18n)
+- Slim de CLAUDE.md (251 -> ~160 líneas, movido contenido a agent_docs/)
+- Creación de docs/PRD.md retroactivo
+- Creación de tasks/lessons.md
+- Creación de .claude/commands/catchup.md
+- Creación de biome.json (no ejecutado aún)
+- Creación de docs/audit/ (3 templates)
+- Actualización de PROJECT_STATE.json
+
+### Decisiones tomadas
+- CLAUDE.md slim: mover catálogo, roadmap, growth strategy a agent_docs/
+- biome.json: agregar pero NO ejecutar `biome check --write` (requiere sesión separada)
+- PRD retroactivo: documentar las 6 fases tal como ocurrieron
+
+### Archivos modificados
+- `CLAUDE.md` — slim de 251 a ~160 líneas
+- `PROJECT_STATE.json` — updated metrics, last_session, decisions
+- `agent_docs/*` — 6 nuevos archivos
+- `docs/PRD.md` — nuevo
+- `docs/PROGRESS.md` — nuevo
+- `docs/audit/*` — 3 nuevos archivos
+- `tasks/lessons.md` — nuevo
+- `.claude/commands/catchup.md` — nuevo
+- `biome.json` — nuevo
+
+### Comandos de test
+```bash
+npm run build   # verificar 0 errores (no se tocó código fuente)
+wc -l CLAUDE.md # debe ser 155-165 líneas
+```
+
+### Próximo paso
+- Ejecutar `biome check --write .` para reformatear código existente (sesión separada)
+- Continuar growth: Reddit (bloqueado 1 mes), Dev.to, Product Hunt
+- Evaluar analytics para decidir i18n expansion
+
+### Bloqueadores
+- Reddit: cuenta nueva, 1 mes de espera para publicar en r/webdev
+
+---
+
+## 2026-03-12 — Batch 5 + Growth Launch
+
+### Completado
+- Batch 5 completo: 6 herramientas (Image Compressor, SVG-PNG, HTML Entity, Color Palette, Text Shadow, CSV-SQL)
+- Total: 34 herramientas live, 105 páginas
+- Security audit: 0 issues abiertos
+- Growth launch: HN posted, AlternativeTo verified
+- Email tools@toolnexus.dev creado en Stalwart
+- Footer: GitHub link + "Suggest a Tool"
+- README profesional + MIT license
+
+### Decisiones tomadas
+- Batch 5 reemplazó 2 tools redundantes (#32 Markdown-HTML, #33 YAML-JSON) por Color Palette y Text Shadow
+- i18n expansion order: FR -> DE -> PL (data-driven)
+
+### Próximo paso
+- Growth: publicar en más plataformas
+- Monitor analytics 2 semanas para decidir i18n expansion
