@@ -335,7 +335,6 @@ export default async function Home({ params }: Props) {
                 src={TOOL_ICONS[tool.key]}
                 alt=""
                 className="relative z-10 shrink-0 w-14 h-14 rounded-xl shadow-lg shadow-black/20"
-                loading="lazy"
               />
             ) : (
               <div
