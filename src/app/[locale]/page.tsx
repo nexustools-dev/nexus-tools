@@ -1,6 +1,43 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 
+const TOOL_ICONS: Record<string, string> = {
+  faviconGenerator: '/icons/tools/favicon-generator.png',
+  jsonFormatter: '/icons/tools/json-formatter.png',
+  metaTagGenerator: '/icons/tools/meta-tag-generator.png',
+  base64Encoder: '/icons/tools/base64-encoder.png',
+  colorConverter: '/icons/tools/color-converter.png',
+  cssUnitConverter: '/icons/tools/css-unit-converter.png',
+  hashGenerator: '/icons/tools/hash-generator.png',
+  urlEncoder: '/icons/tools/url-encoder.png',
+  regexTester: '/icons/tools/regex-tester.png',
+  loremIpsum: '/icons/tools/lorem-ipsum.png',
+  uuidGenerator: '/icons/tools/uuid-generator.png',
+  jwtDecoder: '/icons/tools/jwt-decoder.png',
+  timestampConverter: '/icons/tools/timestamp-converter.png',
+  markdownPreview: '/icons/tools/markdown-preview.png',
+  cssGradientGenerator: '/icons/tools/css-gradient-generator.png',
+  diffChecker: '/icons/tools/diff-checker.png',
+  passwordGenerator: '/icons/tools/password-generator.png',
+  qrCodeGenerator: '/icons/tools/qr-code-generator.png',
+  cronExpressionBuilder: '/icons/tools/cron-expression-builder.png',
+  jsonCsvConverter: '/icons/tools/json-csv-converter.png',
+  textCaseConverter: '/icons/tools/text-case-converter.png',
+  placeholderImage: '/icons/tools/placeholder-image.png',
+  sqlFormatter: '/icons/tools/sql-formatter.png',
+  jsonYamlConverter: '/icons/tools/json-yaml-converter.png',
+  chmodCalculator: '/icons/tools/chmod-calculator.png',
+  boxShadowGenerator: '/icons/tools/box-shadow-generator.png',
+  borderRadiusGenerator: '/icons/tools/border-radius-generator.png',
+  aspectRatioCalculator: '/icons/tools/aspect-ratio-calculator.png',
+  imageCompressor: '/icons/tools/image-compressor.png',
+  svgToPng: '/icons/tools/svg-to-png.png',
+  htmlEntityEncoder: '/icons/tools/html-entity-encoder.png',
+  colorPaletteGenerator: '/icons/tools/color-palette-generator.png',
+  textShadowGenerator: '/icons/tools/text-shadow-generator.png',
+  csvToSql: '/icons/tools/csv-to-sql.png',
+};
+
 const toolKeys = [
   {
     key: 'faviconGenerator',
@@ -245,8 +282,9 @@ export default async function Home({ params }: Props) {
       />
 
       {/* Hero */}
-      <section className="relative text-center pt-24 pb-20 overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-emerald-500/10 rounded-full blur-[120px] pointer-events-none" />
+      <section className="relative text-center pt-24 pb-24 overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-emerald-500/8 rounded-full blur-[140px] pointer-events-none" />
+        <div className="absolute top-20 left-1/4 w-[200px] h-[200px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none" />
 
         <div className="relative z-10">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-emerald-500/20 bg-emerald-500/5 text-emerald-400 text-sm font-medium mb-8">
@@ -256,35 +294,62 @@ export default async function Home({ params }: Props) {
             {toolKeys.length} tools — 100% client-side
           </div>
 
-          <h1 className="font-[family-name:var(--font-heading)] text-5xl md:text-7xl font-bold tracking-tight mb-6 bg-gradient-to-b from-white to-slate-400 bg-clip-text text-transparent">
+          <h1 className="font-[family-name:var(--font-heading)] text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 bg-gradient-to-b from-white via-white to-slate-500 bg-clip-text text-transparent">
             {t('heading')}
           </h1>
-          <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed mb-12">
             {t('subheading')}
           </p>
+
+          {/* Stats */}
+          <div className="flex items-center justify-center gap-8 md:gap-12 text-center">
+            <div>
+              <div className="font-[family-name:var(--font-heading)] text-3xl md:text-4xl font-bold text-white">{toolKeys.length}</div>
+              <div className="text-xs md:text-sm text-slate-500 mt-1">Tools</div>
+            </div>
+            <div className="w-px h-10 bg-white/10" />
+            <div>
+              <div className="font-[family-name:var(--font-heading)] text-3xl md:text-4xl font-bold text-white">3</div>
+              <div className="text-xs md:text-sm text-slate-500 mt-1">Languages</div>
+            </div>
+            <div className="w-px h-10 bg-white/10" />
+            <div>
+              <div className="font-[family-name:var(--font-heading)] text-3xl md:text-4xl font-bold text-white">0</div>
+              <div className="text-xs md:text-sm text-slate-500 mt-1">Tracking</div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Tools Grid */}
-      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {toolKeys.map((tool) => (
           <Link
             key={tool.href}
             href={tool.href}
-            className="group relative flex flex-col p-6 rounded-2xl border border-white/[0.06] bg-white/[0.02] hover:bg-white/[0.05] hover:border-white/[0.1] transition-all duration-300 cursor-pointer"
+            className="group relative flex items-start gap-4 p-6 rounded-2xl border border-white/[0.06] bg-white/[0.02] hover:bg-white/[0.05] hover:border-white/[0.12] hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
           >
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-            <div className="relative z-10">
+            {TOOL_ICONS[tool.key] ? (
+              <img
+                src={TOOL_ICONS[tool.key]}
+                alt=""
+                className="relative z-10 shrink-0 w-14 h-14 rounded-xl shadow-lg shadow-black/20"
+                loading="lazy"
+              />
+            ) : (
               <div
-                className={`inline-flex items-center justify-center w-11 h-11 rounded-xl bg-gradient-to-br ${tool.color} text-white font-mono font-bold text-xs mb-4 shadow-lg`}
+                className={`relative z-10 shrink-0 inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br ${tool.color} text-white font-mono font-bold text-base shadow-lg shadow-black/20`}
                 translate="no"
               >
                 {tool.icon}
               </div>
-              <h2 className="font-[family-name:var(--font-heading)] text-lg font-semibold mb-1.5 text-white group-hover:text-emerald-400 transition-colors duration-200">
+            )}
+            <div className="relative z-10 min-w-0">
+              <h2 className="font-[family-name:var(--font-heading)] text-base font-semibold text-white group-hover:text-emerald-400 transition-colors duration-200 leading-tight">
                 {t(`tools.${tool.key}.name`)}
               </h2>
-              <p className="text-sm text-slate-400 leading-relaxed">
+              <p className="text-sm text-slate-400 leading-relaxed mt-1">
                 {t(`tools.${tool.key}.description`)}
               </p>
             </div>
