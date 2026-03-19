@@ -332,13 +332,12 @@ export default async function Home({ params }: Props) {
           >
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
             <div
-              className="relative z-10 shrink-0 w-14 h-14 rounded-xl shadow-lg shadow-black/20 overflow-hidden"
+              className="relative z-10 shrink-0 w-12 h-12 rounded-xl shadow-lg shadow-black/20 overflow-hidden"
               style={{
                 backgroundImage: 'url(/icons/tools-sprite.png)',
-                backgroundSize: `${34 * 64}px 64px`,
-                backgroundPosition: `${-(SPRITE_INDEX[tool.key] ?? 0) * 64}px 0`,
+                backgroundSize: `${34 * 48}px 48px`,
+                backgroundPosition: `${-(SPRITE_INDEX[tool.key] ?? 0) * 48}px 0`,
                 backgroundRepeat: 'no-repeat',
-                imageRendering: 'auto',
               }}
             />
             <div className="relative z-10 min-w-0">
