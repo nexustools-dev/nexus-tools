@@ -1,41 +1,42 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 
-const TOOL_ICONS: Record<string, string> = {
-  faviconGenerator: '/icons/tools/favicon-generator.png',
-  jsonFormatter: '/icons/tools/json-formatter.png',
-  metaTagGenerator: '/icons/tools/meta-tag-generator.png',
-  base64Encoder: '/icons/tools/base64-encoder.png',
-  colorConverter: '/icons/tools/color-converter.png',
-  cssUnitConverter: '/icons/tools/css-unit-converter.png',
-  hashGenerator: '/icons/tools/hash-generator.png',
-  urlEncoder: '/icons/tools/url-encoder.png',
-  regexTester: '/icons/tools/regex-tester.png',
-  loremIpsum: '/icons/tools/lorem-ipsum.png',
-  uuidGenerator: '/icons/tools/uuid-generator.png',
-  jwtDecoder: '/icons/tools/jwt-decoder.png',
-  timestampConverter: '/icons/tools/timestamp-converter.png',
-  markdownPreview: '/icons/tools/markdown-preview.png',
-  cssGradientGenerator: '/icons/tools/css-gradient-generator.png',
-  diffChecker: '/icons/tools/diff-checker.png',
-  passwordGenerator: '/icons/tools/password-generator.png',
-  qrCodeGenerator: '/icons/tools/qr-code-generator.png',
-  cronExpressionBuilder: '/icons/tools/cron-expression-builder.png',
-  jsonCsvConverter: '/icons/tools/json-csv-converter.png',
-  textCaseConverter: '/icons/tools/text-case-converter.png',
-  placeholderImage: '/icons/tools/placeholder-image.png',
-  sqlFormatter: '/icons/tools/sql-formatter.png',
-  jsonYamlConverter: '/icons/tools/json-yaml-converter.png',
-  chmodCalculator: '/icons/tools/chmod-calculator.png',
-  boxShadowGenerator: '/icons/tools/box-shadow-generator.png',
-  borderRadiusGenerator: '/icons/tools/border-radius-generator.png',
-  aspectRatioCalculator: '/icons/tools/aspect-ratio-calculator.png',
-  imageCompressor: '/icons/tools/image-compressor.png',
-  svgToPng: '/icons/tools/svg-to-png.png',
-  htmlEntityEncoder: '/icons/tools/html-entity-encoder.png',
-  colorPaletteGenerator: '/icons/tools/color-palette-generator.png',
-  textShadowGenerator: '/icons/tools/text-shadow-generator.png',
-  csvToSql: '/icons/tools/csv-to-sql.png',
+// Sprite positions: icons sorted alphabetically in tools-sprite.png (64px each)
+const SPRITE_INDEX: Record<string, number> = {
+  aspectRatioCalculator: 0,
+  base64Encoder: 1,
+  borderRadiusGenerator: 2,
+  boxShadowGenerator: 3,
+  chmodCalculator: 4,
+  colorConverter: 5,
+  colorPaletteGenerator: 6,
+  cronExpressionBuilder: 7,
+  cssGradientGenerator: 8,
+  cssUnitConverter: 9,
+  csvToSql: 10,
+  diffChecker: 11,
+  faviconGenerator: 12,
+  hashGenerator: 13,
+  htmlEntityEncoder: 14,
+  imageCompressor: 15,
+  jsonCsvConverter: 16,
+  jsonFormatter: 17,
+  jsonYamlConverter: 18,
+  jwtDecoder: 19,
+  loremIpsum: 20,
+  markdownPreview: 21,
+  metaTagGenerator: 22,
+  passwordGenerator: 23,
+  placeholderImage: 24,
+  qrCodeGenerator: 25,
+  regexTester: 26,
+  sqlFormatter: 27,
+  svgToPng: 28,
+  textCaseConverter: 29,
+  textShadowGenerator: 30,
+  timestampConverter: 31,
+  urlEncoder: 32,
+  uuidGenerator: 33,
 };
 
 const toolKeys = [
@@ -330,20 +331,16 @@ export default async function Home({ params }: Props) {
             className="group relative flex items-start gap-4 p-6 rounded-2xl border border-white/[0.06] bg-white/[0.02] hover:bg-white/[0.05] hover:border-white/[0.12] hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
           >
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-            {TOOL_ICONS[tool.key] ? (
-              <img
-                src={TOOL_ICONS[tool.key]}
-                alt=""
-                className="relative z-10 shrink-0 w-14 h-14 rounded-xl shadow-lg shadow-black/20"
-              />
-            ) : (
-              <div
-                className={`relative z-10 shrink-0 inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br ${tool.color} text-white font-mono font-bold text-base shadow-lg shadow-black/20`}
-                translate="no"
-              >
-                {tool.icon}
-              </div>
-            )}
+            <div
+              className="relative z-10 shrink-0 w-14 h-14 rounded-xl shadow-lg shadow-black/20 overflow-hidden"
+              style={{
+                backgroundImage: 'url(/icons/tools-sprite.png)',
+                backgroundSize: `${34 * 64}px 64px`,
+                backgroundPosition: `${-(SPRITE_INDEX[tool.key] ?? 0) * 64}px 0`,
+                backgroundRepeat: 'no-repeat',
+                imageRendering: 'auto',
+              }}
+            />
             <div className="relative z-10 min-w-0">
               <h2 className="font-[family-name:var(--font-heading)] text-base font-semibold text-white group-hover:text-emerald-400 transition-colors duration-200 leading-tight">
                 {t(`tools.${tool.key}.name`)}
