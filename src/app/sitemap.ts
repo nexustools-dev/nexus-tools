@@ -40,6 +40,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/tools/color-palette-generator', changeFrequency: 'monthly' as const, priority: 0.8 },
     { path: '/tools/text-shadow-generator', changeFrequency: 'monthly' as const, priority: 0.8 },
     { path: '/tools/csv-to-sql', changeFrequency: 'monthly' as const, priority: 0.8 },
+    { path: '/tools/llm-token-counter', changeFrequency: 'monthly' as const, priority: 0.8 },
+    { path: '/tools/character-counter', changeFrequency: 'monthly' as const, priority: 0.8 },
+    { path: '/tools/http-status-codes', changeFrequency: 'monthly' as const, priority: 0.8 },
   ];
 
   return paths.flatMap(({ path, changeFrequency, priority }) =>

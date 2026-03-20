@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "title": "Contador de Caracteres — Conte Caracteres, Palavras, Sentenças e Mais",
+    "description": "Contador de caracteres gratuito. Conte caracteres, palavras, sentenças, parágrafos e bytes. Tempo de leitura e frequência de letras. 100% no navegador.",
+    "keywords": "contador de caracteres, contador de palavras, contar letras, contar caracteres online, calculadora comprimento texto, ferramenta contar palavras"
+  },
+  "heading": "Contador de Caracteres",
+  "subheading": "Conte caracteres, palavras, sentenças, parágrafos e mais. Tempo de leitura e frequência de letras — instantaneamente no seu navegador.",
+  "seo": {
+    "section1Title": "O que é um contador de caracteres?",
+    "section1Text": "Um contador de caracteres é uma ferramenta que analisa texto e fornece estatísticas detalhadas incluindo contagem de caracteres (com e sem espaços), palavras, sentenças, parágrafos, tamanho em bytes e tempo estimado de leitura. É essencial para escritores, desenvolvedores e criadores de conteúdo que precisam cumprir limites de caracteres em plataformas como Twitter (280 chars), meta descriptions (160 chars) ou mensagens SMS (160 chars).",
+    "section2Title": "Por que a contagem de caracteres importa",
+    "section2Text": "Limites de caracteres existem em toda parte na comunicação digital. Posts em redes sociais, meta descriptions SEO, campos de banco de dados, mensagens SMS e payloads de API têm restrições de comprimento específicas. Exceder esses limites pode causar truncamento, erros ou má experiência do usuário. Um contador de caracteres ajuda você a ficar dentro dos limites enquanto maximiza o impacto da sua mensagem.",
+    "section3Title": "Caracteres vs Bytes",
+    "section3Text": "Caracteres e bytes não são a mesma coisa. Na codificação UTF-8, caracteres ASCII (A-Z, 0-9) usam 1 byte cada, mas caracteres acentuados (á, ñ, ü) usam 2 bytes, e emoji podem usar 4 bytes. Essa distinção importa para armazenamento em banco de dados, limites de API e transmissão de rede. Esta ferramenta mostra tanto a contagem de caracteres quanto o tamanho em bytes.",
+    "section4Title": "Limites comuns de caracteres",
+    "section4List": "Post Twitter/X: 280 caracteres | Legenda Instagram: 2.200 caracteres | Meta description (SEO): 155-160 caracteres | Title tag (SEO): 50-60 caracteres | Mensagem SMS: 160 caracteres (GSM-7) ou 70 (Unicode) | Post Facebook: 63.206 caracteres | Post LinkedIn: 3.000 caracteres | Título YouTube: 100 caracteres"
+  },
+  "ui": {
+    "howItWorksText": "Digite ou cole seu texto abaixo. As estatísticas são atualizadas em tempo real enquanto você digita. A ferramenta conta caracteres, palavras, sentenças, parágrafos, linhas, bytes e estima o tempo de leitura.",
+    "inputLabel": "Seu Texto",
+    "inputPlaceholder": "Digite ou cole seu texto aqui...",
+    "sample": "Exemplo",
+    "clear": "Limpar",
+    "characters": "Caracteres",
+    "charsNoSpaces": "Sem Espaços",
+    "words": "Palavras",
+    "sentences": "Sentenças",
+    "paragraphs": "Parágrafos",
+    "lines": "Linhas",
+    "bytes": "Bytes (UTF-8)",
+    "readingTime": "Tempo Leitura",
+    "letterFrequency": "Frequência de Letras"
+  }
+}

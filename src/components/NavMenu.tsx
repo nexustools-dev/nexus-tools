@@ -39,6 +39,9 @@ const TOOLS = [
   { key: 'colorPaletteGenerator', href: '/tools/color-palette-generator', icon: 'PAL' },
   { key: 'textShadowGenerator', href: '/tools/text-shadow-generator', icon: 'TxS' },
   { key: 'csvToSql', href: '/tools/csv-to-sql', icon: 'C→S' },
+  { key: 'llmTokenCounter', href: '/tools/llm-token-counter', icon: 'LLM' },
+  { key: 'characterCounter', href: '/tools/character-counter', icon: 'ABC' },
+  { key: 'httpStatusCodes', href: '/tools/http-status-codes', icon: 'HTTP' },
 ] as const;
 
 export function NavMenu() {

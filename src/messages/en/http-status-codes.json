@@ -1,0 +1,62 @@
+{
+  "metadata": {
+    "title": "HTTP Status Codes Reference — Complete Guide with Descriptions",
+    "description": "Complete HTTP status codes reference. Search and filter by category (1xx-5xx). Learn what each status code means and when to use it. 100% browser-based.",
+    "keywords": "http status codes, http response codes, 404 not found, 200 ok, 500 internal server error, http error codes, rest api status codes, http status code reference"
+  },
+  "heading": "HTTP Status Codes",
+  "subheading": "Complete reference of HTTP status codes. Search, filter by category, and learn when to use each code.",
+  "seo": {
+    "section1Title": "What Are HTTP Status Codes?",
+    "section1Text": "HTTP status codes are three-digit numbers returned by web servers to indicate the result of a client's request. They are grouped into five categories: 1xx (Informational), 2xx (Success), 3xx (Redirection), 4xx (Client Error), and 5xx (Server Error). Understanding these codes is essential for web development, API design, and debugging network issues.",
+    "section2Title": "Most Common HTTP Status Codes",
+    "section2Text": "The most frequently encountered status codes are 200 OK (request succeeded), 301 Moved Permanently (resource permanently relocated), 404 Not Found (resource doesn't exist), 403 Forbidden (access denied), and 500 Internal Server Error (server-side failure). These five codes account for the vast majority of HTTP responses you'll encounter in everyday web browsing and API development.",
+    "section3Title": "HTTP Status Codes in REST APIs",
+    "section3Text": "REST APIs use status codes to communicate the result of operations. A well-designed API returns 200 for successful GET requests, 201 for successful POST (resource created), 204 for successful DELETE (no content to return), 400 for invalid input, 401 for authentication failures, 403 for authorization failures, 404 for missing resources, and 422 for validation errors. Consistent status code usage makes APIs predictable and easier to consume.",
+    "section4Title": "Status Code Best Practices",
+    "section4List": "Always return the most specific status code — 404 is better than generic 400 | Use 201 Created (not 200) when a new resource is created via POST | Return 204 No Content for successful DELETE operations | Use 429 Too Many Requests with a Retry-After header for rate limiting | Never return 200 with an error message in the body — use proper 4xx/5xx codes | Use 301 for permanent redirects (SEO-friendly) and 307 for temporary ones"
+  },
+  "ui": {
+    "howItWorksText": "Browse all HTTP status codes below. Use the search bar to find specific codes by number or name, or filter by category (1xx-5xx). Click any code to copy it.",
+    "searchPlaceholder": "Search by code or name...",
+    "all": "All",
+    "showing": "Showing {count} of {total} status codes",
+    "clickToCopy": "click to copy",
+    "codes": {
+      "continue": { "name": "Continue", "description": "The server has received the request headers and the client should proceed to send the request body." },
+      "switchingProtocols": { "name": "Switching Protocols", "description": "The server is switching protocols as requested by the client (e.g., upgrading to WebSocket)." },
+      "processing": { "name": "Processing", "description": "The server has received and is processing the request, but no response is available yet (WebDAV)." },
+      "earlyHints": { "name": "Early Hints", "description": "Used to return some response headers before the final HTTP message, allowing the browser to preload resources." },
+      "ok": { "name": "OK", "description": "The request succeeded. The meaning depends on the HTTP method: GET returns the resource, POST returns the result of the action." },
+      "created": { "name": "Created", "description": "The request succeeded and a new resource was created. Typically used as a response to POST requests." },
+      "accepted": { "name": "Accepted", "description": "The request has been accepted for processing, but the processing has not been completed. Used for async operations." },
+      "noContent": { "name": "No Content", "description": "The server successfully processed the request but returns no content. Common response for DELETE operations." },
+      "partialContent": { "name": "Partial Content", "description": "The server is delivering only part of the resource due to a Range header sent by the client." },
+      "multiStatus": { "name": "Multi-Status", "description": "A multi-status response conveys information about multiple resources where multiple status codes might be appropriate (WebDAV)." },
+      "movedPermanently": { "name": "Moved Permanently", "description": "The resource has been permanently moved to a new URL. Search engines will update their links. Use for permanent URL changes." },
+      "found": { "name": "Found", "description": "The resource temporarily resides at a different URL. The client should continue to use the original URL for future requests." },
+      "seeOther": { "name": "See Other", "description": "The response can be found at another URL using a GET request. Often used after POST to redirect to a confirmation page." },
+      "notModified": { "name": "Not Modified", "description": "The resource has not been modified since the last request. Used for caching — the client can use its cached version." },
+      "temporaryRedirect": { "name": "Temporary Redirect", "description": "The resource temporarily resides at a different URL. Unlike 302, the request method must not change (POST stays POST)." },
+      "permanentRedirect": { "name": "Permanent Redirect", "description": "The resource has been permanently moved. Unlike 301, the request method must not change (POST stays POST)." },
+      "badRequest": { "name": "Bad Request", "description": "The server cannot process the request due to malformed syntax, invalid parameters, or missing required fields." },
+      "unauthorized": { "name": "Unauthorized", "description": "Authentication is required. The client must provide valid credentials (API key, token, or login) to access this resource." },
+      "forbidden": { "name": "Forbidden", "description": "The server understood the request but refuses to authorize it. Authentication won't help — the user lacks permission." },
+      "notFound": { "name": "Not Found", "description": "The requested resource could not be found on the server. The URL may be incorrect or the resource may have been deleted." },
+      "methodNotAllowed": { "name": "Method Not Allowed", "description": "The HTTP method used is not supported for this resource. For example, using POST on a read-only endpoint." },
+      "requestTimeout": { "name": "Request Timeout", "description": "The server timed out waiting for the request. The client took too long to send the complete request." },
+      "conflict": { "name": "Conflict", "description": "The request conflicts with the current state of the server. Common in version control or when trying to create a duplicate resource." },
+      "gone": { "name": "Gone", "description": "The resource is no longer available and will not be available again. Unlike 404, this is a permanent condition." },
+      "payloadTooLarge": { "name": "Payload Too Large", "description": "The request body is larger than the server is willing to accept. Common for file upload limits." },
+      "unsupportedMediaType": { "name": "Unsupported Media Type", "description": "The media type of the request body is not supported. For example, sending XML when only JSON is accepted." },
+      "teapot": { "name": "I'm a Teapot", "description": "The server refuses to brew coffee because it is, permanently, a teapot. An April Fools' joke from RFC 2324 that became a real HTTP status code." },
+      "unprocessableEntity": { "name": "Unprocessable Entity", "description": "The server understands the content but cannot process it. Used for validation errors — the syntax is correct but the data is invalid." },
+      "tooManyRequests": { "name": "Too Many Requests", "description": "The user has sent too many requests in a given time period (rate limiting). Check the Retry-After header for when to retry." },
+      "internalServerError": { "name": "Internal Server Error", "description": "The server encountered an unexpected condition that prevented it from fulfilling the request. A generic server-side error." },
+      "notImplemented": { "name": "Not Implemented", "description": "The server does not support the functionality required to fulfill the request. The method may not be recognized." },
+      "badGateway": { "name": "Bad Gateway", "description": "The server, acting as a gateway or proxy, received an invalid response from an upstream server." },
+      "serviceUnavailable": { "name": "Service Unavailable", "description": "The server is temporarily unable to handle the request due to maintenance or overloading. Usually temporary." },
+      "gatewayTimeout": { "name": "Gateway Timeout", "description": "The server, acting as a gateway or proxy, did not receive a timely response from an upstream server." }
+    }
+  }
+}

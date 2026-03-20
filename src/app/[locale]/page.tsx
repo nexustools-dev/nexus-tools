@@ -23,20 +23,21 @@ const SPRITE_INDEX: Record<string, number> = {
   jsonFormatter: 17,
   jsonYamlConverter: 18,
   jwtDecoder: 19,
-  loremIpsum: 20,
-  markdownPreview: 21,
-  metaTagGenerator: 22,
-  passwordGenerator: 23,
-  placeholderImage: 24,
-  qrCodeGenerator: 25,
-  regexTester: 26,
-  sqlFormatter: 27,
-  svgToPng: 28,
-  textCaseConverter: 29,
-  textShadowGenerator: 30,
-  timestampConverter: 31,
-  urlEncoder: 32,
-  uuidGenerator: 33,
+  llmTokenCounter: 20,
+  loremIpsum: 21,
+  markdownPreview: 22,
+  metaTagGenerator: 23,
+  passwordGenerator: 24,
+  placeholderImage: 25,
+  qrCodeGenerator: 26,
+  regexTester: 27,
+  sqlFormatter: 28,
+  svgToPng: 29,
+  textCaseConverter: 30,
+  textShadowGenerator: 31,
+  timestampConverter: 32,
+  urlEncoder: 33,
+  uuidGenerator: 34,
 };
 
 const toolKeys = [
@@ -243,12 +244,29 @@ const toolKeys = [
     icon: 'C→S',
     color: 'from-emerald-500 to-green-600',
   },
+  {
+    key: 'llmTokenCounter',
+    href: '/tools/llm-token-counter',
+    icon: 'LLM',
+    color: 'from-violet-500 to-purple-600',
+  },
+  {
+    key: 'characterCounter',
+    href: '/tools/character-counter',
+    icon: 'ABC',
+    color: 'from-sky-500 to-blue-600',
+  },
+  {
+    key: 'httpStatusCodes',
+    href: '/tools/http-status-codes',
+    icon: 'HTTP',
+    color: 'from-blue-500 to-indigo-600',
+  },
 ] as const;
 
 const comingSoonKeys = [
   { key: 'jwtGenerator', icon: 'JWG', color: 'from-rose-500 to-red-600' },
   { key: 'crontabValidator', icon: 'CRV', color: 'from-green-500 to-teal-600' },
-  { key: 'httpStatusCodes', icon: 'HTTP', color: 'from-blue-500 to-indigo-600' },
   { key: 'tailwindColors', icon: 'TW', color: 'from-cyan-500 to-sky-600' },
   { key: 'regexGenerator', icon: 'RG', color: 'from-purple-500 to-violet-600' },
   { key: 'ipSubnetCalculator', icon: 'IP', color: 'from-amber-500 to-orange-600' },
@@ -335,7 +353,7 @@ export default async function Home({ params }: Props) {
               className="relative z-10 shrink-0 w-12 h-12 rounded-xl shadow-lg shadow-black/20 overflow-hidden"
               style={{
                 backgroundImage: 'url(/icons/tools-sprite.png)',
-                backgroundSize: `${34 * 48}px 48px`,
+                backgroundSize: `${35 * 48}px 48px`,
                 backgroundPosition: `${-(SPRITE_INDEX[tool.key] ?? 0) * 48}px 0`,
                 backgroundRepeat: 'no-repeat',
               }}

@@ -1,0 +1,34 @@
+{
+  "metadata": {
+    "title": "Contador de Tokens LLM — Estima Tokens para GPT-4, Claude, Llama y Más",
+    "description": "Contador de tokens LLM gratuito. Estima tokens para GPT-4o, Claude 3.5, Llama 3, Gemini y DeepSeek. Visualiza el uso de ventana de contexto. 100% en el navegador.",
+    "keywords": "contador de tokens llm, calculadora de tokens, tokens gpt-4, tokens claude, tiktoken online, contador tokens openai, calculadora ventana de contexto, estimador tokens ia"
+  },
+  "heading": "Contador de Tokens LLM",
+  "subheading": "Estima la cantidad de tokens para modelos LLM populares. Compara GPT-4o, Claude, Llama, Gemini y más — al instante en tu navegador.",
+  "seo": {
+    "section1Title": "¿Qué son los tokens en un LLM?",
+    "section1Text": "Los tokens son las unidades básicas que los modelos de lenguaje (LLMs) usan para procesar texto. Un token puede ser una palabra, parte de una palabra, o incluso un solo carácter dependiendo del tokenizador. Por ejemplo, la palabra 'tokenización' podría dividirse en 'token' e 'ización' — dos tokens. Entender los tokens es esencial porque los precios, límites de velocidad y ventanas de contexto de los LLMs se miden en tokens, no en palabras o caracteres.",
+    "section2Title": "Cómo funciona el conteo de tokens",
+    "section2Text": "Cada familia de LLMs usa un tokenizador diferente. Los modelos de OpenAI usan tiktoken (basado en BPE), Claude usa un tokenizador personalizado, y Llama/Mistral usan SentencePiece. Esta herramienta proporciona estimaciones basadas en ratios promedio de caracteres por token para cada familia de modelos. Aunque no son exactas, estas estimaciones están dentro del 5-10% del resultado real — suficientemente precisas para estimar costos, ingeniería de prompts y planificación de ventana de contexto.",
+    "section3Title": "Ventanas de contexto explicadas",
+    "section3Text": "Una ventana de contexto es el número máximo de tokens que un LLM puede procesar en una sola conversación. Esto incluye tanto la entrada (tu prompt e instrucciones del sistema) como la salida (la respuesta del modelo). GPT-4o soporta 128K tokens (~96K palabras), Claude 3.5 soporta 200K tokens (~150K palabras), y Gemini 2.5 Pro soporta hasta 1M de tokens (~750K palabras). Mantenerse dentro de la ventana de contexto es crítico — excederla causa truncamiento o errores.",
+    "section4Title": "Consejos para optimizar tokens",
+    "section4List": "Sé conciso — elimina palabras de relleno e instrucciones redundantes para ahorrar tokens | Usa los prompts del sistema sabiamente — cuentan para tu ventana de contexto | El código usa más tokens por carácter que el lenguaje natural | Los formatos estructurados (JSON, XML) usan más tokens que el texto plano | Monitorea el uso — los costos de tokens se acumulan rápido con prompts grandes | Considera el tamaño del modelo — los modelos más pequeños son más baratos pero pueden necesitar prompts más detallados"
+  },
+  "ui": {
+    "howItWorksText": "Pega tu texto o prompt abajo. La herramienta estima tokens para cada modelo LLM usando heurísticas basadas en caracteres. Los resultados son aproximados — dentro del 5-10% del resultado real.",
+    "inputLabel": "Tu Texto / Prompt",
+    "inputPlaceholder": "Pega tu texto, prompt o código aquí...",
+    "sample": "Ejemplo",
+    "clear": "Limpiar",
+    "characters": "Caracteres",
+    "words": "Palabras",
+    "sentences": "Oraciones",
+    "lines": "Líneas",
+    "tokenEstimates": "Estimación de Tokens por Modelo",
+    "tokens": "tokens",
+    "of": "de",
+    "disclaimer": "Los conteos son estimaciones basadas en ratios promedio de caracteres por token. Para conteos exactos, usa el tokenizador oficial de cada modelo (tiktoken para OpenAI, etc.)."
+  }
+}

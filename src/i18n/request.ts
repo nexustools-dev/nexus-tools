@@ -52,6 +52,9 @@ export default getRequestConfig(async ({ requestLocale }) => {
   const textShadowGenerator = (await import(`../messages/${locale}/text-shadow-generator.json`))
     .default;
   const csvToSql = (await import(`../messages/${locale}/csv-to-sql.json`)).default;
+  const llmTokenCounter = (await import(`../messages/${locale}/llm-token-counter.json`)).default;
+  const characterCounter = (await import(`../messages/${locale}/character-counter.json`)).default;
+  const httpStatusCodes = (await import(`../messages/${locale}/http-status-codes.json`)).default;
 
   return {
     locale,
@@ -91,6 +94,9 @@ export default getRequestConfig(async ({ requestLocale }) => {
       colorPaletteGenerator,
       textShadowGenerator,
       csvToSql,
+      llmTokenCounter,
+      characterCounter,
+      httpStatusCodes,
     },
   };
 });

@@ -1,0 +1,62 @@
+{
+  "metadata": {
+    "title": "Códigos de Status HTTP — Guia Completo com Descrições",
+    "description": "Referência completa de códigos HTTP. Pesquise e filtre por categoria (1xx-5xx). Aprenda o que cada código significa e quando usá-lo. 100% no navegador.",
+    "keywords": "códigos de status http, códigos de resposta http, 404 não encontrado, 200 ok, 500 erro interno, códigos de erro http, códigos api rest"
+  },
+  "heading": "Códigos de Status HTTP",
+  "subheading": "Referência completa de códigos HTTP. Pesquise, filtre por categoria e aprenda quando usar cada código.",
+  "seo": {
+    "section1Title": "O que são códigos de status HTTP?",
+    "section1Text": "Códigos de status HTTP são números de três dígitos retornados por servidores web para indicar o resultado de uma solicitação. São agrupados em cinco categorias: 1xx (Informativo), 2xx (Sucesso), 3xx (Redirecionamento), 4xx (Erro do Cliente) e 5xx (Erro do Servidor). Entender esses códigos é essencial para desenvolvimento web, design de APIs e depuração de problemas de rede.",
+    "section2Title": "Códigos HTTP mais comuns",
+    "section2Text": "Os códigos mais frequentes são 200 OK (solicitação bem-sucedida), 301 Movido Permanentemente (recurso realocado), 404 Não Encontrado (recurso não existe), 403 Proibido (acesso negado) e 500 Erro Interno do Servidor (falha do servidor). Esses cinco códigos representam a grande maioria das respostas HTTP que você encontrará na navegação web e desenvolvimento de APIs.",
+    "section3Title": "Códigos HTTP em APIs REST",
+    "section3Text": "APIs REST usam códigos de status para comunicar o resultado de operações. Uma API bem projetada retorna 200 para GET bem-sucedidos, 201 para POST bem-sucedidos (recurso criado), 204 para DELETE bem-sucedidos (sem conteúdo), 400 para entrada inválida, 401 para falhas de autenticação, 403 para falhas de autorização, 404 para recursos inexistentes e 422 para erros de validação.",
+    "section4Title": "Melhores práticas com códigos HTTP",
+    "section4List": "Retorne o código mais específico — 404 é melhor que um genérico 400 | Use 201 Created (não 200) quando um recurso é criado via POST | Retorne 204 No Content para operações DELETE bem-sucedidas | Use 429 com header Retry-After para rate limiting | Nunca retorne 200 com erro no body — use códigos 4xx/5xx | Use 301 para redirecionamentos permanentes (SEO) e 307 para temporários"
+  },
+  "ui": {
+    "howItWorksText": "Explore todos os códigos HTTP abaixo. Use a barra de pesquisa para encontrar códigos por número ou nome, ou filtre por categoria (1xx-5xx). Clique em qualquer código para copiá-lo.",
+    "searchPlaceholder": "Pesquisar por código ou nome...",
+    "all": "Todos",
+    "showing": "Mostrando {count} de {total} códigos",
+    "clickToCopy": "clique para copiar",
+    "codes": {
+      "continue": { "name": "Continuar", "description": "O servidor recebeu os headers e o cliente deve prosseguir com o envio do corpo da solicitação." },
+      "switchingProtocols": { "name": "Mudando Protocolos", "description": "O servidor está mudando protocolos conforme solicitado pelo cliente (ex: upgrade para WebSocket)." },
+      "processing": { "name": "Processando", "description": "O servidor recebeu e está processando a solicitação, mas ainda não há resposta disponível (WebDAV)." },
+      "earlyHints": { "name": "Dicas Antecipadas", "description": "Usado para retornar alguns headers antes da mensagem final, permitindo ao navegador pré-carregar recursos." },
+      "ok": { "name": "OK", "description": "A solicitação foi bem-sucedida. O significado depende do método HTTP: GET retorna o recurso, POST retorna o resultado da ação." },
+      "created": { "name": "Criado", "description": "A solicitação foi bem-sucedida e um novo recurso foi criado. Tipicamente usado como resposta a solicitações POST." },
+      "accepted": { "name": "Aceito", "description": "A solicitação foi aceita para processamento, mas ainda não foi concluída. Usado para operações assíncronas." },
+      "noContent": { "name": "Sem Conteúdo", "description": "O servidor processou a solicitação com sucesso mas não retorna conteúdo. Resposta comum para operações DELETE." },
+      "partialContent": { "name": "Conteúdo Parcial", "description": "O servidor entrega apenas parte do recurso devido a um header Range enviado pelo cliente." },
+      "multiStatus": { "name": "Multi-Status", "description": "Resposta que transmite informações sobre múltiplos recursos onde vários códigos de status podem ser apropriados (WebDAV)." },
+      "movedPermanently": { "name": "Movido Permanentemente", "description": "O recurso foi movido permanentemente para uma nova URL. Os buscadores atualizarão seus links." },
+      "found": { "name": "Encontrado", "description": "O recurso reside temporariamente em outra URL. O cliente deve continuar usando a URL original para futuras solicitações." },
+      "seeOther": { "name": "Ver Outro", "description": "A resposta pode ser encontrada em outra URL usando GET. Frequentemente usado após POST para redirecionar a uma página de confirmação." },
+      "notModified": { "name": "Não Modificado", "description": "O recurso não foi modificado desde a última solicitação. Usado para cache — o cliente pode usar sua versão salva." },
+      "temporaryRedirect": { "name": "Redirecionamento Temporário", "description": "O recurso reside temporariamente em outra URL. Diferente do 302, o método de solicitação não deve mudar." },
+      "permanentRedirect": { "name": "Redirecionamento Permanente", "description": "O recurso foi movido permanentemente. Diferente do 301, o método de solicitação não deve mudar." },
+      "badRequest": { "name": "Solicitação Inválida", "description": "O servidor não pode processar a solicitação devido a sintaxe malformada, parâmetros inválidos ou campos obrigatórios ausentes." },
+      "unauthorized": { "name": "Não Autorizado", "description": "Autenticação é necessária. O cliente deve fornecer credenciais válidas (API key, token ou login) para acessar." },
+      "forbidden": { "name": "Proibido", "description": "O servidor entendeu a solicitação mas se recusa a autorizá-la. Autenticação não ajudará — o usuário não tem permissão." },
+      "notFound": { "name": "Não Encontrado", "description": "O recurso solicitado não foi encontrado no servidor. A URL pode estar incorreta ou o recurso pode ter sido excluído." },
+      "methodNotAllowed": { "name": "Método Não Permitido", "description": "O método HTTP usado não é suportado para este recurso. Por exemplo, usar POST em um endpoint somente leitura." },
+      "requestTimeout": { "name": "Tempo Esgotado", "description": "O servidor esgotou o tempo de espera. O cliente demorou demais para enviar a solicitação completa." },
+      "conflict": { "name": "Conflito", "description": "A solicitação conflita com o estado atual do servidor. Comum em controle de versão ou ao tentar criar um recurso duplicado." },
+      "gone": { "name": "Desaparecido", "description": "O recurso não está mais disponível e não estará novamente. Diferente do 404, esta é uma condição permanente." },
+      "payloadTooLarge": { "name": "Carga Muito Grande", "description": "O corpo da solicitação é maior do que o servidor aceita. Comum para limites de upload de arquivos." },
+      "unsupportedMediaType": { "name": "Tipo de Mídia Não Suportado", "description": "O tipo de mídia do corpo da solicitação não é suportado. Por exemplo, enviar XML quando apenas JSON é aceito." },
+      "teapot": { "name": "Sou um Bule", "description": "O servidor se recusa a preparar café porque é, permanentemente, um bule de chá. Uma piada do April Fools' do RFC 2324." },
+      "unprocessableEntity": { "name": "Entidade Não Processável", "description": "O servidor entende o conteúdo mas não pode processá-lo. Usado para erros de validação — a sintaxe está correta mas os dados são inválidos." },
+      "tooManyRequests": { "name": "Muitas Solicitações", "description": "O usuário enviou muitas solicitações em um período de tempo (rate limiting). Verifique o header Retry-After." },
+      "internalServerError": { "name": "Erro Interno do Servidor", "description": "O servidor encontrou uma condição inesperada que o impediu de atender a solicitação. Um erro genérico do servidor." },
+      "notImplemented": { "name": "Não Implementado", "description": "O servidor não suporta a funcionalidade necessária. O método pode não ser reconhecido." },
+      "badGateway": { "name": "Gateway Inválido", "description": "O servidor, atuando como gateway ou proxy, recebeu uma resposta inválida do servidor upstream." },
+      "serviceUnavailable": { "name": "Serviço Indisponível", "description": "O servidor não pode atender a solicitação temporariamente devido a manutenção ou sobrecarga. Geralmente temporário." },
+      "gatewayTimeout": { "name": "Tempo Esgotado do Gateway", "description": "O servidor, atuando como gateway ou proxy, não recebeu uma resposta a tempo do servidor upstream." }
+    }
+  }
+}

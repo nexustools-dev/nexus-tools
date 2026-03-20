@@ -1,0 +1,34 @@
+{
+  "metadata": {
+    "title": "LLM Token Counter — Estimate Tokens for GPT-4, Claude, Llama & More",
+    "description": "Free online LLM token counter. Estimate token count for GPT-4o, Claude 3.5, Llama 3, Gemini, and DeepSeek models. See context window usage instantly. 100% browser-based.",
+    "keywords": "llm token counter, token calculator, gpt-4 tokens, claude tokens, tiktoken online, openai token counter, context window calculator, ai token estimator"
+  },
+  "heading": "LLM Token Counter",
+  "subheading": "Estimate token counts for popular LLM models. Compare GPT-4o, Claude, Llama, Gemini, and more — instantly in your browser.",
+  "seo": {
+    "section1Title": "What Are LLM Tokens?",
+    "section1Text": "Tokens are the basic units that large language models (LLMs) use to process text. A token can be a word, part of a word, or even a single character depending on the tokenizer. For example, the word 'tokenization' might be split into 'token' and 'ization' — two tokens. Understanding tokens is essential because LLM pricing, rate limits, and context windows are all measured in tokens, not words or characters.",
+    "section2Title": "How Token Counting Works",
+    "section2Text": "Each LLM family uses a different tokenizer. OpenAI models use tiktoken (BPE-based), Claude uses a custom tokenizer, and Llama/Mistral use SentencePiece. This tool provides estimates based on average characters-per-token ratios for each model family. While not exact, these estimates are within 5-10% of actual tokenizer output — accurate enough for cost estimation, prompt engineering, and context window planning.",
+    "section3Title": "Context Windows Explained",
+    "section3Text": "A context window is the maximum number of tokens an LLM can process in a single conversation. This includes both the input (your prompt and system instructions) and the output (the model's response). GPT-4o supports 128K tokens (~96K words), Claude 3.5 supports 200K tokens (~150K words), and Gemini 2.5 Pro supports up to 1M tokens (~750K words). Staying within the context window is critical — exceeding it causes truncation or errors.",
+    "section4Title": "Tips for Token Optimization",
+    "section4List": "Be concise — remove filler words and redundant instructions to save tokens | Use system prompts wisely — they count toward your context window | Code uses more tokens per character than natural language | Structured formats (JSON, XML) use more tokens than plain text | Monitor usage — token costs add up quickly with large prompts | Consider model size — smaller models are cheaper but may need more detailed prompts"
+  },
+  "ui": {
+    "howItWorksText": "Paste your text or prompt below. The tool estimates token counts for each LLM model using character-based heuristics. Results are approximate — within 5-10% of actual tokenizer output.",
+    "inputLabel": "Your Text / Prompt",
+    "inputPlaceholder": "Paste your text, prompt, or code here...",
+    "sample": "Sample",
+    "clear": "Clear",
+    "characters": "Characters",
+    "words": "Words",
+    "sentences": "Sentences",
+    "lines": "Lines",
+    "tokenEstimates": "Token Estimates by Model",
+    "tokens": "tokens",
+    "of": "of",
+    "disclaimer": "Token counts are estimates based on average characters-per-token ratios. For exact counts, use the official tokenizer for each model (tiktoken for OpenAI, etc.)."
+  }
+}

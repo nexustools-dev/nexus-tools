@@ -34,7 +34,10 @@
     "htmlEntityEncoder": "HTML Entities",
     "colorPaletteGenerator": "Color Palette",
     "textShadowGenerator": "Text Shadow",
-    "csvToSql": "CSV to SQL"
+    "csvToSql": "CSV to SQL",
+    "llmTokenCounter": "LLM Tokens",
+    "characterCounter": "Char Counter",
+    "httpStatusCodes": "HTTP Status"
   },
   "footer": {
     "privacy": "All tools run 100% in your browser. No data is sent to any server.",
@@ -193,6 +196,18 @@
       "csvToSql": {
         "name": "CSV to SQL Converter",
         "description": "Convert CSV data to SQL INSERT statements. Supports PostgreSQL, MySQL, SQLite, and SQL Server dialects."
+      },
+      "llmTokenCounter": {
+        "name": "LLM Token Counter",
+        "description": "Estimate token counts for GPT-4o, Claude, Llama, Gemini, and more. See context window usage instantly."
+      },
+      "characterCounter": {
+        "name": "Character Counter",
+        "description": "Count characters, words, sentences, paragraphs, and bytes. See reading time and letter frequency."
+      },
+      "httpStatusCodes": {
+        "name": "HTTP Status Codes",
+        "description": "Complete reference of HTTP status codes with descriptions. Search, filter by category, and learn when to use each code."
       }
     },
     "comingSoonHeading": "Coming Soon",

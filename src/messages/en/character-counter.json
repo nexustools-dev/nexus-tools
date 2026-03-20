@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "title": "Character Counter — Count Characters, Words, Sentences & More",
+    "description": "Free online character counter. Count characters, words, sentences, paragraphs, and bytes. See reading time and letter frequency. 100% browser-based.",
+    "keywords": "character counter, word counter, letter count, character count online, text length calculator, word count tool, reading time calculator"
+  },
+  "heading": "Character Counter",
+  "subheading": "Count characters, words, sentences, paragraphs, and more. See reading time and letter frequency — instantly in your browser.",
+  "seo": {
+    "section1Title": "What is a Character Counter?",
+    "section1Text": "A character counter is a tool that analyzes text and provides detailed statistics including character count (with and without spaces), word count, sentence count, paragraph count, byte size, and estimated reading time. It's essential for writers, developers, and content creators who need to meet character limits on platforms like Twitter (280 chars), Meta descriptions (160 chars), or SMS messages (160 chars).",
+    "section2Title": "Why Character Count Matters",
+    "section2Text": "Character limits exist everywhere in digital communication. Social media posts, SEO meta descriptions, database fields, SMS messages, and API payloads all have specific length constraints. Exceeding these limits can cause truncation, errors, or poor user experience. A character counter helps you stay within limits while maximizing your message's impact.",
+    "section3Title": "Characters vs Bytes",
+    "section3Text": "Characters and bytes are not the same thing. In UTF-8 encoding, ASCII characters (A-Z, 0-9) use 1 byte each, but accented characters (á, ñ, ü) use 2 bytes, and emoji can use 4 bytes. This distinction matters for database storage, API limits, and network transmission. This tool shows both character count and byte size so you can plan accordingly.",
+    "section4Title": "Common Character Limits",
+    "section4List": "Twitter/X post: 280 characters | Instagram caption: 2,200 characters | Meta description (SEO): 155-160 characters | Title tag (SEO): 50-60 characters | SMS message: 160 characters (GSM-7) or 70 (Unicode) | Facebook post: 63,206 characters | LinkedIn post: 3,000 characters | YouTube title: 100 characters"
+  },
+  "ui": {
+    "howItWorksText": "Type or paste your text below. Statistics update in real-time as you type. The tool counts characters, words, sentences, paragraphs, lines, bytes, and estimates reading time.",
+    "inputLabel": "Your Text",
+    "inputPlaceholder": "Type or paste your text here...",
+    "sample": "Sample",
+    "clear": "Clear",
+    "characters": "Characters",
+    "charsNoSpaces": "No Spaces",
+    "words": "Words",
+    "sentences": "Sentences",
+    "paragraphs": "Paragraphs",
+    "lines": "Lines",
+    "bytes": "Bytes (UTF-8)",
+    "readingTime": "Reading Time",
+    "letterFrequency": "Top Letter Frequency"
+  }
+}
