@@ -42,6 +42,8 @@ const TOOLS = [
   { key: 'llmTokenCounter', href: '/tools/llm-token-counter', icon: 'LLM' },
   { key: 'characterCounter', href: '/tools/character-counter', icon: 'ABC' },
   { key: 'httpStatusCodes', href: '/tools/http-status-codes', icon: 'HTTP' },
+  { key: 'cidrCalculator', href: '/tools/cidr-calculator', icon: 'IP' },
+  { key: 'jwtGenerator', href: '/tools/jwt-generator', icon: 'JWG' },
 ] as const;
 
 export function NavMenu() {

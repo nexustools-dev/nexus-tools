@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "title": "CIDR Calculator — Subnet Mask, IP Range & Network Calculator",
+    "description": "Free online CIDR calculator. Calculate subnet masks, IP address ranges, network and broadcast addresses, wildcard masks, and total hosts. 100% browser-based.",
+    "keywords": "cidr calculator, subnet calculator, ip range calculator, subnet mask calculator, network calculator, cidr notation, ip subnet, wildcard mask"
+  },
+  "heading": "CIDR Calculator",
+  "subheading": "Calculate subnet masks, IP ranges, network addresses, and more from CIDR notation. Instant results in your browser.",
+  "seo": {
+    "section1Title": "What is CIDR Notation?",
+    "section1Text": "CIDR (Classless Inter-Domain Routing) notation is a compact way to represent an IP address and its associated network mask. Written as IP/prefix (e.g., 192.168.1.0/24), the number after the slash indicates how many bits of the address identify the network. The remaining bits identify individual hosts. CIDR replaced the older classful addressing system (Class A, B, C) to allow more flexible allocation of IP addresses.",
+    "section2Title": "How Subnet Masks Work",
+    "section2Text": "A subnet mask divides an IP address into network and host portions. In binary, the mask consists of consecutive 1s (network bits) followed by consecutive 0s (host bits). For example, /24 means 24 network bits and 8 host bits, giving 255.255.255.0 as the subnet mask. The number of host bits determines how many devices can exist on the subnet: 2^host_bits - 2 (subtracting network and broadcast addresses).",
+    "section3Title": "Common Subnet Sizes",
+    "section3Text": "The most common subnets are /24 (256 addresses, 254 usable hosts — typical for small networks), /16 (65,536 addresses — medium organizations), and /8 (16 million addresses — large ISPs). For point-to-point links between routers, /30 (4 addresses, 2 usable) or /31 (2 addresses, RFC 3021) is standard. Cloud providers like AWS use /16 for VPCs and /24 for subnets by default.",
+    "section4Title": "CIDR Tips for Network Design",
+    "section4List": "Always plan for growth — choose a subnet larger than you currently need | Use /24 for most LAN segments (254 hosts is usually sufficient) | Use /30 or /31 for point-to-point links between routers | Private ranges: 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 | Avoid overlapping subnets when connecting networks via VPN | Document your IP allocation plan — subnet sprawl causes routing nightmares"
+  },
+  "ui": {
+    "howItWorksText": "Enter an IP address with CIDR prefix (e.g., 192.168.1.0/24). The calculator instantly shows network address, broadcast, host range, subnet mask, and binary representation.",
+    "inputLabel": "CIDR Notation",
+    "sample": "Sample",
+    "invalidCidr": "Invalid CIDR notation. Use format: 192.168.1.0/24",
+    "networkInfo": "Network Information",
+    "hostRange": "Host Range",
+    "binaryRepresentation": "Binary Representation",
+    "quickReference": "Common Subnet Quick Reference",
+    "networkAddress": "Network Address",
+    "broadcastAddress": "Broadcast Address",
+    "subnetMask": "Subnet Mask",
+    "wildcardMask": "Wildcard Mask",
+    "prefix": "Prefix Length",
+    "firstHost": "First Usable Host",
+    "lastHost": "Last Usable Host",
+    "totalHosts": "Usable Hosts",
+    "ipClass": "IP Class",
+    "privateRange": "Private Range",
+    "ipAddress": "IP Address",
+    "hosts": "Hosts",
+    "yes": "Yes",
+    "no": "No"
+  }
+}

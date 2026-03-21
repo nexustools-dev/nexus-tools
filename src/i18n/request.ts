@@ -55,6 +55,8 @@ export default getRequestConfig(async ({ requestLocale }) => {
   const llmTokenCounter = (await import(`../messages/${locale}/llm-token-counter.json`)).default;
   const characterCounter = (await import(`../messages/${locale}/character-counter.json`)).default;
   const httpStatusCodes = (await import(`../messages/${locale}/http-status-codes.json`)).default;
+  const cidrCalculator = (await import(`../messages/${locale}/cidr-calculator.json`)).default;
+  const jwtGenerator = (await import(`../messages/${locale}/jwt-generator.json`)).default;
 
   return {
     locale,
@@ -97,6 +99,8 @@ export default getRequestConfig(async ({ requestLocale }) => {
       llmTokenCounter,
       characterCounter,
       httpStatusCodes,
+      cidrCalculator,
+      jwtGenerator,
     },
   };
 });

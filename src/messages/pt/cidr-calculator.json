@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "title": "Calculadora CIDR — Máscara de Sub-rede, Faixa IP e Calculadora de Rede",
+    "description": "Calculadora CIDR gratuita. Calcule máscaras de sub-rede, faixas de IP, endereços de rede e broadcast, máscaras wildcard e hosts totais. 100% no navegador.",
+    "keywords": "calculadora cidr, calculadora de sub-redes, calculadora faixa ip, calculadora máscara sub-rede, calculadora de rede, notação cidr"
+  },
+  "heading": "Calculadora CIDR",
+  "subheading": "Calcule máscaras de sub-rede, faixas IP, endereços de rede e mais a partir da notação CIDR. Resultados instantâneos no seu navegador.",
+  "seo": {
+    "section1Title": "O que é notação CIDR?",
+    "section1Text": "CIDR (Classless Inter-Domain Routing) é uma forma compacta de representar um endereço IP e sua máscara de rede associada. Escrita como IP/prefixo (ex: 192.168.1.0/24), o número após a barra indica quantos bits identificam a rede. Os bits restantes identificam hosts individuais. O CIDR substituiu o sistema antigo de classes (Classe A, B, C) para permitir uma alocação mais flexível de endereços IP.",
+    "section2Title": "Como funcionam as máscaras de sub-rede",
+    "section2Text": "Uma máscara de sub-rede divide um endereço IP em porções de rede e host. Em binário, a máscara consiste em 1s consecutivos (bits de rede) seguidos de 0s consecutivos (bits de host). Por exemplo, /24 significa 24 bits de rede e 8 bits de host, resultando em 255.255.255.0 como máscara. O número de bits de host determina quantos dispositivos podem existir: 2^bits_host - 2 (subtraindo endereços de rede e broadcast).",
+    "section3Title": "Tamanhos comuns de sub-redes",
+    "section3Text": "As sub-redes mais comuns são /24 (256 endereços, 254 hosts — típico para redes pequenas), /16 (65.536 endereços — organizações médias) e /8 (16 milhões — ISPs grandes). Para links ponto a ponto entre roteadores, /30 (4 endereços, 2 usáveis) ou /31 (2 endereços, RFC 3021) é padrão. Provedores cloud como AWS usam /16 para VPCs e /24 para sub-redes por padrão.",
+    "section4Title": "Dicas CIDR para design de redes",
+    "section4List": "Planeje para crescimento — escolha uma sub-rede maior do que você precisa agora | Use /24 para a maioria dos segmentos LAN (254 hosts geralmente é suficiente) | Use /30 ou /31 para links ponto a ponto entre roteadores | Faixas privadas: 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 | Evite sub-redes sobrepostas ao conectar redes por VPN | Documente seu plano de alocação IP — a bagunça de sub-redes causa pesadelos de roteamento"
+  },
+  "ui": {
+    "howItWorksText": "Digite um endereço IP com prefixo CIDR (ex: 192.168.1.0/24). A calculadora mostra instantaneamente endereço de rede, broadcast, faixa de hosts, máscara de sub-rede e representação binária.",
+    "inputLabel": "Notação CIDR",
+    "sample": "Exemplo",
+    "invalidCidr": "Notação CIDR inválida. Use o formato: 192.168.1.0/24",
+    "networkInfo": "Informações da Rede",
+    "hostRange": "Faixa de Hosts",
+    "binaryRepresentation": "Representação Binária",
+    "quickReference": "Referência Rápida de Sub-redes",
+    "networkAddress": "Endereço de Rede",
+    "broadcastAddress": "Endereço Broadcast",
+    "subnetMask": "Máscara de Sub-rede",
+    "wildcardMask": "Máscara Wildcard",
+    "prefix": "Comprimento do Prefixo",
+    "firstHost": "Primeiro Host Usável",
+    "lastHost": "Último Host Usável",
+    "totalHosts": "Hosts Usáveis",
+    "ipClass": "Classe IP",
+    "privateRange": "Faixa Privada",
+    "ipAddress": "Endereço IP",
+    "hosts": "Hosts",
+    "yes": "Sim",
+    "no": "Não"
+  }
+}

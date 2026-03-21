@@ -37,7 +37,9 @@
     "csvToSql": "CSV a SQL",
     "llmTokenCounter": "Tokens LLM",
     "characterCounter": "Caracteres",
-    "httpStatusCodes": "HTTP Status"
+    "httpStatusCodes": "HTTP Status",
+    "cidrCalculator": "Calc CIDR",
+    "jwtGenerator": "Generador JWT"
   },
   "footer": {
     "privacy": "Todas las herramientas funcionan 100% en tu navegador. No se envían datos a ningún servidor.",
@@ -208,6 +210,14 @@
       "httpStatusCodes": {
         "name": "Códigos HTTP",
         "description": "Referencia completa de códigos de estado HTTP con descripciones. Busca, filtra por categoría y aprende cuándo usar cada código."
+      },
+      "cidrCalculator": {
+        "name": "Calculadora CIDR",
+        "description": "Calcula máscaras de subred, rangos IP, direcciones de red y broadcast desde notación CIDR. Tabla de referencia rápida."
+      },
+      "jwtGenerator": {
+        "name": "Generador JWT",
+        "description": "Crea y firma JSON Web Tokens con HS256/384/512. Agrega claims, configura expiración. Firmado client-side con Web Crypto API."
       }
     },
     "comingSoonHeading": "Próximamente",
