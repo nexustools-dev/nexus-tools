@@ -1,32 +1,25 @@
 {
   "project": "nexus-tools",
   "version": "5.0.0",
-  "phase": "34 tools live — Batch 5 deployed, 105 pages (34×3 locales + extras)",
+  "phase": "39 tools live — Batch 6 deployed, 124+ pages (39×3 locales + extras)",
   "status": "stable",
-  "last_updated": "2026-03-17",
+  "last_updated": "2026-03-21",
   "updated_by": "NEXUS@PC-Principal",
   "task_id": "T058",
   "last_session": {
-    "date": "2026-03-17",
-    "summary": "Protocol alignment — NEXUS Development Protocol v1.0 retrofit",
+    "date": "2026-03-21",
+    "summary": "Batch 6 complete (5 tools), homepage redesign v2, Phase 1 audit, HN growth",
     "files_created": [
-      "agent_docs/tools-catalog.md",
-      "agent_docs/roadmap.md",
-      "agent_docs/growth-strategy.md",
-      "agent_docs/tool-pattern.md",
-      "agent_docs/deploy-flow.md",
-      "agent_docs/i18n-integration.md",
-      "docs/PRD.md",
-      "docs/PROGRESS.md",
-      "docs/audit/progress-tracker.md",
-      "docs/audit/known-issues-resolved.md",
-      "docs/audit/approved-modules.md",
-      "tasks/lessons.md",
-      ".claude/commands/catchup.md",
-      "biome.json"
+      "src/app/[locale]/tools/llm-token-counter/",
+      "src/app/[locale]/tools/character-counter/",
+      "src/app/[locale]/tools/http-status-codes/",
+      "src/app/[locale]/tools/cidr-calculator/",
+      "src/app/[locale]/tools/jwt-generator/",
+      "scripts/hn-scout.py",
+      ".claude/skills/ui-ux-pro-max/"
     ],
-    "files_modified": ["CLAUDE.md", "PROJECT_STATE.json"],
-    "next_step": "Run biome check --write in separate session, continue growth phase"
+    "files_modified": ["page.tsx (homepage redesign v2)", "layout.tsx (fonts)", "tools-sprite.png"],
+    "next_step": "Growth: Reddit/Dev.to/ProductHunt, i18n expansion review, Batch 7 planning"
   },
   "prd": "docs/PRD.md",
   "domain": "toolnexus.dev",
@@ -97,10 +90,19 @@
       "html-entity-encoder (encode/decode, named/decimal/hex modes, reference table)",
       "color-palette-generator (HSL math, 6 harmony types, 11-shade gradient, CSS export)",
       "text-shadow-generator (multi-layer, 6 presets: neon/glow/fire/retro/emboss)",
-      "csv-to-sql (CSV parser, INSERT generation, 4 SQL dialects, batch insert)"
+      "csv-to-sql (CSV parser, INSERT generation, 4 SQL dialects, batch insert)",
+      "llm-token-counter (estimate tokens for GPT-4o, Claude, Llama, Gemini, DeepSeek — context window bars)",
+      "character-counter (chars, words, sentences, paragraphs, bytes, reading time, letter frequency)",
+      "http-status-codes (34 codes, search, category filter 1xx-5xx, click-to-copy, trilingual descriptions)",
+      "cidr-calculator (subnet mask, IP range, network/broadcast, binary, wildcard, quick reference table)",
+      "jwt-generator (HS256/384/512, Web Crypto API, claim helpers +iat/+exp/+nbf/+jti, color-coded output)",
+      "homepage-v2 (Space Grotesk + DM Sans fonts, emerald glow, AI-generated icons sprite, stats bar)",
+      "Phase 1 audit complete (34 tools audited, all >= 8/10, clipboard fix systemic, FaviconGenerator + SqlFormatter refactored)",
+      "HN Scout cron (daily Telegram alerts, karma building)",
+      "design stack (NanoBanana, 21st Dev Magic, Stitch, UI/UX Pro Max GO)"
     ],
     "in_progress": [
-      "growth-launch (HN done, AlternativeTo verified, Reddit blocked 1mo, Dev.to standby)"
+      "growth (HN karma building — 9 comments posted, Reddit pending, Dev.to standby, Product Hunt pending)"
     ],
     "pending": [
       "i18n-expansion (data-driven: FR first, then DE, then PL — review after 2 weeks of analytics)",
@@ -192,6 +194,16 @@
       "date": "2026-03-17",
       "decision": "Aligned project with NEXUS Development Protocol v1.0",
       "reason": "Project grew from 0 to 34 tools without formal protocol. CLAUDE.md was 251 lines (max 200), mixed rules with catalog/roadmap, metrics stale. Created agent_docs/, PRD, PROGRESS, lessons, catchup command, biome.json, audit templates. Slimmed CLAUDE.md to ~120 lines."
+    },
+    {
+      "date": "2026-03-19",
+      "decision": "Homepage redesign v2 with AI-generated icons",
+      "reason": "NanoBanana generated 34 tool icons, CSS sprite sheet (177KB, 1 HTTP request). Fonts: Space Grotesk + DM Sans. Premium SaaS aesthetic with emerald glow, stats bar, glass cards."
+    },
+    {
+      "date": "2026-03-21",
+      "decision": "Batch 6: 5 tools (LLM Token Counter, Character Counter, HTTP Status Codes, CIDR Calculator, JWT Generator)",
+      "reason": "Based on competitor analysis (gourav.io/devtools, OmniTools) and HN comment feedback. LLM Token Counter high demand from AI boom. HTTP Status Codes and CIDR for SEO content. JWT Generator complements existing decoder."
     }
   ],
   "security": {
@@ -239,9 +251,9 @@
     "blockers": []
   },
   "metrics": {
-    "tools_count": 34,
+    "tools_count": 39,
     "languages": 3,
-    "total_pages": 105,
+    "total_pages": 124,
     "monthly_visitors": "18 (first day, 2026-03-12)",
     "first_day_stats": {
       "date": "2026-03-12",

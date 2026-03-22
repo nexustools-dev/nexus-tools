@@ -58,8 +58,17 @@
 | 33 | Text Shadow Generator | text-shadow-generator | TSH | Multi-layer, 6 presets: neon/glow/fire |
 | 34 | CSV to SQL | csv-to-sql | SQL | CSV parser, INSERT generation, 4 SQL dialects |
 
+## Batch 6 — High Impact + Competitor Gaps (tools 35-39)
+| # | Herramienta | Slug | Icon | Highlights |
+|---|------------|------|------|------------|
+| 35 | LLM Token Counter | llm-token-counter | LLM | Estimate tokens for GPT-4o/Claude/Llama/Gemini/DeepSeek, context window bars |
+| 36 | Character Counter | character-counter | ABC | Chars, words, sentences, paragraphs, bytes, reading time, letter frequency |
+| 37 | HTTP Status Codes | http-status-codes | HTTP | 34 codes, search, category filter 1xx-5xx, click-to-copy, descriptions |
+| 38 | CIDR Calculator | cidr-calculator | IP | Subnet mask, IP range, network/broadcast, binary, wildcard, quick reference |
+| 39 | JWT Generator | jwt-generator | JWG | HS256/384/512, Web Crypto API, claim helpers, color-coded output |
+
 ## Stats
-- **Total:** 34 tools
+- **Total:** 39 tools
 - **Dependencies:** 1 (qrcode for QR #18)
 - **Idiomas:** 3 (EN/ES/PT-BR)
-- **Páginas:** 105 (34x3 locales + extras)
+- **Páginas:** 124+ (39x3 locales + extras)

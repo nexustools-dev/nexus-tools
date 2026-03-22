@@ -4,6 +4,46 @@ Resumen diario para continuidad entre sesiones. Actualizar al final de cada sesi
 
 ---
 
+## 2026-03-21 — Batch 6 Complete + Growth
+
+### Completado
+- Batch 6: 5 tools nuevas (LLM Token Counter, Character Counter, HTTP Status Codes, CIDR Calculator, JWT Generator)
+- Homepage redesign v2: Space Grotesk + DM Sans, AI-generated icons (NanoBanana), CSS sprite sheet, stats bar
+- Phase 1 audit completa: 34 tools auditadas (todas >= 8/10), clipboard fix sistémico, FaviconGenerator + SqlFormatter refactorizados
+- Design stack configurado: NanoBanana, 21st Dev Magic, Google Stitch, UI/UX Pro Max GO
+- HN Scout cron deployado (Mini PC, 8am diario, Telegram alerts)
+- 9 HN comments publicados (karma building)
+- Competitor analysis: gourav.io/devtools, OmniTools, CyberChef
+
+### Decisiones tomadas
+- Batch 6 tools basadas en análisis de competidores y HN feedback
+- AI-generated icons (NanoBanana) > iterar CSS/SVG — más rápido, mejor resultado
+- CSS sprite sheet para iconos: 1 request vs 39 requests individuales
+- biome.json configurado y ejecutado (93 archivos formateados)
+
+### Archivos modificados
+- 39 tool directories (5 nuevas + refactors)
+- Homepage redesign (layout.tsx, page.tsx, tools-sprite.png)
+- Design stack (.mcp.json, .claude/skills/)
+- Audit docs (progress-tracker, known-issues-resolved)
+- Integration files (NavMenu, sitemap, request.ts, common.json ×3)
+
+### Comandos de test
+```bash
+npm run build   # 124+ pages, 0 errors
+```
+
+### Próximo paso
+- Growth: Reddit (check if unblocked), Dev.to post, Product Hunt launch
+- i18n expansion: review analytics for FR → DE → PL
+- Batch 7 planning (CSS visual generators)
+
+### Bloqueadores
+- HN karma still 1 (need ~20-30 to repost toolnexus.dev)
+- Reddit account age requirement (~1 month)
+
+---
+
 ## 2026-03-17 — Protocol Alignment
 
 ### Completado
