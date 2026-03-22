@@ -35,8 +35,8 @@ export default async function ImageCompressorPage({ params }: Props) {
         url={`https://toolnexus.dev/${locale}/tools/image-compressor`}
         faq={faq}
       />
-      <h1 className="text-3xl font-bold mb-2">{t('heading')}</h1>
-      <p className="text-zinc-400 mb-8">{t('subheading')}</p>
+      <h1 className="font-[family-name:var(--font-heading)] text-3xl font-bold mb-2">{t('heading')}</h1>
+      <p className="text-slate-400 mb-8">{t('subheading')}</p>
       <ImageCompressor />
 
       <section className="mt-16 prose prose-invert prose-sm max-w-none">

@@ -86,21 +86,21 @@ export default async function LocaleLayout({ children, params }: Props) {
       </head>
       <body className={`${dmSans.variable} ${spaceGrotesk.variable} font-[family-name:var(--font-body)] bg-[#0F172A] text-slate-100 min-h-screen`}>
         <NextIntlClientProvider>
-          <nav className="border-b border-zinc-800 px-6 py-4">
+          <nav className="border-b border-white/[0.06] px-6 py-4">
             <div className="max-w-6xl mx-auto flex items-center justify-between">
               <Link href="/" className="text-xl font-bold tracking-tight">
                 <span className="text-emerald-400">Nexus</span>Tools
               </Link>
               <div className="flex items-center gap-4">
                 <NavMenu />
-                <div className="border-l border-zinc-700 pl-4">
+                <div className="border-l border-white/[0.08] pl-4">
                   <LanguageSwitcher />
                 </div>
               </div>
             </div>
           </nav>
           <main>{children}</main>
-          <footer className="border-t border-zinc-800 px-6 py-8 mt-16">
+          <footer className="border-t border-white/[0.06] px-6 py-8 mt-16">
             <div className="max-w-6xl mx-auto text-center text-sm text-zinc-500">
               <p>{t('footer.privacy')}</p>
               <div className="flex items-center justify-center gap-4 mt-3">

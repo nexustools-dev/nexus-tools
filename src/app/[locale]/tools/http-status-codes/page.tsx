@@ -26,8 +26,8 @@ export default async function HttpStatusCodesPage({ params }: Props) {
   return (
     <div className="max-w-4xl mx-auto px-6 py-12">
       <ToolJsonLd name={t('heading')} description={t('metadata.description')} url={`https://toolnexus.dev/${locale}/tools/http-status-codes`} faq={faq} />
-      <h1 className="text-3xl font-bold mb-2">{t('heading')}</h1>
-      <p className="text-zinc-400 mb-8">{t('subheading')}</p>
+      <h1 className="font-[family-name:var(--font-heading)] text-3xl font-bold mb-2">{t('heading')}</h1>
+      <p className="text-slate-400 mb-8">{t('subheading')}</p>
       <HttpStatusCodes />
       <section className="mt-16 prose prose-invert prose-sm max-w-none">
         <h2>{t('seo.section1Title')}</h2><p>{t('seo.section1Text')}</p>
