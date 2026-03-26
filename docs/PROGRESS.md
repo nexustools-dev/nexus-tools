@@ -4,6 +4,31 @@ Resumen diario para continuidad entre sesiones. Actualizar al final de cada sesi
 
 ---
 
+## 2026-03-25 — Visual Consistency + Dev.to Launch
+
+### Completado
+- Visual consistency: 39 tool pages updated (Space Grotesk headings, slate colors, glass borders)
+- Dev.to post published: "I Built 39 Developer Tools in 10 Days"
+- NanoBanana cover image generated (1000x420)
+- Analytics check: 301 pageviews, 62 visitors, Google indexing 19/124 pages
+- Umami Docker recovered (was down, auto-restarted)
+
+### Decisiones tomadas
+- i18n expansion deferred: insufficient data (62 visitors), revisit at 200+ unique visitors
+- Dev.to chosen as next growth channel (no account age restriction like Reddit)
+
+### Próximo paso
+- HN comments daily (karma still 1, need 20-30 to repost)
+- Batch 7 planning (CSS visual generators: Flexbox Playground, Grid Generator)
+- Fix Google canonical duplicates (2 pages)
+- Monitor Dev.to post engagement
+
+### Bloqueadores
+- HN karma still 1
+- Reddit account ~1 month old needed (blocked until ~April 12)
+
+---
+
 ## 2026-03-21 — Batch 6 Complete + Growth
 
 ### Completado
