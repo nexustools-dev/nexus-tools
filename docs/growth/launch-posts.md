@@ -1,6 +1,11 @@
 # NexusTools — Launch Posts (Copy-Paste Ready)
 
 > **Cuenta a usar:** Gmail personal para comunidades, tools@toolnexus.dev para directorios.
+>
+> ## Posts publicados
+> - **Dev.to:** https://dev.to/ricardo_rojas_0c3f2a95209/i-built-39-developer-tools-in-10-days-no-backend-no-tracking-no-ads-1732 (2026-03-21)
+> - **HN:** rrojas-nexus (post muerto, karma building con comments — 9 publicados)
+> - **AlternativeTo:** verificado
 
 ---
 
