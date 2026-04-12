@@ -67,8 +67,17 @@
 | 38 | CIDR Calculator | cidr-calculator | IP | Subnet mask, IP range, network/broadcast, binary, wildcard, quick reference |
 | 39 | JWT Generator | jwt-generator | JWG | HS256/384/512, Web Crypto API, claim helpers, color-coded output |
 
+## Batch 7 — CSS Visual Generators (tools 40-44)
+| # | Herramienta | Slug | Icon | Highlights |
+|---|------------|------|------|------------|
+| 40 | Flexbox Playground | flexbox-playground | FLX | Direction, wrap, justify, align, gap, child items, 6 presets |
+| 41 | Grid Generator | grid-generator | GRD | Columns/rows, track sizes (fr/px/auto), item spanning, 5 presets |
+| 42 | Animation Generator | animation-generator | ANI | @keyframes editor, timing, transforms, play/pause, 10 presets |
+| 43 | Glassmorphism Generator | glassmorphism-generator | GLS | Backdrop-blur, opacity, saturation, borders, 6 presets |
+| 44 | Neumorphism Generator | neumorphism-generator | NEU | Soft UI, 4 shapes (flat/concave/convex/pressed), 8 presets |
+
 ## Stats
-- **Total:** 39 tools
+- **Total:** 44 tools
 - **Dependencies:** 1 (qrcode for QR #18)
 - **Idiomas:** 3 (EN/ES/PT-BR)
-- **Páginas:** 124+ (39x3 locales + extras)
+- **Páginas:** 139+ (44x3 locales + extras)

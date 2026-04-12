@@ -4,6 +4,40 @@ Resumen diario para continuidad entre sesiones. Actualizar al final de cada sesi
 
 ---
 
+## 2026-04-11 — Batch 7 Complete + Reddit Prep
+
+### Completado
+- Batch 7: 5 CSS visual tools (Flexbox Playground, Grid Generator, Animation Generator, Glassmorphism, Neumorphism)
+- All 5 tools verified locally (dev server), 0 build errors from Batch 7
+- 139 static pages (was 124), 44 tools total
+- Reddit posts updated to 39 tools (will update to 44 after deploy)
+- Product Hunt pre-launch confirmed (~2 days to launch)
+- Coming soon section cleaned (removed tools that now exist)
+
+### Decisiones tomadas
+- Batch 7 = CSS visual generators for high engagement and time-on-page
+- Reddit Showoff Saturday rule: all 3 subs (r/webdev, r/SideProject, r/opensource) require Saturday posts
+- New tools use fallback gradient icons (no sprite yet — generate with NanoBanana next session)
+
+### Archivos modificados
+- 5 new tool directories (page.tsx + Client Component each)
+- 15 i18n files (5 tools × 3 languages)
+- Integration: NavMenu, homepage, sitemap, request.ts, common.json ×3
+- docs/growth/launch-posts.md (Reddit posts updated)
+
+### Próximo paso
+- Deploy Batch 7 to production (rsync + build + systemctl)
+- Reddit Showoff Saturday (r/webdev tomorrow, r/SideProject, r/opensource)
+- Product Hunt launch (~April 13)
+- Generate sprite icons for 5 new tools (NanoBanana)
+- Update Reddit posts from 39 → 44 tools after deploy
+
+### Bloqueadores
+- Reddit: Showoff Saturday only (mañana sábado)
+- Sprite icons: new tools show gradient fallback icons on homepage
+
+---
+
 ## 2026-03-25 — Visual Consistency + Dev.to Launch
 
 ### Completado
