@@ -113,14 +113,16 @@ export function NavMenu() {
           setOpen(!open);
           if (open) setSearch('');
         }}
-        className="flex items-center gap-1.5 text-sm text-zinc-400 hover:text-zinc-100 transition-colors px-3 py-1.5 rounded-lg hover:bg-zinc-800/50"
+        className="flex items-center gap-1.5 text-sm text-zinc-400 hover:text-zinc-100 px-3 py-1.5 rounded-lg hover:bg-zinc-800/50"
+        style={{ transition: 'color 150ms var(--ease-out), background-color 150ms var(--ease-out), transform 160ms var(--ease-out)' }}
       >
         Tools
         <kbd className="hidden sm:inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded bg-zinc-800 text-[10px] text-zinc-500 font-mono ml-1">
           Ctrl+K
         </kbd>
         <svg
-          className={`w-3.5 h-3.5 transition-transform ${open ? 'rotate-180' : ''}`}
+          className={`w-3.5 h-3.5 ${open ? 'rotate-180' : ''}`}
+          style={{ transition: 'transform 200ms var(--ease-out)' }}
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -131,7 +133,7 @@ export function NavMenu() {
       </button>
 
       {open && (
-        <div className="absolute right-0 top-full mt-2 w-[28rem] bg-zinc-900 border border-zinc-800 rounded-xl shadow-2xl shadow-black/50 p-3 z-50 max-h-[80vh] overflow-y-auto">
+        <div className="popover-enter absolute right-0 top-full mt-2 w-[28rem] bg-zinc-900 border border-zinc-800 rounded-xl shadow-2xl shadow-black/50 p-3 z-50 max-h-[80vh] overflow-y-auto">
           {/* Search input */}
           <div className="mb-2">
             <input
@@ -153,7 +155,8 @@ export function NavMenu() {
                   setOpen(false);
                   setSearch('');
                 }}
-                className="flex items-center gap-2 px-2.5 py-2 rounded-lg text-xs text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800 transition-colors"
+                className="flex items-center gap-2 px-2.5 py-2 rounded-lg text-xs text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800"
+                style={{ transition: 'color 150ms var(--ease-out), background-color 150ms var(--ease-out)' }}
               >
                 <span
                   className="w-5 h-5 flex items-center justify-center rounded bg-zinc-800 text-[8px] font-mono font-bold text-emerald-400 shrink-0"

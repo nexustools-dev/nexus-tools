@@ -1,1 +1,84 @@
 @import "tailwindcss";
+
+/* ── Emil Kowalski Design Tokens ── */
+:root {
+  /* Strong custom easings — default CSS easings are too weak */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ── Button press feedback — every pressable element must feel responsive ── */
+button,
+[role="button"],
+a.group {
+  transition: transform 160ms var(--ease-out);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  button:active,
+  [role="button"]:active,
+  a.group:active {
+    transform: scale(0.97);
+  }
+}
+
+/* ── Stagger animation for grid items ── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stagger-item {
+  opacity: 0;
+  animation: fadeInUp 400ms var(--ease-out) forwards;
+}
+
+/* ── Dropdown/popover entry — scale from trigger, never from scale(0) ── */
+@keyframes popoverIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.popover-enter {
+  animation: popoverIn 180ms var(--ease-out);
+  transform-origin: top right;
+}
+
+/* ── Copy button state transition ── */
+.copy-flash {
+  transition: filter 200ms ease, opacity 200ms ease;
+}
+
+.copy-flash-active {
+  filter: blur(1px);
+  opacity: 0.7;
+}
+
+/* ── Hover guard — prevent false hover states on touch devices ── */
+@media (hover: hover) and (pointer: fine) {
+  .hover-lift:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* ── Smooth range input thumb ── */
+input[type="range"] {
+  transition: opacity 150ms ease;
+}
+
+input[type="range"]:active {
+  transform: none; /* Override button scale for sliders */
+}

@@ -385,13 +385,14 @@ export default async function Home({ params }: Props) {
 
       {/* Tools Grid */}
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        {toolKeys.map((tool) => (
+        {toolKeys.map((tool, idx) => (
           <Link
             key={tool.href}
             href={tool.href}
-            className="group relative flex items-start gap-4 p-6 rounded-2xl border border-white/[0.06] bg-white/[0.02] hover:bg-white/[0.05] hover:border-white/[0.12] hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
+            className="stagger-item group relative flex items-start gap-4 p-6 rounded-2xl border border-white/[0.06] bg-white/[0.02] hover:bg-white/[0.05] hover:border-white/[0.12] hover-lift cursor-pointer"
+            style={{ animationDelay: `${idx * 30}ms` }}
           >
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/[0.03] to-transparent opacity-0 group-hover:opacity-100 pointer-events-none" style={{ transition: 'opacity 200ms var(--ease-out)' }} />
             {SPRITE_INDEX[tool.key] !== undefined ? (
               <div
                 className="relative z-10 shrink-0 w-12 h-12 rounded-xl shadow-lg shadow-black/20 overflow-hidden"
@@ -411,7 +412,7 @@ export default async function Home({ params }: Props) {
               </div>
             )}
             <div className="relative z-10 min-w-0">
-              <h2 className="font-[family-name:var(--font-heading)] text-base font-semibold text-white group-hover:text-emerald-400 transition-colors duration-200 leading-tight">
+              <h2 className="font-[family-name:var(--font-heading)] text-base font-semibold text-white group-hover:text-emerald-400 leading-tight" style={{ transition: 'color 200ms var(--ease-out)' }}>
                 {t(`tools.${tool.key}.name`)}
               </h2>
               <p className="text-sm text-slate-400 leading-relaxed mt-1">
@@ -431,10 +432,11 @@ export default async function Home({ params }: Props) {
           </span>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-3">
-          {comingSoonKeys.map((tool) => (
+          {comingSoonKeys.map((tool, idx) => (
             <div
               key={tool.key}
-              className="p-5 rounded-xl border border-white/[0.04] bg-white/[0.01] opacity-50 relative"
+              className="stagger-item p-5 rounded-xl border border-white/[0.04] bg-white/[0.01] opacity-50 relative"
+              style={{ animationDelay: `${(toolKeys.length + idx) * 30}ms` }}
             >
               <div className="absolute top-3 right-3">
                 <span className="px-2 py-0.5 rounded-full bg-slate-800 text-slate-500 text-[10px] font-medium uppercase tracking-wider">
@@ -462,7 +464,7 @@ export default async function Home({ params }: Props) {
       <section className="mt-20 mb-8">
         <h2 className="font-[family-name:var(--font-heading)] text-2xl font-bold text-center mb-12">{t('whyHeading')}</h2>
         <div className="grid md:grid-cols-3 gap-6">
-          <div className="relative p-8 rounded-2xl border border-white/[0.06] bg-white/[0.02] text-center group hover:border-emerald-500/20 transition-colors duration-300">
+          <div className="relative p-8 rounded-2xl border border-white/[0.06] bg-white/[0.02] text-center group hover:border-emerald-500/20 hover-lift" style={{ transition: 'border-color 200ms var(--ease-out), transform 200ms var(--ease-out)' }}>
             <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 mb-5">
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
@@ -471,7 +473,7 @@ export default async function Home({ params }: Props) {
             <h3 className="font-[family-name:var(--font-heading)] font-semibold text-white mb-2">{t('feature1Title')}</h3>
             <p className="text-sm text-slate-400 leading-relaxed">{t('feature1Desc')}</p>
           </div>
-          <div className="relative p-8 rounded-2xl border border-white/[0.06] bg-white/[0.02] text-center group hover:border-emerald-500/20 transition-colors duration-300">
+          <div className="relative p-8 rounded-2xl border border-white/[0.06] bg-white/[0.02] text-center group hover:border-emerald-500/20 hover-lift" style={{ transition: 'border-color 200ms var(--ease-out), transform 200ms var(--ease-out)' }}>
             <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 mb-5">
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
@@ -480,7 +482,7 @@ export default async function Home({ params }: Props) {
             <h3 className="font-[family-name:var(--font-heading)] font-semibold text-white mb-2">{t('feature2Title')}</h3>
             <p className="text-sm text-slate-400 leading-relaxed">{t('feature2Desc')}</p>
           </div>
-          <div className="relative p-8 rounded-2xl border border-white/[0.06] bg-white/[0.02] text-center group hover:border-emerald-500/20 transition-colors duration-300">
+          <div className="relative p-8 rounded-2xl border border-white/[0.06] bg-white/[0.02] text-center group hover:border-emerald-500/20 hover-lift" style={{ transition: 'border-color 200ms var(--ease-out), transform 200ms var(--ease-out)' }}>
             <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 mb-5">
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
@@ -503,7 +505,8 @@ export default async function Home({ params }: Props) {
               href="https://github.com/nexustools-dev/nexus-tools/discussions/categories/ideas"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-sm font-medium transition-colors duration-200"
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-sm font-medium"
+              style={{ transition: 'background-color 200ms var(--ease-out), transform 160ms var(--ease-out)' }}
             >
               {t('suggestButton')}
             </a>
