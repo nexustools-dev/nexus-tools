@@ -42,6 +42,11 @@ const SPRITE_INDEX: Record<string, number> = {
   timestampConverter: 36,
   urlEncoder: 37,
   uuidGenerator: 38,
+  flexboxPlayground: 39,
+  gridGenerator: 40,
+  animationGenerator: 41,
+  glassmorphismGenerator: 42,
+  neumorphismGenerator: 43,
 };
 
 const toolKeys = [
