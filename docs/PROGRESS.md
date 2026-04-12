@@ -4,37 +4,41 @@ Resumen diario para continuidad entre sesiones. Actualizar al final de cada sesi
 
 ---
 
-## 2026-04-11 — Batch 7 Complete + Reddit Prep
+## 2026-04-11 — Batch 7 Complete + Emil Polish + Deploy
 
 ### Completado
 - Batch 7: 5 CSS visual tools (Flexbox Playground, Grid Generator, Animation Generator, Glassmorphism, Neumorphism)
-- All 5 tools verified locally (dev server), 0 build errors from Batch 7
-- 139 static pages (was 124), 44 tools total
-- Reddit posts updated to 39 tools (will update to 44 after deploy)
+- Emil Kowalski UI polish: custom easing curves, button :active feedback, stagger animations, hover guards, popover entry animation
+- Sprite icons generated (NanoBanana) and integrated — 44 icons in sprite
+- All 5 tools verified locally + deployed to production (200 OK)
+- 139 static pages, 44 tools total
+- Reddit posts updated to 39 tools (need update to 44 before Saturday posts)
 - Product Hunt pre-launch confirmed (~2 days to launch)
 - Coming soon section cleaned (removed tools that now exist)
 
 ### Decisiones tomadas
 - Batch 7 = CSS visual generators for high engagement and time-on-page
-- Reddit Showoff Saturday rule: all 3 subs (r/webdev, r/SideProject, r/opensource) require Saturday posts
-- New tools use fallback gradient icons (no sprite yet — generate with NanoBanana next session)
+- Reddit Showoff Saturday rule: all 3 subs require Saturday posts (r/webdev, r/SideProject, r/opensource)
+- Emil Kowalski design principles adopted globally: custom easing, button feedback, stagger, hover guards
+- Sprite icons appended (positions 39-43) rather than alphabetical reorder — simpler, same result
 
 ### Archivos modificados
 - 5 new tool directories (page.tsx + Client Component each)
 - 15 i18n files (5 tools × 3 languages)
 - Integration: NavMenu, homepage, sitemap, request.ts, common.json ×3
+- globals.css (Emil design tokens + animations)
+- layout.tsx (custom easing on transitions)
+- tools-sprite.png (39 → 44 icons)
 - docs/growth/launch-posts.md (Reddit posts updated)
 
 ### Próximo paso
-- Deploy Batch 7 to production (rsync + build + systemctl)
-- Reddit Showoff Saturday (r/webdev tomorrow, r/SideProject, r/opensource)
+- Reddit Showoff Saturday: update posts from 39→44 tools, post to r/webdev + r/SideProject + r/opensource
 - Product Hunt launch (~April 13)
-- Generate sprite icons for 5 new tools (NanoBanana)
-- Update Reddit posts from 39 → 44 tools after deploy
+- Fix Google canonical duplicates
+- Monitor engagement (Reddit, Dev.to, Product Hunt)
 
 ### Bloqueadores
-- Reddit: Showoff Saturday only (mañana sábado)
-- Sprite icons: new tools show gradient fallback icons on homepage
+- Reddit: Showoff Saturday only (mañana sábado 12 abril)
 
 ---
 
