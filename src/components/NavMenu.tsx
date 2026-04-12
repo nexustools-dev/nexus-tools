@@ -44,6 +44,11 @@ const TOOLS = [
   { key: 'httpStatusCodes', href: '/tools/http-status-codes', icon: 'HTTP' },
   { key: 'cidrCalculator', href: '/tools/cidr-calculator', icon: 'IP' },
   { key: 'jwtGenerator', href: '/tools/jwt-generator', icon: 'JWG' },
+  { key: 'flexboxPlayground', href: '/tools/flexbox-playground', icon: 'FLX' },
+  { key: 'gridGenerator', href: '/tools/grid-generator', icon: 'GRD' },
+  { key: 'animationGenerator', href: '/tools/animation-generator', icon: 'ANI' },
+  { key: 'glassmorphismGenerator', href: '/tools/glassmorphism-generator', icon: 'GLS' },
+  { key: 'neumorphismGenerator', href: '/tools/neumorphism-generator', icon: 'NEU' },
 ] as const;
 
 export function NavMenu() {

@@ -45,6 +45,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/tools/http-status-codes', changeFrequency: 'monthly' as const, priority: 0.8 },
     { path: '/tools/cidr-calculator', changeFrequency: 'monthly' as const, priority: 0.8 },
     { path: '/tools/jwt-generator', changeFrequency: 'monthly' as const, priority: 0.8 },
+    { path: '/tools/flexbox-playground', changeFrequency: 'monthly' as const, priority: 0.8 },
+    { path: '/tools/grid-generator', changeFrequency: 'monthly' as const, priority: 0.8 },
+    { path: '/tools/animation-generator', changeFrequency: 'monthly' as const, priority: 0.8 },
+    { path: '/tools/glassmorphism-generator', changeFrequency: 'monthly' as const, priority: 0.8 },
+    { path: '/tools/neumorphism-generator', changeFrequency: 'monthly' as const, priority: 0.8 },
   ];
 
   return paths.flatMap(({ path, changeFrequency, priority }) =>

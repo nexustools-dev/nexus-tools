@@ -17,9 +17,9 @@
 
 **Tagline (60 chars):** Free dev tools that run 100% in your browser
 **Description:**
-NexusTools is a collection of 34+ free developer tools that run entirely in your browser. No sign-ups, no data collection, no uploads — everything is processed client-side.
+NexusTools is a collection of 39 free developer tools that run entirely in your browser. No sign-ups, no data collection, no uploads — everything is processed client-side.
 
-Tools include: JSON/SQL/YAML formatters, color converters, regex tester, JWT decoder, password generator, QR codes, image compressor, CSS visual generators, and more.
+Tools include: JSON/SQL/YAML formatters, color converters, regex tester, JWT decoder/generator, password generator, QR codes, image compressor, CSS visual generators, LLM token counter, CIDR calculator, and more.
 
 Built with Next.js 15, TypeScript, and Tailwind CSS. Available in English, Spanish, and Portuguese. Open source (MIT).
 
@@ -29,11 +29,13 @@ Hey everyone! I built NexusTools because I was tired of dev tools that:
 - Upload your data to their servers
 - Put basic features behind paywalls
 
-Every tool on NexusTools processes data locally in your browser using Canvas API, Web Crypto, and native JavaScript. Zero dependencies where possible.
+Every tool on NexusTools processes data locally in your browser using Canvas API, Web Crypto, and native JavaScript. Near-zero npm dependencies — custom parsers for SQL, markdown, YAML, and diff.
+
+39 tools and growing. Recent additions include an LLM token counter, CIDR calculator, and JWT generator.
 
 It's open source, so you can verify there's no tracking: https://github.com/nexustools-dev/nexus-tools
 
-I'd love your feedback — what tools would you like to see next? Drop an idea on our GitHub Discussions!
+I'd love your feedback — what tools would you like to see next?
 
 **Topics:** Developer Tools, Open Source, Web App, Productivity
 **Link:** https://toolnexus.dev
@@ -45,15 +47,16 @@ I'd love your feedback — what tools would you like to see next? Drop an idea o
 > **URL:** https://news.ycombinator.com/submit
 > **Cuenta:** Gmail personal
 
-**Title:** Show HN: NexusTools – 34 free dev tools that run 100% in your browser (open source)
+**Title:** Show HN: NexusTools – 39 free dev tools that run 100% in your browser (open source)
 
 **Text:**
-I built a collection of 34 developer tools that run entirely client-side — no backend, no accounts, no data collection.
+I built a collection of 39 developer tools that run entirely client-side — no backend, no accounts, no data collection.
 
 - JSON/SQL/YAML formatters, Base64, URL encoder, Hash generator (Web Crypto API)
 - CSS visual tools: gradient, box-shadow, text-shadow, border-radius generators
 - Image compressor (Canvas API), SVG to PNG, color palette generator
-- Regex tester, JWT decoder, chmod calculator, cron builder, diff checker
+- Regex tester, JWT decoder/generator, chmod calculator, cron builder, diff checker
+- LLM token counter (GPT-4o/Claude/Llama/Gemini/DeepSeek), CIDR calculator
 - Password generator using crypto.getRandomValues (not Math.random)
 
 Stack: Next.js 15 (SSR for SEO), TypeScript, Tailwind CSS v4. Near-zero npm dependencies — custom SQL tokenizer, custom markdown parser, custom LCS diff algorithm.
@@ -71,53 +74,48 @@ contraseña: Rojas1509$
 API: https://github.com/HackerNews/API
 ---
 
-## 3. Reddit r/webdev :: Bloqueado
+## 3. Reddit r/webdev
 
 > **URL:** https://www.reddit.com/r/webdev/submit
 > **Cuenta:** Gmail personal
 
-**Title:** I built 34 free dev tools that run 100% in your browser — no accounts, no tracking, open source
+**Title:** I built 39 free dev tools that run 100% in your browser — no accounts, no tracking, open source
 
 **Body:**
 Hey r/webdev!
 
 I've been building [NexusTools](https://toolnexus.dev) — a growing collection of developer tools that process everything locally in your browser.
 
-**What's there (34 tools):**
-- Formatters: JSON, SQL, Markdown
-- Converters: JSON↔YAML, JSON↔CSV, CSV→SQL, Base64, URL encode, HTML entities, color, CSS units, timestamps
-- Generators: Favicon, UUID, password, QR code, lorem ipsum, placeholder images, hash (MD5/SHA), meta tags, color palettes
-- CSS Visual: Gradients, box-shadow, text-shadow, border-radius
-- Dev Utilities: Regex tester, JWT decoder, diff checker, chmod calculator, cron builder, aspect ratio
-- Image: Compressor (JPEG/WebP/PNG), SVG to PNG
+**What's there (39 tools):**
+- **Formatters:** JSON (tree view, auto-repair), SQL (custom tokenizer), Markdown (custom parser)
+- **Converters:** JSON↔YAML, JSON↔CSV, CSV→SQL, Base64, URL encode, HTML entities, color, CSS units, timestamps
+- **Generators:** Favicon, UUID, password, QR code, lorem ipsum, placeholder images, hash (MD5/SHA + HMAC), meta tags, color palettes, JWT
+- **CSS Visual:** Gradients, box-shadow, text-shadow, border-radius
+- **Dev Utilities:** Regex tester, JWT decoder, diff checker (LCS algorithm), chmod calculator, cron builder, aspect ratio, CIDR calculator, HTTP status codes reference
+- **AI/Text:** LLM token counter (GPT-4o/Claude/Llama/Gemini/DeepSeek), character counter with reading time
+- **Image:** Compressor (JPEG/WebP/PNG via Canvas API), SVG to PNG
 
 **Tech details:**
 - Next.js 15 + TypeScript + Tailwind CSS v4
 - Zero backend — Canvas API, Web Crypto API, native JS
-- Custom parsers (SQL tokenizer, markdown, YAML, diff algorithm)
+- Near-zero npm deps — custom parsers for SQL, markdown, YAML, diff
 - i18n: English, Spanish, Portuguese
 - Open source: [github.com/nexustools-dev/nexus-tools](https://github.com/nexustools-dev/nexus-tools)
 
-What tools do you wish existed? I'm taking suggestions via [GitHub Discussions](https://github.com/nexustools-dev/nexus-tools/discussions/categories/ideas).
-
-
-Para Nexus:
-
-No me dejaron publicar, la cuenta tiene que tener un mes de antiguedas y participar en otras conversaciones para poder publicar
+What tools do you wish existed? I'm planning the next batch and taking suggestions.
 ---
 
-## 4. Reddit r/SideProject :: Bloqueado
-
+## 4. Reddit r/SideProject
 
 > **URL:** https://www.reddit.com/r/SideProject/submit
 > **Cuenta:** Gmail personal
 
-**Title:** From zero to 34 tools in 2 days — I built a free dev tools site that runs 100% client-side
+**Title:** I built 39 free dev tools that run 100% client-side — from zero to deployed in 2 weeks
 
 **Body:**
-I launched [NexusTools](https://toolnexus.dev) — a collection of free developer utilities that process everything in your browser. No sign-ups, no tracking.
+I launched [NexusTools](https://toolnexus.dev) — a collection of 39 free developer utilities that process everything in your browser. No sign-ups, no tracking, no uploads.
 
-Built with Next.js 15, TypeScript, Tailwind CSS. Every tool is a standalone client component with zero cross-dependencies. Open source: [github.com/nexustools-dev/nexus-tools](https://github.com/nexustools-dev/nexus-tools)
+Built with Next.js 15, TypeScript, Tailwind CSS v4. Every tool is a standalone client component with zero cross-dependencies. Open source: [github.com/nexustools-dev/nexus-tools](https://github.com/nexustools-dev/nexus-tools)
 
 Highlights of the build:
 - Custom SQL tokenizer with syntax highlighting (no external parser)
@@ -125,41 +123,36 @@ Highlights of the build:
 - LCS diff algorithm for text comparison
 - HSL color math for palette generation
 - All image processing via Canvas API
-- 3 languages (EN/ES/PT) with next-intl
-- GPU-powered security audits using local Qwen 2.5-Coder 14B
+- LLM token estimator for GPT-4o, Claude, Llama, Gemini, DeepSeek
+- JWT generator/decoder pair using Web Crypto API
+- 3 languages (EN/ES/PT) with next-intl — every tool born translated
+- Self-hosted analytics (Umami) — no Google Analytics
+
+The philosophy: near-zero npm dependencies. Only 1 dep for tool logic (qrcode for Reed-Solomon). Everything else is browser APIs.
 
 Happy to answer questions about the architecture or build process!
-
-
-Para Nexus:
-
-No me dejaron publicar, la cuenta tiene que tener un mes de antiguedas y participar en otras conversaciones para poder publicar, mismo que el punto ##3
 ---
 
 ---
 
-## 5. Reddit r/opensource :: :: Bloqueado
+## 5. Reddit r/opensource
 
 > **URL:** https://www.reddit.com/r/opensource/submit
 > **Cuenta:** Gmail personal
 
-**Title:** NexusTools — 34 free, open-source developer tools that run 100% in your browser (MIT)
+**Title:** NexusTools — 39 free, open-source developer tools that run 100% in your browser (MIT)
 
 **Body:**
-I open-sourced [NexusTools](https://github.com/nexustools-dev/nexus-tools) — a collection of 34 developer tools that run entirely client-side.
+I open-sourced [NexusTools](https://github.com/nexustools-dev/nexus-tools) — a collection of 39 developer tools that run entirely client-side.
 
 The philosophy: near-zero dependencies. Custom parsers for SQL, markdown, YAML, and diff (LCS algorithm). Only 1 npm dep for tool logic (qrcode — Reed-Solomon is genuinely complex). Everything else uses browser APIs: Canvas, Web Crypto, Clipboard.
 
-MIT licensed. Contributions welcome — each tool follows a simple pattern (server component for SEO + client component for logic).
+Recent additions: LLM token counter (estimate tokens for 5 major models), CIDR subnet calculator, JWT generator using Web Crypto API, HTTP status codes reference, and a character counter with reading time estimation.
+
+MIT licensed. Available in 3 languages (EN/ES/PT). Contributions welcome — each tool follows a simple pattern (server component for SEO + client component for logic).
 
 **Site:** [toolnexus.dev](https://toolnexus.dev)
 **Repo:** [github.com/nexustools-dev/nexus-tools](https://github.com/nexustools-dev/nexus-tools)
-
----
-
-Para Nexus:
-
-No me dejaron publicar, la cuenta tiene que tener un mes de antiguedas y participar en otras conversaciones para poder publicar, mismo que el punto ##3
 
 ## 6. Dev.to Article  :: STAND BY mejor directo que por Rust Desktop
 
@@ -230,7 +223,7 @@ Each tool is completely independent — no shared state, no cross-dependencies b
 > **Submit como alternativa a:** DevUtils, CyberChef, IT Tools, SmallDev.tools
 
 **Name:** NexusTools
-**Description:** Free online developer tools (34+) that run 100% in your browser. JSON formatter, SQL formatter, regex tester, password generator, image compressor, CSS generators, and more. No sign-ups, no tracking, open source (MIT). Available in English, Spanish, and Portuguese.
+**Description:** Free online developer tools (39) that run 100% in your browser. JSON formatter, SQL formatter, regex tester, password generator, image compressor, CSS generators, LLM token counter, CIDR calculator, and more. No sign-ups, no tracking, open source (MIT). Available in English, Spanish, and Portuguese.
 **Tags:** Developer Tools, Online Tools, Browser-Based, Free, Open Source
 **Platforms:** Web
 **License:** MIT (Free, Open Source)
@@ -243,8 +236,8 @@ Each tool is completely independent — no shared state, no cross-dependencies b
 > **URL:** https://devhunt.org/submit
 > **Cuenta:** tools@toolnexus.dev (o login con GitHub)
 
-**Tagline:** 34+ free dev tools — 100% browser-based, open source
-**Description:** Collection of developer tools that run entirely client-side. JSON/SQL/YAML formatters, CSS visual generators, image compressor, regex tester, JWT decoder, and more. No accounts, no tracking. Built with Next.js 15, TypeScript, Tailwind CSS. MIT licensed.
+**Tagline:** 39 free dev tools — 100% browser-based, open source
+**Description:** Collection of 39 developer tools that run entirely client-side. JSON/SQL/YAML formatters, CSS visual generators, image compressor, regex tester, JWT decoder/generator, LLM token counter, CIDR calculator, and more. No accounts, no tracking. Built with Next.js 15, TypeScript, Tailwind CSS. MIT licensed.
 **GitHub:** https://github.com/nexustools-dev/nexus-tools
 **Website:** https://toolnexus.dev
 
@@ -257,7 +250,7 @@ Each tool is completely independent — no shared state, no cross-dependencies b
 
 **Name:** NexusTools
 **Category:** Developer Tools
-**Description:** Free collection of 34+ browser-based developer tools. Formatters, converters, generators, CSS visual tools, and dev utilities. No backend — everything runs client-side. Open source, multilingual (EN/ES/PT).
+**Description:** Free collection of 39 browser-based developer tools. Formatters, converters, generators, CSS visual tools, and dev utilities. No backend — everything runs client-side. Open source, multilingual (EN/ES/PT).
 **Alternative to:** DevUtils, CyberChef, IT Tools
 **Website:** https://toolnexus.dev
 
@@ -270,7 +263,7 @@ Each tool is completely independent — no shared state, no cross-dependencies b
 
 **Name:** NexusTools
 **Tagline:** Free developer tools that run 100% in your browser
-**Description:** 34+ browser-based developer tools — JSON/SQL formatters, CSS generators, image compressor, regex tester, and more. No accounts, no tracking, open source.
+**Description:** 39 browser-based developer tools — JSON/SQL formatters, CSS generators, image compressor, regex tester, LLM token counter, and more. No accounts, no tracking, open source.
 **Website:** https://toolnexus.dev
 
 ---
@@ -282,7 +275,7 @@ Each tool is completely independent — no shared state, no cross-dependencies b
 
 **Name:** NexusTools
 **Tagline:** Free dev tools that run 100% in your browser
-**Description:** I'm building a growing collection of 34+ developer tools. All client-side, no tracking, open source. Monetization plan: minimal AdSense once traffic hits ~1000/month.
+**Description:** I'm building a growing collection of 39 developer tools. All client-side, no tracking, open source. Monetization plan: minimal AdSense once traffic hits ~1000/month.
 **Website:** https://toolnexus.dev
 **Revenue:** $0 (pre-revenue, building traffic)
 
@@ -294,7 +287,7 @@ Each tool is completely independent — no shared state, no cross-dependencies b
 > **Cuenta:** Gmail personal (tu cuenta personal)
 
 **Tweet 1:**
-I built 34 free developer tools that run 100% in your browser.
+I built 39 free developer tools that run 100% in your browser.
 
 No accounts. No tracking. No uploads. Open source.
 
@@ -310,7 +303,8 @@ Tools include:
 - Regex tester, JWT decoder, chmod calc
 - Password & UUID generators
 - Color palette generator
-- And 20+ more...
+- LLM token counter, CIDR calculator, HTTP status codes
+- And more...
 
 **Tweet 3:**
 The tech philosophy: near-zero dependencies.
@@ -324,7 +318,7 @@ Next.js 15 + TypeScript + Tailwind CSS v4.
 **Tweet 4:**
 Available in 3 languages (EN/ES/PT) and growing.
 
-8 more tools coming soon. Suggest what you need:
+More tools coming soon (CSS Flexbox, Grid Generator, and more). Suggest what you need:
 github.com/nexustools-dev/nexus-tools/discussions
 
 MIT licensed. Star it if it's useful ⭐
@@ -339,11 +333,13 @@ github.com/nexustools-dev/nexus-tools
 
 I built something I wish existed years ago.
 
-NexusTools is a collection of 34 free developer tools that run entirely in your browser. No accounts, no data uploads, no paywalls.
+NexusTools is a collection of 39 free developer tools that run entirely in your browser. No accounts, no data uploads, no paywalls.
 
 Why? Because I was tired of simple utilities (JSON formatter, regex tester, base64 encoder) requiring sign-ups or sending my data to unknown servers.
 
 Every tool processes data locally using Canvas API, Web Crypto, and native JavaScript. The codebase has near-zero npm dependencies — custom parsers for SQL, markdown, YAML, and diff algorithms.
+
+Recent additions: LLM token counter, CIDR subnet calculator, JWT generator, HTTP status codes reference.
 
 Available in English, Spanish, and Portuguese. Open source (MIT).
 
@@ -361,10 +357,10 @@ If you're a developer who uses online tools daily, I'd love your feedback on wha
 ### Comunidades (usar Gmail personal)
 - [ ] **Product Hunt** — https://www.producthunt.com/posts/new (martes 00:01 PST)
 - [Listo] **Hacker News** — https://news.ycombinator.com/submit
-- [ ] **Reddit r/webdev** — https://www.reddit.com/r/webdev/submit
-- [ ] **Reddit r/SideProject** — https://www.reddit.com/r/SideProject/submit
-- [ ] **Reddit r/opensource** — https://www.reddit.com/r/opensource/submit
-- [ ] **Dev.to** — https://dev.to/new
+- [ ] **Reddit r/webdev** — https://www.reddit.com/r/webdev/submit (LISTO para publicar)
+- [ ] **Reddit r/SideProject** — https://www.reddit.com/r/SideProject/submit (publicar día siguiente)
+- [ ] **Reddit r/opensource** — https://www.reddit.com/r/opensource/submit (publicar día siguiente)
+- [x] **Dev.to** — publicado 2026-03-25
 - [ ] **Indie Hackers** — https://www.indiehackers.com/products/new
 - [ ] **Twitter/X** — https://twitter.com/compose/tweet
 - [ ] **LinkedIn** — https://www.linkedin.com/feed/

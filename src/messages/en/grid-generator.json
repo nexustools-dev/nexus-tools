@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "title": "CSS Grid Generator \u2014 Visual Grid Layout Builder",
+    "description": "Build CSS Grid layouts visually. Define columns, rows, gaps, and item placement. Copy ready-to-use CSS code for your grid designs.",
+    "keywords": "css grid generator, grid layout builder, css grid template, grid columns rows, grid gap, css grid tool, grid template columns, grid template rows, css layout tool, visual grid builder"
+  },
+  "heading": "CSS Grid Generator",
+  "subheading": "Design CSS Grid layouts visually. Define columns, rows, gaps, and item placement with live preview.",
+  "seo": {
+    "section1Title": "What is CSS Grid?",
+    "section1Text": "CSS Grid Layout is a two-dimensional layout system that lets you create complex web layouts with rows and columns simultaneously. Unlike Flexbox which works in one dimension, Grid gives you complete control over both axes, making it perfect for page layouts, dashboards, and image galleries.",
+    "section2Title": "How to Use the Grid Generator",
+    "section2Text": "Start by setting the number of columns and rows. Adjust track sizes using fr (fractional), px, or auto units. Use the gap controls to add spacing between cells. Click on grid items to make them span multiple columns or rows. The generated CSS updates in real time \u2014 copy it when you're ready.",
+    "section3Title": "Grid Template Columns and Rows",
+    "section3Text": "The grid-template-columns and grid-template-rows properties define the track sizes. The fr unit distributes available space proportionally \u2014 1fr 2fr gives the second column twice the width. Use auto for content-based sizing, minmax() for responsive ranges, and repeat() for repeating patterns.",
+    "section4Title": "Common CSS Grid Patterns",
+    "section4List": "12-column layout: repeat(12, 1fr) for maximum flexibility | Dashboard: sidebar (250px) + main (1fr) with header and footer spanning full width | Photo gallery: auto-fill with minmax(200px, 1fr) for responsive columns | Blog layout: 1fr 3fr for sidebar and content | Holy grail: header, 3-column body, footer using grid-template-areas | Card grid: auto-fit with minmax for responsive equal cards"
+  },
+  "ui": {
+    "howItWorksText": "Define your grid structure with columns and rows. Adjust track sizes, gaps, and item placement. Copy the generated CSS when your layout is ready.",
+    "columns": "Columns",
+    "rows": "Rows",
+    "columnGap": "Column Gap",
+    "rowGap": "Row Gap",
+    "justifyItems": "Justify Items",
+    "alignItems": "Align Items",
+    "trackSize": "Track Size",
+    "addColumn": "Add Column",
+    "removeColumn": "Remove Column",
+    "addRow": "Add Row",
+    "removeRow": "Remove Row",
+    "items": "Grid Items",
+    "addItem": "Add Item",
+    "removeItem": "Remove",
+    "colSpan": "Col Span",
+    "rowSpan": "Row Span",
+    "preview": "Preview",
+    "css": "Generated CSS",
+    "copy": "Copy CSS",
+    "presets": "Presets",
+    "preset12col": "12-Column",
+    "presetDashboard": "Dashboard",
+    "presetGallery": "Photo Gallery",
+    "presetBlog": "Blog Layout",
+    "presetHolyGrail": "Header-Main-Footer",
+    "item": "Item",
+    "fr": "fr",
+    "px": "px",
+    "auto": "auto",
+    "columnTracks": "Column Tracks",
+    "rowTracks": "Row Tracks"
+  }
+}

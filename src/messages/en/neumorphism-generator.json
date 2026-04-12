@@ -1,0 +1,45 @@
+{
+  "metadata": {
+    "title": "Neumorphism Generator — Soft UI CSS Builder",
+    "description": "Create neumorphic (soft UI) CSS effects with customizable shadows, blur, and shapes. Flat, concave, convex, and pressed styles with live preview.",
+    "keywords": "neumorphism generator, soft ui css, neumorphic design, soft shadow css, neumorphism css, new skeuomorphism, soft ui generator, css shadow generator, neumorphism tool, soft design css"
+  },
+  "heading": "Neumorphism Generator",
+  "subheading": "Create soft UI (neumorphic) effects with light and dark shadows. Customize shape, distance, blur, and intensity.",
+  "seo": {
+    "section1Title": "What is Neumorphism?",
+    "section1Text": "Neumorphism (new + skeuomorphism) is a design style that creates soft, extruded shapes using carefully crafted shadows. Elements appear to push out of or press into the background surface. It combines flat design with realistic shadow effects, using two shadows — one light and one dark — on a matching background color.",
+    "section2Title": "How Neumorphic Shadows Work",
+    "section2Text": "The effect requires two box-shadows: a light shadow (offset top-left) and a dark shadow (offset bottom-right). Both shadows are derived from the background color — one lighter, one darker. The element and its parent must share the same background color for the illusion to work. Adjust distance and blur to control the depth perception.",
+    "section3Title": "Neumorphism Shape Types",
+    "section3Text": "Flat creates a raised button look with external shadows. Concave makes the surface appear curved inward using a subtle gradient. Convex creates a rounded, raised appearance. Pressed simulates a pushed-in button using inset shadows. Each shape type generates different CSS for the desired visual effect.",
+    "section4Title": "Neumorphism Design Tips",
+    "section4List": "Always use a neutral background color — pure white or very saturated colors break the effect | Keep shadow distances proportional to blur — typically 1:2 ratio | Use subtle intensity to avoid harsh shadows | Ensure sufficient contrast for text and interactive elements | Neumorphism works best for cards, buttons, and toggles | Consider accessibility — the soft edges can be hard to distinguish for some users"
+  },
+  "ui": {
+    "howItWorksText": "Choose a background color and adjust shadow distance, blur, and intensity. Select a shape type to see different neumorphic effects. Copy the CSS when ready.",
+    "bgColor": "Background Color",
+    "distance": "Distance",
+    "blur": "Blur",
+    "intensity": "Intensity",
+    "borderRadius": "Radius",
+    "shape": "Shape",
+    "size": "Size",
+    "flat": "Flat",
+    "concave": "Concave",
+    "convex": "Convex",
+    "pressed": "Pressed",
+    "preview": "Preview",
+    "css": "Generated CSS",
+    "copy": "Copy CSS",
+    "presets": "Presets",
+    "presetFlat": "Flat",
+    "presetPressed": "Pressed",
+    "presetConcave": "Concave",
+    "presetConvex": "Convex",
+    "presetButton": "Button",
+    "presetCard": "Card",
+    "presetInput": "Input",
+    "presetCircle": "Circle"
+  }
+}

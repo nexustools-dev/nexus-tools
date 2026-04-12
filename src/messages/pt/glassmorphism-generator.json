@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "title": "Gerador de Glassmorphism — Efeito de Vidro CSS",
+    "description": "Crie efeitos impressionantes de glassmorphism com CSS. Personalize desfoque, transparência, bordas e cores com prévia ao vivo. Copie CSS pronto para usar.",
+    "keywords": "gerador glassmorphism, efeito vidro css, backdrop blur, vidro fosco css, glassmorphism css, interface vidro, card transparente css, gerador efeito blur, ferramenta glassmorphism, card vidro css"
+  },
+  "heading": "Gerador de Glassmorphism",
+  "subheading": "Crie efeitos de vidro fosco com blur, opacidade e bordas personalizáveis. Prévia ao vivo sobre um fundo vibrante.",
+  "seo": {
+    "section1Title": "O que é Glassmorphism?",
+    "section1Text": "Glassmorphism é uma tendência de design UI que cria um efeito de vidro fosco usando a propriedade CSS backdrop-filter. Os elementos aparecem translúcidos com o fundo desfocado visível através deles, criando profundidade e hierarquia visual. Popularizado pelos designs do macOS e iOS da Apple, combina transparência, desfoque e bordas sutis.",
+    "section2Title": "Como Criar Efeitos de Glassmorphism",
+    "section2Text": "As propriedades principais são backdrop-filter: blur() para o efeito fosco, um background-color semitransparente para a tonalidade, e uma borda sutil para definição das bordas. Ajuste o raio de desfoque para mais ou menos transparência, e use a saturação do fundo para realçar as cores visíveis através do vidro.",
+    "section3Title": "Suporte de Navegadores para Glassmorphism",
+    "section3Text": "A propriedade backdrop-filter é suportada em todos os navegadores modernos incluindo Chrome, Firefox, Safari e Edge. Para navegadores antigos, forneça uma cor de fundo sólida como fallback. Use @supports (backdrop-filter: blur(1px)) para aplicar o efeito de vidro condicionalmente.",
+    "section4Title": "Dicas de Design para Glassmorphism",
+    "section4List": "Use sobre fundos vibrantes ou degradês para o melhor impacto visual | Mantenha o blur entre 8-20px para texto legível atrás do vidro | Adicione uma borda sutil branca ou clara para definição | Garanta que o contraste do texto atenda as diretrizes de acessibilidade WCAG | Sobreponha múltiplos painéis de vidro com diferentes opacidades para criar profundidade | Combine com um box-shadow sutil para maior elevação"
+  },
+  "ui": {
+    "howItWorksText": "Ajuste o desfoque, opacidade e configuração de bordas para criar seu efeito de vidro. A prévia mostra o resultado sobre um fundo colorido. Copie o CSS quando estiver pronto.",
+    "background": "Fundo",
+    "bgColor": "Cor",
+    "bgOpacity": "Opacidade",
+    "blur": "Desfoque",
+    "saturation": "Saturação",
+    "border": "Borda",
+    "borderWidth": "Espessura",
+    "borderColor": "Cor",
+    "borderOpacity": "Opacidade",
+    "borderRadius": "Raio",
+    "preview": "Prévia",
+    "css": "CSS Gerado",
+    "copy": "Copiar CSS",
+    "presets": "Presets",
+    "subtle": "Sutil",
+    "frosted": "Fosco",
+    "bold": "Intenso",
+    "colored": "Colorido",
+    "dark": "Escuro",
+    "card": "Card"
+  }
+}

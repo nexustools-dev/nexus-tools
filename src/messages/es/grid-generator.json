@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "title": "Generador de CSS Grid \u2014 Constructor Visual de Grid",
+    "description": "Construye layouts CSS Grid visualmente. Define columnas, filas, espaciado y ubicaci\u00f3n de elementos. Copia c\u00f3digo CSS listo para usar en tus dise\u00f1os de grid.",
+    "keywords": "generador css grid, constructor grid layout, css grid template, columnas filas grid, grid gap, herramienta css grid, grid template columns, grid template rows, herramienta layout css, constructor visual grid"
+  },
+  "heading": "Generador de CSS Grid",
+  "subheading": "Dise\u00f1a layouts CSS Grid visualmente. Define columnas, filas, espaciado y ubicaci\u00f3n de elementos con vista previa en vivo.",
+  "seo": {
+    "section1Title": "\u00bfQu\u00e9 es CSS Grid?",
+    "section1Text": "CSS Grid Layout es un sistema de layout bidimensional que te permite crear layouts web complejos con filas y columnas simult\u00e1neamente. A diferencia de Flexbox que trabaja en una dimensi\u00f3n, Grid te da control completo sobre ambos ejes, siendo perfecto para layouts de p\u00e1gina, dashboards y galer\u00edas de im\u00e1genes.",
+    "section2Title": "C\u00f3mo Usar el Generador de Grid",
+    "section2Text": "Comienza configurando el n\u00famero de columnas y filas. Ajusta los tama\u00f1os de pista usando unidades fr (fraccional), px o auto. Usa los controles de gap para agregar espaciado entre celdas. Haz clic en los elementos del grid para que ocupen m\u00faltiples columnas o filas. El CSS generado se actualiza en tiempo real \u2014 c\u00f3pialo cuando est\u00e9s listo.",
+    "section3Title": "Grid Template Columns y Rows",
+    "section3Text": "Las propiedades grid-template-columns y grid-template-rows definen los tama\u00f1os de pista. La unidad fr distribuye el espacio disponible proporcionalmente \u2014 1fr 2fr le da a la segunda columna el doble de ancho. Usa auto para dimensionado basado en contenido, minmax() para rangos responsivos y repeat() para patrones repetitivos.",
+    "section4Title": "Patrones Comunes de CSS Grid",
+    "section4List": "Layout de 12 columnas: repeat(12, 1fr) para m\u00e1xima flexibilidad | Dashboard: sidebar (250px) + main (1fr) con header y footer a ancho completo | Galer\u00eda de fotos: auto-fill con minmax(200px, 1fr) para columnas responsivas | Layout de blog: 1fr 3fr para sidebar y contenido | Holy grail: header, cuerpo de 3 columnas, footer usando grid-template-areas | Grid de cards: auto-fit con minmax para cards responsivas iguales"
+  },
+  "ui": {
+    "howItWorksText": "Define la estructura de tu grid con columnas y filas. Ajusta tama\u00f1os de pista, espaciado y ubicaci\u00f3n de elementos. Copia el CSS generado cuando tu layout est\u00e9 listo.",
+    "columns": "Columnas",
+    "rows": "Filas",
+    "columnGap": "Gap de Columna",
+    "rowGap": "Gap de Fila",
+    "justifyItems": "Justify Items",
+    "alignItems": "Align Items",
+    "trackSize": "Tama\u00f1o de Pista",
+    "addColumn": "Agregar Columna",
+    "removeColumn": "Quitar Columna",
+    "addRow": "Agregar Fila",
+    "removeRow": "Quitar Fila",
+    "items": "Elementos del Grid",
+    "addItem": "Agregar Elemento",
+    "removeItem": "Quitar",
+    "colSpan": "Col Span",
+    "rowSpan": "Row Span",
+    "preview": "Vista Previa",
+    "css": "CSS Generado",
+    "copy": "Copiar CSS",
+    "presets": "Presets",
+    "preset12col": "12 Columnas",
+    "presetDashboard": "Dashboard",
+    "presetGallery": "Galer\u00eda de Fotos",
+    "presetBlog": "Layout de Blog",
+    "presetHolyGrail": "Header-Main-Footer",
+    "item": "Elemento",
+    "fr": "fr",
+    "px": "px",
+    "auto": "auto",
+    "columnTracks": "Pistas de Columna",
+    "rowTracks": "Pistas de Fila"
+  }
+}

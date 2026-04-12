@@ -278,14 +278,42 @@ const toolKeys = [
     icon: 'JWG',
     color: 'from-rose-500 to-red-600',
   },
+  {
+    key: 'flexboxPlayground',
+    href: '/tools/flexbox-playground',
+    icon: 'FLX',
+    color: 'from-pink-500 to-fuchsia-600',
+  },
+  {
+    key: 'gridGenerator',
+    href: '/tools/grid-generator',
+    icon: 'GRD',
+    color: 'from-teal-500 to-emerald-600',
+  },
+  {
+    key: 'animationGenerator',
+    href: '/tools/animation-generator',
+    icon: 'ANI',
+    color: 'from-orange-500 to-red-600',
+  },
+  {
+    key: 'glassmorphismGenerator',
+    href: '/tools/glassmorphism-generator',
+    icon: 'GLS',
+    color: 'from-indigo-500 to-violet-600',
+  },
+  {
+    key: 'neumorphismGenerator',
+    href: '/tools/neumorphism-generator',
+    icon: 'NEU',
+    color: 'from-slate-400 to-zinc-500',
+  },
 ] as const;
 
 const comingSoonKeys = [
   { key: 'crontabValidator', icon: 'CRV', color: 'from-green-500 to-teal-600' },
   { key: 'tailwindColors', icon: 'TW', color: 'from-cyan-500 to-sky-600' },
   { key: 'regexGenerator', icon: 'RG', color: 'from-purple-500 to-violet-600' },
-  { key: 'ipSubnetCalculator', icon: 'IP', color: 'from-amber-500 to-orange-600' },
-  { key: 'cssFlexboxGenerator', icon: 'FLX', color: 'from-pink-500 to-fuchsia-600' },
   { key: 'openGraphPreview', icon: 'OG', color: 'from-emerald-500 to-green-600' },
 ] as const;
 
@@ -364,15 +392,24 @@ export default async function Home({ params }: Props) {
             className="group relative flex items-start gap-4 p-6 rounded-2xl border border-white/[0.06] bg-white/[0.02] hover:bg-white/[0.05] hover:border-white/[0.12] hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
           >
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-            <div
-              className="relative z-10 shrink-0 w-12 h-12 rounded-xl shadow-lg shadow-black/20 overflow-hidden"
-              style={{
-                backgroundImage: 'url(/icons/tools-sprite.png)',
-                backgroundSize: `${39 * 48}px 48px`,
-                backgroundPosition: `${-(SPRITE_INDEX[tool.key] ?? 0) * 48}px 0`,
-                backgroundRepeat: 'no-repeat',
-              }}
-            />
+            {SPRITE_INDEX[tool.key] !== undefined ? (
+              <div
+                className="relative z-10 shrink-0 w-12 h-12 rounded-xl shadow-lg shadow-black/20 overflow-hidden"
+                style={{
+                  backgroundImage: 'url(/icons/tools-sprite.png)',
+                  backgroundSize: `${Object.keys(SPRITE_INDEX).length * 48}px 48px`,
+                  backgroundPosition: `${-SPRITE_INDEX[tool.key] * 48}px 0`,
+                  backgroundRepeat: 'no-repeat',
+                }}
+              />
+            ) : (
+              <div
+                className={`relative z-10 shrink-0 w-12 h-12 rounded-xl shadow-lg shadow-black/20 flex items-center justify-center bg-gradient-to-br ${tool.color} text-white font-mono font-bold text-[10px]`}
+                translate="no"
+              >
+                {tool.icon}
+              </div>
+            )}
             <div className="relative z-10 min-w-0">
               <h2 className="font-[family-name:var(--font-heading)] text-base font-semibold text-white group-hover:text-emerald-400 transition-colors duration-200 leading-tight">
                 {t(`tools.${tool.key}.name`)}

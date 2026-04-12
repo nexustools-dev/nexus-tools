@@ -57,6 +57,15 @@ export default getRequestConfig(async ({ requestLocale }) => {
   const httpStatusCodes = (await import(`../messages/${locale}/http-status-codes.json`)).default;
   const cidrCalculator = (await import(`../messages/${locale}/cidr-calculator.json`)).default;
   const jwtGenerator = (await import(`../messages/${locale}/jwt-generator.json`)).default;
+  const flexboxPlayground = (await import(`../messages/${locale}/flexbox-playground.json`)).default;
+  const gridGenerator = (await import(`../messages/${locale}/grid-generator.json`)).default;
+  const animationGenerator = (await import(`../messages/${locale}/animation-generator.json`))
+    .default;
+  const glassmorphismGenerator = (
+    await import(`../messages/${locale}/glassmorphism-generator.json`)
+  ).default;
+  const neumorphismGenerator = (await import(`../messages/${locale}/neumorphism-generator.json`))
+    .default;
 
   return {
     locale,
@@ -101,6 +110,11 @@ export default getRequestConfig(async ({ requestLocale }) => {
       httpStatusCodes,
       cidrCalculator,
       jwtGenerator,
+      flexboxPlayground,
+      gridGenerator,
+      animationGenerator,
+      glassmorphismGenerator,
+      neumorphismGenerator,
     },
   };
 });

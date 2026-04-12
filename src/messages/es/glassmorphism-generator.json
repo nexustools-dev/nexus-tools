@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "title": "Generador de Glassmorphism — Efecto de Vidrio CSS",
+    "description": "Crea impresionantes efectos de glassmorphism con CSS. Personaliza desenfoque, transparencia, bordes y colores con vista previa en vivo. Copia CSS listo para usar.",
+    "keywords": "generador glassmorphism, efecto vidrio css, backdrop blur, vidrio esmerilado css, glassmorphism css, interfaz vidrio, tarjeta transparente css, generador efecto blur, herramienta glassmorphism, tarjeta vidrio css"
+  },
+  "heading": "Generador de Glassmorphism",
+  "subheading": "Crea efectos de vidrio esmerilado con blur, opacidad y bordes personalizables. Vista previa en vivo sobre un fondo vibrante.",
+  "seo": {
+    "section1Title": "¿Qué es Glassmorphism?",
+    "section1Text": "Glassmorphism es una tendencia de diseño UI que crea un efecto de vidrio esmerilado usando la propiedad CSS backdrop-filter. Los elementos aparecen translúcidos con el fondo difuminado visible a través de ellos, creando profundidad y jerarquía visual. Popularizado por los diseños de macOS e iOS de Apple, combina transparencia, desenfoque y bordes sutiles.",
+    "section2Title": "Cómo Crear Efectos de Glassmorphism",
+    "section2Text": "Las propiedades principales son backdrop-filter: blur() para el efecto esmerilado, un background-color semitransparente para el tinte, y un borde sutil para la definición de bordes. Ajusta el radio de desenfoque para más o menos transparencia, y usa la saturación del fondo para realzar los colores visibles a través del vidrio.",
+    "section3Title": "Compatibilidad de Navegadores para Glassmorphism",
+    "section3Text": "La propiedad backdrop-filter es compatible con todos los navegadores modernos incluyendo Chrome, Firefox, Safari y Edge. Para navegadores antiguos, proporciona un color de fondo sólido como respaldo. Usa @supports (backdrop-filter: blur(1px)) para aplicar el efecto de vidrio condicionalmente.",
+    "section4Title": "Consejos de Diseño para Glassmorphism",
+    "section4List": "Úsalo sobre fondos vibrantes o degradados para el mejor impacto visual | Mantén el blur entre 8-20px para texto legible detrás del vidrio | Agrega un borde sutil blanco o claro para definición | Asegura que el contraste del texto cumpla las pautas de accesibilidad WCAG | Superpón múltiples paneles de vidrio con diferentes opacidades para crear profundidad | Combina con un box-shadow sutil para mayor elevación"
+  },
+  "ui": {
+    "howItWorksText": "Ajusta el desenfoque, opacidad y configuración de bordes para crear tu efecto de vidrio. La vista previa muestra el resultado sobre un fondo colorido. Copia el CSS cuando esté listo.",
+    "background": "Fondo",
+    "bgColor": "Color",
+    "bgOpacity": "Opacidad",
+    "blur": "Desenfoque",
+    "saturation": "Saturación",
+    "border": "Borde",
+    "borderWidth": "Grosor",
+    "borderColor": "Color",
+    "borderOpacity": "Opacidad",
+    "borderRadius": "Radio",
+    "preview": "Vista Previa",
+    "css": "CSS Generado",
+    "copy": "Copiar CSS",
+    "presets": "Presets",
+    "subtle": "Sutil",
+    "frosted": "Esmerilado",
+    "bold": "Intenso",
+    "colored": "Color",
+    "dark": "Oscuro",
+    "card": "Tarjeta"
+  }
+}

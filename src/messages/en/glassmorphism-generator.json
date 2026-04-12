@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "title": "Glassmorphism Generator — CSS Glass Effect Builder",
+    "description": "Create stunning glassmorphism CSS effects. Customize backdrop blur, transparency, borders, and colors with live preview. Copy ready-to-use CSS.",
+    "keywords": "glassmorphism generator, glass effect css, backdrop blur, frosted glass css, glassmorphism css, glass ui, transparent card css, blur effect generator, glass morphism tool, css glass card"
+  },
+  "heading": "Glassmorphism Generator",
+  "subheading": "Create frosted glass UI effects with customizable blur, opacity, and borders. Live preview on a vibrant background.",
+  "seo": {
+    "section1Title": "What is Glassmorphism?",
+    "section1Text": "Glassmorphism is a UI design trend that creates a frosted glass effect using CSS backdrop-filter. Elements appear translucent with a blurred background showing through, creating depth and visual hierarchy. Popularized by Apple's macOS and iOS designs, it combines transparency, blur, and subtle borders.",
+    "section2Title": "How to Create Glassmorphism Effects",
+    "section2Text": "The core properties are backdrop-filter: blur() for the frosted effect, a semi-transparent background-color for the tint, and a subtle border for edge definition. Adjust the blur radius for more or less transparency, and use background saturation to enhance colors visible through the glass.",
+    "section3Title": "Browser Support for Glassmorphism",
+    "section3Text": "The backdrop-filter property is supported in all modern browsers including Chrome, Firefox, Safari, and Edge. For older browsers, provide a fallback solid background color. Use @supports (backdrop-filter: blur(1px)) to conditionally apply the glass effect.",
+    "section4Title": "Glassmorphism Design Tips",
+    "section4List": "Use on vibrant or gradient backgrounds for the best visual impact | Keep blur between 8-20px for readable text behind glass | Add a subtle white or light border for edge definition | Ensure text contrast meets WCAG accessibility guidelines | Layer multiple glass panels at different opacities for depth | Combine with subtle box-shadow for extra elevation"
+  },
+  "ui": {
+    "howItWorksText": "Adjust blur, opacity, and border settings to create your glass effect. The preview shows the result on a colorful background. Copy the CSS when ready.",
+    "background": "Background",
+    "bgColor": "Color",
+    "bgOpacity": "Opacity",
+    "blur": "Blur",
+    "saturation": "Saturation",
+    "border": "Border",
+    "borderWidth": "Width",
+    "borderColor": "Color",
+    "borderOpacity": "Opacity",
+    "borderRadius": "Radius",
+    "preview": "Preview",
+    "css": "Generated CSS",
+    "copy": "Copy CSS",
+    "presets": "Presets",
+    "subtle": "Subtle",
+    "frosted": "Frosted",
+    "bold": "Bold",
+    "colored": "Colored",
+    "dark": "Dark",
+    "card": "Card"
+  }
+}

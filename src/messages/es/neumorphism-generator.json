@@ -1,0 +1,45 @@
+{
+  "metadata": {
+    "title": "Generador de Neumorfismo — Constructor de Soft UI CSS",
+    "description": "Crea efectos neumórficos (soft UI) con sombras, desenfoque y formas personalizables. Estilos plano, cóncavo, convexo y presionado con vista previa en vivo.",
+    "keywords": "generador neumorfismo, soft ui css, diseño neumórfico, sombra suave css, neumorfismo css, nuevo esqueumorfismo, generador soft ui, generador sombras css, herramienta neumorfismo, diseño suave css"
+  },
+  "heading": "Generador de Neumorfismo",
+  "subheading": "Crea efectos soft UI (neumórficos) con sombras claras y oscuras. Personaliza forma, distancia, desenfoque e intensidad.",
+  "seo": {
+    "section1Title": "¿Qué es el Neumorfismo?",
+    "section1Text": "El Neumorfismo (nuevo + esqueumorfismo) es un estilo de diseño que crea formas suaves y extruidas usando sombras cuidadosamente elaboradas. Los elementos parecen sobresalir o hundirse en la superficie del fondo. Combina el diseño plano con efectos de sombra realistas, usando dos sombras — una clara y una oscura — sobre un color de fondo que coincida.",
+    "section2Title": "Cómo Funcionan las Sombras Neumórficas",
+    "section2Text": "El efecto requiere dos box-shadows: una sombra clara (desplazada arriba-izquierda) y una sombra oscura (desplazada abajo-derecha). Ambas sombras se derivan del color de fondo — una más clara, otra más oscura. El elemento y su contenedor padre deben compartir el mismo color de fondo para que la ilusión funcione. Ajusta la distancia y el desenfoque para controlar la percepción de profundidad.",
+    "section3Title": "Tipos de Formas en Neumorfismo",
+    "section3Text": "Plano crea un aspecto de botón elevado con sombras externas. Cóncavo hace que la superficie parezca curvada hacia adentro usando un gradiente sutil. Convexo crea una apariencia redondeada y elevada. Presionado simula un botón hundido usando sombras internas. Cada tipo de forma genera CSS diferente para el efecto visual deseado.",
+    "section4Title": "Consejos de Diseño para Neumorfismo",
+    "section4List": "Siempre usa un color de fondo neutro — el blanco puro o colores muy saturados rompen el efecto | Mantén las distancias de sombra proporcionales al desenfoque — típicamente ratio 1:2 | Usa intensidad sutil para evitar sombras duras | Asegura suficiente contraste para texto y elementos interactivos | El neumorfismo funciona mejor en tarjetas, botones y toggles | Considera la accesibilidad — los bordes suaves pueden ser difíciles de distinguir para algunos usuarios"
+  },
+  "ui": {
+    "howItWorksText": "Elige un color de fondo y ajusta la distancia, desenfoque e intensidad de las sombras. Selecciona un tipo de forma para ver diferentes efectos neumórficos. Copia el CSS cuando esté listo.",
+    "bgColor": "Color de Fondo",
+    "distance": "Distancia",
+    "blur": "Desenfoque",
+    "intensity": "Intensidad",
+    "borderRadius": "Radio",
+    "shape": "Forma",
+    "size": "Tamaño",
+    "flat": "Plano",
+    "concave": "Cóncavo",
+    "convex": "Convexo",
+    "pressed": "Presionado",
+    "preview": "Vista Previa",
+    "css": "CSS Generado",
+    "copy": "Copiar CSS",
+    "presets": "Presets",
+    "presetFlat": "Plano",
+    "presetPressed": "Presionado",
+    "presetConcave": "Cóncavo",
+    "presetConvex": "Convexo",
+    "presetButton": "Botón",
+    "presetCard": "Tarjeta",
+    "presetInput": "Campo",
+    "presetCircle": "Círculo"
+  }
+}

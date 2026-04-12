@@ -39,7 +39,12 @@
     "characterCounter": "Caracteres",
     "httpStatusCodes": "HTTP Status",
     "cidrCalculator": "Calc CIDR",
-    "jwtGenerator": "Generador JWT"
+    "jwtGenerator": "Generador JWT",
+    "flexboxPlayground": "Flexbox",
+    "gridGenerator": "CSS Grid",
+    "animationGenerator": "Animaciones",
+    "glassmorphismGenerator": "Glassmorphism",
+    "neumorphismGenerator": "Neumorfismo"
   },
   "footer": {
     "privacy": "Todas las herramientas funcionan 100% en tu navegador. No se envían datos a ningún servidor.",
@@ -218,6 +223,26 @@
       "jwtGenerator": {
         "name": "Generador JWT",
         "description": "Crea y firma JSON Web Tokens con HS256/384/512. Agrega claims, configura expiración. Firmado client-side con Web Crypto API."
+      },
+      "flexboxPlayground": {
+        "name": "CSS Flexbox Playground",
+        "description": "Construye y visualiza layouts flexbox interactivamente. Ajusta dirección, wrap, alineación, gap y propiedades de hijos con vista previa en vivo."
+      },
+      "gridGenerator": {
+        "name": "Generador de CSS Grid",
+        "description": "Diseña layouts CSS Grid visualmente. Define columnas, filas, gaps y posicionamiento de elementos con vista previa."
+      },
+      "animationGenerator": {
+        "name": "Generador de Animaciones CSS",
+        "description": "Crea animaciones CSS @keyframes visualmente. Define keyframes, timing, easing y transforms con vista previa en vivo."
+      },
+      "glassmorphismGenerator": {
+        "name": "Generador de Glassmorphism",
+        "description": "Crea efectos de vidrio esmerilado con blur, opacidad y bordes personalizables. Vista previa sobre fondo vibrante."
+      },
+      "neumorphismGenerator": {
+        "name": "Generador de Neumorfismo",
+        "description": "Crea efectos soft UI (neumórficos) con sombras claras y oscuras. Personaliza forma, distancia, blur e intensidad."
       }
     },
     "comingSoonHeading": "Próximamente",
@@ -227,17 +252,9 @@
     "suggestText": "Siempre estamos creando nuevas herramientas. Cuéntanos qué te gustaría ver — tu sugerencia podría ser nuestro próximo lanzamiento.",
     "suggestButton": "Sugerir una Herramienta",
     "upcoming": {
-      "jwtGenerator": {
-        "name": "Generador de JWT",
-        "description": "Crea y firma JSON Web Tokens con claims personalizados, expiración y algoritmos."
-      },
       "crontabValidator": {
         "name": "Validador de Crontab",
         "description": "Valida expresiones cron y depura problemas de programación con mensajes de error detallados."
-      },
-      "httpStatusCodes": {
-        "name": "Códigos de Estado HTTP",
-        "description": "Referencia interactiva de todos los códigos HTTP con descripciones, casos de uso y ejemplos."
       },
       "tailwindColors": {
         "name": "Selector de Colores Tailwind",
@@ -246,14 +263,6 @@
       "regexGenerator": {
         "name": "Generador de Regex",
         "description": "Genera expresiones regulares desde descripciones en lenguaje natural. Constructor de patrones con ejemplos."
-      },
-      "ipSubnetCalculator": {
-        "name": "Calculadora de Subredes IP",
-        "description": "Calcula direcciones de red, broadcast, hosts utilizables y notación CIDR desde cualquier rango IP."
-      },
-      "cssFlexboxGenerator": {
-        "name": "Generador CSS Flexbox",
-        "description": "Diseña layouts flexbox visualmente. Ajusta dirección, wrap, alineación y gap con vista previa en vivo."
       },
       "openGraphPreview": {
         "name": "Vista Previa Open Graph",
