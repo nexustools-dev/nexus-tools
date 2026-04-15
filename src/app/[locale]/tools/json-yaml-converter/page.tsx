@@ -12,6 +12,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: t('title'),
     description: t('description'),
     keywords: t('keywords').split(', '),
+    alternates: {
+      canonical: `/${locale}/tools/json-yaml-converter`,
+      languages: Object.fromEntries(
+        (['en', 'es', 'pt'] as const).map((l) => [l, `/${l}/tools/json-yaml-converter`])
+      ),
+    },
   };
 }
 

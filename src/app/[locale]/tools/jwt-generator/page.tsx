@@ -8,7 +8,17 @@ type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'jwtGenerator.metadata' });
-  return { title: t('title'), description: t('description'), keywords: t('keywords').split(', ') };
+  return {
+    title: t('title'),
+    description: t('description'),
+    keywords: t('keywords').split(', '),
+    alternates: {
+      canonical: `/${locale}/tools/jwt-generator`,
+      languages: Object.fromEntries(
+        (['en', 'es', 'pt'] as const).map((l) => [l, `/${l}/tools/jwt-generator`])
+      ),
+    },
+  };
 }
 
 export default async function JwtGeneratorPage({ params }: Props) {

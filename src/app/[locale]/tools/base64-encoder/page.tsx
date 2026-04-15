@@ -12,6 +12,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: t('title'),
     description: t('description'),
     keywords: t('keywords').split(', '),
+    alternates: {
+      canonical: `/${locale}/tools/base64-encoder`,
+      languages: Object.fromEntries(
+        (['en', 'es', 'pt'] as const).map((l) => [l, `/${l}/tools/base64-encoder`])
+      ),
+    },
   };
 }
 

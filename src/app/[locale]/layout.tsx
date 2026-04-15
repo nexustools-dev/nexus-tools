@@ -53,6 +53,7 @@ export async function generateMetadata({
       locale: locale === 'pt' ? 'pt_BR' : locale === 'es' ? 'es_ES' : 'en_US',
     },
     alternates: {
+      canonical: `/${locale}`,
       languages: Object.fromEntries(routing.locales.map((l) => [l, `/${l}`])),
     },
   };

@@ -8,7 +8,17 @@ type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'cidrCalculator.metadata' });
-  return { title: t('title'), description: t('description'), keywords: t('keywords').split(', ') };
+  return {
+    title: t('title'),
+    description: t('description'),
+    keywords: t('keywords').split(', '),
+    alternates: {
+      canonical: `/${locale}/tools/cidr-calculator`,
+      languages: Object.fromEntries(
+        (['en', 'es', 'pt'] as const).map((l) => [l, `/${l}/tools/cidr-calculator`])
+      ),
+    },
+  };
 }
 
 export default async function CidrCalculatorPage({ params }: Props) {

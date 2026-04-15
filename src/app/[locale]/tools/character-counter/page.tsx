@@ -8,7 +8,17 @@ type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'characterCounter.metadata' });
-  return { title: t('title'), description: t('description'), keywords: t('keywords').split(', ') };
+  return {
+    title: t('title'),
+    description: t('description'),
+    keywords: t('keywords').split(', '),
+    alternates: {
+      canonical: `/${locale}/tools/character-counter`,
+      languages: Object.fromEntries(
+        (['en', 'es', 'pt'] as const).map((l) => [l, `/${l}/tools/character-counter`])
+      ),
+    },
+  };
 }
 
 export default async function CharacterCounterPage({ params }: Props) {
